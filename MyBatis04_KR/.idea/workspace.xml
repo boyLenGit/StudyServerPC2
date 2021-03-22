@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="849aa6f2-2173-4a8a-b0b4-d8f64e5f705a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Apps/apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1p6O25mox2cSE4ACySHmJuAR7TG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/Sub05_resultMap_simple/src/main/resources/len/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sub08_RowBounds/src/main/resources" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="len.pojo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub08_RowBounds\src\main\resources" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub08_RowBounds\src\main\java" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub07_limit\src\main\resources" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub07_limit\src\main\java" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub06_Log\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dao" />
+      <recent name="len.pojo" />
+      <recent name="len.dao" />
+      <recent name="len.mybatis" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub08_RowBounds\src\main\resources\len" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub07_limit\src\main\resources\len" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub07_limit\src\main\resources" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub06_Log\src\main\resources\len" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub05_resultMap_simple\src\main\resources\len" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.Test04_Alias.T04_getUserByRowBounds">
+    <configuration name="Test04_Alias.T04_getUserByLimit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub07_limit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.Test04_Alias" />
+      <option name="METHOD_NAME" value="T04_getUserByLimit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test04_Alias.T04_getUserByRowBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub08_RowBounds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.Test04_Alias" />
+      <option name="METHOD_NAME" value="T04_getUserByRowBounds" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test04_Alias.T04_getUserList (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub07_limit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.Test04_Alias" />
+      <option name="METHOD_NAME" value="T04_getUserList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test04_Alias.T04_getUserList (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub08_RowBounds" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.Test04_Alias" />
+      <option name="METHOD_NAME" value="T04_getUserList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test04_Alias.T04_getUserList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub06_Log" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.Test04_Alias" />
+      <option name="METHOD_NAME" value="T04_getUserList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Test04_Alias.T04_getUserByRowBounds" />
+        <item itemvalue="JUnit.Test04_Alias.T04_getUserByLimit" />
+        <item itemvalue="JUnit.Test04_Alias.T04_getUserList (1)" />
+        <item itemvalue="JUnit.Test04_Alias.T04_getUserList (2)" />
+        <item itemvalue="JUnit.Test04_Alias.T04_getUserList" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="849aa6f2-2173-4a8a-b0b4-d8f64e5f705a" name="Default Changelist" comment="" />
+      <created>1614499862240</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614499862240</updated>
+      <workItem from="1614499864776" duration="27823000" />
+      <workItem from="1614649542870" duration="28415000" />
+      <workItem from="1614826525463" duration="15164000" />
+      <workItem from="1615031309984" duration="2004000" />
+      <workItem from="1615044563936" duration="6416000" />
+      <workItem from="1615172102303" duration="16068000" />
+      <workItem from="1615301351621" duration="7088000" />
+      <workItem from="1615357855112" duration="8145000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="819" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614654496448">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="819" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614654496448" />
+    <state x="988" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614865056923">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="988" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614865056922" />
+    <state x="1066" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1614522901644">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1066" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614522901644" />
+    <state x="938" y="448" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1614505182529">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="938" y="448" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614505182529" />
+    <state x="1003" y="392" width="447" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1614859410738">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1003" y="392" width="447" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614859410738" />
+    <state x="924" y="226" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1614565715620">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="924" y="226" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614565715620" />
+    <state x="957" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1614826471531">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="957" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614826471531" />
+    <state x="1007" y="280" key="FileChooserDialogImpl" timestamp="1615358810572">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1007" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615358810572" />
+    <state width="1340" height="345" key="GridCell.Tab.0.bottom" timestamp="1615390909370">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1340" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615390909370" />
+    <state width="1340" height="345" key="GridCell.Tab.0.center" timestamp="1615390909369">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1340" height="345" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615390909369" />
+    <state width="1340" height="345" key="GridCell.Tab.0.left" timestamp="1615390909369">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1340" height="345" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615390909369" />
+    <state width="1340" height="345" key="GridCell.Tab.0.right" timestamp="1615390909370">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1340" height="345" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615390909370" />
+    <state x="534" y="213" width="997" height="711" key="SettingsEditor" timestamp="1615106199705">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="534" y="213" width="997" height="711" key="SettingsEditor/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615106199705" />
+    <state x="1026" y="303" key="chooseDestDirectoryDialog" timestamp="1615344263496">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1026" y="303" key="chooseDestDirectoryDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615344263496" />
+    <state x="957" y="330" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1614694513130">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="957" y="330" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614694513130" />
+    <state x="665" y="146" key="new project wizard" timestamp="1615372688421">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="665" y="146" key="new project wizard/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615372688421" />
+    <state x="890" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1614651346319">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="890" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614651346319" />
+  </component>
+</project>
