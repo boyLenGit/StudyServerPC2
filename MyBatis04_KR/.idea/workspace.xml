@@ -62,72 +62,8 @@
       <recent name="D:\boyLen\Java\MyBatis04_KR\Sub07_limit\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Test04_Alias.T04_getUserList (3)">
-    <configuration name="Test04_Alias.T04_getUserByLimit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub07_limit" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.Test04_Alias" />
-      <option name="METHOD_NAME" value="T04_getUserByLimit" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test04_Alias.T04_getUserByRowBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub08_RowBounds" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.Test04_Alias" />
-      <option name="METHOD_NAME" value="T04_getUserByRowBounds" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test04_Alias.T04_getUserList (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub07_limit" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.Test04_Alias" />
-      <option name="METHOD_NAME" value="T04_getUserList" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test04_Alias.T04_getUserList (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub08_RowBounds" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.Test04_Alias" />
-      <option name="METHOD_NAME" value="T04_getUserList" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test04_Alias.T04_getUserList (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.T01.T01_updateUser">
+    <configuration name="T01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sub09_annotation" />
       <extension name="coverage">
         <pattern>
@@ -136,7 +72,70 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.Test04_Alias" />
+      <option name="MAIN_CLASS_NAME" value="dao.T01" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T01.T01_addUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub09_annotation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.T01" />
+      <option name="METHOD_NAME" value="T01_addUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T01.T01_getUserByID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub09_annotation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.T01" />
+      <option name="METHOD_NAME" value="T01_getUserByID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T01.T01_updateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub09_annotation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.T01" />
+      <option name="METHOD_NAME" value="T01_updateUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T01.T04_getUserList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub09_annotation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.T01" />
       <option name="METHOD_NAME" value="T04_getUserList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -145,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Test04_Alias.T04_getUserList (3)" />
-        <item itemvalue="JUnit.Test04_Alias.T04_getUserList (2)" />
-        <item itemvalue="JUnit.Test04_Alias.T04_getUserByRowBounds" />
-        <item itemvalue="JUnit.Test04_Alias.T04_getUserByLimit" />
-        <item itemvalue="JUnit.Test04_Alias.T04_getUserList (1)" />
+        <item itemvalue="JUnit.T01.T01_updateUser" />
+        <item itemvalue="JUnit.T01.T01_addUser" />
+        <item itemvalue="JUnit.T01.T01_getUserByID" />
+        <item itemvalue="JUnit.T01" />
+        <item itemvalue="JUnit.T01.T04_getUserList" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +170,7 @@
       <workItem from="1615172102303" duration="16068000" />
       <workItem from="1615301351621" duration="7088000" />
       <workItem from="1615357855112" duration="8748000" />
-      <workItem from="1616655754063" duration="6560000" />
+      <workItem from="1616655754063" duration="12224000" />
     </task>
     <servers />
   </component>
@@ -211,22 +210,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1007" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615358810572" />
-    <state width="1340" height="345" key="GridCell.Tab.0.bottom" timestamp="1616750123699">
+    <state width="1340" height="345" key="GridCell.Tab.0.bottom" timestamp="1616772151953">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1340" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616750123699" />
-    <state width="1340" height="345" key="GridCell.Tab.0.center" timestamp="1616750123699">
+    <state width="1340" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616772151953" />
+    <state width="1340" height="345" key="GridCell.Tab.0.center" timestamp="1616772151952">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1340" height="345" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616750123699" />
-    <state width="1340" height="345" key="GridCell.Tab.0.left" timestamp="1616750123699">
+    <state width="1340" height="345" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616772151952" />
+    <state width="1340" height="345" key="GridCell.Tab.0.left" timestamp="1616772151952">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1340" height="345" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616750123699" />
-    <state width="1340" height="345" key="GridCell.Tab.0.right" timestamp="1616750123699">
+    <state width="1340" height="345" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616772151952" />
+    <state width="1340" height="345" key="GridCell.Tab.0.right" timestamp="1616772151952">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1340" height="345" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616750123699" />
+    <state width="1340" height="345" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616772151952" />
     <state x="534" y="213" width="997" height="711" key="SettingsEditor" timestamp="1615106199705">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

@@ -24,6 +24,7 @@
         </environment>
     </environments>
 
+    <!-- 使用注解开发，Mapper.xml不再需要，Dao直接集成了Mapper.xml，所以在配置文件中Mapper直接写Dao即可 -->
     <mappers>
         <mapper class="len.dao.Dao04_Alias"/>
     </mappers>
