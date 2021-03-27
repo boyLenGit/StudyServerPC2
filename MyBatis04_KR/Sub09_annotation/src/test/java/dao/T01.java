@@ -27,6 +27,7 @@ public class T01 {
         sqlSession1.close();
     }
 
+    // 如果报错，则因为要添加的项目已存在
     @Test
     public void T01_addUser(){
         // 获得SqlSession对象      --- 固定写法 ---
@@ -45,6 +46,30 @@ public class T01 {
         Dao04_Alias dao_mapper = sqlSession1.getMapper(Dao04_Alias.class);
 
         dao_mapper.Dao04_updateUser(new Obj04_Alias(1, "尹航", "111666"));
+        // 关闭SQLSession
+        sqlSession1.close();
+    }
+
+    // [删除MySQL数据] ！ 如果报错，则因为要删除的项目不存在
+    @Test
+    public void T01_deleteUser(){
+        // 获得SqlSession对象      --- 固定写法 ---
+        SqlSession sqlSession1 = S02_Start_hm.getSqlSession();
+        Dao04_Alias dao_mapper = sqlSession1.getMapper(Dao04_Alias.class);
+
+        dao_mapper.Dao04_deleteUser(1);
+        // 关闭SQLSession
+        sqlSession1.close();
+    }
+
+    // [删除MySQL数据] ！ 如果报错，则因为要删除的项目不存在
+    @Test
+    public void T01_addUser_Param(){
+        // 获得SqlSession对象      --- 固定写法 ---
+        SqlSession sqlSession1 = S02_Start_hm.getSqlSession();
+        Dao04_Alias dao_mapper = sqlSession1.getMapper(Dao04_Alias.class);
+
+        dao_mapper.Dao04_addUser_Param(13, "皮卡", "989898");
         // 关闭SQLSession
         sqlSession1.close();
     }

@@ -1,10 +1,7 @@
 package len.dao;
 
 import len.pojo.Obj04_Alias;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -17,9 +14,17 @@ public interface Dao04_Alias {
     @Select("select * from MyBatis_KR.user where id = #{id}")
     Obj04_Alias Dao04_getUserByID(@Param("id") int id);
 
+    // 方法()中的类型，取决于MySQL指令中要输入的类型
     @Insert("insert into MyBatis_KR.user(id,name,pwd) values (#{id},#{name},#{pwd})")
     int Dao04_addUser(Obj04_Alias obj_user);
 
     @Update("update MyBatis_KR.user set name=#{name},pwd=#{pwd} where id = #{id}")
     int Dao04_updateUser(Obj04_Alias user);
+
+    @Delete("delete from MyBatis_KR.user where id = #{id}")
+    int Dao04_deleteUser(@Param("id") int id);
+
+    // 多参数时的用法
+    @Insert("insert into MyBatis_KR.user(id,name,pwd) values (#{id},#{name},#{pwd})")
+    int Dao04_addUser_Param(@Param("id") int id, @Param("name") String name, @Param("pwd") String pwd);
 }
