@@ -20,6 +20,8 @@
         <module>Sub07_limit</module>
         <module>Sub08_RowBounds</module>
         <module>Sub09_annotation</module>
+        <module>Sub10_Lombok</module>
+        <module>Sub11_Complex_query</module>
     </modules>
 
     <!-- 添加依赖包 -->
