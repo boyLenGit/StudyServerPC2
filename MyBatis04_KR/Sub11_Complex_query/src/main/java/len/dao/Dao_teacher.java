@@ -7,5 +7,5 @@ import org.apache.ibatis.annotations.Select;
 public interface Dao_teacher {
 
     @Select("select * from MyBatis_KR.teacher where id = #{tid}")
-    Obj_teacher getTeacher(@Param("tid") int id);
+    Obj_teacher Dao_getTeacher(@Param("tid") int id);
 }

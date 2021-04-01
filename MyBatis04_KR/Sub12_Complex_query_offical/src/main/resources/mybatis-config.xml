@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
-<configuration> <!-- MyBatis的核心配置文件，用于从XML中构建SqlSessionFactory -->
+<configuration>
 
     <environments default="development">
         <environment id="development">
@@ -17,9 +17,9 @@
         </environment>
     </environments>
 
-    <!-- 使用注解开发，Mapper.xml不再需要，Dao直接集成了Mapper.xml，所以在配置文件中Mapper直接写Dao即可 -->
+    <!--绑定接口-->
     <mappers>
-        <mapper class="len.dao.Dao_teacher"></mapper>
-        <mapper class="len.dao.Dao_student"></mapper>
+        <mapper class="com.hou.dao.TeacherMapper"></mapper>
+        <mapper class="com.hou.dao.StudentMapper"></mapper>
     </mappers>
 </configuration>

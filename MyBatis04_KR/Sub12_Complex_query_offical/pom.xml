@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Sub11_Complex_query</artifactId>
+    <artifactId>Sub12_Complex_query_offical</artifactId>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->

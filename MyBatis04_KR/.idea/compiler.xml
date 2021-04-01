@@ -8,14 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Sub09_annotation" />
-        <module name="Sub06_Log" />
-        <module name="Sub05_resultMap_simple" />
-        <module name="Sub10_Lombok" />
-        <module name="Sub07_limit" />
-        <module name="Sub03_Alias_pkg" />
         <module name="Sub11_Complex_query" />
+        <module name="Sub05_resultMap_simple" />
+        <module name="Sub06_Log" />
+        <module name="Sub07_limit" />
         <module name="Sub01_Start" />
+        <module name="Sub03_Alias_pkg" />
         <module name="Sub02_db_properties" />
+        <module name="Sub12_Complex_query_offical" />
+        <module name="Sub10_Lombok" />
         <module name="Sub04_Alias_annotation" />
         <module name="Sub08_RowBounds" />
       </profile>

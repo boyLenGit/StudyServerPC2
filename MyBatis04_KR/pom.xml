@@ -22,6 +22,7 @@
         <module>Sub09_annotation</module>
         <module>Sub10_Lombok</module>
         <module>Sub11_Complex_query</module>
+        <module>Sub12_Complex_query_offical</module>
     </modules>
 
     <!-- 添加依赖包 -->

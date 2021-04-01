@@ -34,16 +34,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/Sub05_resultMap_simple/src/main/resources/len/mapper" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sub11_Complex_query/src/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sub12_Complex_query_offical/src/main/resources" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub12_Complex_query_offical\src\test\java" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub12_Complex_query_offical\src\main\resources" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub12_Complex_query_offical\src\main\java" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub01_Start" />
       <recent name="D:\boyLen\Java\MyBatis04_KR\Sub11_Complex_query\src\test\java" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub09_annotation\src\main\resources\len" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub08_RowBounds\src\main\resources\len" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub07_limit\src\main\resources\len" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub07_limit\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="len.pojo" />
@@ -55,32 +58,48 @@
       <recent name="len.mybatis" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub12_Complex_query_offical\src\main\resources" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub11_Complex_query\src\main\resources\len\dao" />
       <recent name="D:\boyLen\Java\MyBatis04_KR\Sub11_Complex_query\src\test" />
       <recent name="D:\boyLen\Java\MyBatis04_KR\Sub11_Complex_query\src\main\resources" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub11_Complex_query\src\main\java" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub10_Lombok\src\main\resources" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub10_Lombok\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.T01.T01_getUserByID (1)">
-    <configuration name="T01.T01_addUser (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub10_Lombok" />
+  <component name="RunManager" selected="JUnit.T01.T01_Student_Teacher">
+    <configuration name="MyTest.getStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub12_Complex_query_offical" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dao.*" />
+          <option name="PATTERN" value="com.hou.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.T01" />
-      <option name="METHOD_NAME" value="T01_addUser" />
+      <option name="PACKAGE_NAME" value="com.hou.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.hou.dao.MyTest" />
+      <option name="METHOD_NAME" value="getStudent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="T01.T01_addUser_Param" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub09_annotation" />
+    <configuration name="MyTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub12_Complex_query_offical" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hou.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hou.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.hou.dao.MyTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T01.T01_Student_Teacher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub11_Complex_query" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dao.*" />
@@ -89,7 +108,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="dao" />
       <option name="MAIN_CLASS_NAME" value="dao.T01" />
-      <option name="METHOD_NAME" value="T01_addUser_Param" />
+      <option name="METHOD_NAME" value="T01_Student_Teacher" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,29 +146,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="T01.T01_updateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub10_Lombok" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.T01" />
-      <option name="METHOD_NAME" value="T01_updateUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.T01.T01_Student_Teacher" />
         <item itemvalue="JUnit.T01.T01_getUserByID (1)" />
-        <item itemvalue="JUnit.T01.T01_addUser (1)" />
-        <item itemvalue="JUnit.T01.T01_updateUser" />
+        <item itemvalue="JUnit.MyTest.getStudent" />
+        <item itemvalue="JUnit.MyTest.test" />
         <item itemvalue="JUnit.T01.T01_getUserByID" />
-        <item itemvalue="JUnit.T01.T01_addUser_Param" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +178,9 @@
       <workItem from="1616775550412" duration="437000" />
       <workItem from="1616809983014" duration="3428000" />
       <workItem from="1616823470142" duration="875000" />
-      <workItem from="1616826268628" duration="6798000" />
+      <workItem from="1616826268628" duration="8933000" />
+      <workItem from="1616917178638" duration="6942000" />
+      <workItem from="1616946195089" duration="12319000" />
     </task>
     <servers />
   </component>
@@ -187,14 +192,18 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="804" y="286" key="#HTTP_Proxy/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616823410367" />
+    <state x="653" y="99" key="#Project_Structure" timestamp="1616945963562">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="653" y="99" key="#Project_Structure/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616945963562" />
     <state x="819" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614654496448">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="819" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614654496448" />
-    <state x="988" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614865056923">
+    <state x="988" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1616916887607">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="988" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614865056922" />
+    <state x="988" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616916887607" />
     <state x="1066" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1614522901644">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -219,22 +228,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1007" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615358810572" />
-    <state width="1339" height="345" key="GridCell.Tab.0.bottom" timestamp="1616901562087">
+    <state width="1877" height="303" key="GridCell.Tab.0.bottom" timestamp="1617113935714">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1339" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616901562087" />
-    <state width="1339" height="345" key="GridCell.Tab.0.center" timestamp="1616901562087">
+    <state width="1877" height="303" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1617113935714" />
+    <state width="1877" height="303" key="GridCell.Tab.0.center" timestamp="1617113935713">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1339" height="345" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616901562087" />
-    <state width="1339" height="345" key="GridCell.Tab.0.left" timestamp="1616901562087">
+    <state width="1877" height="303" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1617113935713" />
+    <state width="1877" height="303" key="GridCell.Tab.0.left" timestamp="1617113935713">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1339" height="345" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616901562087" />
-    <state width="1339" height="345" key="GridCell.Tab.0.right" timestamp="1616901562087">
+    <state width="1877" height="303" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1617113935713" />
+    <state width="1877" height="303" key="GridCell.Tab.0.right" timestamp="1617113935714">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1339" height="345" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616901562087" />
+    <state width="1877" height="303" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1617113935714" />
     <state x="534" y="213" width="997" height="711" key="SettingsEditor" timestamp="1616823446052">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -247,10 +256,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="957" y="330" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614694513130" />
-    <state x="665" y="146" key="new project wizard" timestamp="1616899505408">
+    <state x="665" y="146" key="new project wizard" timestamp="1616945530798">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="665" y="146" key="new project wizard/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616899505408" />
+    <state x="665" y="146" key="new project wizard/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616945530798" />
     <state x="890" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1614651346319">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
