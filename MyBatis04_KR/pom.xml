@@ -25,6 +25,8 @@
         <module>Sub12_Complex_query_offical</module>
         <module>Sub11_More_to_One_F2</module>
         <module>Sub11_More_to_One_F1</module>
+        <module>Sub13_AliYun_MySQL</module>
+        <module>Sub14_One_to_More_F1</module>
     </modules>
 
     <!-- 添加依赖包 -->

@@ -1,0 +1,24 @@
+2021-04-03 17:06:20,958 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-04-03 17:06:21,241 283    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-03 17:06:21,241 283    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-03 17:06:21,241 283    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-03 17:06:21,242 284    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-03 17:06:21,534 576    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2021-04-03 17:06:24,177 3219   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1437941060.
+2021-04-03 17:06:24,180 3222   [           main] DEBUG dao.Dao_student.Dao_getStudent  - ==>  Preparing: select s.id s_id,s.name s_name,t.name t_name from MyBatis_KR.student s, MyBatis_KR.teacher t where s.tid = t.id 
+2021-04-03 17:06:24,232 3274   [           main] DEBUG dao.Dao_student.Dao_getStudent  - ==> Parameters: 
+2021-04-03 17:06:24,301 3343   [           main] DEBUG dao.Dao_student.Dao_getStudent  - <==      Total: 5
+2021-04-03 17:06:24,307 3349   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@55b53d44]
+2021-04-03 17:06:24,307 3349   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1437941060 to pool.
+2021-04-03 17:23:38,539 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-04-03 17:23:38,782 243    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-03 17:23:38,783 244    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-03 17:23:38,783 244    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-03 17:23:38,783 244    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-03 17:23:38,969 430    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2021-04-03 17:23:41,405 2866   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1437941060.
+2021-04-03 17:23:41,408 2869   [           main] DEBUG dao.Dao_student.Dao_getStudent  - ==>  Preparing: select s.id s_id,s.name s_name,t.name t_name from MyBatis_KR.student s, MyBatis_KR.teacher t where s.tid = t.id 
+2021-04-03 17:23:41,477 2938   [           main] DEBUG dao.Dao_student.Dao_getStudent  - ==> Parameters: 
+2021-04-03 17:23:41,548 3009   [           main] DEBUG dao.Dao_student.Dao_getStudent  - <==      Total: 5
+2021-04-03 17:23:41,554 3015   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@55b53d44]
+2021-04-03 17:23:41,554 3015   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1437941060 to pool.
