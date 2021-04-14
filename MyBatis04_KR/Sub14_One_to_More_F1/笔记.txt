@@ -1,0 +1,4 @@
+·功能：
+·核心：
+·注意事项
+    1.Dao_Teacher.xml中的变量名#{dao_t_id}，要与Dao_teacher中的@Param("dao_t_id")一致

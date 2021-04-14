@@ -6,4 +6,20 @@
 
 <mapper namespace="len.dao.Dao_teacher">
 
+    <select id="Dao_getTeacher" resultMap="Mapper_Teacher_to_Students">
+        select s.id s_id,s.name s_name,t.name t_name, t.id t_id
+        from MyBatis_KR.student s, MyBatis_KR.teacher t
+        where s.tid = t.id and t.id = #{t_id1}
+    </select>
+
+    <resultMap id="Mapper_Teacher_to_Students" type="len.pojo.Obj_teacher">
+        <result property="obj_t_id" column="t_id"/>
+        <result property="obj_t_name" column="t_name"/>
+        <collection property="obj_t_student" ofType="len.pojo.Obj_student">
+            <result property="obj_s_id" column="t_id"/>
+            <result property="obj_s_name" column="s_name"/>
+            <result property="obj_s_teacher_id" column="t_id"/>
+        </collection>
+    </resultMap>
+
 </mapper>

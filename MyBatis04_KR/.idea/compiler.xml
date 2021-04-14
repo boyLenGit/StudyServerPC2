@@ -20,6 +20,7 @@
         <module name="Sub14_One_to_More_F1" />
         <module name="Sub11_More_to_One_F2" />
         <module name="Sub11_More_to_One_F1" />
+        <module name="Sub16_One_to_More_F2" />
         <module name="Sub10_Lombok" />
       </profile>
     </annotationProcessing>
