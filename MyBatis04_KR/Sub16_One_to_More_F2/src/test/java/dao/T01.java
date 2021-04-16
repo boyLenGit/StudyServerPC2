@@ -1,6 +1,5 @@
 package dao;
 
-import len.dao.Dao_student;
 import len.dao.Dao_teacher;
 import len.mybatis.S02_Start_hm;
 import len.pojo.Obj_student;
@@ -29,13 +28,15 @@ public class T01 {
         sqlSession1.close();
     }
 
+
     @Test
-    public void T01_Student_Teacher(){
+    public void T01_Teacher_get_Student(){
         // 获得SqlSession对象
         SqlSession sqlSession1 = S02_Start_hm.getSqlSession();
-        Dao_student dao_student = sqlSession1.getMapper(Dao_student.class);
+        Dao_teacher dao_teacher = sqlSession1.getMapper(Dao_teacher.class);
 
-        List<Obj_student> studentList = dao_student.Dao_getStudent();
+        Obj_teacher obj_teacher = dao_teacher.Dao_getTeacher(1);
+        List<Obj_student> studentList = obj_teacher.getObj_t_student();
         for(Obj_student student: studentList){
             System.out.println(student);
         }

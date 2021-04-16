@@ -74,3 +74,15 @@
 2021-04-13 17:05:44,424 2455   [           main] DEBUG dao.Dao_teacher.Dao_getTeacher  - <==      Total: 1
 2021-04-13 17:05:44,428 2459   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@503d687a]
 2021-04-13 17:05:44,428 2459   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1346201722 to pool.
+2021-04-15 13:49:43,886 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-04-15 13:49:44,081 195    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-15 13:49:44,081 195    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-15 13:49:44,081 195    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-15 13:49:44,081 195    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-15 13:49:44,222 336    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2021-04-15 13:49:49,192 5306   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 1346201722.
+2021-04-15 13:49:49,194 5308   [           main] DEBUG dao.Dao_teacher.Dao_getTeacher  - ==>  Preparing: select * from MyBatis_KR.teacher where id = ? 
+2021-04-15 13:49:49,231 5345   [           main] DEBUG dao.Dao_teacher.Dao_getTeacher  - ==> Parameters: 1(Integer)
+2021-04-15 13:49:49,273 5387   [           main] DEBUG dao.Dao_teacher.Dao_getTeacher  - <==      Total: 1
+2021-04-15 13:49:49,276 5390   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@503d687a]
+2021-04-15 13:49:49,276 5390   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 1346201722 to pool.

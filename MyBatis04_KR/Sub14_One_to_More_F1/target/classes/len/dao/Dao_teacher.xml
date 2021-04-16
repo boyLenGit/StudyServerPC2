@@ -9,8 +9,9 @@
     <select id="Dao_getTeacher" resultMap="Mapper_Teacher_to_Students">
         select s.id s_id,s.name s_name,t.name t_name, t.id t_id
         from MyBatis_KR.student s, MyBatis_KR.teacher t
-        where s.tid = t.id and t.id = #{t_id1}
+        where s.tid = t.id and t.id = #{dao_t_id}
     </select>
+    <!-- #{dao_t_id}的变量名，要与Dao_teacher中的@Param("dao_t_id")一致 -->
 
     <resultMap id="Mapper_Teacher_to_Students" type="len.pojo.Obj_teacher">
         <result property="obj_t_id" column="t_id"/>
