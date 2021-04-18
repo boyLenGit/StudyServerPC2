@@ -18,6 +18,7 @@
         <module name="Sub08_RowBounds" />
         <module name="Sub05_resultMap_simple" />
         <module name="Sub02_db_properties" />
+        <module name="Sub15_Dynamic_if" />
         <module name="Sub14_One_to_More_F1" />
         <module name="Sub11_More_to_One_F2" />
         <module name="Sub11_More_to_One_F1" />

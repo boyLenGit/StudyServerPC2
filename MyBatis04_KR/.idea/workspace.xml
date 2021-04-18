@@ -10,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -34,22 +34,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/Sub05_resultMap_simple/src/main/resources/len/mapper" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sub16_One_to_More_F2/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Sub15_Dynamic_if/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub15_Dynamic_if\src\main\resources\len" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub05_resultMap_simple" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub16_One_to_More_F2\src\main\resources\len" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub14_One_to_More_F1\src\main\resources\len" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub13_AliYun_MySQL\src\main\resources\len" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="len.pojo" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub16_One_to_More_F2\src\main\java" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub16_One_to_More_F2\src\main\resources" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub16_One_to_More_F2\src\main\resources\len" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub14_One_to_More_F1\src\main\resources" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub14_One_to_More_F1\src\main\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="dao" />
@@ -57,33 +57,33 @@
       <recent name="len.dao" />
       <recent name="len.mybatis" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub15_Dynamic_if\src\main\resources" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub15_Dynamic_if\src\main\java" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub16_One_to_More_F2\src\main\java" />
+      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub16_One_to_More_F2\src\main\resources" />
       <recent name="D:\boyLen\Java\MyBatis04_KR\Sub16_One_to_More_F2\src\main\resources\len" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub14_One_to_More_F1\src\main\resources\len" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub13_AliYun_MySQL\src\main\resources\len" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub11_More_to_One_F2\src\main\resources\len" />
-      <recent name="D:\boyLen\Java\MyBatis04_KR\Sub11_More_to_One_F1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.T01.T01_Teacher_get_Student (1)">
-    <configuration name="T01.T01_Student_Teacher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub11_More_to_One_F1" />
+  <component name="RunManager" selected="JUnit.T01.queryBlogForeach">
+    <configuration name="IDUtiles.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub15_Dynamic_if" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dao.*" />
+          <option name="PATTERN" value="len.mybatis.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.T01" />
-      <option name="METHOD_NAME" value="T01_Student_Teacher" />
+      <option name="PACKAGE_NAME" value="len.mybatis" />
+      <option name="MAIN_CLASS_NAME" value="len.mybatis.IDUtiles" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="T01.T01_Teacher_get_Student (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub16_One_to_More_F2" />
+    <configuration name="T01.addBlog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub15_Dynamic_if" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dao.*" />
@@ -92,14 +92,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="dao" />
       <option name="MAIN_CLASS_NAME" value="dao.T01" />
-      <option name="METHOD_NAME" value="T01_Teacher_get_Student" />
+      <option name="METHOD_NAME" value="addBlog" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="T01.T01_Teacher_get_Student" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub14_One_to_More_F1" />
+    <configuration name="T01.queryBlogForeach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub15_Dynamic_if" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dao.*" />
@@ -108,14 +108,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="dao" />
       <option name="MAIN_CLASS_NAME" value="dao.T01" />
-      <option name="METHOD_NAME" value="T01_Teacher_get_Student" />
+      <option name="METHOD_NAME" value="queryBlogForeach" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="T01.T01_getUserByID (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub16_One_to_More_F2" />
+    <configuration name="T01.queryBlogIF" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub15_Dynamic_if" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dao.*" />
@@ -124,14 +124,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="dao" />
       <option name="MAIN_CLASS_NAME" value="dao.T01" />
-      <option name="METHOD_NAME" value="T01_getUserByID" />
+      <option name="METHOD_NAME" value="queryBlogIF" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="T01.T01_getUserByID (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub11_More_to_One_F2" />
+    <configuration name="T01.updateBlog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub15_Dynamic_if" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dao.*" />
@@ -140,7 +140,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="dao" />
       <option name="MAIN_CLASS_NAME" value="dao.T01" />
-      <option name="METHOD_NAME" value="T01_getUserByID" />
+      <option name="METHOD_NAME" value="updateBlog" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.T01.T01_Teacher_get_Student (1)" />
-        <item itemvalue="JUnit.T01.T01_getUserByID (1)" />
-        <item itemvalue="JUnit.T01.T01_Student_Teacher" />
-        <item itemvalue="JUnit.T01.T01_getUserByID (2)" />
-        <item itemvalue="JUnit.T01.T01_Teacher_get_Student" />
+        <item itemvalue="JUnit.T01.queryBlogForeach" />
+        <item itemvalue="JUnit.T01.updateBlog" />
+        <item itemvalue="JUnit.T01.queryBlogIF" />
+        <item itemvalue="JUnit.IDUtiles.test" />
+        <item itemvalue="JUnit.T01.addBlog" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +187,9 @@
       <workItem from="1617440726538" duration="8182000" />
       <workItem from="1618301890881" duration="312000" />
       <workItem from="1618302905421" duration="13348000" />
-      <workItem from="1618465746930" duration="7332000" />
+      <workItem from="1618465746930" duration="14040000" />
+      <workItem from="1618713448712" duration="1494000" />
+      <workItem from="1618715179592" duration="12760000" />
     </task>
     <servers />
   </component>
@@ -207,10 +209,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="819" y="183" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614654496448" />
-    <state x="988" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1616916887607">
+    <state x="988" y="325" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618715536386">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="988" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1616916887607" />
+    <state x="988" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618715536386" />
     <state x="1066" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1614522901644">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -235,22 +237,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1007" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615358810572" />
-    <state width="1433" height="266" key="GridCell.Tab.0.bottom" timestamp="1618478199108">
+    <state width="1433" height="270" key="GridCell.Tab.0.bottom" timestamp="1618741246081">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1433" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618478199108" />
-    <state width="1433" height="266" key="GridCell.Tab.0.center" timestamp="1618478199108">
+    <state width="1433" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618741246081" />
+    <state width="1433" height="270" key="GridCell.Tab.0.center" timestamp="1618741246081">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1433" height="266" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618478199108" />
-    <state width="1433" height="266" key="GridCell.Tab.0.left" timestamp="1618478199108">
+    <state width="1433" height="270" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618741246081" />
+    <state width="1433" height="270" key="GridCell.Tab.0.left" timestamp="1618741246081">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1433" height="266" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618478199108" />
-    <state width="1433" height="266" key="GridCell.Tab.0.right" timestamp="1618478199108">
+    <state width="1433" height="270" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618741246081" />
+    <state width="1433" height="270" key="GridCell.Tab.0.right" timestamp="1618741246081">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1433" height="266" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618478199108" />
+    <state width="1433" height="270" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618741246081" />
     <state x="534" y="213" width="997" height="711" key="SettingsEditor" timestamp="1616823446052">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -263,14 +265,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="957" y="330" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614694513130" />
-    <state x="-967" y="0" width="974" height="1057" key="dock-window-1" timestamp="1618477270936">
+    <state x="-967" y="0" width="974" height="1057" key="dock-window-1" timestamp="1618739336041">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="-967" y="0" width="974" height="1057" key="dock-window-1/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618477270936" />
-    <state x="665" y="146" key="new project wizard" timestamp="1618304395944">
+    <state x="-967" y="0" width="974" height="1057" key="dock-window-1/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618739336041" />
+    <state x="665" y="146" key="new project wizard" timestamp="1618713236444">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="665" y="146" key="new project wizard/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618304395944" />
+    <state x="665" y="146" key="new project wizard/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618713236444" />
     <state x="890" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1614651346319">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

@@ -169,3 +169,18 @@
 2021-04-15 18:07:51,073 4237   [           main] DEBUG dao.Dao_teacher.Dao_getTeacher  - <==      Total: 1
 2021-04-15 18:07:51,074 4238   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@e1de817]
 2021-04-15 18:07:51,074 4238   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 236840983 to pool.
+2021-04-18 10:52:05,292 0      [           main] DEBUG ache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2021-04-18 10:52:05,535 243    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-18 10:52:05,536 244    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-18 10:52:05,536 244    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-18 10:52:05,536 244    [           main] DEBUG source.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+2021-04-18 10:52:05,700 408    [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+2021-04-18 10:52:07,773 2481   [           main] DEBUG source.pooled.PooledDataSource  - Created connection 236840983.
+2021-04-18 10:52:07,776 2484   [           main] DEBUG dao.Dao_teacher.Dao_getTeacher  - ==>  Preparing: select * from MyBatis_KR.teacher where id = ? 
+2021-04-18 10:52:07,824 2532   [           main] DEBUG dao.Dao_teacher.Dao_getTeacher  - ==> Parameters: 1(Integer)
+2021-04-18 10:52:07,883 2591   [           main] DEBUG _teacher.getStudentByTeacherId  - ====>  Preparing: select * from MyBatis_KR.student where tid = ? 
+2021-04-18 10:52:07,884 2592   [           main] DEBUG _teacher.getStudentByTeacherId  - ====> Parameters: 1(Integer)
+2021-04-18 10:52:07,908 2616   [           main] DEBUG _teacher.getStudentByTeacherId  - <====      Total: 5
+2021-04-18 10:52:07,911 2619   [           main] DEBUG dao.Dao_teacher.Dao_getTeacher  - <==      Total: 1
+2021-04-18 10:52:07,912 2620   [           main] DEBUG ansaction.jdbc.JdbcTransaction  - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@e1de817]
+2021-04-18 10:52:07,912 2620   [           main] DEBUG source.pooled.PooledDataSource  - Returned connection 236840983 to pool.

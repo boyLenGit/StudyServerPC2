@@ -28,6 +28,7 @@
         <module>Sub13_AliYun_MySQL</module>
         <module>Sub14_One_to_More_F1</module>
         <module>Sub16_One_to_More_F2</module>
+        <module>Sub15_Dynamic_if</module>
     </modules>
 
     <!-- 添加依赖包 -->
