@@ -67,7 +67,7 @@
   </component>
   <component name="RunManager" selected="JUnit.T01.queryBlogForeach">
     <configuration name="IDUtiles.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub15_Dynamic_if" />
+      <module name="Sub16_Dynamic" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="len.mybatis.*" />
@@ -83,7 +83,7 @@
       </method>
     </configuration>
     <configuration name="T01.addBlog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub15_Dynamic_if" />
+      <module name="Sub16_Dynamic" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dao.*" />
@@ -99,7 +99,7 @@
       </method>
     </configuration>
     <configuration name="T01.queryBlogForeach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub15_Dynamic_if" />
+      <module name="Sub16_Dynamic" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dao.*" />
@@ -115,7 +115,7 @@
       </method>
     </configuration>
     <configuration name="T01.queryBlogIF" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub15_Dynamic_if" />
+      <module name="Sub16_Dynamic" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dao.*" />
@@ -131,7 +131,7 @@
       </method>
     </configuration>
     <configuration name="T01.updateBlog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub15_Dynamic_if" />
+      <module name="Sub16_Dynamic" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="dao.*" />
@@ -149,8 +149,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.T01.queryBlogForeach" />
-        <item itemvalue="JUnit.T01.updateBlog" />
         <item itemvalue="JUnit.T01.queryBlogIF" />
+        <item itemvalue="JUnit.T01.updateBlog" />
         <item itemvalue="JUnit.IDUtiles.test" />
         <item itemvalue="JUnit.T01.addBlog" />
       </list>
@@ -189,7 +189,9 @@
       <workItem from="1618302905421" duration="13348000" />
       <workItem from="1618465746930" duration="14040000" />
       <workItem from="1618713448712" duration="1494000" />
-      <workItem from="1618715179592" duration="12760000" />
+      <workItem from="1618715179592" duration="16847000" />
+      <workItem from="1618815050578" duration="10119000" />
+      <workItem from="1618890490059" duration="4803000" />
     </task>
     <servers />
   </component>
@@ -237,22 +239,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1007" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615358810572" />
-    <state width="1433" height="270" key="GridCell.Tab.0.bottom" timestamp="1618741246081">
+    <state width="1433" height="268" key="GridCell.Tab.0.bottom" timestamp="1618902138755">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1433" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618741246081" />
-    <state width="1433" height="270" key="GridCell.Tab.0.center" timestamp="1618741246081">
+    <state width="1433" height="268" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618902138755" />
+    <state width="1433" height="268" key="GridCell.Tab.0.center" timestamp="1618902138753">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1433" height="270" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618741246081" />
-    <state width="1433" height="270" key="GridCell.Tab.0.left" timestamp="1618741246081">
+    <state width="1433" height="268" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618902138753" />
+    <state width="1433" height="268" key="GridCell.Tab.0.left" timestamp="1618902138752">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1433" height="270" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618741246081" />
-    <state width="1433" height="270" key="GridCell.Tab.0.right" timestamp="1618741246081">
+    <state width="1433" height="268" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618902138752" />
+    <state width="1433" height="268" key="GridCell.Tab.0.right" timestamp="1618902138754">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1433" height="270" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618741246081" />
+    <state width="1433" height="268" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618902138754" />
     <state x="534" y="213" width="997" height="711" key="SettingsEditor" timestamp="1616823446052">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -265,10 +267,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="957" y="330" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1614694513130" />
-    <state x="-967" y="0" width="974" height="1057" key="dock-window-1" timestamp="1618739336041">
+    <state x="-1107" y="0" width="1123" height="1050" key="dock-window-1" timestamp="1618905398916">
       <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
-    <state x="-967" y="0" width="974" height="1057" key="dock-window-1/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618739336041" />
+    <state x="-1107" y="0" width="1123" height="1050" key="dock-window-1/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1618905398916" />
     <state x="665" y="146" key="new project wizard" timestamp="1618713236444">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
