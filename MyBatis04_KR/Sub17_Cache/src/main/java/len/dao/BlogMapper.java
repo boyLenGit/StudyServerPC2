@@ -1,8 +1,9 @@
 package len.dao;
 
+import len.pojo.Blog;
+
 import java.util.List;
 import java.util.Map;
-import len.pojo.Blog;
 
 public interface BlogMapper {
 

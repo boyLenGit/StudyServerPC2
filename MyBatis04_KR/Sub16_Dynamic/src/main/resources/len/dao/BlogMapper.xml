@@ -71,7 +71,16 @@
     <select id="queryBlogForeach" parameterType="map" resultMap="Map_Obj_Blog">
         select * from MyBatis_KR.blog
         <where>
-            <foreach collection="list_id" item="id" open="and (" close=")" separator="or">
+            <foreach collection="list_id" item="Obj_id" open="and (" close=")" separator="or">
+                id=#{Obj_id}
+            </foreach>
+        </where>
+    </select>
+
+    <select id="queryBlogForeach_list" parameterType="list" resultMap="Map_Obj_Blog">
+        select * from MyBatis_KR.blog
+        <where>
+            <foreach collection="list" item="Obj_id" open="and (" close=")" separator="or">
                 id=#{Obj_id}
             </foreach>
         </where>

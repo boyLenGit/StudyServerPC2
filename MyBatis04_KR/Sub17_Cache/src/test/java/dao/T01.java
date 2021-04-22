@@ -1,9 +1,9 @@
 package dao;
 
 import len.dao.BlogMapper;
-import len.pojo.Blog;
 import len.mybatis.IDUtiles;
 import len.mybatis.MybatisUtils;
+import len.pojo.Blog;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
@@ -75,6 +75,9 @@ public class T01 {
         map.put("Obj_id", "bd4f2a83c3b843ab925dcd4d9aa6fbeb");
 
         blogMapper.updateBlog(map);
+
+        // 手动清理缓存
+        sqlSession.clearCache();
 
         sqlSession.close();
 

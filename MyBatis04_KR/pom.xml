@@ -25,6 +25,7 @@
         <module>Sub14_One_to_More_F1</module>
         <module>Sub15_One_to_More_F2</module>
         <module>Sub16_Dynamic</module>
+        <module>Sub17_Cache</module>
     </modules>
 
     <!-- 添加依赖包 -->
