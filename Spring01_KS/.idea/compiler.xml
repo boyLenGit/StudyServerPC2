@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="S02_hellospring" />
         <module name="S01_ioc" />
+        <module name="S02_hellospring" />
       </profile>
     </annotationProcessing>
   </component>

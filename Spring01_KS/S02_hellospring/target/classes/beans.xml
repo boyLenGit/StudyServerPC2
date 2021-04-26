@@ -25,6 +25,4 @@
         <constructor-arg name="str" value="Test_value_hava_param_C"/>
     </bean>
 
-
-
 </beans>
