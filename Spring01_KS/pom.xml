@@ -11,6 +11,7 @@
     <modules>
         <module>S01_ioc</module>
         <module>S02_hellospring</module>
+        <module>S03_DL_Inject</module>
     </modules>
 
     <dependencies>

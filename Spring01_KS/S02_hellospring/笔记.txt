@@ -28,3 +28,5 @@
             <bean id="bean_hava_param_C" class="len.pojo.Hello_have_param_C">
                 <constructor-arg name="str" value="Test_value_hava_param_C"/>
             </bean>
+
+·注意事项：同一个类中，有参无参可以同时存在
