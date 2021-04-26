@@ -9,6 +9,7 @@
         <module name="S02_hellospring" />
         <module name="S01_ioc" />
         <module name="S03_DL_Inject" />
+        <module name="S04_AutoWired" />
       </profile>
     </annotationProcessing>
   </component>
