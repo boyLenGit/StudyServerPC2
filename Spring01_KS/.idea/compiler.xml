@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="S02_hellospring" />
-        <module name="S01_ioc" />
-        <module name="S03_DL_Inject" />
         <module name="S04_AutoWired" />
+        <module name="S05_Autowire_Annotation" />
+        <module name="S01_ioc" />
+        <module name="S06_Annotation_develop" />
+        <module name="S03_DL_Inject" />
       </profile>
     </annotationProcessing>
   </component>
