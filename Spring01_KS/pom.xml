@@ -15,6 +15,7 @@
         <module>S04_AutoWired</module>
         <module>S05_Autowire_Annotation</module>
         <module>S06_Annotation_develop</module>
+        <module>S07_StaticProxy</module>
     </modules>
 
     <dependencies>

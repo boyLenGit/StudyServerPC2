@@ -10,6 +10,7 @@
         http://www.springframework.org/schema/aop
         https://www.springframework.org/schema/aop/spring-aop.xsd">
     <!--开启注解的支持-->
+
     <context:annotation-config/>
     <context:component-scan base-package="len"/>
 
