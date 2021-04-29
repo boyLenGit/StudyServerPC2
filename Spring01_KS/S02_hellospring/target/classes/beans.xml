@@ -21,8 +21,11 @@
         <constructor-arg type="java.lang.String" value="Test_value_hava_param_B"/>
     </bean>
 
+
     <bean id="bean_hava_param_C" class="len.pojo.Hello_have_param_C">
         <constructor-arg name="str" value="Test_value_hava_param_C"/>
     </bean>
+
+
 
 </beans>
