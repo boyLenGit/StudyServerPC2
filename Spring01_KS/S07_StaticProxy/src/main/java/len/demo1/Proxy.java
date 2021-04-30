@@ -1,15 +1,14 @@
 package len.demo1;
 
-
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
-@AllArgsConstructor
-@NoArgsConstructor
-public class Proxy {
+public class Proxy  implements Rent {
     private Host host;
 
-    @Override
+    public Proxy(){}
+
+    public Proxy(Host host){
+        this.host = host;
+    }
+
     public void rent() {
         host.rent();
     }

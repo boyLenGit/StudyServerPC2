@@ -1,5 +1,5 @@
 package len.demo1;
 
-public class Rent {
+public interface Rent {
     void rent();
 }
