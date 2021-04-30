@@ -8,25 +8,21 @@ import lombok.NoArgsConstructor;
 public class UserServicePorxy implements UserService {
 
     private UserService userService;
-    @Override
     public void add() {
         log("add");
         userService.add();
     }
 
-    @Override
     public void delete() {
         log("delete");
         userService.delete();
     }
 
-    @Override
     public void update() {
         log("update");
         userService.update();
     }
 
-    @Override
     public void query() {
         log("query");
         userService.query();

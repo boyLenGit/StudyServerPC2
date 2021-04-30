@@ -1,9 +1,6 @@
-package com.kuang.demo03;
+package len.demo03;
 
-/**
- * @author ：ltb
- * @date ：2020/7/15
- */
+
 public class Client {
 
     public static void main(String[] args) {

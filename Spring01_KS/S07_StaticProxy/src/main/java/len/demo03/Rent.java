@@ -1,4 +1,4 @@
-package com.kuang.demo03;
+package len.demo03;
 
 /**
  * @author ：ltb
