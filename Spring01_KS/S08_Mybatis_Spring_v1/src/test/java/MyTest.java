@@ -1,8 +1,9 @@
-import com.kuang.pojo.User;
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import len.mapper.UserMapper;
+import len.pojo.User;
+import len.ibatis.io.Resources;
+import len.ibatis.session.SqlSession;
+import len.ibatis.session.SqlSessionFactory;
+import len.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
