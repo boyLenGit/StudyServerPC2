@@ -16,6 +16,7 @@
         <module>S05_Autowire_Annotation</module>
         <module>S06_Annotation_develop</module>
         <module>S07_StaticProxy</module>
+        <module>S08_Mybatis_Spring_v1</module>
     </modules>
 
     <dependencies>

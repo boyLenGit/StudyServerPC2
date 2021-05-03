@@ -13,6 +13,7 @@
         <module name="S01_ioc" />
         <module name="S06_Annotation_develop" />
         <module name="S03_DL_Inject" />
+        <module name="S08_Mybatis_Spring_v1" />
       </profile>
     </annotationProcessing>
   </component>
