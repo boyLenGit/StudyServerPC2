@@ -5,6 +5,6 @@
 <mapper namespace="len.mapper.UserMapper">
 
     <select id="selectAllUsers" resultType="User">
-        select * from mybatis.user
+        select * from MyBatis_KR.student
     </select>
 </mapper>

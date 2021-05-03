@@ -4,11 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <package name="len.pojo"/>
+        <package name="com.kuang.pojo"/>
     </typeAliases>
-
-    <mappers>
-        <mapper class="len.mapper.UserMapper"></mapper>
-    </mappers>
 
 </configuration>

@@ -18,6 +18,7 @@
         <module>S07_StaticProxy</module>
         <module>S09_Mybatis_with_Spring</module>
         <module>S08_only_MyBatis</module>
+        <module>S09_MyBatis_with_Spring_github</module>
     </modules>
 
     <dependencies>
