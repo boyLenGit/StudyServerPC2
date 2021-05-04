@@ -1,5 +1,5 @@
-import len.mapper.UserMapper;
 import len.pojo.User;
+import len.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -10,7 +10,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-
 
 public class MyTest {
 

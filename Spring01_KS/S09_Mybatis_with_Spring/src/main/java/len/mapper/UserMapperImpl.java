@@ -2,7 +2,6 @@ package len.mapper;
 
 import len.pojo.User;
 import org.mybatis.spring.SqlSessionTemplate;
-
 import java.util.List;
 
 public class UserMapperImpl implements UserMapper {
@@ -14,6 +13,7 @@ public class UserMapperImpl implements UserMapper {
         this.sqlSession = sqlSession;
     }
 
+    @Override
     public List<User> selectAllUsers() {
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         return mapper.selectAllUsers();

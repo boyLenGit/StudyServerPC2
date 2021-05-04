@@ -7,8 +7,4 @@
         <package name="len.pojo"/>
     </typeAliases>
 
-    <mappers>
-        <mapper class="len.mapper.UserMapper"></mapper>
-    </mappers>
-
 </configuration>
