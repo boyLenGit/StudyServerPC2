@@ -7,4 +7,8 @@
     <select id="selectAllUsers" resultType="User">
         select * from MyBatis_KR.student
     </select>
+
+    <select id="getUserById" parameterType="int" resultType="User">
+        select * from MyBatis_KR.student where id = #{int_id};
+    </select>
 </mapper>

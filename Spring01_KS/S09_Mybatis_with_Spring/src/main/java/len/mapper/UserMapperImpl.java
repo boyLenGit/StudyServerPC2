@@ -18,4 +18,10 @@ public class UserMapperImpl implements UserMapper {
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         return mapper.selectAllUsers();
     }
+
+    @Override
+    public User getUserById(int int_id) {
+        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        return mapper.getUserById(int_id);
+    }
 }

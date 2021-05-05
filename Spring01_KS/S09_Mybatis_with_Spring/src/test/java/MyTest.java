@@ -16,10 +16,11 @@ public class MyTest {
     @Test
     public void selectAllUsers() throws IOException {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring-mapper.xml");
-        UserMapper userMapper = context.getBean("userMapper", UserMapper.class);
+        UserMapper userMapper = context.getBean("userMapper_itself", UserMapper.class);
         for (User user : userMapper.selectAllUsers()){
             System.out.println(user);
         }
 
+        System.out.println("GetUserById:"+userMapper.getUserById(1));
     }
 }
