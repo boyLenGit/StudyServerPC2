@@ -1,28 +1,20 @@
 package len.mapper;
 
 import len.pojo.User;
+import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionTemplate;
-
+import org.mybatis.spring.support.SqlSessionDaoSupport;
 import java.util.List;
 
-public class UserMapperImpl implements UserMapper {
+public class UserMapperImpl extends SqlSessionDaoSupport implements UserMapper {
 
-    //我们的所有操作都使用sqlSession来执行，在原来，现在都使用sqlSessionTemplate
-    private SqlSessionTemplate sqlSession;
-
-    public void setSqlSession(SqlSessionTemplate sqlSession) {
-        this.sqlSession = sqlSession;
+    public List<User> selectAllUsers(){
+        SqlSession sqlSession1 = getSqlSession();
+        UserMapper userMapper1 = sqlSession1.getMapper(UserMapper.class);
+        return userMapper1.selectAllUsers();
     }
 
-    @Override
-    public List<User> selectAllUsers() {
-        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        return mapper.selectAllUsers();
-    }
-
-    @Override
     public User getUserById(int int_id) {
-        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        return mapper.getUserById(int_id);
+        return getSqlSession().getMapper(UserMapper.class).getUserById(int_id);
     }
 }
