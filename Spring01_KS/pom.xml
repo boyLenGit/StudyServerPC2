@@ -20,6 +20,7 @@
         <module>S08_only_MyBatis</module>
         <module>S09_MyBatis_with_Spring_github</module>
         <module>S10_Spring_with_MyBatis_Simple</module>
+        <module>S11_Affair</module>
     </modules>
 
     <dependencies>

@@ -15,6 +15,7 @@
         <module name="S01_ioc" />
         <module name="S06_Annotation_develop" />
         <module name="S03_DL_Inject" />
+        <module name="S11_Affair" />
         <module name="S10_Spring_with_MyBatis_Simple" />
         <module name="S08_only_MyBatis" />
         <module name="S09_MyBatis_with_Spring_github" />
