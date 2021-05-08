@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>S01_Servlet</module>
+        <module>S02_HelloMVC</module>
     </modules>
 
     <dependencies>
