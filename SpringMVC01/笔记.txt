@@ -7,3 +7,10 @@
 
 ·Tips
     1.modelAndView1.setViewName("hello");  用于指定该Controller打开哪个Web视图（即jsp文件）
+
+·目录
+    1.
+    2.
+    3.
+    4.S04_Controller_config
+        讲解了3中Controller的使用方式，既有Controller的Config问题，又有注解开发。

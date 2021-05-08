@@ -12,6 +12,7 @@
         <module>S01_Servlet</module>
         <module>S02_HelloMVC</module>
         <module>S04_Controller_config</module>
+        <module>S03_Annotation</module>
     </modules>
 
     <dependencies>
