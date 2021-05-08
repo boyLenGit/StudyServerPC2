@@ -7,8 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="S02_HelloMVC" />
+        <module name="S04_Controller_config" />
         <module name="S01_Servlet" />
+        <module name="S02_HelloMVC" />
       </profile>
     </annotationProcessing>
   </component>
