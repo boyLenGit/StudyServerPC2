@@ -17,8 +17,8 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
-    <!--/ 匹配所有的请求；（不包括.jsp）-->
-    <!--/* 匹配所有的请求；（包括.jsp）-->
+
+    <!-- 注意：“/”匹配所有的请求，不包括.jsp；而“/*”匹配所有的请求，包括.jsp -->
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>
         <url-pattern>/</url-pattern>
