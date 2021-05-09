@@ -12,6 +12,7 @@
         <module name="S04_Controller_config" />
         <module name="S05_RestFull_Style" />
         <module name="S02_HelloMVC" />
+        <module name="S06_UTF_8" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

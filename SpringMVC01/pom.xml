@@ -16,6 +16,7 @@
         <module>S05_RestFull_Style</module>
         <module>S06_Redirect</module>
         <module>S07_Receive</module>
+        <module>S06_UTF_8</module>
     </modules>
 
     <dependencies>
