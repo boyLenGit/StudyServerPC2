@@ -7,15 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="S04_Controller_config_Github" />
         <module name="S01_Servlet" />
         <module name="S03_Annotation" />
-        <module name="S04_Controller_config" />
-        <module name="S05_RestFull_Style" />
-        <module name="S02_HelloMVC" />
         <module name="S06_UTF_8" />
+        <module name="S02_HelloMVC" />
+        <module name="S05_RestFull_Style" />
+        <module name="S04_Controller_config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="S04_Controller_config_Github2" target="1.5" />
       <module name="S06_Redirect" target="1.5" />
       <module name="S07_Receive" target="1.5" />
     </bytecodeTargetLevel>

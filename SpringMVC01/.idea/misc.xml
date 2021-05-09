@@ -9,6 +9,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/S04_Controller_config_Github2/pom.xml" />
         <option value="$PROJECT_DIR$/S06_Redirect/pom.xml" />
         <option value="$PROJECT_DIR$/S07_Receive/pom.xml" />
       </set>
