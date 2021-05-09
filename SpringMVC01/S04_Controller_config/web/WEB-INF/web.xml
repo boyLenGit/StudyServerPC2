@@ -19,4 +19,20 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!--配置springmvc的乱码过滤-->
+    <filter>
+        <filter-name>encoding</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encoding</filter-name>
+        <url-pattern>/*</url-pattern>
+        <!-- /*表示扫描包括.jsp的文件在内。如果不加*，过滤器将失效。要区分/与/* -->
+    </filter-mapping>
+
+
 </web-app>
