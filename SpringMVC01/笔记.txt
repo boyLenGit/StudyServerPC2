@@ -13,5 +13,9 @@
     2.
     3.
     4.S04_Controller_config
-        讲解了3种Controller的使用方式，还有/a/b结构的网页请求。既有Controller的Config示例，又有注解开发的示例。
+        1.3种Controller的使用方式
+        2./t1/c1结构的网页请求
+        3.既有Controller的Config示例，又有注解开发的示例。
+        4.重定向Redirect示例
+
     5.

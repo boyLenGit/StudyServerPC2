@@ -14,6 +14,8 @@
         <module>S04_Controller_config</module>
         <module>S03_Annotation</module>
         <module>S05_RestFull_Style</module>
+        <module>S06_Redirect</module>
+        <module>S07_Receive</module>
     </modules>
 
     <dependencies>
