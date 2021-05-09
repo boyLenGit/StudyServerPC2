@@ -10,6 +10,7 @@
         <module name="S04_Controller_config" />
         <module name="S01_Servlet" />
         <module name="S02_HelloMVC" />
+        <module name="S05_RestFull_Style" />
         <module name="S03_Annotation" />
       </profile>
     </annotationProcessing>

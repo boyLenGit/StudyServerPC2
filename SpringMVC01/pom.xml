@@ -13,6 +13,7 @@
         <module>S02_HelloMVC</module>
         <module>S04_Controller_config</module>
         <module>S03_Annotation</module>
+        <module>S05_RestFull_Style</module>
     </modules>
 
     <dependencies>
