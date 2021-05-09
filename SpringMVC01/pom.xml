@@ -17,6 +17,7 @@
         <module>S06_UTF_8</module>
         <module>S04_Controller_config_Github</module>
         <module>S04_Controller_config_Github2</module>
+        <module>S08_Project_Book</module>
     </modules>
 
     <dependencies>
