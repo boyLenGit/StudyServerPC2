@@ -13,4 +13,5 @@
     2.
     3.
     4.S04_Controller_config
-        讲解了3中Controller的使用方式，既有Controller的Config问题，又有注解开发。
+        讲解了3种Controller的使用方式，还有/a/b结构的网页请求。既有Controller的Config示例，又有注解开发的示例。
+    5.
