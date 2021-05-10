@@ -16,7 +16,6 @@
         <module>S05_RestFull_Style</module>
         <module>S06_UTF_8</module>
         <module>S04_Controller_config_Github</module>
-        <module>S04_Controller_config_Github2</module>
         <module>S08_Project_Book</module>
     </modules>
 
@@ -47,6 +46,7 @@
             <version>1.18.12</version>
         </dependency>
 
+        <!-- Servlet JSP -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>

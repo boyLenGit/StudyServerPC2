@@ -23,7 +23,7 @@ public class T01 {
         SqlSession sqlSession1 = S02_Start_hm.getSqlSession();
         Dao_teacher dao_teacher = sqlSession1.getMapper(Dao_teacher.class);
 
-        Obj_teacher obj_teacher = dao_teacher.Dao_getTeacher(1);
+        Obj_teacher obj_teacher = dao_teacher.Dao_getTeacher(2);
         System.out.println(obj_teacher);
         // 关闭SQLSession
         sqlSession1.close();

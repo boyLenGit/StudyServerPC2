@@ -7,12 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Sub16_Dynamic" />
         <module name="Sub09_annotation" />
         <module name="Sub13_AliYun_MySQL" />
         <module name="Sub02_db_properties" />
         <module name="Sub17_Cache" />
         <module name="Sub07_limit" />
+        <module name="Sub11_More_to_One_F1" />
         <module name="Sub01_Start" />
         <module name="Sub06_Log" />
         <module name="Sub04_Alias_annotation" />
@@ -22,7 +22,7 @@
         <module name="Sub15_One_to_More_F2" />
         <module name="Sub14_One_to_More_F1" />
         <module name="Sub11_More_to_One_F2" />
-        <module name="Sub11_More_to_One_F1" />
+        <module name="Sub16_Dynamic" />
         <module name="Sub10_Lombok" />
       </profile>
     </annotationProcessing>

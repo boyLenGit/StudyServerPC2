@@ -65,12 +65,28 @@
       <recent name="D:\boyLen\Java\MyBatis04_KR\Sub17_Cache\src\main\java\len\mybatis" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.T01.queryBlogIF (1)">
+  <component name="RunManager" selected="JUnit.T01.T01_getUserByID">
     <configuration name="MyTest.addBlog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sub17_Cache" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyTest" />
       <option name="METHOD_NAME" value="addBlog" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T01.T01_getUserByID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sub13_AliYun_MySQL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dao" />
+      <option name="MAIN_CLASS_NAME" value="dao.T01" />
+      <option name="METHOD_NAME" value="T01_getUserByID" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -87,22 +103,6 @@
       <option name="PACKAGE_NAME" value="dao" />
       <option name="MAIN_CLASS_NAME" value="dao.T01" />
       <option name="METHOD_NAME" value="addBlog" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="T01.queryBlogForeach_list" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sub16_Dynamic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.T01" />
-      <option name="METHOD_NAME" value="queryBlogForeach_list" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.T01.T01_getUserByID" />
         <item itemvalue="JUnit.T01.queryBlogIF (1)" />
         <item itemvalue="JUnit.T01.queryBlogIF" />
         <item itemvalue="JUnit.T01.addBlog" />
         <item itemvalue="JUnit.MyTest.addBlog" />
-        <item itemvalue="JUnit.T01.queryBlogForeach_list" />
       </list>
     </recent_temporary>
   </component>
@@ -190,6 +190,7 @@
       <workItem from="1619077317142" duration="4983000" />
       <workItem from="1619417007527" duration="118000" />
       <workItem from="1620116097340" duration="1679000" />
+      <workItem from="1620645169020" duration="3682000" />
     </task>
     <servers />
   </component>
@@ -237,21 +238,25 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1007" y="280" key="FileChooserDialogImpl/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1615358810572" />
-    <state width="1433" height="276" key="GridCell.Tab.0.bottom" timestamp="1619162316381">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1433" height="274" key="GridCell.Tab.0.bottom" timestamp="1620654373081">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state width="1433" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1620654373081" />
     <state width="1433" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1619162316381" />
-    <state width="1433" height="276" key="GridCell.Tab.0.center" timestamp="1619162316381">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1433" height="274" key="GridCell.Tab.0.center" timestamp="1620654373080">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state width="1433" height="274" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1620654373080" />
     <state width="1433" height="276" key="GridCell.Tab.0.center/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1619162316381" />
-    <state width="1433" height="276" key="GridCell.Tab.0.left" timestamp="1619162316381">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1433" height="274" key="GridCell.Tab.0.left" timestamp="1620654373079">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state width="1433" height="274" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1620654373079" />
     <state width="1433" height="276" key="GridCell.Tab.0.left/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1619162316381" />
-    <state width="1433" height="276" key="GridCell.Tab.0.right" timestamp="1619162316381">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state width="1433" height="274" key="GridCell.Tab.0.right" timestamp="1620654373081">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state width="1433" height="274" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1620654373081" />
     <state width="1433" height="276" key="GridCell.Tab.0.right/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1619162316381" />
     <state x="534" y="213" width="997" height="711" key="SettingsEditor" timestamp="1616823446052">
       <screen x="0" y="0" width="1920" height="1050" />
