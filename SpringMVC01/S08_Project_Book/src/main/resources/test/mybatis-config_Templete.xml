@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration> <!-- MyBatis的核心配置文件，用于从XML中构建SqlSessionFactory -->
-
+    
     <typeAliases>
         <package name="len.pojo"/>
     </typeAliases>
