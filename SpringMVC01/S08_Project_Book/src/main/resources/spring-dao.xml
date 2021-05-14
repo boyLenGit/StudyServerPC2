@@ -7,7 +7,7 @@
     <!--1.关联数据库配置文件-->
     <context:property-placeholder location="classpath:database.properties"/>
 
-    <!--2.连接池种类
+    <!--2.连接池
         dbcp:半自动化，不能自动连接
         c3p0:自动化操作（自动化的加载配置文件，并且可以自动设置到对象中
         druid:
