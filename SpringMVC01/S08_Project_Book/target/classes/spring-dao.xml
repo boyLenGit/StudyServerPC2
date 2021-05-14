@@ -13,7 +13,7 @@
         druid:
         hikori:
     -->
-    <bean id="dataSource_beanId" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <!-- 配置连接池属性 -->
         <property name="driverClass" value="${jdbc.driver}"/>
         <property name="jdbcUrl" value="${jdbc.url}"/>
@@ -33,7 +33,7 @@
 
     <!--3.SQLSessionFactory-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource_beanId"/>
+        <property name="dataSource" ref="dataSource"/>
         <!--绑定mybatis配置文件-->
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
     </bean>

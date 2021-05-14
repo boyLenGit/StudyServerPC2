@@ -22,7 +22,7 @@
     </environments>
 
     <mappers>
-        <mapper class="len.dao.BookMapper"></mapper>
+        <mapper class="len.dao.BookMapper"/>
     </mappers>
 
 </configuration>

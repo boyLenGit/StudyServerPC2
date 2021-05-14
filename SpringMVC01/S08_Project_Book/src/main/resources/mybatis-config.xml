@@ -5,6 +5,9 @@
 
 <!-- MyBatis的核心配置文件，用于从XML中构建SqlSessionFactory -->
 <configuration>
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
 
     <typeAliases>
         <package name="len.pojo"/>
