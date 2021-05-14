@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BookServiceImpl {
+public class BookServiceImpl implements BookService{
 
     //service调dao层，组合Dao
     //@Autowired
