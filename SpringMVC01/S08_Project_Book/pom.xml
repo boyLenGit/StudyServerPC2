@@ -30,7 +30,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.22</version>
+            <version>8.0.20</version>
         </dependency>
 
         <!-- 数据库连接池：c3p0:dbcp -->
@@ -76,7 +76,7 @@
 
     </dependencies>
 
-    <!--静态资源导出问题-->
+<!--    &lt;!&ndash;静态资源导出问题&ndash;&gt;-->
     <build>
         <resources>
             <resource>

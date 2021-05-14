@@ -15,7 +15,7 @@ public class TestSpring {
         BookService bookServiceImpl = (BookService) context1.getBean("BookServiceImpl");
         List<Books> book1 = bookServiceImpl.queryAllBooks();
         for (Books book:book1){
-            System.out.println(book1);
+            System.out.println(book);
         }
     }
 

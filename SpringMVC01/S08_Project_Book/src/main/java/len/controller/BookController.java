@@ -21,8 +21,11 @@ public class BookController {
     //查询全部的书籍，并且返回到一个书籍展示页面
     @RequestMapping("/allBook_len")
     public String list(Model model){
-        List<Books> list = bookService.queryAllBooks();
-        model.addAttribute("list", list);
+        List<Books> lists = bookService.queryAllBooks();
+        for (Books books1 :lists){
+            System.out.println("Test"+books1);
+        }
+        model.addAttribute("list", lists);
         return "allBook_len";
     }
 }

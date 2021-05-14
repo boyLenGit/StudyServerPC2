@@ -13,3 +13,9 @@
         (1,'Java',1,'从入门到放弃'),
         (2,'MySQL',10,'从删库到跑路'),
         (3,'Linux',5,'从入门到精通');
+
+·报错
+    1.错误：com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL
+        原因：将jdbc.url=jdbc:mysql://39.103.160.64:3306/MyBatis_KR?useUnicode=true&amp;characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+        的;修改为&：jdbc.url=jdbc:mysql://39.103.160.64:3306/MyBatis_KR?useUnicode=true&amp&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+
