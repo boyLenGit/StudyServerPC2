@@ -28,4 +28,14 @@ public class TestSpring {
             System.out.println(book);
         }
     }
+
+    @Test
+    public void test() {
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        BookService bookService = (BookService)applicationContext.getBean("BookServiceImpl");
+        List<Books> books = bookService.queryAllBooks();
+        for (Books book : books) {
+            System.out.println(book);
+        }
+    }
 }
