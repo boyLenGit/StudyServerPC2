@@ -14,7 +14,8 @@
         (2,'MySQL',10,'从删库到跑路'),
         (3,'Linux',5,'从入门到精通);
 
-·Tomcat运行不成功原因：调用的是MySQL8.0的驱动，导致报错。如果是调用MySQL5驱动则可以解决问题
+·Tomcat运行不成功原因：
+    1.调用的是MySQL8.0的驱动，导致报错。如果是调用MySQL5驱动则可以解决问题
 
 ·报错
     1.错误：com.mysql.cj.exceptions.WrongArgumentException: Malformed database URL
