@@ -18,7 +18,7 @@
     h3 {
       width: 180px;
       height: 38px;
-      margin: 100px auto;
+      margin: 10px auto;
       text-align: center;
       line-height: 38px;
       background: deepskyblue;
@@ -27,7 +27,8 @@
   </style>
 </head>
 <body>
-<h3><a href="${pageContext.request.contextPath}/book/queryAllBooks">进入书籍页面</a></h3>
-<h3><a href="${pageContext.request.contextPath}/queryBooksById_form.jsp">进入查询页面</a></h3>
+<h3><a href="${pageContext.request.contextPath}/book/queryAllBooks">全部书籍</a></h3>
+<h3><a href="${pageContext.request.contextPath}/queryBooksById_form.jsp">查询书籍</a></h3>
+<h3><a href="${pageContext.request.contextPath}/book/addBook_form">增加书籍</a></h3>
 </body>
 </html>

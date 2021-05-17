@@ -28,7 +28,6 @@
     <form action="${pageContext.request.contextPath}/book/addBook" method="post">
 
 
-
         <div class="form-group">
             <label for="bookName">书籍名称：</label>
             <input id="bookName" type="text"  class="form-control"   name="bookName" required>

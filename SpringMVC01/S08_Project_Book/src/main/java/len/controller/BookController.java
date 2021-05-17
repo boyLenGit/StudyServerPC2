@@ -30,10 +30,23 @@ public class BookController {
     }
 
     @RequestMapping("/queryBooksById")
-    public String list1(int bookId, Model model){
+    public String queryBooksById(int bookId, Model model){
         Books book = bookService.queryBookById(bookId);
         System.out.println("queryBooksById:"+book);
         model.addAttribute("list", book);
         return "queryAllBooks";
+    }
+
+    // 跳转功能
+    @RequestMapping("/addBook_form")
+    public String addBook_form(){
+        return "addBook";
+    }
+
+    @RequestMapping("/addBook")
+    public String addBook(Books book){
+        System.out.println("addBook:"+book);
+        bookService.addBook(book);
+        return "redirect:/book/queryAllBooks";
     }
 }
