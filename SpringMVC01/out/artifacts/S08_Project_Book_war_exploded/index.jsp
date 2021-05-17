@@ -27,6 +27,7 @@
   </style>
 </head>
 <body>
-<h3><a href="${pageContext.request.contextPath}/book/allBook_len">进入书籍页面</a></h3>
+<h3><a href="${pageContext.request.contextPath}/book/queryAllBooks">进入书籍页面</a></h3>
+<h3><a href="${pageContext.request.contextPath}/queryBooksById_form.jsp">进入查询页面</a></h3>
 </body>
 </html>
