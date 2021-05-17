@@ -18,6 +18,7 @@
         <module>S04_Controller_config_Github</module>
         <module>S08_Project_Book</module>
         <module>S08_Project_Book_Github</module>
+        <module>S08_Project_Book_MySQL5</module>
     </modules>
 
     <dependencies>

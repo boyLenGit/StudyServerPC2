@@ -15,6 +15,7 @@
         <module name="S05_RestFull_Style" />
         <module name="S02_HelloMVC" />
         <module name="S01_Servlet" />
+        <module name="S08_Project_Book_MySQL5" />
         <module name="S04_Controller_config" />
       </profile>
     </annotationProcessing>
