@@ -27,7 +27,7 @@
 
     <form action="${pageContext.request.contextPath}/book/addBook" method="post">
 
-
+        <%-- name名字一定要与pojo中的Book的变量名一致！ --%>
         <div class="form-group">
             <label for="bookName">书籍名称：</label>
             <input id="bookName" type="text"  class="form-control"   name="bookName" required>

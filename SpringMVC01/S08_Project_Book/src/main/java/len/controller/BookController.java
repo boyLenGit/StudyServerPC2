@@ -49,4 +49,20 @@ public class BookController {
         bookService.addBook(book);
         return "redirect:/book/queryAllBooks";
     }
+
+    // 更新用户
+    @RequestMapping("/toUpdateBook")
+    public String toUpdateBook(Model model, int bookId){
+        System.out.println("toUpdateBook:"+bookId);
+        Books book = bookService.queryBookById(bookId);
+        model.addAttribute("book", book);
+        return "updateBook";
+    }
+
+    @RequestMapping("/updateBook")
+    public String updateBook(Books book){
+        System.out.println("addBook:"+book);
+        bookService.addBook(book);
+        return "redirect:/book/queryAllBooks";
+    }
 }
