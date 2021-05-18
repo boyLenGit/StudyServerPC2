@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -72,5 +73,21 @@ public class BookController {
         System.out.println("updateBook:"+bookId);
         bookService.deleteBookById(bookId);
         return "redirect:/book/queryAllBooks";
+    }
+
+
+    @RequestMapping("/queryBookByName")
+    public String queryBookByName(String queryBookName, Model model){
+        System.out.println("queryBookByName:"+queryBookName);
+        Books book = bookService.queryBookByName(queryBookName);
+        List<Books> list_book = new ArrayList<Books>();
+        list_book.add(book);
+        model.addAttribute("error","查询成功");
+        if (book == null) {
+            list_book = bookService.queryAllBooks();
+            model.addAttribute("error","未查到");
+        }
+        model.addAttribute("list", list_book);
+        return "queryAllBooks_table";
     }
 }
