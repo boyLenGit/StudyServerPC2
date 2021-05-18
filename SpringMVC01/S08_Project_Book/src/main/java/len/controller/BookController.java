@@ -61,8 +61,8 @@ public class BookController {
 
     @RequestMapping("/updateBook")
     public String updateBook(Books book){
-        System.out.println("addBook:"+book);
-        bookService.addBook(book);
+        System.out.println("updateBook:"+book);
+        bookService.updateBook(book);
         return "redirect:/book/queryAllBooks";
     }
 }

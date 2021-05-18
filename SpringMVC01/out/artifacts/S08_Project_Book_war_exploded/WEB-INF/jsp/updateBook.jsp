@@ -26,6 +26,7 @@
     </div>
 
     <form action="${pageContext.request.contextPath}/book/updateBook" method="post">
+<%-- 这里非常重要，隐藏 --%>
         <input type="hidden" name="bookID" value="${book.bookID}">
         <div class="form-group">
             <label for="bookName">书籍名称：</label>
