@@ -45,7 +45,7 @@
                         <td>${book.getDetail()}</td>
                         <td>
                             <a href="${pageContext.request.contextPath}/book/toUpdateBook?bookId=${book.getBookID()}">更改</a> |
-                            <a href="${pageContext.request.contextPath}/book/del/${book.getBookID()}">删除</a>
+                            <a href="${pageContext.request.contextPath}/book/deleteBook/${book.getBookID()}">删除</a>
                         </td>
                     </tr>
                 </c:forEach>
