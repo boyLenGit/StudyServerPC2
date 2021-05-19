@@ -17,6 +17,7 @@
         <module name="S01_Servlet" />
         <module name="S08_Project_Book_MySQL5" />
         <module name="S04_Controller_config" />
+        <module name="S09_Ajax" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
