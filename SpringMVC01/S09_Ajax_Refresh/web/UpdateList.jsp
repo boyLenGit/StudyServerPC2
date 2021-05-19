@@ -12,10 +12,13 @@
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script>
         $(function () {
+            let data_global="Null"
             $("#btn").click(function () {
-                // console.log('点击事件成功')
+                console.log('点击事件成功')
+                console.log(${pageContext.request.contextPath})
                 // $.post(url,param,[可以省略],success)
                 $.post("${pageContext.request.contextPath}/a2",function (data) {
+                    data_global="Success"
                     console.log(data[0].name);
                     let html =  "";
                     for (let i = 0; i < data.length; i++) {
@@ -28,6 +31,7 @@
                     $("#content").html(html)
                     console.log(html)
                 })
+                console.log(data_global)
             })
         })
     </script>
