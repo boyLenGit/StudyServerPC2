@@ -14,6 +14,7 @@
         <module name="S06_UTF_8" />
         <module name="S08_Project_Book_Github" />
         <module name="S09_Ajax_Github" />
+        <module name="S09_Ajax_Refresh" />
         <module name="S02_HelloMVC" />
         <module name="S05_RestFull_Style" />
         <module name="S08_Project_Book_MySQL5" />
