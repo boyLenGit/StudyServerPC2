@@ -20,6 +20,7 @@
         <module>S08_Project_Book_Github</module>
         <module>S08_Project_Book_MySQL5</module>
         <module>S09_Ajax</module>
+        <module>S09_Ajax_Github</module>
     </modules>
 
     <dependencies>
