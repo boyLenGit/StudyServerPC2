@@ -5,7 +5,7 @@
   Time: 9:49
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
     <title>Title</title>
@@ -14,8 +14,8 @@
         $(function () {
             let data_global="Null"
             $("#btn").click(function () {
-                console.log('点击事件成功')
-                console.log(${pageContext.request.contextPath})
+                console.log('点击事件成功2')
+                console.log('网址：${pageContext.request.contextPath}/a2')
                 // $.post(url,param,[可以省略],success)
                 $.post("${pageContext.request.contextPath}/a2",function (data) {
                     data_global="Success"

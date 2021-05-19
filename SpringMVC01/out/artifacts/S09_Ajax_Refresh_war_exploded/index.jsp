@@ -12,5 +12,6 @@
   </head>
   <body>
   <a href="UpdateList.jsp">UpdateList</a>
+  <a href="login.jsp">login</a>
   </body>
 </html>

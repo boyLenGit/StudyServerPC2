@@ -39,6 +39,7 @@ public class AjaxController {
 
     @RequestMapping("/a3")
     public String a3(String name,String pwd) {
+        System.out.println("调用了a3,"+name+" "+pwd);
         String msg = "";
         if (name != null) {
             if ("admin".equals(name)) {
