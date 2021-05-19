@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <a href="UpdateList.jsp">UpdateList</a>
   </body>
 </html>
