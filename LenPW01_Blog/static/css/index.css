@@ -22,3 +22,15 @@
 .LenCSS-Item-LeftRight_center{
 
 }
+
+/*上下边距*/
+.LenCSS-Margin-TopBottom-H{
+
+}
+.LenCSS-Margin-TopBottom-M{
+
+}
+.LenCSS-Margin-TopBottom-L{
+    margin-top: 0.3em !important;
+    margin-bottom:  0.3em !important;;
+}
