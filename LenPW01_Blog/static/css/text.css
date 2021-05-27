@@ -1,3 +1,7 @@
-.LenCssText-Text-color-black{
+.LenCssText-color-black{
     color: black !important;
+}
+
+.LenCssText-Opacity-L{
+    opacity: 0.8 !important;
 }
