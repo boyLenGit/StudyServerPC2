@@ -6,4 +6,11 @@
     .LenCssLogic-mobile-hide{
         display: none !important;
     }
+    .LenCssLogic-mobile-show{
+        display: block !important;
+    }
+}
+
+.LenCssLogic-mobile-show{
+    display: none !important;
 }
