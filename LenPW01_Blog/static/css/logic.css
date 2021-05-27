@@ -2,6 +2,11 @@
 /*    display: inline-block !important;*/
 /*}*/
 
+/* LenCssLogic-mobile-show必须放在@media的上面，否则无效！ */
+.LenCssLogic-mobile-show {
+    display: none !important;
+}
+
 @media screen and (max-width: 768px){
     .LenCssLogic-mobile-hide{
         display: none !important;
@@ -9,8 +14,4 @@
     .LenCssLogic-mobile-show{
         display: block !important;
     }
-}
-
-.LenCssLogic-mobile-show{
-    display: none !important;
 }
