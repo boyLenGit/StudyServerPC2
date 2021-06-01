@@ -93,10 +93,10 @@ attached:轨道可以依附在主窗口
             <div class="ui LenCssText-padding-middle right aligned basic segment">
                 <div class="ui basic teal left pointing label">方法论</div>
             </div>
-            <div class="ui center aligned basic segment LenCssText-size-middle">
+            <div id="button_pay" class="ui center aligned basic segment LenCssText-size-middle">
                 <button class="ui orange basic circular button">赞赏</button>
             </div>
-            <div class="ui flowing popup transition hidden">
+            <div id="popup_pay" class="ui flowing popup transition hidden">
                 <div class="ui orange basic label">
                     <div class="ui images" style="font-size: inherit !important;">
                         <div class="image"><img src="./static/image/article/QRcode_pay_1.png" alt="" class="ui rounded bordered image" style="width: 120px"></div>
@@ -166,6 +166,12 @@ attached:轨道可以依附在主窗口
 <script>
     $('#button_sidebar').click(function () {
         $('#a_top_label1, #a_top_label2, #a_top_label3, #a_top_label4, #div_search1').toggleClass('LenCssLogic-mobile-hide');
+    })
+
+    $('#button_pay').popup({
+        popup : $('#popup_pay.popup'),
+        on : 'click',
+        position : 'bottom center'
     })
 </script>
 
