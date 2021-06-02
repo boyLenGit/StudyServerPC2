@@ -14,4 +14,8 @@
     .LenCssLogic-mobile-show{
         display: block !important;
     }
+    .LenCssText-padding-middle{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }
