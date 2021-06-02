@@ -96,7 +96,7 @@ attached:轨道可以依附在主窗口
             <div id="button_pay" class="ui center aligned basic segment LenCssText-size-middle">
                 <button class="ui orange basic circular button">赞赏</button>
             </div>
-            <div class="ui popup_pay flowing popup transition hidden">
+            <div id="popup_pay" class="ui flowing popup transition hidden">
                 <div class="ui orange basic label">
                     <div class="ui images" style="font-size: inherit !important;">
                         <div class="image">
@@ -115,7 +115,9 @@ attached:轨道可以依附在主窗口
 
         <!--        博客信息-->
         <div class="ui attached positive message">
-            博客信息
+            <div class="ui middle aligned grid">
+
+            </div>
         </div>
 
         <!--        留言模版-->
@@ -173,7 +175,7 @@ attached:轨道可以依附在主窗口
     });
 
     $('#button_pay').popup({
-        popup : $('.popup_pay.popup'),
+        popup : $('#popup_pay.popup'),
         on : 'click',
         position : 'bottom center'
     });
