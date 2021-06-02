@@ -4,11 +4,7 @@
     right:0 !important;
 }
 
-.LenCssButton-length-middle{
-
-}
-
 .LenCssButton-padding-middle{
-    margin-bottom: 0.3em;
-    margin-top: 0.3em;
+    margin-bottom: 0.3em !important;
+    margin-top: 0.3em !important;
 }
