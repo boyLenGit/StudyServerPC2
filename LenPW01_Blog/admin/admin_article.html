@@ -36,7 +36,7 @@ attached:轨道可以依附在主窗口
             <a href="#" id="a_top_label2" class="item LenCssLogic-mobile-hide"><i class="idea icon"></i>标签管理</a>
             <a href="#" id="a_top_label3" class="item LenCssLogic-mobile-hide"><i class="tags icon"></i>分类</a>
             <div class="right menu">
-                <div class="ui dropdown item">
+                <div id="dropdown_user_label" class="ui dropdown item">
                     <div class="text">
                         <img src="../static/image/icon_little/icon020.png" class="ui avatar image">
                         长寿花
@@ -119,7 +119,7 @@ attached:轨道可以依附在主窗口
         $('#a_top_label1, #a_top_label2, #a_top_label3, #a_top_label4, #a_top_label5, #div_search1').toggleClass('LenCssLogic-mobile-hide');
     });
 
-    $('.ui.dropdown').dropdown();
+    $('#dropdown_user_label.dropdown').dropdown();
 </script>
 
 </body>
