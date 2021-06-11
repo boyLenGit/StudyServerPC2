@@ -35,7 +35,7 @@ attached:轨道可以依附在主窗口
             <a href="#" id="a_top_label1" class="active item LenCssLogic-mobile-hide"><i class="home icon"></i>文章管理</a>
             <a href="#" id="a_top_label2" class="item LenCssLogic-mobile-hide"><i class="idea icon"></i>标签管理</a>
             <a href="#" id="a_top_label3" class="item LenCssLogic-mobile-hide"><i class="tags icon"></i>分类</a>
-            <div class="right menu">
+            <div id="div_dropdown_user_label" class="right menu LenCssLogic-mobile-hide">
                 <div id="dropdown_user_label" class="ui dropdown item">
                     <div class="text">
                         <img src="../static/image/icon_little/icon020.png" class="ui avatar image">
@@ -63,7 +63,11 @@ attached:轨道可以依附在主窗口
 
 <!--****** 中间内容 ******-->
 <div class="LenCSS-Pad-middle-div1">
-
+    <div class="ui container">
+        <form action="#" method="post" class="ui segment form">
+            
+        </form>
+    </div>
 </div>
 
 
@@ -116,7 +120,7 @@ attached:轨道可以依附在主窗口
 
 <script>
     $('#button_sidebar').click(function () {
-        $('#a_top_label1, #a_top_label2, #a_top_label3, #a_top_label4, #a_top_label5, #div_search1').toggleClass('LenCssLogic-mobile-hide');
+        $('#a_top_label1, #a_top_label2, #a_top_label3, #div_dropdown_user_label').toggleClass('LenCssLogic-mobile-hide');
     });
 
     $('#dropdown_user_label.dropdown').dropdown({
