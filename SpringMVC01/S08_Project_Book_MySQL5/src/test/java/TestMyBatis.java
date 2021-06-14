@@ -16,4 +16,8 @@ public class TestMyBatis {
         // 关闭SQLSession
         sqlSession1.close();
     }
+    @Test
+    public void T(){
+        float a = 3.14f;
+    }
 }
