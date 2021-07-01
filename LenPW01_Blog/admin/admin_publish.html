@@ -128,10 +128,10 @@ attached:轨道可以依附在主窗口
             </div>
         </form>
 
-        <div class="inline fields">
+        <div class="four fields">
             <div class="field">
                 <div class="ui checkbox">
-                    <input type="checkbox" id="id_recommend" name="recommend" class="hidden">
+                    <input type="checkbox" id="id_recommend" name="recommend" checked class="hidden">
                     <label for="id_recommend">推荐</label>
                 </div>
             </div>
@@ -153,6 +153,11 @@ attached:轨道可以依附在主窗口
                     <label for="id_comment">评论</label>
                 </div>
             </div>
+        </div>
+
+        <div class="ui container">
+<!--            button的类型有三种：button、submit、reset。button是按钮后触发函数，submit是按下后提交表单。-->
+            <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
         </div>
 
     </div>
