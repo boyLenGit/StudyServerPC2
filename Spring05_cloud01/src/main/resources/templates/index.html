@@ -84,7 +84,7 @@
                     <div class="ui padded vertical segment" th:each="blog : ${page.content}">
                         <div class="ui mobile reversed stackable grid">
                             <div class="eleven wide column">
-                                <h2 class="ui header"><a href="#" th:href="@{/admin_article/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">深度学习 （人工神经网络的研究的概念）</a></h2>
+                                <h2 class="ui header"><a href="#" th:href="@{/article/{id}(id=${blog.id})}" target="_blank" class="m-black" th:text="${blog.title}">深度学习 （人工神经网络的研究的概念）</a></h2>
                                 <p>深度学习(DL, Deep Learning)是机器学习(ML, Machine Learning)领域中一个新的研究方向，它被引入机器学习使其更接近于最初的目标——人工智能(AI, Artificial Intelligence)。 [1]
                                     深度学习是学习样本数据的内在规律和表示层次，这些学习过程中获得的信息对诸如文字，图像和声音等数据的解释有很大的帮助。它的最终目标是让机器能够像人一样具有分析学习能力，能够识别文字、图像和声音等数据。 深度学习是一个复杂的机器学习算法，在语音和图像识别方面取得的效果，远远超过先前相关技术。</p>
                                 <!--                                文章块下的参数，如阅读量、作者-->
