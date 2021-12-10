@@ -1,0 +1,50 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cat" class="len.pojo.Cat"/>
+    <bean id="dog" class="len.pojo.Dog"/>
+    <bean id="people" class="len.pojo.People_At_Autowired">
+        <property name="name" value="测试name"/>
+        <property name="cat" ref="cat"/>
+        <property name="dog" ref="dog"/>
+    </bean>
+
+    <bean id="people_Autowired_byName" class="len.pojo.People_At_Autowired" autowire="byName">
+        <property name="name" value="测试name"/>
+    </bean>
+
+    <bean id="people_Autowired_byType" class="len.pojo.People_At_Autowired" autowire="byType">
+        <property name="name" value="测试name"/>
+    </bean>
+
+
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cat" class="len.pojo.Cat"/>
+    <bean id="dog" class="len.pojo.Dog"/>
+    <bean id="people" class="len.pojo.People_At_Autowired">
+        <property name="name" value="测试name"/>
+        <property name="cat" ref="cat"/>
+        <property name="dog" ref="dog"/>
+    </bean>
+
+    <bean id="people_Autowired_byName" class="len.pojo.People_At_Autowired" autowire="byName">
+        <property name="name" value="测试name"/>
+    </bean>
+
+    <bean id="people_Autowired_byType" class="len.pojo.People_At_Autowired" autowire="byType">
+        <property name="name" value="测试name"/>
+    </bean>
+
+
+>>>>>>> 1da3f48 (first commit)
+</beans>

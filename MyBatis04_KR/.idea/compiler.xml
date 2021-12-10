@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Sub16_Dynamic" />
+        <module name="Sub09_annotation" />
+        <module name="Sub13_AliYun_MySQL" />
+        <module name="Sub02_db_properties" />
+        <module name="Sub17_Cache" />
+        <module name="Sub07_limit" />
+        <module name="Sub01_Start" />
+        <module name="Sub06_Log" />
+        <module name="Sub04_Alias_annotation" />
+        <module name="Sub03_Alias_pkg" />
+        <module name="Sub08_RowBounds" />
+        <module name="Sub05_resultMap_simple" />
+        <module name="Sub15_One_to_More_F2" />
+        <module name="Sub14_One_to_More_F1" />
+        <module name="Sub11_More_to_One_F2" />
+        <module name="Sub11_More_to_One_F1" />
+        <module name="Sub10_Lombok" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Sub02_db.properties" target="1.5" />
+      <module name="Sub05_resultMap_easy" target="1.5" />
+      <module name="Sub12_More_to_One_offical" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

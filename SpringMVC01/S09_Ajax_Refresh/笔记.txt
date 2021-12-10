@@ -1,0 +1,38 @@
+<<<<<<< HEAD
+[Ajax使用（不用刷新网页即可更新Web内容）（局部刷新技术）]
+·核心
+    1.Json配置乱码：
+            <!--JSON乱码问题配置-->
+            <mvc:annotation-driven>
+                <mvc:message-converters register-defaults="true">
+                    <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                        <constructor-arg value="UTF-8"/>
+                    </bean>
+                    <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                        <property name="objectMapper">
+                            <bean class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean">
+                                <property name="failOnEmptyBeans" value="false"/>
+                            </bean>
+                        </property>
+                    </bean>
+                </mvc:message-converters>
+=======
+[Ajax使用（不用刷新网页即可更新Web内容）（局部刷新技术）]
+·核心
+    1.Json配置乱码：
+            <!--JSON乱码问题配置-->
+            <mvc:annotation-driven>
+                <mvc:message-converters register-defaults="true">
+                    <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                        <constructor-arg value="UTF-8"/>
+                    </bean>
+                    <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                        <property name="objectMapper">
+                            <bean class="org.springframework.http.converter.json.Jackson2ObjectMapperFactoryBean">
+                                <property name="failOnEmptyBeans" value="false"/>
+                            </bean>
+                        </property>
+                    </bean>
+                </mvc:message-converters>
+>>>>>>> 1da3f48 (first commit)
+            </mvc:annotation-driven>

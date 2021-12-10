@@ -1,0 +1,17 @@
+<<<<<<< HEAD
+· Sub01_Start
+· Sub02_db_properties
+· Sub03_Alias_pkg
+· Sub07_limit
+    1.功能：实现MySQL的分页功能，根本是在于MySQL的limit语句。
+· Sub08_RowBounds
+    1.功能：RowBounds实现MySQL分页
+=======
+· Sub01_Start
+· Sub02_db_properties
+· Sub03_Alias_pkg
+· Sub07_limit
+    1.功能：实现MySQL的分页功能，根本是在于MySQL的limit语句。
+· Sub08_RowBounds
+    1.功能：RowBounds实现MySQL分页
+>>>>>>> 1da3f48 (first commit)

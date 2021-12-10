@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory测试</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+</head>
+<body>
+
+<!--****** 导包 ******-->
+<!--    JQuery包-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    Semantic的JS包-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="https://cdn.highcharts.com.cn/highstock/highstock.js"></script>
+<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+<script src="https://code.highcharts.com.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+<!--<script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script>-->
+<script src="https://cdn.highcharts.com.cn/highcharts/themes/dark-unica.js"></script>
+
+<form class="ui large form" method="post" action="#" th:object="${serverStateDynamic}" th:action="@{/cluster/connect/test_memory_object/post}">
+    <div class="ui segment">
+        <div class="field">
+            <div class="ui left icon input">
+                <i class="user icon"></i>
+                <input type="text" name="command" placeholder="指令内容">
+            </div>
+        </div>
+        <button class="ui fluid large teal submit button">提交</button>
+    </div>
+
+    <div class="ui error mini message"></div>
+    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">指令结果将显示在此</div>
+    <div class="" th:text="${serverStateDynamic.mem_total}">测试单独变量</div>
+
+    <table class="ui compact teal table">
+        <thead>
+        <tr>
+            <th>mem_total</th>
+            <th>mem_used</th>
+            <th>mem_free</th>
+            <th>mem_shared</th>
+            <th>mem_cache</th>
+            <th>mem_available</th>
+            <th>io_read</th>
+        </tr>
+        </thead>
+
+        <tr>
+            <td th:text="*{mem_total}">0</td>
+            <td th:text="*{mem_usage}">0</td>
+            <td th:text="*{mem_free}">0</td>
+            <td th:text="*{mem_shared}">0</td>
+            <td th:text="*{mem_cache}">0</td>
+            <td th:text="*{mem_available}">0</td>
+            <td th:text="*{io_read}">0</td>
+        </tr>
+    </table>
+</form>
+<input type="button" value="加载数据" id="getdata-btn">
+<input type="button" value="加载List数据" id="getdataList-btn">
+<input type="button" value="加载Value数据" id="getdataValue-btn">
+
+<div id="container" style="width:800px;height:400px"></div>
+<script>
+    function getAjaxCurveValue_init() {
+        let result_return = 0;
+        $.ajax({
+            url : "/cluster/monitor/test_memusage_curve/ajaxValue",
+            type : "post",
+            data : {},
+            async : false,
+            success : function(result) {
+                result_return = result;
+            }
+        });
+        return result_return;
+    }
+
+    const series_y_value = getAjaxCurveValue_init();
+
+    Highcharts.setOptions({
+        global : {
+            useUTC : false
+        }
+    });
+    // Create the chart
+    Highcharts.stockChart('container', {
+        chart : {
+            events : {
+                load : function () {
+                    // set up the updating of the chart each second
+                    var series = this.series[0];
+                    setInterval(function () {
+                        var data_y = getAjaxCurveValue();
+                        var x = (new Date()).getTime(), // current time
+                            y = data_y;
+                        console.log("events:" + data_y, typeof data_y)
+                        series.addPoint([x, y], true, true);
+                    }, 1000);
+                }
+            }
+        },
+        rangeSelector: {
+            buttons: [{
+                count: 1,
+                type: 'minute',
+                text: '1M'
+            }, {
+                count: 5,
+                type: 'minute',
+                text: '5M'
+            }, {
+                type: 'all',
+                text: 'All'
+            }],
+            inputEnabled: false,
+            selected: 0
+        },
+        title : {
+            text : '内存使用量'
+        },
+        tooltip: {
+            split: false
+        },
+        exporting: {
+            enabled: false
+        },
+        series : [{
+            name : '随机数据',
+            data : (function () {
+                // generate an array of random data
+                var data = [], time = (new Date()).getTime(), i;
+                for (i = -200; i <= 0; i += 1) {
+                    data.push([
+                        time + i * 1000,
+                        series_y_value
+                    ]);
+                }
+                return data;
+            }())
+        }]
+    });
+</script>
+
+</body>
+
+<script>
+    $(function () {
+        $("#getdata-btn").click(function () {
+            // console.log('点击事件成功')
+            // $.post(url,param,[可以省略],success)
+            $.post("/cluster/monitor/test_memusage_curve/ajax",function (data) {
+                console.log(data.name);
+                console.log(data);
+            })
+        })
+    })
+
+    $(function () {
+        $("#getdataValue-btn").click(function () {
+            getAjaxCurveValue();
+        })
+    })
+
+    function getAjaxCurveValue() {
+        var result_return = 0;
+        $.ajax({
+            url : "/cluster/monitor/test_memusage_curve/ajaxValue",
+            type : "post",
+            data : {},
+            async : false,
+            success : function(result) {
+                result_return = result;
+            }
+        });
+        return result_return;
+    }
+
+    function getAjaxCurveDict_AutoSleep() {
+        var result_return = 0;
+        $.ajax({
+            url : "/cluster/monitor/test_memusage_curve/ajaxValue",
+            type : "post",
+            data : {},
+            async : false,
+            success : function(result) {
+                result_return = result;
+            }
+        });
+        return result_return;
+    }
+</script>
+</html>

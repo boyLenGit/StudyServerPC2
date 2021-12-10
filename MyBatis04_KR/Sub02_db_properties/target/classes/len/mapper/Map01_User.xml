@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 作用：这是Mapping映射配置文件；对应java文件：Dao01_User -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="len.dao.Dao01_User"><!-- 指定”命名空间namespace“从而让mapper与接口相绑定，从而让java与MySQL产生映射关系 -->
+    <!--
+    id写的就是api01_user厘米的findAll1方法。有了它就有了SQL执行语句，就可以获取PreparedSatement
+    -->
+    <select id="getUserList1" resultType="len.pojo.Obj01_User"><!-- resultType就是指定返回数据的类型，这里直接用我们定义的对象 -->
+        select * from user;
+    </select>
+</mapper>
+        <!--
+         【注意事项】
+         1.mybatis的映射配置文件位置必须和API01_user.java接口的包结构相同
+         2.映射配置文件的mapper标签namespace属性的取值必须是API01_user.java接口的全限定类名
+         3.映射配置文件的操作配置（select），id属性的取值必须是API01_user.java接口的方法名，如上面写的findAll1
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 作用：这是Mapping映射配置文件；对应java文件：Dao01_User -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="len.dao.Dao01_User"><!-- 指定”命名空间namespace“从而让mapper与接口相绑定，从而让java与MySQL产生映射关系 -->
+    <!--
+    id写的就是api01_user厘米的findAll1方法。有了它就有了SQL执行语句，就可以获取PreparedSatement
+    -->
+    <select id="getUserList1" resultType="len.pojo.Obj01_User"><!-- resultType就是指定返回数据的类型，这里直接用我们定义的对象 -->
+        select * from user;
+    </select>
+</mapper>
+        <!--
+         【注意事项】
+         1.mybatis的映射配置文件位置必须和API01_user.java接口的包结构相同
+         2.映射配置文件的mapper标签namespace属性的取值必须是API01_user.java接口的全限定类名
+         3.映射配置文件的操作配置（select），id属性的取值必须是API01_user.java接口的方法名，如上面写的findAll1
+>>>>>>> 1da3f48 (first commit)
+         -->

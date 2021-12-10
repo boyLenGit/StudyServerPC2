@@ -1,0 +1,66 @@
+<<<<<<< HEAD
+[HelloSpring]
+
+[Spring4种构造方法]
+1.无参构造：
+        ·首先pojo中要有无参构造(不写构造就默认是无参构造)
+        ·Mapper：
+            <bean id="bean_hello" class="len.pojo.Hello">
+                <property name="str" value="Len Test of Hello Spring"/>
+            </bean>
+2.有参构造-index方法
+        ·首先pojo中要有有参构造(不写构造就默认是无参构造，因此要写一个有参构造)
+            public Hello_have_param_A(String str){System.out.println("有参构造A"+str);}
+        ·Mapper：
+            <bean id="bean_hava_param_A" class="len.pojo.Hello_have_param_A">
+                <constructor-arg index="0" value="Test_value_hava_param_A"/>
+            </bean>
+3.有参构造-变量类型方法
+        ·首先pojo中要有有参构造(不写构造就默认是无参构造，因此要写一个有参构造)
+            public Hello_have_param_A(String str){System.out.println("有参构造A"+str);}
+        ·Mapper：
+            <bean id="bean_hava_param_B" class="len.pojo.Hello_have_param_B">
+                <constructor-arg type="java.lang.String" value="Test_value_hava_param_B"/>
+            </bean>
+4.有参构造-变量name方法
+        ·首先pojo中要有有参构造(不写构造就默认是无参构造，因此要写一个有参构造)
+            public Hello_have_param_A(String str){System.out.println("有参构造A"+str);}
+        ·Mapper：
+            <bean id="bean_hava_param_C" class="len.pojo.Hello_have_param_C">
+                <constructor-arg name="str" value="Test_value_hava_param_C"/>
+            </bean>
+
+=======
+[HelloSpring]
+
+[Spring4种构造方法]
+1.无参构造：
+        ·首先pojo中要有无参构造(不写构造就默认是无参构造)
+        ·Mapper：
+            <bean id="bean_hello" class="len.pojo.Hello">
+                <property name="str" value="Len Test of Hello Spring"/>
+            </bean>
+2.有参构造-index方法
+        ·首先pojo中要有有参构造(不写构造就默认是无参构造，因此要写一个有参构造)
+            public Hello_have_param_A(String str){System.out.println("有参构造A"+str);}
+        ·Mapper：
+            <bean id="bean_hava_param_A" class="len.pojo.Hello_have_param_A">
+                <constructor-arg index="0" value="Test_value_hava_param_A"/>
+            </bean>
+3.有参构造-变量类型方法
+        ·首先pojo中要有有参构造(不写构造就默认是无参构造，因此要写一个有参构造)
+            public Hello_have_param_A(String str){System.out.println("有参构造A"+str);}
+        ·Mapper：
+            <bean id="bean_hava_param_B" class="len.pojo.Hello_have_param_B">
+                <constructor-arg type="java.lang.String" value="Test_value_hava_param_B"/>
+            </bean>
+4.有参构造-变量name方法
+        ·首先pojo中要有有参构造(不写构造就默认是无参构造，因此要写一个有参构造)
+            public Hello_have_param_A(String str){System.out.println("有参构造A"+str);}
+        ·Mapper：
+            <bean id="bean_hava_param_C" class="len.pojo.Hello_have_param_C">
+                <constructor-arg name="str" value="Test_value_hava_param_C"/>
+            </bean>
+
+>>>>>>> 1da3f48 (first commit)
+·注意事项：同一个类中，有参无参可以同时存在

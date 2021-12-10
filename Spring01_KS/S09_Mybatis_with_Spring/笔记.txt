@@ -1,0 +1,29 @@
+<<<<<<< HEAD
+[Spring与MyBatis结合使用]
+·初始使用流程
+    1.编写数据源配置
+    2.SQLSessionFactory
+    3.SQLSessionTemplate
+    4.给接口加实现类Impl
+    5.将自己的实现类，注入到Spring中
+    6.测试使用
+·增加SQL功能流程
+    1.在xxxMapper.java中添加接口A
+    2.xxxMapperImpl.java中添加接口A
+    3.在Mapper.xml中连接接口A，并且设定各种变量，设定SQL增删改查语句
+    4.在Test.java直接测试功能即可
+=======
+[Spring与MyBatis结合使用]
+·初始使用流程
+    1.编写数据源配置
+    2.SQLSessionFactory
+    3.SQLSessionTemplate
+    4.给接口加实现类Impl
+    5.将自己的实现类，注入到Spring中
+    6.测试使用
+·增加SQL功能流程
+    1.在xxxMapper.java中添加接口A
+    2.xxxMapperImpl.java中添加接口A
+    3.在Mapper.xml中连接接口A，并且设定各种变量，设定SQL增删改查语句
+    4.在Test.java直接测试功能即可
+>>>>>>> 1da3f48 (first commit)

@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+[DL注入 set注入]
+=======
+[DL注入 set注入]
+>>>>>>> 1da3f48 (first commit)
+·核心：Mapper中对于pojo不同类型的变量的注入写法

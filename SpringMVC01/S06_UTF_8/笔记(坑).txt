@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+[乱码问题的解决]
+·核心
+
+·坑
+    1.提交表单form.jsp后，报错404
+        .原因：要在Run-Edit Configurations-Depolyment中将"Application context"修改为只有一个斜线"/"，使得主页为http://localhost:8080/，
+              而不是http://localhost:8080/S04_Controller_config_Github2_war_exploded/
+=======
+[乱码问题的解决]
+·核心
+
+·坑
+    1.提交表单form.jsp后，报错404
+        .原因：要在Run-Edit Configurations-Depolyment中将"Application context"修改为只有一个斜线"/"，使得主页为http://localhost:8080/，
+              而不是http://localhost:8080/S04_Controller_config_Github2_war_exploded/
+>>>>>>> 1da3f48 (first commit)
+              即删掉S04_Controller_config_Github_war_exploded这一部分，这是报错的根源

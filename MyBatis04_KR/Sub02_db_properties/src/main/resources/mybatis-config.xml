@@ -1,0 +1,70 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration> <!-- MyBatis的核心配置文件，用于从XML中构建SqlSessionFactory -->
+
+    <properties resource="db/db.properties">
+        <property name="username_db" value="boyLenPC"/>
+        <!--
+        properties的url属性中不要加“amp;”，因此要把environment中的url=“...&amp;...”改为url=“...&...”
+        db.properties中的值不需要双引号，直接写值即可：password_db=0001
+        ${driver_db}的内容要和db.properties中的名字相一致，而不需要跟<property name="url" value="${url_db}"/>中的name一致
+        -->
+    </properties>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/> <!-- 设定事务管理 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver_db}"/>
+                <property name="url" value="${url_db}"/>
+                <property name="username" value="${username_db}"/>
+                <property name="password" value="${password_db}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers><!-- resource的路径必须用/不能用点. -->
+        <mapper resource="len/mapper/Map01_User.xml"/>
+        <mapper resource="len/mapper/Map02_User_hm.xml"/>
+        <mapper resource="len/mapper/Map03_Multi_Dao.xml"/>
+    </mappers>
+=======
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration> <!-- MyBatis的核心配置文件，用于从XML中构建SqlSessionFactory -->
+
+    <properties resource="db/db.properties">
+        <property name="username_db" value="boyLenPC"/>
+        <!--
+        properties的url属性中不要加“amp;”，因此要把environment中的url=“...&amp;...”改为url=“...&...”
+        db.properties中的值不需要双引号，直接写值即可：password_db=0001
+        ${driver_db}的内容要和db.properties中的名字相一致，而不需要跟<property name="url" value="${url_db}"/>中的name一致
+        -->
+    </properties>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/> <!-- 设定事务管理 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver_db}"/>
+                <property name="url" value="${url_db}"/>
+                <property name="username" value="${username_db}"/>
+                <property name="password" value="${password_db}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers><!-- resource的路径必须用/不能用点. -->
+        <mapper resource="len/mapper/Map01_User.xml"/>
+        <mapper resource="len/mapper/Map02_User_hm.xml"/>
+        <mapper resource="len/mapper/Map03_Multi_Dao.xml"/>
+    </mappers>
+>>>>>>> 1da3f48 (first commit)
+</configuration>

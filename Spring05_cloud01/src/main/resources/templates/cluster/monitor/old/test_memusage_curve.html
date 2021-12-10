@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory测试</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+</head>
+<body>
+
+<!--****** 导包 ******-->
+<!--    JQuery包-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    Semantic的JS包-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+
+<form class="ui large form" method="post" action="#" th:object="${serverStateDynamic}" th:action="@{/cluster/connect/test_memory_object/post}">
+    <div class="ui segment">
+        <div class="field">
+            <div class="ui left icon input">
+                <i class="user icon"></i>
+                <input type="text" name="command" placeholder="指令内容">
+            </div>
+        </div>
+        <button class="ui fluid large teal submit button">提交</button>
+    </div>
+
+    <div class="ui error mini message"></div>
+    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">指令结果将显示在此</div>
+    <div class="" th:text="${serverStateDynamic.mem_total}">测试单独变量</div>
+
+    <table class="ui compact teal table">
+        <thead>
+        <tr>
+            <th>mem_total</th>
+            <th>mem_used</th>
+            <th>mem_free</th>
+            <th>mem_shared</th>
+            <th>mem_cache</th>
+            <th>mem_available</th>
+            <th>io_read</th>
+        </tr>
+        </thead>
+
+        <tr>
+            <td th:text="*{mem_total}">0</td>
+            <td th:text="*{mem_usage}">0</td>
+            <td th:text="*{mem_free}">0</td>
+            <td th:text="*{mem_shared}">0</td>
+            <td th:text="*{mem_cache}">0</td>
+            <td th:text="*{mem_available}">0</td>
+            <td th:text="*{io_read}">0</td>
+        </tr>
+    </table>
+</form>
+<input type="button" value="加载数据" id="getdata-btn">
+<input type="button" value="加载List数据" id="getdataList-btn">
+<input type="button" value="加载Value数据" id="getdataValue-btn">
+
+<figure class="highcharts-figure">
+    <div id="container" data-highcharts-chart="0" style="overflow: hidden;" aria-hidden="false" role="region" aria-label="Live random data. Highcharts interactive chart."><div id="highcharts-screen-reader-region-before-0" aria-label="Chart screen reader information, Live random data." role="region" aria-hidden="false" style="position: relative;"><div aria-hidden="false" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"><p>Live random data</p><div>Line chart with 20 data points.</div><div>
+        Chart showing data updating every second, with old data being removed.
+    </div><div><button id="hc-linkto-highcharts-data-table-0" tabindex="-1" aria-expanded="false">View as data table, Live random data</button></div><div>The chart has 1 X axis displaying Time. Range: 2021-11-03 10:51:42 to 2021-11-03 10:52:02.</div><div>The chart has 1 Y axis displaying Value. Range: 0 to 1.25.</div></div></div><div aria-hidden="false" class="highcharts-announcer-container" style="position: relative;"><div aria-hidden="false" aria-live="polite" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"></div><div aria-hidden="false" aria-live="assertive" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"></div><div aria-hidden="false" aria-live="polite" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"></div></div><div id="highcharts-ndov4qk-0" dir="ltr" class="highcharts-container " style="position: relative; overflow: hidden; width: 800px; height: 400px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; touch-action: manipulation; outline: none; font-family: Dosis, sans-serif;" aria-hidden="false" tabindex="0"><div aria-hidden="false" class="highcharts-a11y-proxy-container-before" style="top: 0px; left: 0px; white-space: nowrap; position: absolute;"></div><svg version="1.1" class="highcharts-root" style="font-family:Dosis, sans-serif;font-size:12px;" xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400" aria-hidden="false" aria-label="Interactive chart"><desc aria-hidden="true">Created with Highcharts 9.3.0</desc><defs aria-hidden="true"><clipPath id="highcharts-ndov4qk-1-"><rect x="0" y="0" width="720" height="315" fill="none"></rect></clipPath><clipPath id="highcharts-ndov4qk-22-"><rect x="0" y="0" width="720" height="315" fill="none"></rect></clipPath></defs><rect fill="none" class="highcharts-background" x="0" y="0" width="800" height="400" rx="0" ry="0" aria-hidden="true"></rect><rect fill="none" class="highcharts-plot-background" x="70" y="46" width="720" height="315" aria-hidden="true"></rect><g class="highcharts-plot-lines-0" data-z-index="0" aria-hidden="true"><path fill="none" class="highcharts-plot-line " stroke="#808080" stroke-width="1" d="M 70 361.5 L 790 361.5"></path></g><g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1" aria-hidden="true"><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 194.3945646223445 46 L 194.3945646223445 361" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 380.3945646223445 46 L 380.3945646223445 361" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 566.406593814154 46 L 566.406593814154 361" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 752.406593814154 46 L 752.406593814154 361" opacity="1"></path></g><g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1" aria-hidden="true"><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 361.5 L 790 361.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 311.5 L 790 311.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 260.5 L 790 260.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 210.5 L 790 210.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 159.5 L 790 159.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 109.5 L 790 109.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 348.5 L 790 348.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 336.5 L 790 336.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 323.5 L 790 323.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 298.5 L 790 298.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 285.5 L 790 285.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 273.5 L 790 273.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 248.5 L 790 248.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 235.5 L 790 235.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 222.5 L 790 222.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 197.5 L 790 197.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 185.5 L 790 185.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 172.5 L 790 172.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 147.5 L 790 147.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 134.5 L 790 134.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 122.5 L 790 122.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 96.5 L 790 96.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 84.5 L 790 84.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 71.5 L 790 71.5" opacity="1"></path><path fill="none" stroke="#f2f2f2" stroke-width="1" stroke-dasharray="none" class="highcharts-minor-grid-line" d="M 70 59.5 L 790 59.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 70 361.5 L 790 361.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 70 109.5 L 790 109.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 70 298.5 L 790 298.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 70 235.5 L 790 235.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 70 172.5 L 790 172.5" opacity="1"></path><path fill="none" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="none" data-z-index="1" class="highcharts-grid-line" d="M 70 45.5 L 790 45.5" opacity="1"></path></g><rect fill="none" class="highcharts-plot-border" data-z-index="1" x="70" y="46" width="720" height="315" aria-hidden="true"></rect><g class="highcharts-axis highcharts-xaxis" data-z-index="2" aria-hidden="true"><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 194.3945646223445 361 L 194.3945646223445 371" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 380.3945646223445 361 L 380.3945646223445 371" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 566.406593814154 361 L 566.406593814154 371" opacity="1"></path><path fill="none" class="highcharts-tick" stroke="#ccd6eb" stroke-width="1" d="M 752.406593814154 361 L 752.406593814154 371" opacity="1"></path><path fill="none" class="highcharts-axis-line" stroke="#ccd6eb" stroke-width="1" data-z-index="7" d="M 70 361.5 L 790 361.5"></path></g><g class="highcharts-axis highcharts-yaxis" data-z-index="2" aria-hidden="true"><text x="24.96875" data-z-index="7" text-anchor="middle" transform="translate(0,0) rotate(270 24.96875 203.5)" class="highcharts-axis-title" style="color:#666666;text-transform:uppercase;fill:#666666;" y="203.5">Value</text><path fill="none" class="highcharts-axis-line" data-z-index="7" d="M 70 46 L 70 361"></path></g><g class="highcharts-series-group" data-z-index="3" aria-hidden="false"><g class="highcharts-series highcharts-series-0 highcharts-spline-series highcharts-color-0" data-z-index="0.1" opacity="1" transform="translate(70,46) scale(1 1)" clip-path="url(#highcharts-ndov4qk-22-)" aria-hidden="true"><path fill="none" d="M 7.0588235294118 269.249358107283 C 7.0588235294118 269.249358107283 29.30038102963158 165.29056795854592 44.1280860297781 165.29056795854592 C 58.955791029924946 165.29056795854592 66.4191077016049 232.93203331488775 81.27978881615611 232.93203331488775 C 96.15533061182131 232.93203331488775 103.5931015096539 129.64176497818823 118.4686433053191 129.64176497818823 C 133.34418510098712 129.64176497818823 140.7819559988211 129.64176497818823 155.6574977944891 136.90832298553727 C 170.4884575468091 144.1748809928863 177.9039374229691 202.9315896512961 192.73489717528912 202.9315896512961 C 207.59557828984111 202.9315896512961 215.02591884711708 142.30381861939043 229.8865999616691 142.30381861939043 C 244.76214175733307 142.30381861939043 252.1999126551651 223.70431041638062 267.07545445082906 223.70431041638062 C 281.93613556538105 223.70431041638062 289.36647612265705 73.46682423974795 304.2271572372091 73.46682423974795 C 319.0729776706451 73.46682423974795 326.4958878873631 117.53781284221643 341.34170832079906 149.0596631270426 C 356.20238943535105 180.61306681556042 363.6327299926271 198.37752444829033 378.4934111071791 231.1549591731079 C 393.3689529028431 263.9651713326446 400.8067238006752 313.02878033792825 415.6822655963391 313.02878033792825 C 430.52808602977507 313.02878033792825 437.9509962464931 127.2114191159985 452.7968166799291 112.07997385905367 C 467.6574977944811 96.94852860210884 475.087838351757 102.29371701997911 489.94851946630905 96.94852860210884 C 504.824061261977 91.59799499582019 512.2618321598112 85.34066879865637 527.1373739554791 85.34066879865637 C 541.9831943889151 85.34066879865637 549.4061046056331 180.28467832166226 564.2519250390691 180.28467832166226 C 579.1274668347331 180.28467832166226 586.5652377325652 174.0719467384995 601.4407795282291 174.0719467384995 C 616.3014606427811 174.0719467384995 623.7318012000571 290.98275433836824 638.5924823146091 290.98275433836824 C 653.4383027480451 290.98275433836824 660.8612129647631 187.03976661966223 675.7070333981991 150.12841708184965 C 690.5677145127512 113.18011924619742 712.8257600701747 106.3336359047062 712.8587361845791 106.3336359047062 C 712.8917122989834 106.3336359047062 712.94117647059 106.62357672486417 712.94117647059 106.62357672486417" class="highcharts-graph" data-z-index="1" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path><path fill="none" d="M 7.0588235294118 165.29056795854592 C 7.0588235294118 165.29056795854592 29.349845201238118 232.93203331488775 44.210526315789 232.93203331488775 C 59.086068111455006 232.93203331488775 66.52383900928801 129.64176497818823 81.399380804954 129.64176497818823 C 96.2749226006204 129.64176497818823 103.7126934984536 129.64176497818823 118.58823529412 136.90832298553727 C 133.41919504644 144.1748809928863 140.8346749226 202.9315896512961 155.66563467492 202.9315896512961 C 170.526315789472 202.9315896512961 177.95665634674802 142.30381861939043 192.8173374613 142.30381861939043 C 207.69287925696398 142.30381861939043 215.130650154796 223.70431041638062 230.00619195046 223.70431041638062 C 244.866873065012 223.70431041638062 252.29721362228798 73.46682423974795 267.15789473684 73.46682423974795 C 282.003715170276 73.46682423974795 289.426625386994 117.53781284221637 304.27244582043 149.0596631270426 C 319.133126934982 180.61306681556036 326.563467492258 198.3775244482947 341.42414860681 231.1549591731079 C 356.29969040247795 263.965171332649 363.73746130031196 313.02878033792825 378.61300309598 313.02878033792825 C 393.458823529416 313.02878033792825 400.881733746134 127.2114191159985 415.72755417957 112.07997385905367 C 430.588235294118 96.94852860210884 438.01857585139203 102.29371701997839 452.87925696594 96.94852860210884 C 467.75479876160796 91.59799499581946 475.192569659442 85.34066879865637 490.06811145511 85.34066879865637 C 504.913931888546 85.34066879865637 512.3368421052639 180.28467832166226 527.1826625387 180.28467832166226 C 542.0582043343641 180.28467832166226 549.495975232196 174.0719467384995 564.37151702786 174.0719467384995 C 579.232198142412 174.0719467384995 586.6625386996881 290.98275433836824 601.52321981424 290.98275433836824 C 616.369040247676 290.98275433836824 623.791950464394 187.03976661966252 638.63777089783 150.12841708184965 C 653.498452012382 113.1801192461977 660.928792569658 106.3336359047062 675.78947368421 106.3336359047062 C 690.6501547987621 106.3336359047062 712.94117647059 236.9954239378484 712.94117647059 236.9954239378484" visibility="visible" data-z-index="2" class="highcharts-tracker-line" stroke-linecap="round" stroke-linejoin="round" stroke="rgba(192,192,192,0.0001)" stroke-width="22"></path></g><g class="highcharts-markers highcharts-series-0 highcharts-spline-series highcharts-color-0 highcharts-tracker" data-z-index="0.1" opacity="1" transform="translate(70,46) scale(1 1)" clip-path="none" aria-hidden="false" aria-label=""><path fill="#7cb5ec" d="M 304 176.13393086530544 A 0 0 0 1 1 304 176.13393086530544 Z" class="highcharts-halo highcharts-color-0" data-z-index="-1" fill-opacity="0.25" visibility="hidden"></path><path fill="#7cb5ec" d="M 43.91789634515698 169.29056795854592 A 4 4 0 1 1 43.92189634449032 169.2905659585461 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="1. Wednesday, Nov  3, 10:51:42.815, 0.594085047783548." style="outline: none;"></path><path fill="#7cb5ec" d="M 80.91789634515698 236.93203331488775 A 4 4 0 1 1 80.9218963444903 236.93203131488792 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="2. Wednesday, Nov  3, 10:51:43.815, 0.32566653446473115." style="outline: none;"></path><path fill="#7cb5ec" d="M 117.91789634515698 133.64176497818823 A 4 4 0 1 1 117.9218963444903 133.6417629781884 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="3. Wednesday, Nov  3, 10:51:44.816, 0.7355485516738562." style="outline: none;"></path><path fill="#7cb5ec" d="M 154.91789634515698 140.90832298553727 A 4 4 0 1 1 154.9218963444903 140.90832098553744 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="4. Wednesday, Nov  3, 10:51:45.817, 0.7067130040256457." style="outline: none;"></path><path fill="#7cb5ec" d="M 191.91789634515698 206.9315896512961 A 4 4 0 1 1 191.9218963444903 206.93158765129627 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="5. Wednesday, Nov  3, 10:51:46.815, 0.4447159140821584." style="outline: none;"></path><path fill="#7cb5ec" d="M 228.9284717691487 146.30381861939043 A 4 4 0 1 1 228.93247176848203 146.3038166193906 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="6. Wednesday, Nov  3, 10:51:47.815, 0.685302307065911." style="outline: none;"></path><path fill="#7cb5ec" d="M 266.9284717691487 227.70431041638062 A 4 4 0 1 1 266.93247176848206 227.7043084163808 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="7. Wednesday, Nov  3, 10:51:48.816, 0.36228448247468004." style="outline: none;"></path><path fill="#7cb5ec" d="M 303.9284717691487 77.46682423974795 A 4 4 0 1 1 303.93247176848206 77.46682223974811 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="8. Wednesday, Nov  3, 10:51:49.816, 0.9584649831756034." style="outline: none;"></path><path fill="#7cb5ec" d="M 340.9284717691487 153.0596631270426 A 4 4 0 1 1 340.93247176848206 153.05966112704277 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="9. Wednesday, Nov  3, 10:51:50.815, 0.6584934002895135." style="outline: none;"></path><path fill="#7cb5ec" d="M 377.9284717691487 235.1549591731079 A 4 4 0 1 1 377.93247176848206 235.15495717310807 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="10. Wednesday, Nov  3, 10:51:51.815, 0.3327184159797305." style="outline: none;"></path><path fill="#7cb5ec" d="M 414.9284717691487 317.02878033792825 A 4 4 0 1 1 414.93247176848206 317.02877833792843 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="11. Wednesday, Nov  3, 10:51:52.816, 0.007822300246316471." style="outline: none;"></path><path fill="#7cb5ec" d="M 451.9284717691487 116.07997385905367 A 4 4 0 1 1 451.93247176848206 116.07997185905383 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="12. Wednesday, Nov  3, 10:51:53.815, 0.8052381989720092." style="outline: none;"></path><path fill="#7cb5ec" d="M 489.9265385737203 100.94852860210884 A 4 4 0 1 1 489.93053857305364 100.948526602109 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="13. Wednesday, Nov  3, 10:51:54.815, 0.8652836166582982." style="outline: none;"></path><path fill="#7cb5ec" d="M 526.9284717691487 89.34066879865637 A 4 4 0 1 1 526.9324717684821 89.34066679865653 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="14. Wednesday, Nov  3, 10:51:55.816, 0.9113465523862843." style="outline: none;"></path><path fill="#7cb5ec" d="M 563.9383196686296 184.28467832166226 A 4 4 0 1 1 563.9423196679629 184.28467632166243 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="15. Wednesday, Nov  3, 10:51:56.815, 0.5345846098346736." style="outline: none;"></path><path fill="#7cb5ec" d="M 600.9383196686296 178.0719467384995 A 4 4 0 1 1 600.9423196679629 178.07194473849967 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="16. Wednesday, Nov  3, 10:51:57.816, 0.559238306593256." style="outline: none;"></path><path fill="#7cb5ec" d="M 637.9383196686296 294.98275433836824 A 4 4 0 1 1 637.9423196679629 294.9827523383684 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="17. Wednesday, Nov  3, 10:51:58.816, 0.09530653040330073." style="outline: none;"></path><path fill="#7cb5ec" d="M 674.9383196686296 154.12841708184965 A 4 4 0 1 1 674.9423196679629 154.12841508184982 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="18. Wednesday, Nov  3, 10:51:59.815, 0.6542523131672633." style="outline: none;"></path><path fill="#7cb5ec" d="M 711.9383196686296 110.3336359047062 A 4 4 0 1 1 711.9423196679629 110.33363390470636 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="19. Wednesday, Nov  3, 10:52:00.815, 0.828041127362277." style="outline: none;"></path><path fill="#7cb5ec" d="M 712 241 A 4 4 0 1 1 712.0039999993334 240.99999800000018 Z" opacity="1" class="highcharts-point highcharts-color-0" tabindex="-1" role="img" aria-label="20. Wednesday, Nov  3, 10:52:01.815, 0.30954196850060156." style="outline: none;"></path></g></g><text x="400" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color:#333333;font-size:16px;font-weight:bold;text-transform:uppercase;fill:#333333;" y="22" aria-hidden="true">Live random data</text><text x="400" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color:#666666;fill:#666666;" y="45" aria-hidden="true"></text><text x="10" text-anchor="start" class="highcharts-caption" data-z-index="4" style="color:#666666;fill:#666666;" y="397" aria-hidden="true"></text><g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7" aria-hidden="true"><text x="195.28112923337605" style="color:#666666;cursor:default;font-size:12px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="381" opacity="1">10:51:45</text><text x="381.0517216776679" style="color:#666666;cursor:default;font-size:12px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="381" opacity="1">10:51:50</text><text x="566.8102356095579" style="color:#666666;cursor:default;font-size:12px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="381" opacity="1">10:51:55</text><text x="752.5687495414479" style="color:#666666;cursor:default;font-size:12px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" y="381" opacity="1">10:52:00</text></g><g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7" aria-hidden="true"><text x="55" style="color:#666666;cursor:default;font-size:12px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="365" opacity="1">0</text><text x="55" style="color:#666666;cursor:default;font-size:12px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="113" opacity="1">1</text><text x="55" style="color:#666666;cursor:default;font-size:12px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="303" opacity="1">0.25</text><text x="55" style="color:#666666;cursor:default;font-size:12px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="239" opacity="1">0.5</text><text x="55" style="color:#666666;cursor:default;font-size:12px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="177" opacity="1">0.75</text><text x="55" style="color:#666666;cursor:default;font-size:12px;fill:#666666;" text-anchor="end" transform="translate(0,0)" y="51" opacity="1">1.25</text></g><text x="790" class="highcharts-credits" text-anchor="end" data-z-index="8" style="cursor:pointer;color:#999999;font-size:9px;fill:#999999;" y="395" aria-label="Chart credits: Highcharts.com" aria-hidden="false">Highcharts.com</text><g class="highcharts-label highcharts-tooltip highcharts-color-0" style="cursor:default;white-space:nowrap;pointer-events:none;" data-z-index="8" transform="translate(324,-9999)" opacity="0" visibility="hidden" aria-hidden="true"><path fill="rgba(219,219,216,0.8)" class="highcharts-label-box highcharts-tooltip-box" d="M 3 0 L 98 0 C 101 0 101 0 101 3 L 101 58 C 101 61 101 61 98 61 L 56 61 L 50 67 L 44 61 L 3 61 C 0 61 0 61 0 58 L 0 3 C 0 0 0 0 3 0"></path><text x="8" data-z-index="1" y="20" style="color:#333333;font-size:12px;fill:#333333;"><tspan style="font-weight:bold;">Random data</tspan><tspan class="highcharts-br" dy="15" x="8">​</tspan>2021-11-03 10:51:34<tspan class="highcharts-br" dy="15" x="8">​</tspan>0.55</text></g></svg><div aria-hidden="false" class="highcharts-a11y-proxy-container-after" style="top: 0px; left: 0px; white-space: nowrap; position: absolute;"><div class="highcharts-a11y-proxy-group highcharts-a11y-proxy-group-zoom"></div><div class="highcharts-a11y-proxy-group highcharts-a11y-proxy-group-chartMenu"></div></div></div><div id="highcharts-screen-reader-region-after-0" aria-label="" aria-hidden="false" style="position: relative;"><div aria-hidden="false" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"><div id="highcharts-end-of-chart-marker-0" class="highcharts-exit-anchor" tabindex="0" aria-hidden="false">End of interactive chart.</div></div></div></div>
+    <p class="highcharts-description highcharts-linked-description" aria-hidden="true">
+        Chart showing data updating every second, with old data being removed.
+    </p>
+</figure>
+
+</body>
+
+<script>
+    Highcharts.chart('container', {
+        chart: {
+            type: 'spline',
+            animation: Highcharts.svg, // don't animate in old IE
+            marginRight: 10,
+            events: {
+                load: function () {
+
+                    // set up the updating of the chart each second
+                    var series = this.series[0];
+                    setInterval(function () {
+                        var x = (new Date()).getTime(), // current time
+                            y = getAjaxCurveValue();
+                        series.addPoint([x, y], true, true);
+                    }, 1000);
+                }
+            }
+        },
+
+        time: {
+            useUTC: false
+        },
+
+        title: {
+            text: '服务器内存使用量'
+        },
+
+        accessibility: {
+            announceNewData: {
+                enabled: true,
+                minAnnounceInterval: 15000,
+                announcementFormatter: function (allSeries, newSeries, newPoint) {
+                    if (newPoint) {
+                        return 'New point added. Value: ' + newPoint.y;
+                    }
+                    return false;
+                }
+            }
+        },
+
+        xAxis: {
+            type: 'datetime',
+            tickPixelInterval: 150
+        },
+
+        yAxis: {
+            title: {
+                text: 'Value'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+
+        tooltip: {
+            headerFormat: '<b>{series.name}</b><br/>',
+            pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}'
+        },
+
+        legend: {
+            enabled: false
+        },
+
+        exporting: {
+            enabled: false
+        },
+
+        series: [{
+            name: 'Random data',
+            data: (function () {
+                // generate an array of random data
+                var data = [],
+                    time = (new Date()).getTime(),
+                    i;
+
+                for (i = -19; i <= 0; i += 1) {
+                    data.push({
+                        x: time + i * 1000,
+                        //y: Math.random()
+                        y: getAjaxCurveValue()
+                    });
+                }
+                console.log("data:" + Math.random());
+                // var data_plot = getAjaxCurveList()
+                // console.log("data_plot:" + data_plot);
+                return data;
+            }())
+        }]
+    });
+
+    $(function () {
+        $("#getdata-btn").click(function () {
+            // console.log('点击事件成功')
+            // $.post(url,param,[可以省略],success)
+            $.post("/cluster/monitor/test_memusage_curve/ajax",function (data) {
+                console.log(data.name);
+                console.log(data);
+            })
+        })
+    })
+
+    $(function () {
+        $("#getdataValue-btn").click(function () {
+            getAjaxCurveValue();
+        })
+    })
+
+    function getAjaxCurveList() {
+        $.post("/cluster/monitor/test_memusage_curve/ajaxList",function (data) {
+            console.log("List:" + data);
+            return data;
+        })
+    }
+
+    function getAjaxCurveValue() {
+        $.post("/cluster/monitor/test_memusage_curve/ajaxValue",function (data) {
+            console.log("Value:" + data);
+            return data.value;
+        })
+    }
+</script>
+</html>

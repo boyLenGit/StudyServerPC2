@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>MyBatis04_KR</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>Sub01_Start</module>
+        <module>Sub02_db_properties</module>
+        <module>Sub03_Alias_pkg</module>
+        <module>Sub04_Alias_annotation</module>
+        <module>Sub05_resultMap_simple</module>
+        <module>Sub06_Log</module>
+        <module>Sub07_limit</module>
+        <module>Sub08_RowBounds</module>
+        <module>Sub09_annotation</module>
+        <module>Sub10_Lombok</module>
+        <module>Sub11_More_to_One_F2</module>
+        <module>Sub11_More_to_One_F1</module>
+        <module>Sub13_AliYun_MySQL</module>
+        <module>Sub14_One_to_More_F1</module>
+        <module>Sub15_One_to_More_F2</module>
+        <module>Sub16_Dynamic</module>
+        <module>Sub17_Cache</module>
+    </modules>
+
+    <!-- 添加依赖包 -->
+    <dependencies>
+
+        <!-- mybatis核心包 -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.4.5</version>
+        </dependency>
+
+        <!-- mysql驱动包 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.22</version>
+        </dependency>
+
+        <!-- 用于单元测试 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+        </dependency>
+
+        <!-- 用于查看日志 -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.12</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

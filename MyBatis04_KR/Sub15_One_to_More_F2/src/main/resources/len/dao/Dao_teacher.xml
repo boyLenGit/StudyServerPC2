@@ -1,0 +1,66 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 作用：这是Mapping映射配置文件；对应java文件：Dao03_MultiDao -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="len.dao.Dao_teacher">
+
+    <select id="Dao_getTeacher" resultMap="Mapper_Teacher_to_Students">
+        select * from MyBatis_KR.teacher where id = #{dao_t_id}
+    </select>
+    <!-- #{dao_t_id}的变量名，要与Dao_teacher中的@Param("dao_t_id")一致 -->
+
+    <resultMap id="Mapper_Teacher_to_Students" type="len.pojo.Obj_teacher">
+        <result property="obj_t_id" column="id"/>
+        <result property="obj_t_name" column="name"/>
+        <collection property="obj_t_student" column="id"
+                    javaType="ArrayList" ofType="len.pojo.Obj_student"
+                    select="getStudentByTeacherId"/>
+    </resultMap>
+
+    <select id="getStudentByTeacherId" resultMap="Mapper_Students">
+        select * from MyBatis_KR.student where tid = #{dao_t_id}
+    </select>
+
+    <resultMap id="Mapper_Students" type="len.pojo.Obj_student">
+        <result property="obj_s_id" column="id"/>
+        <result property="obj_s_name" column="name"/>
+        <result property="obj_s_teacher_id" column="tid"/>
+    </resultMap>
+
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 作用：这是Mapping映射配置文件；对应java文件：Dao03_MultiDao -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="len.dao.Dao_teacher">
+
+    <select id="Dao_getTeacher" resultMap="Mapper_Teacher_to_Students">
+        select * from MyBatis_KR.teacher where id = #{dao_t_id}
+    </select>
+    <!-- #{dao_t_id}的变量名，要与Dao_teacher中的@Param("dao_t_id")一致 -->
+
+    <resultMap id="Mapper_Teacher_to_Students" type="len.pojo.Obj_teacher">
+        <result property="obj_t_id" column="id"/>
+        <result property="obj_t_name" column="name"/>
+        <collection property="obj_t_student" column="id"
+                    javaType="ArrayList" ofType="len.pojo.Obj_student"
+                    select="getStudentByTeacherId"/>
+    </resultMap>
+
+    <select id="getStudentByTeacherId" resultMap="Mapper_Students">
+        select * from MyBatis_KR.student where tid = #{dao_t_id}
+    </select>
+
+    <resultMap id="Mapper_Students" type="len.pojo.Obj_student">
+        <result property="obj_s_id" column="id"/>
+        <result property="obj_s_name" column="name"/>
+        <result property="obj_s_teacher_id" column="tid"/>
+    </resultMap>
+
+>>>>>>> 1da3f48 (first commit)
+</mapper>

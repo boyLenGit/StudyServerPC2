@@ -1,0 +1,20 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 作用：这是Mapping映射配置文件；对应java文件：Dao03_MultiDao -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="len.dao.Dao_teacher">
+
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 作用：这是Mapping映射配置文件；对应java文件：Dao03_MultiDao -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="len.dao.Dao_teacher">
+
+>>>>>>> 1da3f48 (first commit)
+</mapper>

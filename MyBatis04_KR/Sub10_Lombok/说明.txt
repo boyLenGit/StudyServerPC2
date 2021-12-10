@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+Lombok
+·使用步骤
+    1.在IDEA中安装Lombok插件
+    2.在项目中导入lombok的jar包
+    3.在实体类上加注解即可
+=======
+Lombok
+·使用步骤
+    1.在IDEA中安装Lombok插件
+    2.在项目中导入lombok的jar包
+    3.在实体类上加注解即可
+>>>>>>> 1da3f48 (first commit)

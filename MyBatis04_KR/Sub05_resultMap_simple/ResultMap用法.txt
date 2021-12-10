@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+1.注意事项
+    1.[!极易错] Mapper.xml文件中的resultType一定要改成resultMap，否则会报错Mapper.xml存在错误
+=======
+1.注意事项
+    1.[!极易错] Mapper.xml文件中的resultType一定要改成resultMap，否则会报错Mapper.xml存在错误
+>>>>>>> 1da3f48 (first commit)
+        PS：parameterType也同理

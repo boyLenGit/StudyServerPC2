@@ -1,0 +1,62 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 作用：这是Mapping映射配置文件；对应java文件：Dao03_MultiDao -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="len.dao.Dao04_Alias">
+
+    <resultMap id="LenMap_Result" type="obj04_alias">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="pwd" property="password"/>
+    </resultMap>
+
+    <parameterMap id="LenMap_Parameter" type="obj04_alias">
+        <parameter resultMap="id" property="id"/>
+        <parameter resultMap="name" property="name"/>
+        <parameter resultMap="pwd" property="password"/>
+    </parameterMap>
+
+    <select id="Dao04_getUserList" resultMap="LenMap_Result">
+        select * from MyBatis_KR.user;
+    </select>
+
+    <!-- 注意这里的parameterType可以写Map或者map，跟Dao中的map名无关，跟Dao中的Map类型有关。     别名参考网址：https://mybatis.org/mybatis-3/zh/configuration.html#typeAliases -->
+    <select id="Dao04_getUserByLimit" parameterType="Map" resultMap="LenMap_Result">
+        select * from MyBatis_KR.user limit #{startIndex1},#{pageSize1};
+    </select>
+
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 作用：这是Mapping映射配置文件；对应java文件：Dao03_MultiDao -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="len.dao.Dao04_Alias">
+
+    <resultMap id="LenMap_Result" type="obj04_alias">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="pwd" property="password"/>
+    </resultMap>
+
+    <parameterMap id="LenMap_Parameter" type="obj04_alias">
+        <parameter resultMap="id" property="id"/>
+        <parameter resultMap="name" property="name"/>
+        <parameter resultMap="pwd" property="password"/>
+    </parameterMap>
+
+    <select id="Dao04_getUserList" resultMap="LenMap_Result">
+        select * from MyBatis_KR.user;
+    </select>
+
+    <!-- 注意这里的parameterType可以写Map或者map，跟Dao中的map名无关，跟Dao中的Map类型有关。     别名参考网址：https://mybatis.org/mybatis-3/zh/configuration.html#typeAliases -->
+    <select id="Dao04_getUserByLimit" parameterType="Map" resultMap="LenMap_Result">
+        select * from MyBatis_KR.user limit #{startIndex1},#{pageSize1};
+    </select>
+
+>>>>>>> 1da3f48 (first commit)
+</mapper>

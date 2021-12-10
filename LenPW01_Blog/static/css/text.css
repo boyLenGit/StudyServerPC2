@@ -1,0 +1,65 @@
+<<<<<<< HEAD
+/*Color*/
+.LenCssText-color-black{
+    color: black !important;
+}
+/*Size*/
+.LenCssText-size-middle{
+    font-size: medium;
+}
+/*Line spacing */
+.LenCssText-line-space-middle{
+    line-height: 1.8;
+}
+/**/
+.LenCssText-Opacity-L{
+    opacity: 0.8 !important;
+}
+/*margin*/
+.LenCssText-margin-middle{
+    margin-top: 0.3em; !important;
+    margin-bottom: 0.3em !important;
+}
+/*padding*/
+.LenCssText-padding-middle{
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
+/*weight*/
+.LenCssText-weight-bold{
+    font-weight: bold;
+}
+
+=======
+/*Color*/
+.LenCssText-color-black{
+    color: black !important;
+}
+/*Size*/
+.LenCssText-size-middle{
+    font-size: medium;
+}
+/*Line spacing */
+.LenCssText-line-space-middle{
+    line-height: 1.8;
+}
+/**/
+.LenCssText-Opacity-L{
+    opacity: 0.8 !important;
+}
+/*margin*/
+.LenCssText-margin-middle{
+    margin-top: 0.3em; !important;
+    margin-bottom: 0.3em !important;
+}
+/*padding*/
+.LenCssText-padding-middle{
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
+/*weight*/
+.LenCssText-weight-bold{
+    font-weight: bold;
+}
+
+>>>>>>> 1da3f48 (first commit)

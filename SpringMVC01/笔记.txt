@@ -1,0 +1,44 @@
+<<<<<<< HEAD
+·BX 网页存放位置
+    1.如果是公共的页面，就放在web网页下
+    2.如果是不公开的页面，就放在web/WEB-INF/下
+
+·网页解析：http://localhost:8080/S02_HelloMVC_war_exploded/hello
+    1.请求位于服务器localhost:8080上的SpringMVC站点的hello控制器
+
+·Tips
+    1.modelAndView1.setViewName("hello");  用于指定该Controller打开哪个Web视图（即jsp文件）
+
+·目录
+    1.
+    2.
+    3.
+    4.S04_Controller_config
+        1.3种Controller的使用方式
+        2./t1/c1结构的网页请求
+        3.既有Controller的Config示例，又有注解开发的示例。
+        4.重定向Redirect示例
+
+=======
+·BX 网页存放位置
+    1.如果是公共的页面，就放在web网页下
+    2.如果是不公开的页面，就放在web/WEB-INF/下
+
+·网页解析：http://localhost:8080/S02_HelloMVC_war_exploded/hello
+    1.请求位于服务器localhost:8080上的SpringMVC站点的hello控制器
+
+·Tips
+    1.modelAndView1.setViewName("hello");  用于指定该Controller打开哪个Web视图（即jsp文件）
+
+·目录
+    1.
+    2.
+    3.
+    4.S04_Controller_config
+        1.3种Controller的使用方式
+        2./t1/c1结构的网页请求
+        3.既有Controller的Config示例，又有注解开发的示例。
+        4.重定向Redirect示例
+
+>>>>>>> 1da3f48 (first commit)
+    5.

@@ -1,0 +1,62 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="len.dao.Dao_student">
+    <select id="Dao_getStudent" resultMap="resultMap_StudentTeacher">
+        select * from MyBatis_KR.student;
+    </select>
+
+    <select id="Dao_getTeacher" resultType="len.pojo.Obj_teacher">
+        select * from MyBatis_KR.teacher where id = #{id};
+    </select>
+    
+    <resultMap id="resultMap_StudentTeacher" type="len.pojo.Obj_student">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <!-- 复杂的插件需要单独处理  如果是对象则用association，如果是集合则用collection -->
+
+        <!--
+        [association用法]
+            1.property：映射数据库列的字段或属性。即student类中要做Map映射的变量
+            2.column：数据库的列名或者列标签别名。即MySQL中要做Map映射的变量 对应的MySQL列名
+            3.javaType：返回的数据类型，应为完整java类名或别名
+            4.select：接口中对应的MySQL操作（在接口Dao_getTeacher中已经写好了MySQL操作）
+        -->
+        <association property="teacher" column="tid" javaType="len.pojo.Obj_teacher" select="Dao_getTeacher"/>
+    </resultMap>
+
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="len.dao.Dao_student">
+    <select id="Dao_getStudent" resultMap="resultMap_StudentTeacher">
+        select * from MyBatis_KR.student;
+    </select>
+
+    <select id="Dao_getTeacher" resultType="len.pojo.Obj_teacher">
+        select * from MyBatis_KR.teacher where id = #{id};
+    </select>
+    
+    <resultMap id="resultMap_StudentTeacher" type="len.pojo.Obj_student">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <!-- 复杂的插件需要单独处理  如果是对象则用association，如果是集合则用collection -->
+
+        <!--
+        [association用法]
+            1.property：映射数据库列的字段或属性。即student类中要做Map映射的变量
+            2.column：数据库的列名或者列标签别名。即MySQL中要做Map映射的变量 对应的MySQL列名
+            3.javaType：返回的数据类型，应为完整java类名或别名
+            4.select：接口中对应的MySQL操作（在接口Dao_getTeacher中已经写好了MySQL操作）
+        -->
+        <association property="teacher" column="tid" javaType="len.pojo.Obj_teacher" select="Dao_getTeacher"/>
+    </resultMap>
+
+>>>>>>> 1da3f48 (first commit)
+</mapper>

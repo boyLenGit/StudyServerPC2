@@ -1,0 +1,64 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    使用Spring来创建对象，在Spring中这些都称为Bean
+    ·bean标签：id就是调用时getBean的值；class就是要生成的实体类的路径
+    ·property标签：name就是实体类中的变量名；value就是赋给该变量的值
+         -->
+    <bean id="bean_hello" class="len.pojo.Hello">
+        <property name="str" value="Len Test of Hello Spring"/>
+    </bean>
+
+    <bean id="bean_hava_param_A" class="len.pojo.Hello_have_param_A">
+        <constructor-arg index="0" value="Test_value_hava_param_A"/>
+    </bean>
+
+    <bean id="bean_hava_param_B" class="len.pojo.Hello_have_param_B">
+        <constructor-arg type="java.lang.String" value="Test_value_hava_param_B"/>
+    </bean>
+
+
+    <bean id="bean_hava_param_C" class="len.pojo.Hello_have_param_C">
+        <constructor-arg name="str" value="Test_value_hava_param_C"/>
+    </bean>
+
+
+
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    使用Spring来创建对象，在Spring中这些都称为Bean
+    ·bean标签：id就是调用时getBean的值；class就是要生成的实体类的路径
+    ·property标签：name就是实体类中的变量名；value就是赋给该变量的值
+         -->
+    <bean id="bean_hello" class="len.pojo.Hello">
+        <property name="str" value="Len Test of Hello Spring"/>
+    </bean>
+
+    <bean id="bean_hava_param_A" class="len.pojo.Hello_have_param_A">
+        <constructor-arg index="0" value="Test_value_hava_param_A"/>
+    </bean>
+
+    <bean id="bean_hava_param_B" class="len.pojo.Hello_have_param_B">
+        <constructor-arg type="java.lang.String" value="Test_value_hava_param_B"/>
+    </bean>
+
+
+    <bean id="bean_hava_param_C" class="len.pojo.Hello_have_param_C">
+        <constructor-arg name="str" value="Test_value_hava_param_C"/>
+    </bean>
+
+
+
+>>>>>>> 1da3f48 (first commit)
+</beans>

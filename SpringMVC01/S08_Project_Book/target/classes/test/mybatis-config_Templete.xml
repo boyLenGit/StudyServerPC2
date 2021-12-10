@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- MyBatis的核心配置文件，用于从XML中构建SqlSessionFactory -->
+<configuration>
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <typeAliases>
+        <package name="len.pojo"/>
+    </typeAliases>
+
+    <mappers>
+        <mapper class="len.dao.BookMapper"/>
+    </mappers>
+
+=======
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<!-- MyBatis的核心配置文件，用于从XML中构建SqlSessionFactory -->
+<configuration>
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <typeAliases>
+        <package name="len.pojo"/>
+    </typeAliases>
+
+    <mappers>
+        <mapper class="len.dao.BookMapper"/>
+    </mappers>
+
+>>>>>>> 1da3f48 (first commit)
+</configuration>

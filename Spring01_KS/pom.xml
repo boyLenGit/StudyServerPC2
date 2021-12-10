@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>len.groupid</groupId>
+    <artifactId>Spring01_KS</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>S01_ioc</module>
+        <module>S02_hellospring</module>
+        <module>S03_DL_Inject</module>
+        <module>S04_AutoWired</module>
+        <module>S05_Autowire_Annotation</module>
+        <module>S06_Annotation_develop</module>
+        <module>S07_StaticProxy</module>
+        <module>S09_Mybatis_with_Spring</module>
+        <module>S08_only_MyBatis</module>
+        <module>S09_MyBatis_with_Spring_github</module>
+        <module>S10_Spring_with_MyBatis_Simple</module>
+        <module>S11_Affair</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.2.0.RELEASE</version>
+        </dependency>
+
+        <!-- 用于单元测试 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+        </dependency>
+
+        <!-- 用于查看日志 -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

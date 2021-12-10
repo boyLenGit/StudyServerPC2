@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+不能自动安装的指令，需要手动安装：
+RUN apt-get install -y x-window-system-core
+=======
+不能自动安装的指令，需要手动安装：
+RUN apt-get install -y x-window-system-core
+>>>>>>> 1da3f48 (first commit)
+apt-get install -y ubuntu-desktop

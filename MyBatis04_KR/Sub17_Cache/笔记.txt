@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+[一级缓存与二级缓存]
+·核心过程
+    1.Mapper中添加标签<cache/>
+        ·也可以添加标签<cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+    2.将实体类序列化implements Serializable
+        ·public class Blog implements Serializable
+    3.MyBatis中开启二级缓存（也叫全局缓存）：<setting name="cacheEnabled" value="true"/>
+=======
+[一级缓存与二级缓存]
+·核心过程
+    1.Mapper中添加标签<cache/>
+        ·也可以添加标签<cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+    2.将实体类序列化implements Serializable
+        ·public class Blog implements Serializable
+    3.MyBatis中开启二级缓存（也叫全局缓存）：<setting name="cacheEnabled" value="true"/>
+>>>>>>> 1da3f48 (first commit)
+    4.（可选）手动清理缓存：sqlSession1.clearCache();

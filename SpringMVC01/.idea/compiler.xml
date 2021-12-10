@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="S09_Ajax" />
+        <module name="S04_Controller_config_Github" />
+        <module name="S09_Ajax_Github" />
+        <module name="S08_Project_Book" />
+        <module name="S03_Annotation" />
+        <module name="S06_UTF_8" />
+        <module name="S09_Ajax_Refresh" />
+        <module name="S05_RestFull_Style" />
+        <module name="S02_HelloMVC" />
+        <module name="S08_Project_Book_Github" />
+        <module name="S08_Project_Book_MySQL5" />
+        <module name="S04_Controller_config" />
+        <module name="S01_Servlet" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="S04_Controller_config_Github2" target="1.5" />
+      <module name="S06_Redirect" target="1.5" />
+      <module name="S07_Receive" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
