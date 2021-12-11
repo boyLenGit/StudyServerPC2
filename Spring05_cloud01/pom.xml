@@ -79,6 +79,23 @@
             <artifactId>trilead-ssh2</artifactId>
             <version>build212-hudson-6</version>
         </dependency>
+
+        <!-- 用于将markdown的原始数据转化为html显示，在这里用于博客内容的展示 -->
+        <dependency>
+            <groupId>com.atlassian.commonmark</groupId>
+            <artifactId>commonmark</artifactId>
+            <version>0.10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.commonmark</groupId>
+            <artifactId>commonmark-ext-heading-anchor</artifactId>
+            <version>0.10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.atlassian.commonmark</groupId>
+            <artifactId>commonmark-ext-gfm-tables</artifactId>
+            <version>0.10.0</version>
+        </dependency>
     </dependencies>
 
     <build>
