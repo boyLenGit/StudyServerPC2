@@ -44,10 +44,11 @@ public class BlogServiceImpl implements BlogService{
         if(blog==null){
             throw new NotFoundException("该博客不存在");
         }
-        String content = blog.getContent();
-        MarkdownUtils.markdownToHtmlExtensions(content);
-        blog.setContent(content);
-        return blog;
+        Blog blog_markdownd = new Blog();
+        BeanUtils.copyProperties(blog, blog_markdownd);
+        String content = blog_markdownd.getContent();
+        blog_markdownd.setContent(MarkdownUtils.markdownToHtmlExtensions(content););
+        return blog_markdownd;
     }
 
     @Override
