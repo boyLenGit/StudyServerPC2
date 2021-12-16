@@ -6,6 +6,7 @@ import len.cloud01.artifact.po.Blog;
 import len.cloud01.artifact.po.Tag;
 import len.cloud01.artifact.po.Type;
 import len.cloud01.artifact.util.LenBeanUtils;
+import len.cloud01.artifact.util.MarkdownUtils;
 import len.cloud01.artifact.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,9 +42,12 @@ public class BlogServiceImpl implements BlogService{
     public Blog getAndConvert(Long id) {
         Blog blog = blogRepository.findById(id).orElse(null);
         if(blog==null){
-            throw 
+            throw new NotFoundException("该博客不存在");
         }
-        return null;
+        String content = blog.getContent();
+        MarkdownUtils.markdownToHtmlExtensions(content);
+        blog.setContent(content);
+        return blog;
     }
 
     @Override
