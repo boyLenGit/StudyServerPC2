@@ -91,7 +91,7 @@ attached:轨道可以依附在主窗口
             </div>
             <h2 class="ui center aligned header" th:text="${blog.title}">现在的手机把夜晚拍成“白天”，这合理吗？</h2>
             <br>
-            <div class="LenCssText-size-middle LenCssText-padding-middle LenCssText-line-space-middle" th:text="${blog.content}">
+            <div class="LenCssText-size-middle LenCssText-padding-middle LenCssText-line-space-middle" th:utext="${blog.content}">
                 每当手机发布会上出现超级夜景的展示片段时，总有人问：“把夜晚拍成白天有意义吗？”不少人都有这种想法，但我要说这种想法是错误的，你以为拍出来的是白天，实际上那还是夜晚的照片。
                 这是我2016年6月25日凌晨在无人区里拍的图，可以看到漆黑一片，无人区没有打灯肯定是漆黑一片这没毛病吧？
                 这种看起来很明亮的照片不是所谓的“把夜晚拍成白天”，而是通过长曝光+大光圈+高ISO带来更多的进光量，所以照片看起来比较明亮而已。我们的人眼也有类似的功能，你从明亮突然进入黑暗的环境，你也觉得一片漆黑，但过一段时间你的眼睛就能适应这个黑暗环境，不再是漆黑一片了。
