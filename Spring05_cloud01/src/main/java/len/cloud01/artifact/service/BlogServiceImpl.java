@@ -39,6 +39,10 @@ public class BlogServiceImpl implements BlogService{
 
     @Override
     public Blog getAndConvert(Long id) {
+        Blog blog = blogRepository.findById(id).orElse(null);
+        if(blog==null){
+            throw 
+        }
         return null;
     }
 
