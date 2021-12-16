@@ -48,7 +48,7 @@ public class IndexController {
 
     @GetMapping("/article/{id}")
     public String article(@PathVariable Long id, Model model){
-        model.addAttribute("blog", blogService.getBlog(id));
+        model.addAttribute("blog", blogService.getAndConvert(id));
         return "article";
     }
 }
