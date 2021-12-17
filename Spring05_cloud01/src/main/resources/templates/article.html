@@ -223,6 +223,9 @@ attached:轨道可以依附在主窗口
             </div>
             <!--                评论输入框-->
             <form class="ui form">
+                <input type="text" name="blog.id" th:value="${blog.id}">
+                <!--为-1的时候，表示为空，表示无父评论-->
+                <input type="text" name="parentComment.id" value="-1">
                 <div class="field LenCssButton-padding-middle">
                     <textarea name="content" placeholder="请输入文本信息..."></textarea>
                 </div>
@@ -305,6 +308,34 @@ attached:轨道可以依附在主窗口
         popup : $('#popup_pay.popup'),
         on : 'click',
         position : 'bottom center'
+    });
+
+    //评论表单验证
+    $('.ui.form').form({
+        fields: {
+            title: {
+                identifier: 'content',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入评论内容'
+                }
+                ]
+            },
+            content: {
+                identifier: 'nickname',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入你的大名'
+                }]
+            },
+            type: {
+                identifier: 'email',
+                rules: [{
+                    type: 'email',
+                    prompt: '请填写正确的邮箱地址'
+                }]
+            }
+        }
     });
 
 </script>
