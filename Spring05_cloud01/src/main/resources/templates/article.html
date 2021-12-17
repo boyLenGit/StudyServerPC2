@@ -221,6 +221,7 @@ attached:轨道可以依附在主窗口
                     </div>
                 </div>
             </div>
+
             <!--                评论输入框-->
             <form class="ui form">
                 <input type="text" name="blog.id" th:value="${blog.id}">
@@ -363,6 +364,7 @@ attached:轨道可以依附在主窗口
             "email"   : $("[name='email']").val(),
             "content" : $("[name='content']").val()
         },function (responseTxt, statusTxt, xhr) {
+            // 回调内容，如果成功了xhr=200，可用于判断提交是否成功
 //        $(window).scrollTo($('#comment-container'),500);
             clearContent();
         });
