@@ -340,6 +340,19 @@ attached:轨道可以依附在主窗口
         }
     });
 
+    // 评论提交按钮提交评论并通过Ajax刷新表单功能
+    $('#commentpost-btn').click(function () {
+        // 用于表单验证，当评论内容为空时，不能提交。具体原理和接口不知道
+        var boo = $('.ui.form').form('validate form');
+        if (boo) {
+            console.log('校验成功');
+            postData();
+        } else {
+            console.log('校验失败');
+        }
+
+    });
+
 </script>
 
 </body>
