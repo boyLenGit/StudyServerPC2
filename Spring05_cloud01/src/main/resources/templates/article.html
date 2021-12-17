@@ -243,7 +243,7 @@ attached:轨道可以依附在主窗口
                         </div>
                     </div>
                     <div class="field LenCssButton-padding-middle LenCssButton-length-full">
-                        <button class="ui yellow button LenCssButton-length-full"><i class="edit icon"></i>发布</button>
+                        <button id="commentpost-btn" type="button" class="ui yellow button LenCssButton-length-full"><i class="edit icon"></i>发布</button>
                     </div>
                 </div>
             </form>
@@ -300,17 +300,19 @@ attached:轨道可以依附在主窗口
 </footer>
 
 <script>
+    // 标题栏展开列表
     $('#button_sidebar').click(function () {
         $('#a_top_label1, #a_top_label2, #a_top_label3, #a_top_label4, #a_top_label5, #div_search1').toggleClass('LenCssLogic-mobile-hide');
     });
 
+    // 付款页面
     $('#button_pay').popup({
         popup : $('#popup_pay.popup'),
         on : 'click',
         position : 'bottom center'
     });
 
-    //评论表单验证
+    // 评论表单验证
     $('.ui.form').form({
         fields: {
             title: {
