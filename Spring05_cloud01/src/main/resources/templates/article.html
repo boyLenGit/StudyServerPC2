@@ -372,6 +372,12 @@ attached:轨道可以依附在主窗口
         });
     }
 
+    function clearContent() {
+        $("[name='content']").val('');
+        $("[name='parentComment.id']").val(-1);
+        $("[name='content']").attr("placeholder", "请输入评论信息...");
+    }
+
 </script>
 
 </body>
