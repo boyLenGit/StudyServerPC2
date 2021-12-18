@@ -222,13 +222,13 @@ attached:轨道可以依附在主窗口
                 </div>
             </div>
 
+
             <!--                评论输入框-->
-            <div class="ui form">
-                <div id="comment-form" class="ui form">
-                    <input type="hidden" name="blog.id" th:value="${blog.id}">
-                    <!--为-1的时候，表示为空，表示无父评论-->
-                    <input type="hidden" name="parentComment.id" value="-1">
-                </div>
+            <div id="comment-form" class="ui form">
+                <input type="hidden" name="blog.id" th:value="${blog.id}">
+                <!--为-1的时候，表示为空，表示无父评论-->
+                <input type="hidden" name="parentComment.id" value="-1">
+
                 <div class="field LenCssButton-padding-middle">
                     <textarea name="content" placeholder="请输入文本信息..."></textarea>
                 </div>
