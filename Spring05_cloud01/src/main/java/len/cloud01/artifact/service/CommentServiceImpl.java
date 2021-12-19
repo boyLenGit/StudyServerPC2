@@ -4,10 +4,13 @@ import len.cloud01.artifact.dao.CommentRepository;
 import len.cloud01.artifact.po.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
+@Service
 public class CommentServiceImpl implements CommentService{
     @Autowired
     private CommentRepository commentRepository;
@@ -30,6 +33,7 @@ public class CommentServiceImpl implements CommentService{
         }else {
             comment.setParentComment(null);
         }
+        comment.setCreateTime(new Date());
         return commentRepository.save(comment);
     }
 }
