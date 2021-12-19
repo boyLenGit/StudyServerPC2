@@ -473,6 +473,7 @@ h5,h6{font-size:1em;}
         </div>
       </div>
       <div  class="ui bottom attached segment" th:if="${blog.commentabled}">
+
         <!--留言区域列表-->
         <div id="comment-container"  class="ui teal segment">
           <div th:fragment="commentList">
@@ -579,6 +580,9 @@ h5,h6{font-size:1em;}
 
             </div>
           </div>
+
+
+<!--          /*************-->
         </div>
         <div id="comment-form" class="ui form">
           <input type="hidden" name="blog.id" th:value="${blog.id}">
