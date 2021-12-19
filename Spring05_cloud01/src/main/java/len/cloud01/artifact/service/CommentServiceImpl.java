@@ -25,9 +25,11 @@ public class CommentServiceImpl implements CommentService{
     public Comment saveComment(Comment comment) {
         Long parentCommentId = comment.getParentComment().getId();
         if (parentCommentId != -1){  // 如果当前的comment不是父级，则给这个comment设置父级。
-            // ⬇ comment中带有父级comment的id，但是不含有父级comment的其他属性（如comment的内容），因此这里是为了将父级comment整个都给当前comment
+            // ⬇ comment中带有父级comment的id，但是不含有父级comment的其他属性（如comment的内容），因此这里是为了将父级comment整个都给当前comment，即实例化
             comment.setParentComment(commentRepository.getById(parentCommentId));
+        }else {
+            comment.setParentComment(null);
         }
-        return null;
+        return commentRepository.save(comment);
     }
 }
