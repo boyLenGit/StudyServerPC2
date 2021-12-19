@@ -163,7 +163,7 @@ attached:轨道可以依附在主窗口
                             How artistic!
                         </div>
                         <div class="actions">
-                            <a class="reply">回复</a>
+                            <a class="reply" data-commentid="1" data-commentnickname="Matt" onclick="reply(this)">回复</a>
                         </div>
                     </div>
                 </div>
@@ -216,7 +216,7 @@ attached:轨道可以依附在主窗口
                             Dude, this is awesome. Thanks so much
                         </div>
                         <div class="actions">
-                            <a class="reply">回复</a>
+                            <a class="reply" data-commentid="1" data-commentnickname="Joe Henderson" onclick="reply(this)">回复</a>
                         </div>
                     </div>
                 </div>
@@ -372,10 +372,20 @@ attached:轨道可以依附在主窗口
         });
     }
 
+    // 评论内容发表后的处理内容
     function clearContent() {
         $("[name='content']").val('');
         $("[name='parentComment.id']").val(-1);
         $("[name='content']").attr("placeholder", "请输入评论信息...");
+    }
+
+    // 实现评论回复按钮的功能
+    function reply(obj) {
+        var commentId = $(obj).data('commentid');
+        var commentNickname = $(obj).data('commentnickname');
+        $("[name='content']").attr("placeholder", "@"+commentNickname).focus();
+        $("[name='parentComment.id']").val(commentId);
+        $(window).scrollTo($('#comment-form'),500);
     }
 
 </script>
