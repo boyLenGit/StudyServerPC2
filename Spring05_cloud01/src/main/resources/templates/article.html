@@ -381,6 +381,7 @@ attached:轨道可以依附在主窗口
 
     // 实现评论回复按钮的功能
     function reply(obj) {
+        // data方法获取"data-xxxxx='1'"标签的内容，调用时不需要写全，只需要写"xxxxx"即可
         var commentId = $(obj).data('commentid');
         var commentNickname = $(obj).data('commentnickname');
         $("[name='content']").attr("placeholder", "@"+commentNickname).focus();
