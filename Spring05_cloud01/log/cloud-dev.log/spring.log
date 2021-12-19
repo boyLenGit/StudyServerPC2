@@ -1,50 +1,56 @@
-2021-12-18 00:36:20.006  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s145ms), soft-evicting connections from pool.
-2021-12-18 01:07:23.552  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m29s260ms).
-2021-12-18 01:25:12.695  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m11s753ms).
-2021-12-18 01:42:38.320  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m25s605ms).
-2021-12-18 01:43:07.480  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s160ms), soft-evicting connections from pool.
-2021-12-18 02:00:51.646  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m14s154ms).
-2021-12-18 02:02:01.734  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s732ms), soft-evicting connections from pool.
-2021-12-18 02:19:38.542  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m36s808ms).
-2021-12-18 02:35:44.364  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m35s797ms).
-2021-12-18 02:53:17.613  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m3s240ms).
-2021-12-18 03:11:04.126  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m16s499ms).
-2021-12-18 03:29:41.203  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m29s491ms).
-2021-12-18 03:47:32.192  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m20s975ms).
-2021-12-18 04:05:11.295  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m9s86ms).
-2021-12-18 04:23:51.726  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m36s319ms).
-2021-12-18 04:42:41.877  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m50s141ms).
-2021-12-18 05:51:33.974  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h8m20s893ms).
-2021-12-18 05:52:02.035  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s63ms), soft-evicting connections from pool.
-2021-12-18 06:10:01.665  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m53s713ms).
-2021-12-18 06:20:26.430  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m20s742ms).
-2021-12-18 06:37:52.676  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m56s238ms).
-2021-12-18 06:56:02.684  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m10s2ms).
-2021-12-18 08:27:52.230  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h31m19s536ms).
-2021-12-18 08:44:27.684  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s150ms).
-2021-12-18 09:02:02.902  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m5s197ms).
-2021-12-18 09:28:29.069  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m16s260ms).
-2021-12-18 10:04:29.338  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=27s787ms), soft-evicting connections from pool.
-2021-12-18 11:34:02.724  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m28s905ms).
-2021-12-18 11:43:02.083  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m59s277ms).
-2021-12-18 12:01:28.040  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m52s118ms).
-2021-12-18 14:24:34.027  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m31s265ms).
-2021-12-18 14:41:00.514  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m56s481ms).
-2021-12-18 14:57:05.497  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m34s973ms).
-2021-12-18 15:52:25.703  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m50s189ms).
-2021-12-18 16:09:39.655  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m38s25ms).
-2021-12-18 16:26:42.694  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m2s384ms).
-2021-12-18 16:27:10.991  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s292ms), soft-evicting connections from pool.
-2021-12-18 16:55:01.372  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m50s386ms).
-2021-12-18 17:52:37.498  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55m36s116ms).
-2021-12-18 18:11:38.077  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m47s154ms).
-2021-12-18 18:12:06.306  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s229ms), soft-evicting connections from pool.
-2021-12-18 18:17:41.867  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m27s629ms).
-2021-12-18 18:34:21.149  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m9s266ms).
-2021-12-18 18:46:41.823  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m41s733ms).
-2021-12-18 20:26:52.738  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m36s279ms).
-2021-12-18 23:28:50.279  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=25s977ms), soft-evicting connections from pool.
-2021-12-18 23:30:56.131  WARN 11082 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s6ms).
-2021-12-18 23:41:48.648  INFO 11082 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-12-18 23:41:48.684  INFO 11082 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-12-18 23:41:48.694  INFO 11082 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-19 16:24:27.506  INFO 6671 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Starting ArtifactApplication using Java 1.8.0_311 on mabolunBP15inch with PID 6671 (/Users/mabolun/Project/Java/Spring05_cloud01/target/classes started by mabolun in /Users/mabolun/Project/Java/Spring05_cloud01)
+2021-12-19 16:24:27.512 DEBUG 6671 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-12-19 16:24:27.512  INFO 6671 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : The following profiles are active: dev
+2021-12-19 16:24:27.566  INFO 6671 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-19 16:24:27.566  INFO 6671 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-19 16:24:28.422  INFO 6671 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-19 16:24:28.498  INFO 6671 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
+2021-12-19 16:24:29.322  INFO 6671 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-19 16:24:29.335  INFO 6671 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-19 16:24:29.335  INFO 6671 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-19 16:24:29.433  INFO 6671 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-19 16:24:29.433  INFO 6671 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1865 ms
+2021-12-19 16:24:29.692  INFO 6671 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-19 16:24:29.746  INFO 6671 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-12-19 16:24:29.923  INFO 6671 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-19 16:24:30.032  INFO 6671 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-19 16:24:31.542  INFO 6671 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-19 16:24:31.575  INFO 6671 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-19 16:24:34.413  INFO 6671 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-19 16:24:34.430  INFO 6671 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-19 16:24:35.500  WARN 6671 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-19 16:24:35.816  INFO 6671 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-19 16:24:36.153  INFO 6671 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-19 16:24:36.210  INFO 6671 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-19 16:24:36.223  INFO 6671 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Started ArtifactApplication in 9.339 seconds (JVM running for 10.086)
+2021-12-19 16:31:18.241  INFO 6671 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-19 16:31:18.250  INFO 6671 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-19 16:31:18.267  INFO 6671 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-19 16:36:34.977  INFO 6887 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Starting ArtifactApplication using Java 1.8.0_311 on mabolunBP15inch with PID 6887 (/Users/mabolun/Project/Java/Spring05_cloud01/target/classes started by mabolun in /Users/mabolun/Project/Java/Spring05_cloud01)
+2021-12-19 16:36:34.982 DEBUG 6887 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-12-19 16:36:34.983  INFO 6887 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : The following profiles are active: dev
+2021-12-19 16:36:35.050  INFO 6887 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-19 16:36:35.050  INFO 6887 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-19 16:36:36.083  INFO 6887 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-19 16:36:36.221  INFO 6887 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 4 JPA repository interfaces.
+2021-12-19 16:36:37.280  INFO 6887 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-19 16:36:37.296  INFO 6887 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-19 16:36:37.297  INFO 6887 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-19 16:36:37.439  INFO 6887 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-19 16:36:37.440  INFO 6887 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2388 ms
+2021-12-19 16:36:37.844  INFO 6887 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-19 16:36:37.906  INFO 6887 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-12-19 16:36:38.063  INFO 6887 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-19 16:36:38.177  INFO 6887 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-19 16:36:39.629  INFO 6887 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-19 16:36:39.656  INFO 6887 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-19 16:36:42.070  INFO 6887 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-19 16:36:42.086  INFO 6887 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-19 16:36:43.644  WARN 6887 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-19 16:36:44.052  INFO 6887 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-19 16:36:44.671  INFO 6887 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-19 16:36:44.749  INFO 6887 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-19 16:36:44.761  INFO 6887 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Started ArtifactApplication in 10.477 seconds (JVM running for 11.567)
+2021-12-19 16:49:56.010  INFO 6887 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-19 16:49:56.014  INFO 6887 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-19 16:49:56.026  INFO 6887 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
