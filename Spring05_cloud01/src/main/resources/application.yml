@@ -1,3 +1,5 @@
 spring:
   profiles:
     active: dev
+
+comment.avatar: /image/icon_little/icon002.png
