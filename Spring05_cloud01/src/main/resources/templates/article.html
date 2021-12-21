@@ -412,7 +412,13 @@ attached:轨道可以依附在主窗口
     // 在页面刚加载完成后刷新一次评论区，用于让评论区显示内容
     $(function () {
         console.log('初始化评论区');
-        $("#comment-container").load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"comments/{id}(id=${blog.id})");
+        $("#comment-container").load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"comments/{id}(id=${blog.id})",{
+            "parentComment.id" : $("[name='parentComment.id']").val(),
+            "blog.id" : $("[name='blog.id']").val(),
+            "nickname": $("[name='nickname']").val(),
+            "email"   : $("[name='email']").val(),
+            "content" : $("[name='content']").val()
+        });
     });
 
     // 评论内容发表后的处理内容
