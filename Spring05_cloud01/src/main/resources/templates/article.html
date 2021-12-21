@@ -395,7 +395,6 @@ attached:轨道可以依附在主窗口
 
     function postData() {
         console.log('postData');
-        console.log($("[name='content']").val());
         // 下面的""blog.id" : $xxxx"结构用于组成键值对，让后端识别数据
         $("#comment-container").load(/*[[@{/comments}]]*/"/comments",{
             "parentComment.id" : $("[name='parentComment.id']").val(),
@@ -412,7 +411,8 @@ attached:轨道可以依附在主窗口
 
     // 在页面刚加载完成后刷新一次评论区，用于让评论区显示内容
     $(function () {
-        $("#comment-container").load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"comments/6");
+        console.log('初始化评论区');
+        $("#comment-container").load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"comments/{id}(id=${blog.id})");
     });
 
     // 评论内容发表后的处理内容
