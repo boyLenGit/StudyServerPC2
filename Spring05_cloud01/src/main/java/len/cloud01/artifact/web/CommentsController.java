@@ -38,6 +38,7 @@ public class CommentsController {
         comment.setBlog(blogService.getBlog(blogId));
         comment.setAvatar(avatar);
         commentService.saveComment(comment);
+        LenLog.staticInfo("Comment-post", blogId.toString());
         return "redirect:/comments/" + blogId;
     }
 }
