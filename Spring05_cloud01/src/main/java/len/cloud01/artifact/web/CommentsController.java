@@ -19,12 +19,13 @@ public class CommentsController {
     @Autowired
     private BlogService blogService;
     // ↓ 这个comment.avatar位于/resources/application-dev.yml
-    @Value("comment.avatar")
+    @Value("${comment.avatar}")
     private String avatar;
 
     @GetMapping("/comments/{blogId}")
     public String Comments(@PathVariable Long blogId, Model model){
         model.addAttribute("comments", commentService.listCommentByBlogId(blogId));
+        LenLog.staticInfo("comments-Comments", commentService.listCommentByBlogId(blogId).toString());
         return "article :: commentList";
     }
 
