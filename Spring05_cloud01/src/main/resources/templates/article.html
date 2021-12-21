@@ -257,33 +257,32 @@ attached:轨道可以依附在主窗口
                     <!--*/-->
                 </div>
             </div>
+        </div>
 
+        <!--评论输入框-->
+        <div id="comment-form" class="ui form">
+            <input type="hidden" name="blog.id" th:value="${blog.id}">
+            <!--为-1的时候，表示为空，表示无父评论-->
+            <input type="hidden" name="parentComment.id" value="-1">
 
-            <!--                评论输入框-->
-            <div id="comment-form" class="ui form">
-                <input type="hidden" name="blog.id" th:value="${blog.id}">
-                <!--为-1的时候，表示为空，表示无父评论-->
-                <input type="hidden" name="parentComment.id" value="-1">
-
-                <div class="field LenCssButton-padding-middle">
-                    <textarea name="content" placeholder="请输入文本信息..."></textarea>
+            <div class="field LenCssButton-padding-middle">
+                <textarea name="content" placeholder="请输入文本信息..."></textarea>
+            </div>
+            <div class="fields">
+                <div class="field LenCssButton-padding-middle LenCssButton-length-full">
+                    <div class="ui left icon input">
+                        <i class="user icon"></i>
+                        <input type="text" name="nickname" placeholder="姓名">
+                    </div>
                 </div>
-                <div class="fields">
-                    <div class="field LenCssButton-padding-middle LenCssButton-length-full">
-                        <div class="ui left icon input">
-                            <i class="user icon"></i>
-                            <input type="text" name="nickname" placeholder="姓名">
-                        </div>
+                <div class="field LenCssButton-padding-middle LenCssButton-length-full">
+                    <div class="ui left icon input">
+                        <i class="mail icon"></i>
+                        <input type="text" name="nickname" placeholder="邮箱">
                     </div>
-                    <div class="field LenCssButton-padding-middle LenCssButton-length-full">
-                        <div class="ui left icon input">
-                            <i class="mail icon"></i>
-                            <input type="text" name="nickname" placeholder="邮箱">
-                        </div>
-                    </div>
-                    <div class="field LenCssButton-padding-middle LenCssButton-length-full">
-                        <button id="commentpost-btn" type="button" class="ui yellow button LenCssButton-length-full"><i class="edit icon"></i>发布</button>
-                    </div>
+                </div>
+                <div class="field LenCssButton-padding-middle LenCssButton-length-full">
+                    <button id="commentpost-btn" type="button" class="ui yellow button LenCssButton-length-full"><i class="edit icon"></i>发布</button>
                 </div>
             </div>
         </div>
