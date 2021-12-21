@@ -387,9 +387,12 @@ attached:轨道可以依附在主窗口
 
     // 评论内容提交。
     // /comments：为评论提交的地址
+    
     function postData() {
-        // 下面的""blog.id" : $"结构用于组成键值对，让后端识别数据
-        $("#comment-container").load(/*[[@{/comments}]]*/"",{
+        console.log('postData');
+        console.log($("[name='content']").val());
+        // 下面的""blog.id" : $xxxx"结构用于组成键值对，让后端识别数据
+        $("#comment-container").load(/*[[@{/comments}]]*/"/comments",{
             "parentComment.id" : $("[name='parentComment.id']").val(),
             "blog.id" : $("[name='blog.id']").val(),
             "nickname": $("[name='nickname']").val(),

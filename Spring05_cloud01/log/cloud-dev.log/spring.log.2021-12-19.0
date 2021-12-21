@@ -1,0 +1,56 @@
+2021-12-19 16:24:27.506  INFO 6671 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Starting ArtifactApplication using Java 1.8.0_311 on mabolunBP15inch with PID 6671 (/Users/mabolun/Project/Java/Spring05_cloud01/target/classes started by mabolun in /Users/mabolun/Project/Java/Spring05_cloud01)
+2021-12-19 16:24:27.512 DEBUG 6671 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-12-19 16:24:27.512  INFO 6671 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : The following profiles are active: dev
+2021-12-19 16:24:27.566  INFO 6671 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-19 16:24:27.566  INFO 6671 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-19 16:24:28.422  INFO 6671 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-19 16:24:28.498  INFO 6671 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 4 JPA repository interfaces.
+2021-12-19 16:24:29.322  INFO 6671 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-19 16:24:29.335  INFO 6671 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-19 16:24:29.335  INFO 6671 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-19 16:24:29.433  INFO 6671 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-19 16:24:29.433  INFO 6671 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1865 ms
+2021-12-19 16:24:29.692  INFO 6671 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-19 16:24:29.746  INFO 6671 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-12-19 16:24:29.923  INFO 6671 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-19 16:24:30.032  INFO 6671 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-19 16:24:31.542  INFO 6671 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-19 16:24:31.575  INFO 6671 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-19 16:24:34.413  INFO 6671 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-19 16:24:34.430  INFO 6671 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-19 16:24:35.500  WARN 6671 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-19 16:24:35.816  INFO 6671 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-19 16:24:36.153  INFO 6671 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-19 16:24:36.210  INFO 6671 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-19 16:24:36.223  INFO 6671 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Started ArtifactApplication in 9.339 seconds (JVM running for 10.086)
+2021-12-19 16:31:18.241  INFO 6671 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-19 16:31:18.250  INFO 6671 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-19 16:31:18.267  INFO 6671 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-19 16:36:34.977  INFO 6887 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Starting ArtifactApplication using Java 1.8.0_311 on mabolunBP15inch with PID 6887 (/Users/mabolun/Project/Java/Spring05_cloud01/target/classes started by mabolun in /Users/mabolun/Project/Java/Spring05_cloud01)
+2021-12-19 16:36:34.982 DEBUG 6887 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-12-19 16:36:34.983  INFO 6887 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : The following profiles are active: dev
+2021-12-19 16:36:35.050  INFO 6887 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-19 16:36:35.050  INFO 6887 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-19 16:36:36.083  INFO 6887 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-19 16:36:36.221  INFO 6887 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 4 JPA repository interfaces.
+2021-12-19 16:36:37.280  INFO 6887 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-19 16:36:37.296  INFO 6887 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-19 16:36:37.297  INFO 6887 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-19 16:36:37.439  INFO 6887 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-19 16:36:37.440  INFO 6887 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2388 ms
+2021-12-19 16:36:37.844  INFO 6887 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-19 16:36:37.906  INFO 6887 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-12-19 16:36:38.063  INFO 6887 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-19 16:36:38.177  INFO 6887 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-19 16:36:39.629  INFO 6887 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-19 16:36:39.656  INFO 6887 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-19 16:36:42.070  INFO 6887 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-19 16:36:42.086  INFO 6887 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-19 16:36:43.644  WARN 6887 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-19 16:36:44.052  INFO 6887 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-19 16:36:44.671  INFO 6887 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-19 16:36:44.749  INFO 6887 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-19 16:36:44.761  INFO 6887 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Started ArtifactApplication in 10.477 seconds (JVM running for 11.567)
+2021-12-19 16:49:56.010  INFO 6887 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-19 16:49:56.014  INFO 6887 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-19 16:49:56.026  INFO 6887 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
