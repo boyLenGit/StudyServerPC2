@@ -378,6 +378,18 @@ attached:轨道可以依附在主窗口
         }
     });
 
+    // 在页面刚加载完成后刷新一次评论区，用于让评论区显示内容【已作废】
+    // $(function () {
+    //     console.log('初始化评论区');
+    //     $("#comment-container").load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"comments/{id}(id=${blog.id})",{
+    //         "parentComment.id" : $("[name='parentComment.id']").val(),
+    //         "blog.id" : $("[name='blog.id']").val(),
+    //         "nickname": $("[name='nickname']").val(),
+    //         "email"   : $("[name='email']").val(),
+    //         "content" : $("[name='content']").val()
+    //     });
+    // });
+
     // 评论提交按钮提交评论并通过Ajax刷新表单功能
     $('#commentpost-btn').click(function () {
         // 用于表单验证，当评论内容为空时，不能提交。具体原理和接口不知道
@@ -408,18 +420,6 @@ attached:轨道可以依附在主窗口
             clearContent();
         });
     }
-
-    // 在页面刚加载完成后刷新一次评论区，用于让评论区显示内容
-    $(function () {
-        console.log('初始化评论区');
-        $("#comment-container").load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"comments/{id}(id=${blog.id})",{
-            "parentComment.id" : $("[name='parentComment.id']").val(),
-            "blog.id" : $("[name='blog.id']").val(),
-            "nickname": $("[name='nickname']").val(),
-            "email"   : $("[name='email']").val(),
-            "content" : $("[name='content']").val()
-        });
-    });
 
     // 评论内容发表后的处理内容
     function clearContent() {

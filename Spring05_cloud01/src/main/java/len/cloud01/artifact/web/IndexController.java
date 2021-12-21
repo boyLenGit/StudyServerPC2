@@ -2,6 +2,7 @@ package len.cloud01.artifact.web;
 
 import len.cloud01.artifact.error.NotFoundException;
 import len.cloud01.artifact.service.BlogService;
+import len.cloud01.artifact.service.CommentService;
 import len.cloud01.artifact.service.TagService;
 import len.cloud01.artifact.service.TypeService;
 import len.cloud01.artifact.util.base.LenLog;
@@ -24,6 +25,8 @@ public class IndexController {
     private TypeService typeService;
     @Autowired
     private TagService tagService;
+    @Autowired
+    private CommentService commentService;
 
     @GetMapping("/")
     public String index(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
@@ -49,6 +52,7 @@ public class IndexController {
     @GetMapping("/article/{id}")
     public String article(@PathVariable Long id, Model model){
         model.addAttribute("blog", blogService.getAndConvert(id));
+        model.addAttribute("comments", commentService.listCommentByBlogId(id));
         return "article";
     }
 }
