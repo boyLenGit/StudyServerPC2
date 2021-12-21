@@ -410,6 +410,11 @@ attached:轨道可以依附在主窗口
         });
     }
 
+    // 在页面刚加载完成后刷新一次评论区，用于让评论区显示内容
+    $(function () {
+        $("#comment-container").load(/*[[@{/comments/{id}(id=${blog.id})}]]*/"comments/6");
+    });
+
     // 评论内容发表后的处理内容
     function clearContent() {
         $("[name='content']").val('');
