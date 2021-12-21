@@ -170,14 +170,15 @@ attached:轨道可以依附在主窗口
                                 <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${comment.id},data-commentnickname=${comment.nickname}" onclick="reply(this)">回复</a>
                             </div>
                         </div>
+                        <!-- 评论回复区 -->
 <!--                        <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">-->
-                        <div class="comments">
-<!--                            <div class="comment" th:each="reply : ${comment.replyComments}">-->
-                            <div class="comment">
-                                <a class="avatar">
-<!--                                    <img src="../static/image/icon_little/icon007.png" th:src="@{${reply.avatar}}">-->
-                                    <img src="../static/image/icon_little/icon007.png">
-                                </a>
+<!--                        <div class="comments">-->
+<!--&lt;!&ndash;                            <div class="comment" th:each="reply : ${comment.replyComments}">&ndash;&gt;-->
+<!--                            <div class="comment">-->
+<!--                                <a class="avatar">-->
+<!--&lt;!&ndash;                                    <img src="../static/image/icon_little/icon007.png" th:src="@{${reply.avatar}}">&ndash;&gt;-->
+<!--                                    <img src="../static/image/icon_little/icon007.png">-->
+<!--                                </a>-->
 <!--                                <div class="content">-->
 <!--                                    <a class="author" >-->
 <!--&lt;!&ndash;                                        <span th:text="${reply.nickname}">小红</span>&ndash;&gt;-->
@@ -196,8 +197,8 @@ attached:轨道可以依附在主窗口
 <!--                                        <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickname}" onclick="reply(this)">回复</a>-->
 <!--                                    </div>-->
 <!--                                </div>-->
-                            </div>
-                        </div>
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                     <!--/*-->
                     <div class="comment">
