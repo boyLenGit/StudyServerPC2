@@ -23,10 +23,12 @@ public class Comment {
 
     // ↓ replyComment跟随parentComment
     @OneToMany(mappedBy = "parentComment")
-    private List<Comment> replyComment = new ArrayList<>();
+    private List<Comment> replyComments = new ArrayList<>();
 
     @ManyToOne
     private Comment parentComment;
+
+    private boolean adminComment;
 
     public Comment() {
     }
@@ -79,12 +81,12 @@ public class Comment {
         this.createTime = createTime;
     }
 
-    public List<Comment> getReplyComment() {
-        return replyComment;
+    public List<Comment> getReplyComments() {
+        return replyComments;
     }
 
-    public void setReplyComment(List<Comment> replyComment) {
-        this.replyComment = replyComment;
+    public void setReplyComments(List<Comment> replyComment) {
+        this.replyComments = replyComment;
     }
 
     public Comment getParentComment() {
@@ -103,6 +105,14 @@ public class Comment {
         this.blog = blog;
     }
 
+    public boolean isAdminComment() {
+        return adminComment;
+    }
+
+    public void setAdminComment(boolean adminComment) {
+        this.adminComment = adminComment;
+    }
+
     @Override
     public String toString() {
         return "Comment{" +
@@ -112,6 +122,10 @@ public class Comment {
                 ", content='" + content + '\'' +
                 ", avatar='" + avatar + '\'' +
                 ", createTime=" + createTime +
+                ", blog=" + blog +
+                ", replyComments=" + replyComments +
+                ", parentComment=" + parentComment +
+                ", adminComment=" + adminComment +
                 '}';
     }
 }
