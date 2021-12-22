@@ -7,5 +7,7 @@ import java.util.List;
 public interface CommentService {
     List<Comment> listCommentByBlogId(Long blogId);
 
+    List<Comment> listCommentByBlogIdAndParentCommentNull(Long blogId);
+
     Comment saveComment(Comment comment);
 }

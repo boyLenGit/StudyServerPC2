@@ -22,7 +22,15 @@ public class CommentServiceImpl implements CommentService{
         // 作用：用于返回博客的评论，并且按照评论时间倒序排序
         // 旧版：Sort sort = new Sort(Sort.Direction.DESC, "createTime");
         Sort sort = Sort.by(Sort.Direction.DESC, "createTime");
-        List<Comment> comments = commentRepository.findByBlogIdAndParentCommentNot(blogId, sort);
+        return commentRepository.findByBlogId(blogId, sort);
+    }
+
+    @Override
+    public List<Comment> listCommentByBlogIdAndParentCommentNull(Long blogId) {
+        // 作用：用于返回博客的评论，并且按照评论时间倒序排序
+        // 旧版：Sort sort = new Sort(Sort.Direction.DESC, "createTime");
+        Sort sort = Sort.by(Sort.Direction.DESC, "createTime");
+        List<Comment> comments = commentRepository.findByBlogIdAndParentCommentNull(blogId, sort);
         return eachComment(comments);
     }
 

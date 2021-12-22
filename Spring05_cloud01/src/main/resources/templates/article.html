@@ -170,31 +170,33 @@ attached:轨道可以依附在主窗口
                                 <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${comment.id},data-commentnickname=${comment.nickname}" onclick="reply(this)">回复</a>
                             </div>
                         </div>
-                        <!-- 评论回复区 -->
-                        <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">
-                        <div class="comments">
-                            <div class="comment" th:each="reply : ${comment.replyComments}">
-                                <a class="avatar">
-                                    <img src="../static/image/icon_little/icon007.png" th:src="@{${reply.avatar}}">
-                                </a>
-                                <div class="content">
-                                    <a class="author" >
-                                        <span th:text="${reply.nickname}">小红</span>
-                                        <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${reply.adminComment}">博主</div>
-                                        &nbsp;<span th:text="|@ ${reply.parentComment.nickname}|" class="m-teal">@ 小白</span>
-                                    </a>
-                                    <div class="metadata">
-                                        <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
-                                    </div>
-                                    <div class="text" th:text="${reply.content}">
-                                        How artistic!
-                                    </div>
-                                    <div class="actions">
-                                        <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickname}" onclick="reply(this)">回复</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                        <!-- 单个评论回复区 -->
+                        <!--th:if → 如果replyComments不为空的话，则进行遍历并显示该区域；否则不显示该区域-->
+<!--                        <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">-->
+<!--                            <div class="comment" th:each="reply : ${comment.replyComments}">-->
+<!--                                <a class="avatar">-->
+<!--                                    <img src="../static/image/icon_little/icon007.png" th:src="@{${reply.avatar}}">-->
+<!--                                </a>-->
+<!--                                <div class="content">-->
+<!--                                    <a class="author" >-->
+<!--                                        <span th:text="${reply.nickname}">小红</span>-->
+<!--                                        <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${reply.adminComment}">博主</div>-->
+<!--                                        &lt;!&ndash;这里的|@ ${...} 用于将text显示多组内容，将@显示出来|&ndash;&gt;-->
+<!--                                        &nbsp;<span th:text="|@ ${reply.parentComment.nickname}|" class="m-teal">@ 小白</span>-->
+<!--                                    </a>-->
+<!--                                    <div class="metadata">-->
+<!--                                        <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>-->
+<!--                                    </div>-->
+<!--                                    <div class="text" th:text="${reply.content}">-->
+<!--                                        How artistic!-->
+<!--                                    </div>-->
+<!--                                    <div class="actions">-->
+<!--                                        <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickname}" onclick="reply(this)">回复</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                     <!--/*-->
                     <div class="comment">
