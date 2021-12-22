@@ -22,7 +22,8 @@ public class CommentServiceImpl implements CommentService{
         // 作用：用于返回博客的评论，并且按照评论时间倒序排序
         // 旧版：Sort sort = new Sort(Sort.Direction.DESC, "createTime");
         Sort sort = Sort.by(Sort.Direction.DESC, "createTime");
-        return commentRepository.findByBlogId(blogId, sort);
+        List<Comment> comments = commentRepository.findByBlogIdAndParentCommentNot(blogId, sort);
+        return eachComment(comments);
     }
 
     @Transactional
@@ -45,6 +46,7 @@ public class CommentServiceImpl implements CommentService{
      * @return
      */
     private List<Comment> eachComment(List<Comment> comments) {
+        // 用于复制一个List<Comment>副本出来，没有别的作用
         List<Comment> commentsView = new ArrayList<>();
         for (Comment comment : comments) {
             Comment c = new Comment();

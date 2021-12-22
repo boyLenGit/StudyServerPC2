@@ -278,7 +278,7 @@ attached:轨道可以依附在主窗口
                 <div class="field LenCssButton-padding-middle LenCssButton-length-full">
                     <div class="ui left icon input">
                         <i class="mail icon"></i>
-                        <input type="text" name="nickname" placeholder="邮箱">
+                        <input type="text" name="email" placeholder="邮箱">
                     </div>
                 </div>
                 <div class="field LenCssButton-padding-middle LenCssButton-length-full">
@@ -407,6 +407,7 @@ attached:轨道可以依附在主窗口
 
     function postData() {
         console.log('postData');
+        console.log($("[name='email']").val())
         // 下面的""blog.id" : $xxxx"结构用于组成键值对，让后端识别数据
         $("#comment-container").load(/*[[@{/comments}]]*/"/comments",{
             "parentComment.id" : $("[name='parentComment.id']").val(),

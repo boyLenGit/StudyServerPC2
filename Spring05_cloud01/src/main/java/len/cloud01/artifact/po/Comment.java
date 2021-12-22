@@ -128,4 +128,18 @@ public class Comment {
                 ", adminComment=" + adminComment +
                 '}';
     }
+
+    public String toString_lite() {
+        return "Comment{" +
+                "id=" + id +
+                ", nickname='" + nickname + '\'' +
+                ", email='" + email + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", createTime=" + createTime +
+                ", blog=" + blog +
+                ", replyComments=" + replyComments +
+                ", parentComment=" + parentComment +
+                ", adminComment=" + adminComment +
+                '}';
+    }
 }
