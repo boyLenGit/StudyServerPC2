@@ -113,33 +113,5 @@ public class Comment {
         this.adminComment = adminComment;
     }
 
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", nickname='" + nickname + '\'' +
-                ", email='" + email + '\'' +
-                ", content='" + content + '\'' +
-                ", avatar='" + avatar + '\'' +
-                ", createTime=" + createTime +
-                ", blog=" + blog +
-                ", replyComments=" + replyComments +
-                ", parentComment=" + parentComment +
-                ", adminComment=" + adminComment +
-                '}';
-    }
-
-    public String toString_lite() {
-        return "Comment{" +
-                "id=" + id +
-                ", nickname='" + nickname + '\'' +
-                ", email='" + email + '\'' +
-                ", avatar='" + avatar + '\'' +
-                ", createTime=" + createTime +
-                ", blog=" + blog +
-                ", replyComments=" + replyComments +
-                ", parentComment=" + parentComment +
-                ", adminComment=" + adminComment +
-                '}';
-    }
+    // !!! 不能在这里建立toString方法！因为Comment多次叠加引用与嵌套，toString会产生无穷次迭代 !!!
 }
