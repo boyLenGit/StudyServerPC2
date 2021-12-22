@@ -158,7 +158,7 @@ attached:轨道可以依附在主窗口
                         <div class="content">
                             <a class="author" >
                                 <span th:text="${comment.nickname}">Matt</span>
-<!--                                <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${comment.adminComment}">博主</div>-->
+                                <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${comment.adminComment}">博主</div>
                             </a>
                             <div class="metadata">
                                 <span class="date" th:text="${#dates.format(comment.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
@@ -171,34 +171,30 @@ attached:轨道可以依附在主窗口
                             </div>
                         </div>
                         <!-- 评论回复区 -->
-<!--                        <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">-->
-<!--                        <div class="comments">-->
-<!--&lt;!&ndash;                            <div class="comment" th:each="reply : ${comment.replyComments}">&ndash;&gt;-->
-<!--                            <div class="comment">-->
-<!--                                <a class="avatar">-->
-<!--&lt;!&ndash;                                    <img src="../static/image/icon_little/icon007.png" th:src="@{${reply.avatar}}">&ndash;&gt;-->
-<!--                                    <img src="../static/image/icon_little/icon007.png">-->
-<!--                                </a>-->
-<!--                                <div class="content">-->
-<!--                                    <a class="author" >-->
-<!--&lt;!&ndash;                                        <span th:text="${reply.nickname}">小红</span>&ndash;&gt;-->
-<!--                                        <span>小红</span>-->
-<!--&lt;!&ndash;                                        <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${reply.adminComment}">博主</div>&ndash;&gt;-->
-<!--                                        <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${reply.adminComment}">博主</div>-->
-<!--                                        &nbsp;<span th:text="|@ ${reply.parentComment.nickname}|" class="m-teal">@ 小白</span>-->
-<!--                                    </a>-->
-<!--                                    <div class="metadata">-->
-<!--                                        <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>-->
-<!--                                    </div>-->
-<!--                                    <div class="text" th:text="${reply.content}">-->
-<!--                                        How artistic!-->
-<!--                                    </div>-->
-<!--                                    <div class="actions">-->
-<!--                                        <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickname}" onclick="reply(this)">回复</a>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
+                        <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">
+                        <div class="comments">
+                            <div class="comment" th:each="reply : ${comment.replyComments}">
+                                <a class="avatar">
+                                    <img src="../static/image/icon_little/icon007.png" th:src="@{${reply.avatar}}">
+                                </a>
+                                <div class="content">
+                                    <a class="author" >
+                                        <span th:text="${reply.nickname}">小红</span>
+                                        <div class="ui mini basic teal left pointing label m-padded-mini" th:if="${reply.adminComment}">博主</div>
+                                        &nbsp;<span th:text="|@ ${reply.parentComment.nickname}|" class="m-teal">@ 小白</span>
+                                    </a>
+                                    <div class="metadata">
+                                        <span class="date" th:text="${#dates.format(reply.createTime,'yyyy-MM-dd HH:mm')}">Today at 5:42PM</span>
+                                    </div>
+                                    <div class="text" th:text="${reply.content}">
+                                        How artistic!
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply" data-commentid="1" data-commentnickname="Matt" th:attr="data-commentid=${reply.id},data-commentnickname=${reply.nickname}" onclick="reply(this)">回复</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!--/*-->
                     <div class="comment">
