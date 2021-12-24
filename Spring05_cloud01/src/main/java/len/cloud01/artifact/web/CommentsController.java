@@ -45,3 +45,5 @@ public class CommentsController {
         return "redirect:/comments/" + blogId;
     }
 }
+
+// 如果想要更改评论的时间倒序/正序，只需要修改Impl中的Sort即可，删除sort中的Desc，只保留'commentTime'
