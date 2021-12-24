@@ -52,7 +52,7 @@ public class IndexController {
     @GetMapping("/article/{id}")
     public String article(@PathVariable Long id, Model model){
         model.addAttribute("blog", blogService.getAndConvert(id));
-        model.addAttribute("comments", commentService.listCommentByBlogId(id));
+        model.addAttribute("comments", commentService.listCommentByBlogIdAndParentCommentNull(id));
         return "article";
     }
 }
