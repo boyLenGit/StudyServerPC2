@@ -26,7 +26,7 @@ public class Comment {
     private List<Comment> replyComments = new ArrayList<>();
 
     @ManyToOne
-    private Comment parentComment;
+    private Comment parentComment;  // 父级评论。如果自身是父级，则为null
 
     private boolean adminComment;
 
