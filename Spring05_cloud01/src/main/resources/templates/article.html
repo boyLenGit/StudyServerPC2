@@ -270,13 +270,13 @@ attached:轨道可以依附在主窗口
                 <div class="field LenCssButton-padding-middle LenCssButton-length-full">
                     <div class="ui left icon input">
                         <i class="user icon"></i>
-                        <input type="text" name="nickname" placeholder="姓名">
+                        <input type="text" name="nickname" placeholder="姓名" th:value="${session.user}!=null ? ${session.user.nickname}">
                     </div>
                 </div>
                 <div class="field LenCssButton-padding-middle LenCssButton-length-full">
                     <div class="ui left icon input">
                         <i class="mail icon"></i>
-                        <input type="text" name="email" placeholder="邮箱">
+                        <input type="text" name="email" placeholder="邮箱" th:value="${session.user}!=null ? ${session.user.email}">
                     </div>
                 </div>
                 <div class="field LenCssButton-padding-middle LenCssButton-length-full">
