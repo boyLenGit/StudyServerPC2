@@ -174,3 +174,40 @@ java.lang.NullPointerException: null
 2021-12-26 19:52:38.527  INFO 5052 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021-12-26 19:52:38.528  INFO 5052 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-12-26 19:52:38.531  INFO 5052 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-12-26 22:54:22.572  INFO 5052 --- [http-nio-8080-exec-5] l.c.artifact.web.admin.LoginController   : Len logger <Controller-login-init>|| username=boylen, password=0000
+2021-12-26 22:54:22.625  INFO 5052 --- [http-nio-8080-exec-5] l.c.artifact.web.admin.LoginController   : Len logger <Controller-login-user>|| user=User{id=1, nickname='boyLen', username='boylen', password='4a7d1ed414474e4033ac29ccb8653d9b', email='1024552631@qq.com', avatar='https://picsum.photos/300/300', type=1, createTime=2021-10-07 19:45:47.0, updateTime=2021-10-07 19:46:40.0}
+2021-12-26 22:54:29.798  WARN 5052 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-12-26 22:54:29.830  WARN 5052 --- [http-nio-8080-exec-8] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-12-26 22:54:51.717  INFO 5052 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:54:51.723  INFO 5052 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-12-26 22:54:51.733  INFO 5052 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-12-26 22:54:55.624  INFO 7148 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Starting ArtifactApplication using Java 1.8.0_311 on mabolunBP15inch with PID 7148 (/Users/mabolun/Project/Java/Spring05_cloud01/target/classes started by mabolun in /Users/mabolun/Project/Java/Spring05_cloud01)
+2021-12-26 22:54:55.627 DEBUG 7148 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Running with Spring Boot v2.5.5, Spring v5.3.10
+2021-12-26 22:54:55.628  INFO 7148 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : The following profiles are active: dev
+2021-12-26 22:54:55.711  INFO 7148 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-26 22:54:55.711  INFO 7148 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-26 22:54:56.726  INFO 7148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-26 22:54:56.832  INFO 7148 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 5 JPA repository interfaces.
+2021-12-26 22:54:57.862  INFO 7148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-12-26 22:54:57.877  INFO 7148 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-26 22:54:57.877  INFO 7148 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-26 22:54:58.005  INFO 7148 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-26 22:54:58.006  INFO 7148 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2294 ms
+2021-12-26 22:54:58.282  INFO 7148 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-26 22:54:58.342  INFO 7148 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-12-26 22:54:58.467  INFO 7148 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-26 22:54:58.586  INFO 7148 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-26 22:54:59.384  INFO 7148 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-26 22:54:59.421  INFO 7148 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-26 22:55:01.151  INFO 7148 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-26 22:55:01.163  INFO 7148 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-26 22:55:03.322  WARN 7148 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-26 22:55:03.902  INFO 7148 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-12-26 22:55:04.834  INFO 7148 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-26 22:55:04.917  INFO 7148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-12-26 22:55:04.935  INFO 7148 --- [restartedMain] l.cloud01.artifact.ArtifactApplication   : Started ArtifactApplication in 10.181 seconds (JVM running for 11.005)
+2021-12-26 23:10:35.452  INFO 7148 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-26 23:10:35.453  INFO 7148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-26 23:10:35.455  INFO 7148 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-12-26 23:10:35.510  INFO 7148 --- [http-nio-8080-exec-1] l.c.artifact.web.admin.LoginController   : Len logger <Controller-login-init>|| username=boylen, password=0000
+2021-12-26 23:10:35.610  INFO 7148 --- [http-nio-8080-exec-1] l.c.artifact.web.admin.LoginController   : Len logger <Controller-login-user>|| user=User{id=1, nickname='boyLen', username='boylen', password='4a7d1ed414474e4033ac29ccb8653d9b', email='1024552631@qq.com', avatar='https://picsum.photos/300/300', type=1, createTime=2021-10-07 19:45:47.0, updateTime=2021-10-07 19:46:40.0}
