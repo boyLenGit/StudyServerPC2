@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
@@ -19,6 +20,7 @@ public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificat
     @Query("select blog from t_blog blog where blog.title like ?1 or blog.content like ?1")
     Page<Blog> findByQuery(String query, Pageable pageable);
 
+    @Modifying // ← 因为update是修改，因此要加上这个注解
     @Query("update t_blog blog set blog.views = blog.views + 1 where blog.id = ?1")
     int updateViews(Long id);
 }
