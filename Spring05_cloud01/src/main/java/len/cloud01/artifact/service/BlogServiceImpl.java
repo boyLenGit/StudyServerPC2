@@ -38,6 +38,8 @@ public class BlogServiceImpl implements BlogService{
         return blogRepository.getOne(id);
     }
 
+    // 返回经过MarkDown化的Blog内容。这是为访问Blog页面写的
+    @Transactional  // ← 这是声明这个服务是事务的，否则updateViews不生效。这个注解也可以加到blogRepository中
     @Override
     public Blog getAndConvert(Long id) {
         Blog blog = blogRepository.findById(id).orElse(null);
@@ -48,6 +50,8 @@ public class BlogServiceImpl implements BlogService{
         BeanUtils.copyProperties(blog, blog_markdownd);
         String content = blog_markdownd.getContent();
         blog_markdownd.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        // blog页面浏览次数计数
+        blogRepository.updateViews(id);
         return blog_markdownd;
     }
 

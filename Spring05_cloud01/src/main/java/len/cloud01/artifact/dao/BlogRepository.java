@@ -18,4 +18,7 @@ public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificat
     // SQL模糊处理语句：select * from t_blog where title like '%内容%';  其中内容就是要模糊查询的内容。这里采用在query中先加上%，不在SQL语句中加%
     @Query("select blog from t_blog blog where blog.title like ?1 or blog.content like ?1")
     Page<Blog> findByQuery(String query, Pageable pageable);
+
+    @Query("update t_blog blog set blog.views = blog.views + 1 where blog.id = ?1")
+    int updateViews(Long id);
 }
