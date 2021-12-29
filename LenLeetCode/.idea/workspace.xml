@@ -31,7 +31,7 @@
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="leet.*" />
+          <option name="PATTERN" value="leet.help.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -55,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640775920986</updated>
-      <workItem from="1640775922321" duration="5244000" />
+      <workItem from="1640775922321" duration="8672000" />
     </task>
     <servers />
   </component>
