@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class l020 {
+    // ! 执行错误
     public static boolean isValid(String s) {
         if (s.length()%2!=0) return false;
         char[] chars = s.toCharArray();
@@ -39,6 +40,7 @@ public class l020 {
     }
 
     public static boolean isValid_len2(String s) {
+        if (s.length()%2!=0) return false;
         char[] chars = s.toCharArray();
         ArrayList<Character> inputs = new ArrayList<Character>();
         for (char char_single: chars){
@@ -47,13 +49,15 @@ public class l020 {
         char compare = ' ';
         int isTrue = 0;
         for (int i1=0; i1<inputs.size(); i1++){
-            if (chars[i1]=='[' | chars[i1]=='{' | chars[i1]=='('){
-                if (chars[i1]=='[') compare = ']';
-                else if (chars[i1]=='{') compare = '}';
-                else if (chars[i1]=='(') compare = ')';
+            if (inputs.get(i1).equals('[') | inputs.get(i1).equals('{') | inputs.get(i1).equals('(')){
+                if (inputs.get(i1).equals('[')) compare = ']';
+                else if (inputs.get(i1).equals('{')) compare = '}';
+                else if (inputs.get(i1).equals('(')) compare = ')';
                 for (int i2=i1+1; i2<inputs.size(); i2++){
-                    if (inputs.get(i2)==compare){
+                    if (inputs.get(i2).equals(compare)){
+                        if (((i2-i1)%2==0 & i2-i1!=0)) return false;
                         inputs.remove(i1);
+                        i1--;
                         i2--;
                         inputs.remove(i2);
                         isTrue=1;
@@ -64,13 +68,21 @@ public class l020 {
                     return false;
                 }
                 isTrue = 0;
-            }
+            }else return false;
         }
         return true;
     }
 
+    public static boolean isValid_len3(String s){
+        for ( ; ; ){
+            s = s.replace("()", "").replace("{}", "").replace("[]", "");
+            if (!s.contains("{}") & !s.contains("[]") & !s.contains("()")) break;;
+        }
+        return s.length()==0;
+    }
+
     public static void main(String[] args){
-        System.out.println(isValid_len2("(}{)"));
+        System.out.println(isValid_len3("(([]){})"));
     }
 }
 
@@ -79,3 +91,8 @@ public class l020 {
 // "){"
 // "[[[]"
 // "(}{)"
+// "()[]{}"
+// "([)]"
+//  0123
+//  "([}}])"
+//  "(([]){})"
