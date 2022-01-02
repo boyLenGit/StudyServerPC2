@@ -3,6 +3,8 @@ package leet;
 import leet.help.ListNode;
 import util.LenLog;
 
+import java.math.BigInteger;
+
 public class l002 {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         String string1 = "";
@@ -22,7 +24,8 @@ public class l002 {
         for(int i1=chars1.length-1; i1>=0; i1--){
             string1 = string1.concat(String.valueOf(chars1[i1]));
         }
-        Long num1 = Long.valueOf(string1);
+        BigInteger bigInteger1 = BigInteger.valueOf(Long.parseLong(string1));
+//        Long num1 = Long.valueOf(string1);
 
         // l2
         while (true){
@@ -38,38 +41,26 @@ public class l002 {
         for(int i2=chars2.length-1; i2>=0; i2--){
             string2 = string2.concat(String.valueOf(chars2[i2]));
         }
-        Long num2 = Long.valueOf(string2);
+        BigInteger bigInteger2 = BigInteger.valueOf(Long.parseLong(string2));
         // 开始合并结果
-        Long num_result = num1 + num2;
-        char[] chars_result = String.valueOf(num_result).toCharArray();
-        String string_result = "";
-        for(int i_r=chars_result.length-1; i_r>=0; i_r--){
-            string_result = string_result.concat(String.valueOf(chars_result[i_r]));
-        }
-        chars_result = string_result.toCharArray();
+        BigInteger bigInteger_result = bigInteger1.add(bigInteger2);
+        char[] chars_result = String.valueOf(bigInteger_result).toCharArray();
+        //      反转数组
+//        String string_result = "";
+//        for(int i_r=chars_result.length-1; i_r>=0; i_r--){
+//            string_result = string_result.concat(String.valueOf(chars_result[i_r]));
+//        }
+//        chars_result = string_result.toCharArray();
         // result to ListNode
         ListNode listNode_result = new ListNode();
-        ListNode listNode_temp = new ListNode();
         for(int i4=0; i4<chars_result.length; i4++){
             if(i4 == 0){
                 listNode_result = new ListNode((int) (chars_result[i4]-'0'));
                 continue;
             }
-            listNode_result.next = new ListNode((int) (chars_result[i4]-'0'));
-            listNode_result = new ListNode(0, listNode_result);
-
+            listNode_result = new ListNode((int) (chars_result[i4]-'0'), listNode_result);
         }
-        LenLog.printString(String.valueOf(num_result));
-
-        while (true){
-            System.out.println(listNode_temp.val);
-            System.out.println(listNode_temp.next);
-            if (listNode_temp.next==null){
-                break;
-            }
-            listNode_temp = listNode_temp.next;
-        }
-        return listNode_temp;
+        return listNode_result;
     }
 }
 // ListNode l1 = new ListNode(2, new ListNode(3, new ListNode(4, null)));
