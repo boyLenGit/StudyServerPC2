@@ -24,7 +24,6 @@ public class l002 {
         for(int i1=chars1.length-1; i1>=0; i1--){
             string1 = string1.concat(String.valueOf(chars1[i1]));
         }
-//        BigInteger bigInteger1 = BigInteger.valueOf(Long.parseLong(string1));
 
         // l2
         while (true){
@@ -40,11 +39,11 @@ public class l002 {
         for(int i2=chars2.length-1; i2>=0; i2--){
             string2 = string2.concat(String.valueOf(chars2[i2]));
         }
-//        BigInteger bigInteger2 = BigInteger.valueOf(Long.parseLong(string2));
         // 开始合并结果
         //      String实现大数相加算法
         char[] chars_add_1 = string1.toCharArray();
         char[] chars_add_2 = string2.toCharArray();
+        String string_add_result = "";
         int index_1 = string1.length()-1;
         int index_2 = string2.length()-1;
         char[] chars_add_result;
@@ -53,19 +52,22 @@ public class l002 {
             int num_adder_1 = chars_add_1[index_1] - '0';
             int num_adder_2 = chars_add_2[index_2] - '0';
             int num_adder_result = num_adder_1 + num_adder_2;
+            if(add_next_level == 1){
+                num_adder_result = num_adder_result + 1;
+                add_next_level = 0;
+            }
             if(num_adder_result>=10){
                 add_next_level = 1;
                 num_adder_result = num_adder_result - 10;
             }
-            
+            string_add_result = string_add_result.concat(String.valueOf(num_adder_result));
             if(index_1<=0 && index_2<=0){
                 break;
             }
             index_1--;
             index_2--;
-            add_next_level = 0;
         }
-        char[] chars_result = String.valueOf(bigInteger_result).toCharArray();
+        char[] chars_result = string_add_result.toCharArray();
         // result to ListNode
         ListNode listNode_result = new ListNode();
         for(int i4=0; i4<chars_result.length; i4++){
@@ -78,4 +80,3 @@ public class l002 {
         return listNode_result;
     }
 }
-// ListNode l1 = new ListNode(2, new ListNode(3, new ListNode(4, null)));
