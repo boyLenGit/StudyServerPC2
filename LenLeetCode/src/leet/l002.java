@@ -46,11 +46,22 @@ public class l002 {
         String string_add_result = "";
         int index_1 = string1.length()-1;
         int index_2 = string2.length()-1;
+        int num_adder_1 = 0;
+        int num_adder_2 = 0;
         char[] chars_add_result;
         int add_next_level = 0;
         while (true){
-            int num_adder_1 = chars_add_1[index_1] - '0';
-            int num_adder_2 = chars_add_2[index_2] - '0';
+            if(index_1<0){
+                num_adder_1 = 0;
+            }else {
+                num_adder_1 = chars_add_1[index_1] - '0';
+            }
+            if(index_1<0){
+                num_adder_2 = 0;
+            }else {
+                num_adder_2 = chars_add_2[index_2] - '0';
+            }
+
             int num_adder_result = num_adder_1 + num_adder_2;
             if(add_next_level == 1){
                 num_adder_result = num_adder_result + 1;
@@ -68,6 +79,12 @@ public class l002 {
             index_2--;
         }
         char[] chars_result = string_add_result.toCharArray();
+        //      反转数组
+        String string_result = "";
+        for(int i_r=chars_result.length-1; i_r>=0; i_r--){
+            string_result = string_result.concat(String.valueOf(chars_result[i_r]));
+        }
+        chars_result = string_result.toCharArray();
         // result to ListNode
         ListNode listNode_result = new ListNode();
         for(int i4=0; i4<chars_result.length; i4++){
