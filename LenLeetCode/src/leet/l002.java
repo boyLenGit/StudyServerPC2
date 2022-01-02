@@ -49,9 +49,9 @@ public class l002 {
         chars_result = string_result.toCharArray();
         // result to ListNode
         ListNode listNode_result = new ListNode();
-        ListNode listNode_temp = new ListNode(0, null);
+        ListNode listNode_temp = new ListNode();
         for(int i4=0; i4<chars_result.length; i4++){
-            listNode_temp.val = (int) chars_result[i4];
+            listNode_temp.val = (int) (chars_result[i4]-'0');
             listNode_temp.next = listNode_temp;
         }
         LenLog.printString(String.valueOf(num_result));
