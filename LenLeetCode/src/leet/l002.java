@@ -51,8 +51,13 @@ public class l002 {
         ListNode listNode_result = new ListNode();
         ListNode listNode_temp = new ListNode();
         for(int i4=0; i4<chars_result.length; i4++){
-            listNode_temp.val = (int) (chars_result[i4]-'0');
-            listNode_temp.next = listNode_temp;
+            if(i4 == 0){
+                listNode_result = new ListNode((int) (chars_result[i4]-'0'));
+                continue;
+            }
+            listNode_result.next = new ListNode((int) (chars_result[i4]-'0'));
+            listNode_result = new ListNode(0, listNode_result);
+
         }
         LenLog.printString(String.valueOf(num_result));
 
@@ -67,3 +72,4 @@ public class l002 {
         return listNode_temp;
     }
 }
+// ListNode l1 = new ListNode(2, new ListNode(3, new ListNode(4, null)));
