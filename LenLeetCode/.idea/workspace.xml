@@ -85,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640775920986</updated>
       <workItem from="1640775922321" duration="28326000" />
-      <workItem from="1641101157853" duration="8280000" />
+      <workItem from="1641101157853" duration="9241000" />
     </task>
     <servers />
   </component>
@@ -167,30 +167,6 @@
     <state width="1638" height="315" key="GridCell.Tab.1.right/1680.25.1112.809/0.25.1680.956@0.25.1680.956" timestamp="1640882866785" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/leet/l002.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/leet/l002.java</url>
-          <line>117</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/leet/l002.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/leet/l002.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo typeName="leet.help.ListNode" fieldName="next" />
