@@ -26,7 +26,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager" selected="Application.l003">
+  <component name="RunManager" selected="Application.l005">
     <configuration name="_test01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leet._test01" />
       <module name="LenLeetCode" />
@@ -79,8 +79,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="l005" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leet.l005" />
+      <module name="LenLeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.l005" />
         <item itemvalue="Application.l003" />
         <item itemvalue="Application.l002" />
         <item itemvalue="Application._test01" />
@@ -99,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640775920986</updated>
       <workItem from="1640775922321" duration="28326000" />
-      <workItem from="1641101157853" duration="29459000" />
+      <workItem from="1641101157853" duration="32849000" />
     </task>
     <servers />
   </component>
