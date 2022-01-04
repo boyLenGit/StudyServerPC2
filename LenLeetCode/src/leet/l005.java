@@ -18,7 +18,7 @@ public class l005 {
                     int indexHwStart = 0;
                     int indexHwEnd = 0;
                     for(int i_1=i_0+2; i_1<length; i_1++){
-                        pointReverse = i_0 - (i_1 - i_0);
+                        pointReverse = i_0 - (i_1 - i_0) + 1;
                         // 如果索引越界了
                         if(pointReverse<0){
                             break;
@@ -27,13 +27,13 @@ public class l005 {
                         if(s.charAt(pointReverse)!=s.charAt(i_1)){
                             break;
                         }
-                        indexHwStart = i_0 - (i_1 - i_0);
+                        indexHwStart = pointReverse;
                         indexHwEnd = i_1;
                         lengthHw_temp = 2 * (i_1 - i_0);
                     }
                     if(lengthHw_temp>lengthHw){
                         lengthHw = lengthHw_temp;
-                        result = s.substring(indexHwStart, indexHwEnd);
+                        result = s.substring(indexHwStart, indexHwEnd+1);
                     }
                 }
             }
@@ -44,7 +44,7 @@ public class l005 {
 
 
     public static void main(String[] args) {
-        String test01 = "xnoony";
+        String test01 = "xnoonxy";
         String result = longestPalindrome(test01);
         LenLog.printString(result);
     }
