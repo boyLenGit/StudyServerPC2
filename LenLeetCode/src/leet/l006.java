@@ -58,6 +58,12 @@ public class l006 {
         }
         return result;
     }
+    /*
+    执行用时：473 ms, 在所有 Java 提交中击败了5.17% 的用户
+    内存消耗：46.8 MB, 在所有 Java 提交中击败了5.00% 的用户
+    通过测试用例：1157 / 1157
+    */
+
 
     public static void main(String[] args) {
         String test01 = "ABCD";
