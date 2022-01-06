@@ -26,20 +26,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager" selected="Application.l007">
-    <configuration name="l002" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l002" />
-      <module name="LenLeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.l008">
     <configuration name="l003" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leet.l003" />
       <module name="LenLeetCode" />
@@ -92,13 +79,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="l008" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leet.l008" />
+      <module name="LenLeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.l008" />
         <item itemvalue="Application.l007" />
         <item itemvalue="Application.l006" />
         <item itemvalue="Application.l005" />
         <item itemvalue="Application.l003" />
-        <item itemvalue="Application.l002" />
       </list>
     </recent_temporary>
   </component>
@@ -116,7 +116,7 @@
       <workItem from="1641101157853" duration="48781000" />
       <workItem from="1641377773836" duration="1663000" />
       <workItem from="1641380219054" duration="7285000" />
-      <workItem from="1641455242902" duration="1992000" />
+      <workItem from="1641455242902" duration="2676000" />
     </task>
     <servers />
   </component>
@@ -246,6 +246,15 @@
     <state x="552" y="117" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1920.25.1920.1055/1680.241.1112.809/0.25.1680.956@0.25.1680.956" timestamp="1641442380535" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/leet/l008.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo typeName="leet.help.ListNode" fieldName="next" />
