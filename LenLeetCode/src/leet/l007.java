@@ -16,14 +16,25 @@ public class l007 {
         if ((x>=0 & long_result>Long.parseLong("2147483647")) | (x<0 & long_result>Long.parseLong("2147483648"))){
             return 0;
         }
-        int int_result = x>=0 ? Integer.parseInt(string_result) : Integer.parseInt(string_result) * (-1);
+        int int_result = Integer.parseInt(string_result);
         return x>=0 ? int_result : (-1 * int_result);
     }
+
+
+    public int reverse_leetcode_nb(int x) {
+        long n = 0;
+        while(x != 0) {
+            n = n*10 + x%10;
+            x = x/10;
+        }
+        return (int) n == n ? (int) n : 0;
+    }
+
 
     public static void main(String[] args) {
         int input1 = 1534236469;
         int input2 = -2147483648;
-        int result = reverse(input2);
+        int result = reverse(-132123);
         LenLog.printString(String.valueOf(result));
     }
 }
