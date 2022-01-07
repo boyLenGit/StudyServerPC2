@@ -1,5 +1,7 @@
 package leet;
 
+import util.LenLog;
+
 public class l009 {
     public static boolean isPalindrome(int x) {
         if (x<0){
@@ -17,6 +19,12 @@ public class l009 {
             index_end--;
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        int input1 = 12;
+        boolean result = isPalindrome(input1);
+        LenLog.printString(String.valueOf(result));
     }
 }
 
