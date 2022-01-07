@@ -16,7 +16,7 @@ public class l008 {
             return 0;
         }
         for(int i1=0; i1<chars_input.length; i1++){
-            if ((chars_input[i1]<'0' | chars_input[i1]>'9') & i1!=0 & chars_input[i1]!='+' & chars_input[i1]!='-'){
+            if ((chars_input[i1]<'0' | chars_input[i1]>'9') & chars_input[i1]!='+' & chars_input[i1]!='-'){
                 break;
             }
             // 预防+-123的情况
@@ -36,12 +36,10 @@ public class l008 {
         if (string_result.length()==0){
             return 0;
         }
-//        if (string_result.length()>=10){
-//            return isPositive==1 ? 2147483647 : -2147483648;
-//        }
+        Long long_result;
         try {
-            Long long_result = Long.parseLong(string_result);
-        }catch (NumberFormatException){
+            long_result = Long.parseLong(string_result);
+        }catch (NumberFormatException a){
             return isPositive==1 ? 2147483647 : -2147483648;
         }
         if (isPositive==1 & long_result>=Long.parseLong("2147483647")){
