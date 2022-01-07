@@ -19,6 +19,23 @@ public class l011 {
     // 超出时间限制
 
 
+    public static int maxArea_len2(int[] height) {
+        long volume = 0L;
+        long volume_temp = 0L;
+        int lower_height = 0;
+        for (int i1=0, i2=height.length-1; i1<i2; ){
+            volume_temp = (i2 - i1) * Math.min(height[i1], height[i2]);
+            volume = Math.max(volume_temp, volume);
+            if (height[i1]>height[i2]){
+                i2--;
+            }else {
+                i1++;
+            }
+        }
+        return (int)volume;
+    }
+
+
     public static int maxArea_leetcode_dalao1(int[] a) {
         int max = 0;
         for(int i = 0, j = a.length - 1; i < j; ){
@@ -32,8 +49,8 @@ public class l011 {
     public int maxArea_leetcode_dalao2(int[] height) {
         //初始面积
         int area  = 0;
-        for (int start = 0, end = height.length-1;start<end;) {
-            area = Math.max(area,(end - start)*Math.min(height[start],height[end]));
+        for (int start = 0, end = height.length-1; start<end;) {
+            area = Math.max(area, (end - start) * Math.min(height[start], height[end]));
             if (height[start] < height[end]){
                 start++;
             }else {
@@ -45,8 +62,8 @@ public class l011 {
 
 
     public static void main(String[] args) {
-        int[] input1 = {1,2,2222222,2,2,2,2,2,2,2222222,2};
-        int result = maxArea_leetcode_dalao1(input1);
+        int[] input1 = {2,4,6,8,100};
+        int result = maxArea_len2(input1);
         LenLog.printString(String.valueOf(result));
     }
 }
