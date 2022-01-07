@@ -1,5 +1,7 @@
 package leet;
 
+import util.LenLog;
+
 public class l011 {
     public static int maxArea(int[] height) {
         long volume = 0L;
@@ -14,9 +16,38 @@ public class l011 {
         }
         return (int)volume;
     }
+    // 超出时间限制
+
+
+    public static int maxArea_leetcode_dalao1(int[] a) {
+        int max = 0;
+        for(int i = 0, j = a.length - 1; i < j; ){
+            int minHeight = a[i] < a[j] ? a[i++] : a[j--];
+            max = Math.max(max, (j - i + 1) * minHeight);
+        }
+        return max;
+    }
+
+
+    public int maxArea_leetcode_dalao2(int[] height) {
+        //初始面积
+        int area  = 0;
+        for (int start = 0, end = height.length-1;start<end;) {
+            area = Math.max(area,(end - start)*Math.min(height[start],height[end]));
+            if (height[start] < height[end]){
+                start++;
+            }else {
+                end--;
+            }
+        }
+        return area;
+    }
+
 
     public static void main(String[] args) {
-        int input1 = [1,8,6,2,5,4,8,3,7];
+        int[] input1 = {1,2,2222222,2,2,2,2,2,2,2222222,2};
+        int result = maxArea_leetcode_dalao1(input1);
+        LenLog.printString(String.valueOf(result));
     }
 }
 // 0 1 2 3 4 5
