@@ -2,6 +2,9 @@ package leet;
 
 import util.LenLog;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class l011 {
     public static int maxArea(int[] height) {
         long volume = 0L;
@@ -20,9 +23,9 @@ public class l011 {
 
 
     public static int maxArea_len2(int[] height) {
+        // 双指针法
         long volume = 0L;
-        long volume_temp = 0L;
-        int lower_height = 0;
+        long volume_temp;
         for (int i1=0, i2=height.length-1; i1<i2; ){
             volume_temp = (i2 - i1) * Math.min(height[i1], height[i2]);
             volume = Math.max(volume_temp, volume);
@@ -65,6 +68,9 @@ public class l011 {
         int[] input1 = {2,4,6,8,100};
         int result = maxArea_len2(input1);
         LenLog.printString(String.valueOf(result));
+        List<String> strings = Arrays.asList("dfd", "ddsf");
+        String[] strings1 = {"dfd", "ddsf"};
+
     }
 }
 // 0 1 2 3 4 5
