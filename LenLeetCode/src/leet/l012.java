@@ -1,12 +1,15 @@
 package leet;
 
+import util.LenLog;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class l012 {
     public static String intToRoman(int num) {
-        ArrayList<Integer> divisors = new ArrayList<Integer>(Arrays.asList(1, 5, 10, 50, 100, 500, 1000));
+        ArrayList<Integer> divisors = new ArrayList<Integer>(Arrays.asList(1000,900,500,400,100,90,50,40,10,9,5,4,1));
+        ArrayList<String> romas = new ArrayList<String>(Arrays.asList("M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"));
         ArrayList<Integer> devide_result = new ArrayList<Integer>();
         int be_divisor = num;
         for (int divisor : divisors) {
@@ -15,13 +18,20 @@ public class l012 {
                 continue;
             } else {
                 devide_result.add(be_divisor / divisor);
+                be_divisor = be_divisor % divisor;
             }
-            be_divisor = be_divisor % divisor;
         }
-        return "";
+        String result = "";
+        for (int i1=0; i1<devide_result.size(); i1++){
+            if (devide_result.get(i1)!=0){
+                result = result.concat(romas.get(i1));
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) {
-        String result = intToRoman(3);
+        String result = intToRoman(1994);
+        LenLog.printString(result);
     }
 }
