@@ -19,10 +19,8 @@ public class l013 {
         for (int i1=0; i1<list_chars.length; i1++){
             // 针对"CM","CD","XC","XL","IX","IV"情况
             if ((list_chars[i1]=='C' | list_chars[i1]=='X' | list_chars[i1]=='I') & i1+1<list_chars.length){
-                char_dul = list_chars[i1+1];
                 for (int i2=0; i2<romas_dual_index.size(); i2++){
-                    char compare = romas.get(romas_dual_index.get(i2)).toCharArray()[1];
-                    if (compare==char_dul){
+                    if ((romas.get(romas_dual_index.get(i2)).toCharArray()[0]==list_chars[i1]) & (romas.get(romas_dual_index.get(i2)).toCharArray()[1]==list_chars[i1+1])){
                         result = result + divisors.get(romas_dual_index.get(i2));
                         i1++;
                         isDul = 1;
@@ -39,8 +37,8 @@ public class l013 {
                 break;
             }
             for (int i2=0; i2<romas.size(); i2++){
-                if (romas.get(i2).toCharArray()[0]==list_chars[i1]){
-                    result = result + divisors.get(i1);
+                if (romas.get(i2).toCharArray()[0]==list_chars[i1] & romas.get(i2).length()==1){
+                    result = result + divisors.get(i2);
                     break;
                 }
             }
@@ -51,6 +49,6 @@ public class l013 {
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(args));
-        LenLog.printString(String.valueOf(romanToInt("MCMXCIV")));
+        LenLog.printString(String.valueOf(romanToInt("DCXXI"))); // 621
     }
 }
