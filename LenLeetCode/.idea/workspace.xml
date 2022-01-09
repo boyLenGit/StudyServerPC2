@@ -117,7 +117,7 @@
       <workItem from="1641377773836" duration="1663000" />
       <workItem from="1641380219054" duration="7285000" />
       <workItem from="1641455242902" duration="25755000" />
-      <workItem from="1641716900558" duration="1160000" />
+      <workItem from="1641716900558" duration="2223000" />
     </task>
     <servers />
   </component>
@@ -284,6 +284,11 @@
           <url>file://$PROJECT_DIR$/src/leet/l012.java</url>
           <line>12</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/leet/l012.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
