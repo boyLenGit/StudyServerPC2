@@ -11,6 +11,7 @@ public class l012 {
         ArrayList<Integer> divisors = new ArrayList<Integer>(Arrays.asList(1000,900,500,400,100,90,50,40,10,9,5,4,1));
         ArrayList<String> romas = new ArrayList<String>(Arrays.asList("M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"));
         ArrayList<Integer> devide_result = new ArrayList<Integer>();
+        // 计算每个罗马数字出现的次数
         int be_divisor = num;
         for (int divisor : divisors) {
             if (divisor > be_divisor) { // 如果输入值＞被除数，则跳过
@@ -21,6 +22,7 @@ public class l012 {
                 be_divisor = be_divisor % divisor;
             }
         }
+        // 生成罗马数字的结果
         String result = "";
         for (int i1=0; i1<devide_result.size(); i1++){
             if (devide_result.get(i1)!=0){
@@ -33,7 +35,7 @@ public class l012 {
     }
 
     public static void main(String[] args) {
-        String result = intToRoman(58);
+        String result = intToRoman(1994);
         LenLog.printString(result);
     }
 }
