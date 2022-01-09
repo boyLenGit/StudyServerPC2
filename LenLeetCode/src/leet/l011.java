@@ -68,9 +68,11 @@ public class l011 {
         int[] input1 = {2,4,6,8,100};
         int result = maxArea_len2(input1);
         LenLog.printString(String.valueOf(result));
+
         List<String> strings = Arrays.asList("dfd", "ddsf");
         String[] strings1 = {"dfd", "ddsf"};
-
+        System.out.println(strings);
+        System.out.println(Arrays.toString(strings1));
     }
 }
 // 0 1 2 3 4 5
