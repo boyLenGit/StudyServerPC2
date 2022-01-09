@@ -24,14 +24,16 @@ public class l012 {
         String result = "";
         for (int i1=0; i1<devide_result.size(); i1++){
             if (devide_result.get(i1)!=0){
-                result = result.concat(romas.get(i1));
+                for (int i2=0; i2<devide_result.get(i1); i2++){
+                    result = result.concat(romas.get(i1));
+                }
             }
         }
         return result;
     }
 
     public static void main(String[] args) {
-        String result = intToRoman(1994);
+        String result = intToRoman(58);
         LenLog.printString(result);
     }
 }
