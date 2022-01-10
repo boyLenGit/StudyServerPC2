@@ -30,12 +30,20 @@ public class l015 {
                 }
             }
         }
+        for (int i1=0; i1<result.size(); i1++){
+            if (i1!=0){
+                if (result.get(i1)==result.get(i1-1)) result.remove(i1);
+            }
+        }
         return result;
     }
 
     public static void main(String[] args){
-        List<List<Integer>> result = threeSum(new int[]{-1,0,1,2,-1,-4});
+
+        List<List<Integer>> result = threeSum(new int[]{0,0,0,0});
         System.out.println(result);
+        // [0,0,0,0]
+        // -1,0,1,2,-1,-4
     }
 }
 
