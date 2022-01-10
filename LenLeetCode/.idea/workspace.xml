@@ -26,20 +26,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager" selected="Application.l014">
-    <configuration name="l009" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l009" />
-      <module name="LenLeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.l015">
     <configuration name="l011" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leet.l011" />
       <module name="LenLeetCode" />
@@ -92,13 +79,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="l015" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leet.l015" />
+      <module name="LenLeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.l015" />
         <item itemvalue="Application.l014" />
         <item itemvalue="Application.l013" />
         <item itemvalue="Application.l012" />
         <item itemvalue="Application.l011" />
-        <item itemvalue="Application.l009" />
       </list>
     </recent_temporary>
   </component>
@@ -117,7 +117,7 @@
       <workItem from="1641377773836" duration="1663000" />
       <workItem from="1641380219054" duration="7285000" />
       <workItem from="1641455242902" duration="25755000" />
-      <workItem from="1641716900558" duration="14061000" />
+      <workItem from="1641716900558" duration="19090000" />
     </task>
     <servers />
   </component>
@@ -317,6 +317,11 @@
           <url>file://$PROJECT_DIR$/src/leet/l014.java</url>
           <line>15</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/leet/l015.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
