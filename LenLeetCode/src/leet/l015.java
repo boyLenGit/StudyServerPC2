@@ -18,7 +18,7 @@ public class l015 {
                 sum = inputs.get(i1) + inputs.get(i2) + inputs.get(i3);
                 if (sum==0){
                     result.add(new ArrayList<>(Arrays.asList(inputs.get(i1), inputs.get(i2), inputs.get(i3))));
-                    break;
+                    i2++;
                 }else {
                     if (sum>0){
                         i3--;
@@ -32,7 +32,8 @@ public class l015 {
         }
         for (int i1=0; i1<result.size(); i1++){
             if (i1!=0){
-                if (result.get(i1)==result.get(i1-1)) result.remove(i1);
+                if (result.get(i1).equals(result.get(i1-1))) result.remove(i1);
+                i1--;
             }
         }
         return result;
