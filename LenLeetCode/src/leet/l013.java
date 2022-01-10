@@ -12,6 +12,7 @@ public class l013 {
         ArrayList<Integer> divisors = new ArrayList<Integer>(Arrays.asList(1000,900,500,400,100,90,50,40,10,9,5,4,1));
         ArrayList<String> romas = new ArrayList<String>(Arrays.asList("M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"));
         ArrayList<Integer> romas_dual_index = new ArrayList<Integer>(Arrays.asList(1,3,5,7,9,11));
+        
         char[] list_chars = s.toCharArray();
         char char_dul = ' ';
         int result = 0;
