@@ -1,11 +1,13 @@
 package leet;
 
+import util.LenLog;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class l016 {
-    public int threeSumClosest(int[] nums, int target) {
+    public static int threeSumClosest(int[] nums, int target) {
         Arrays.parallelSort(nums);
         List<Integer> inputs = Arrays.stream(nums).boxed().collect(Collectors.toList());
         int sum_min = 0;
@@ -22,6 +24,8 @@ public class l016 {
     }
 
     public static void main(String[] args){
-
+        int[] input1 = new int[] {-1,2,1,-4};
+        int result = threeSumClosest(input1, 1);
+        LenLog.printString(String.valueOf(result));
     }
 }
