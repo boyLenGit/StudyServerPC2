@@ -12,10 +12,13 @@ public class l016 {
         for (int i1=0; i1<inputs.size(); i1++){
             for (int i2=0, i3=inputs.size()-1; i2<i3; ){
                 int sum = inputs.get(i1) + inputs.get(i2) + inputs.get(i3);
-                if (Math.abs(target-sum)==0) return 999;
+                if (target-sum==0) return sum;
                 sum_min = Math.abs(target-sum) < Math.abs(target-sum_min) ? sum : sum_min;
+                if (target-sum>0) i2++;
+                else i3--;
             }
         }
+        return sum_min;
     }
 
     public static void main(String[] args){
