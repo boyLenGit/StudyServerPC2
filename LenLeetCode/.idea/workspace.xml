@@ -117,7 +117,7 @@
       <workItem from="1641377773836" duration="1663000" />
       <workItem from="1641380219054" duration="7285000" />
       <workItem from="1641455242902" duration="25755000" />
-      <workItem from="1641716900558" duration="30452000" />
+      <workItem from="1641716900558" duration="31128000" />
     </task>
     <servers />
   </component>
@@ -129,6 +129,10 @@
       <screen x="0" y="25" width="1680" height="956" />
     </state>
     <state x="724" y="370" width="584" height="266" key="#Notifications/-1920.25.1920.1055/0.25.1680.956@0.25.1680.956" timestamp="1641378939334" />
+    <state x="578" y="263" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1641869822337">
+      <screen x="0" y="25" width="1680" height="960" />
+    </state>
+    <state x="578" y="263" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/-1920.25.1920.1055/0.25.1680.960@0.25.1680.960" timestamp="1641869822337" />
     <state width="1638" height="320" key="GridCell.Tab.0.bottom" timestamp="1641825708908">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
