@@ -3,6 +3,7 @@ package leet;
 import leet.help.ListNode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class l019 {
@@ -21,15 +22,16 @@ public class l019 {
             input_temp = input_temp.next;
         }
         inputs.remove(inputs.size()-n);
+        Collections.reverse(inputs);
         ListNode result = null;
         for (int i1=0; i1<inputs.size(); i1++){
             if (i1==0) {
                  result = new ListNode(inputs.get(i1));
             }
             if (i1+1>=inputs.size()) break;
-            result.next = new ListNode(inputs.get(i1+1), result);
+            result = new ListNode(inputs.get(i1+1), result);
         }
-        return new ListNode();
+        return result;
     }
 
     public static void main(String[] args){
