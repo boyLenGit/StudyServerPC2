@@ -9,6 +9,7 @@ public class l018 {
         Arrays.parallelSort(nums);
         List<List<Integer>> result = new ArrayList<>();
         int sum;
+        List<Integer> to_add_temp = new ArrayList<>(Arrays.asList(nums[0], nums[0], nums[0], nums[0]));
         for (int i1=0; i1<nums.length; i1++){
             if (nums[i1]>0) break;
             for (int i2=i1+1; i2<nums.length; i2++){
