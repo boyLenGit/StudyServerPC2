@@ -28,20 +28,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.l017">
-    <configuration name="l013" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l013" />
-      <module name="LenLeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.l018">
     <configuration name="l014" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leet.l014" />
       <module name="LenLeetCode" />
@@ -94,13 +81,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="l018" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leet.l018" />
+      <module name="LenLeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.l018" />
         <item itemvalue="Application.l017" />
         <item itemvalue="Application.l016" />
         <item itemvalue="Application.l015" />
         <item itemvalue="Application.l014" />
-        <item itemvalue="Application.l013" />
       </list>
     </recent_temporary>
   </component>
@@ -127,7 +127,7 @@
       <workItem from="1641913731292" duration="79000" />
       <workItem from="1641913829574" duration="1503000" />
       <workItem from="1641952857837" duration="4600000" />
-      <workItem from="1641962583019" duration="4445000" />
+      <workItem from="1641962583019" duration="7238000" />
     </task>
     <servers />
   </component>
