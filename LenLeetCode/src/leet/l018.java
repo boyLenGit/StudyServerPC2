@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class l018 {
+    // 链表法
     public static List<List<Integer>> fourSum(int[] nums, int target) {
         if (nums.length<=3) return new ArrayList<>();
         Arrays.parallelSort(nums);
