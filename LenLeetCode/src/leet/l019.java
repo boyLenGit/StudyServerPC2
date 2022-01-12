@@ -20,6 +20,15 @@ public class l019 {
             if (input_temp.next==null)break;
             input_temp = input_temp.next;
         }
+        inputs.remove(inputs.size()-n);
+        ListNode result = null;
+        for (int i1=0; i1<inputs.size(); i1++){
+            if (i1==0) {
+                 result = new ListNode(inputs.get(i1));
+            }
+            if (i1+1>=inputs.size()) break;
+            result.next = new ListNode(inputs.get(i1+1), result);
+        }
         return new ListNode();
     }
 
@@ -29,7 +38,7 @@ public class l019 {
                         2, new ListNode(
                                 3, new ListNode(
                                         4, new ListNode(
-                                                5, new ListNode()
+                                                5
         )
         )
         )
