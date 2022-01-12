@@ -12,6 +12,13 @@ public class l017 {
         for (int i1=0; i1<inputs.length; i1++){
             List<String> result_temp = new ArrayList<String>();
             char[] chars_single = strings_abcde[inputs[i1] - '0' - 2].toCharArray();  // "abc"→a b c
+            // 当首次进入时，还没有存储内容
+            if (i1==0){
+                for (int i3=0; i3<chars_single.length; i3++){
+                    result.add(String.valueOf(chars_single[i3]));
+                }
+                continue;
+            }
             for (int i2=0; i2<result.size(); i2++){
                 String string = result.get(i2);
                 for (int i3=0; i3<chars_single.length; i3++){
@@ -19,7 +26,6 @@ public class l017 {
                 }
             }
             result = result_temp;
-
         }
         return result;
     }
