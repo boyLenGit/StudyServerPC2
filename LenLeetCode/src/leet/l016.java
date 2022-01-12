@@ -7,16 +7,17 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class l016 {
+    // 双指针法
     public static int threeSumClosest(int[] nums, int target) {
         Arrays.parallelSort(nums);
         List<Integer> inputs = Arrays.stream(nums).boxed().collect(Collectors.toList());
-        int sum_min = 0;
+        int sum_min = inputs.get(0) + inputs.get(1) + inputs.get(2);
         for (int i1=0; i1<inputs.size(); i1++){
-            for (int i2=0, i3=inputs.size()-1; i2<i3; ){
+            for (int i2=i1+1, i3=inputs.size()-1; i2<i3; ){
                 int sum = inputs.get(i1) + inputs.get(i2) + inputs.get(i3);
                 if (target-sum==0) return sum;
                 sum_min = Math.abs(target-sum) < Math.abs(target-sum_min) ? sum : sum_min;
-                if (target-sum>0) i2++;
+                if (target>sum) i2++;
                 else i3--;
             }
         }
