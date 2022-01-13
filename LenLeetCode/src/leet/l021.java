@@ -18,9 +18,16 @@ public class l021 {
             alist1.add(list2.val);
             list2 = list2.next;
         } while (list2 != null);
-
         Collections.sort(alist1);
-        return new ListNode();
+        ListNode result = new ListNode();
+        for (int i1=0; i1<alist1.size(); i1++){
+            if (i1==0){
+                result.val = alist1.get(i1);
+                continue;
+            }
+            result = new ListNode(alist1.get(i1), result);
+        }
+        return result;
     }
 
     public static void main(String[] args){
