@@ -32,6 +32,7 @@ public class l022 {
             }
             Collections.copy(list_2v, list_2v_temp);
         }
+        // 将char[]变为string
         List<String> result = new ArrayList<String>();
         for (char[] value : list_2v) {
             result.add(String.valueOf(value));
@@ -45,7 +46,7 @@ public class l022 {
         generateParenthesis(3);
     }
 }
-// 012345
+// 原理：
 // ()
 // (  )
 // (    )
