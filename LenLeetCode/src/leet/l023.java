@@ -25,7 +25,14 @@ public class l023 {
             result.addAll(ilist2v.get(i1));
         }
         Collections.sort(result);
-        return new ListNode();
+        Collections.reverse(result);
+        // 生成最终结果ListNode
+        ListNode result_node = new ListNode();
+        for (int i1=0; i1<result.size(); i1++){
+            if (i1!=0) result_node = new ListNode(result.get(i1), result_node);
+            result_node.val = result.get(i1);
+        }
+        return result_node;
     }
 
     public static void main(String[] args){
