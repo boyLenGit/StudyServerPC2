@@ -11,19 +11,24 @@ public class l021 {
         ArrayList<Integer> alist1 = new ArrayList<Integer>();
 
         while (true){
+            if (list1==null) break;
             alist1.add(list1.val);
-            if (list2.next==null) break;
+            if (list1.next==null) break;
             list1 = list1.next;
         }
 
         while (true){
+            if (list2==null) break;
             alist1.add(list2.val);
             if (list2.next==null) break;
             list2 = list2.next;
         }
+        // 如果输入：l1 = [], l2 = []
+        if(alist1.size()==0) return null;
 
         Collections.sort(alist1);
         Collections.reverse(alist1);
+
         ListNode result = new ListNode();
         for (int i1=0; i1<alist1.size(); i1++){
             if (i1==0){
@@ -39,6 +44,6 @@ public class l021 {
         ListNode input1 = new ListNode(1, new ListNode(2, new ListNode(4)));
         ListNode input2 = new ListNode(1, new ListNode(3, new ListNode(4)));
         ListNode input3 = new ListNode();
-        ListNode result = mergeTwoLists(input1, input2);
+        ListNode result = mergeTwoLists(null, null);
     }
 }
