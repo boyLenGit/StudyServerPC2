@@ -27,6 +27,7 @@ public class l023 {
         Collections.sort(result);
         Collections.reverse(result);
         // 生成最终结果ListNode
+        if (result.size()==0) return null;
         ListNode result_node = new ListNode();
         for (int i1=0; i1<result.size(); i1++){
             if (i1!=0) result_node = new ListNode(result.get(i1), result_node);
@@ -39,7 +40,8 @@ public class l023 {
         ListNode input1 = new ListNode(1, new ListNode(4, new ListNode(5)));
         ListNode input2 = new ListNode(1, new ListNode(3, new ListNode(4)));
         ListNode input3 = new ListNode(2, new ListNode(6));
-        ListNode[] listNodes = new ListNode[]{input1, input2,input3};
+        ListNode input4 = null;
+        ListNode[] listNodes = new ListNode[]{input4, input4, input4};
         ListNode result = mergeKLists(listNodes);
     }
 }
