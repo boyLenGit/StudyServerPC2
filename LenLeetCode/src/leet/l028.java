@@ -25,4 +25,10 @@ public class l028 {
         }
         return -1;
     }
+
+    public static void main(String[] args){
+        System.out.println(strStr2("mississippi", "issi"));
+    }
+    //"mississippi"
+    //"issi"
 }
