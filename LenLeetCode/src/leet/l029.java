@@ -2,6 +2,7 @@ package leet;
 
 public class l029 {
     public static int divide(int dividend, int divisor) {
+        int debug = dividend % divisor;
         int pone_d = dividend>=0 ? 1 : -1;
         int pone_or = divisor>=0 ? 1 : -1;
         String str_d = String.valueOf(dividend).replace("-", "");
@@ -24,22 +25,22 @@ public class l029 {
             }
 
             // 最末尾
-            if (i1+1==str_d.length()){
-                long_result = Long.valueOf(result);
-                long_result = int_d_adder * 2>divisor * 10 * pone_or ? long_result+1 : long_result;
-                break;
-            }
+//            if (i1+1==str_d.length()){
+//                long_result = int_d_adder * 2>divisor * 10 * pone_or ? long_result+1 : long_result;
+//                break;
+//            }
         }
         // 数据溢出的情况
+        long_result = Long.valueOf(result) * pone_d * pone_or;
         if (long_result>2147483647) return 2147483647;
         else if(long_result<-2147483648) return -2147483648;
-        return long_result.intValue() * pone_d * pone_or;
+        return long_result.intValue();
     }
 
     public static void main(String[] args){
-        System.out.println(divide(7, -3));
+        System.out.println(divide(-2147483648, -3));
 
     }
 }
-//     _____
-// 321|42342
+// -2147483648
+//-3
