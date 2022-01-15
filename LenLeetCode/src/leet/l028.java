@@ -11,24 +11,23 @@ public class l028 {
         if (haystack.length()<needle.length()) return -1;
         char[] be = haystack.toCharArray();
         char[] to = needle.toCharArray();
-        int isRepeat = 1;
+        int position = 0;
+        int to_cnt = 0;
         for (int i1=0; i1<be.length; i1++){
-            if (be[i1]==to[0]){
-                for (int i2=0; i2<to.length; i2++){
-                    if (be[i1]!=to[i2]) {
-                        isRepeat=0;
-                        break;
-                    }
-                }
-                if (isRepeat==1) return i1;
-            }
+            if (be[i1]==to[to_cnt]){
+                if (to_cnt==0) position = i1;
+                to_cnt++;
+                if (to_cnt>=needle.length()) break;
+            }else to_cnt = 0;
         }
-        return -1;
+        return to_cnt==needle.length() ? position : -1;
     }
 
     public static void main(String[] args){
-        System.out.println(strStr2("mississippi", "issi"));
+        System.out.println(strStr2("mississippi", "issip"));
     }
     //"mississippi"
     //"issi"
+    // "mississippi"
+    //"issip"
 }
