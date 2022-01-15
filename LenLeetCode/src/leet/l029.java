@@ -2,8 +2,10 @@ package leet;
 
 public class l029 {
     public static int divide(int dividend, int divisor) {
-        String str_d = String.valueOf(dividend);
-        String str_or = String.valueOf(divisor);
+        int pone_d = dividend>=0 ? 1 : -1;
+        int pone_or = divisor>=0 ? 1 : -1;
+        String str_d = String.valueOf(dividend).replace("-", "");
+        String str_or = String.valueOf(divisor).replace("-", "");
         String result = "";
         int int_d;
         int int_d_adder = 0;
@@ -21,7 +23,7 @@ public class l029 {
                 int_d = int_d - divisor;
             }
             long_result = Long.valueOf(result);
-
+            // 最末尾
             if (i1+len_or<str_d.length() & i1+len_or+len_or>=str_d.length()){
                 int_d = Integer.parseInt(str_d.substring(i1+len_or, str_d.length()));
                 long_result = int_d * 2>divisor ? long_result+1 : long_result;
@@ -36,6 +38,8 @@ public class l029 {
 
     public static void main(String[] args){
         System.out.println(divide(10, 3));
+        Integer a1 = 0;
+
     }
 }
 //     _____
