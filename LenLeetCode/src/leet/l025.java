@@ -17,12 +17,12 @@ public class l025 {
         // 高级反转
         ArrayList<Integer> results = new ArrayList<Integer>();
         for (int i1=0; i1<inputs.size(); ){
-            for (int i2=i1+k; i2<inputs.size() & i2>i1; i2--){
+            for (int i2=i1+k-1; i2<inputs.size() & i2>=i1; i2--){
                 results.add(inputs.get(i2));
-                i1 = i1 + k;
             }
-            if (i1+k>=inputs.size()){
-                for (int i3=i1+1; i3<inputs.size(); i3++){
+            i1 = i1 + k;
+            if (i1+k>inputs.size()){
+                for (int i3=i1; i3<inputs.size(); i3++){
                     results.add(inputs.get(i3));
                 }
                 break;
@@ -38,7 +38,9 @@ public class l025 {
     }
 
     public static void main(String[] args){
-        ListNode inputs = LenListNode.ints2listnode(new int[]{1,2,3,4,5});
-        ListNode result = reverseKGroup(inputs, 3);
+        ListNode inputs = LenListNode.ints2listnode(new int[]{1,2,3,4});
+        ListNode result = reverseKGroup(inputs, 2);
     }
+    // [1,2,3,4]
+    //2
 }
