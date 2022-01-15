@@ -10,7 +10,7 @@ public class l029 {
         int int_d;
         int int_d_adder = 0;
         int len_or = str_or.length();
-        Long long_result = null;
+        Long long_result = 0L;
         for (int i1=0; i1<str_d.length(); i1=i1+len_or){
             int_d = Integer.parseInt(str_d.substring(i1, i1+len_or)) + int_d_adder;
             // 上端
@@ -22,23 +22,22 @@ public class l029 {
                 }
                 int_d = int_d - divisor;
             }
-            long_result = Long.valueOf(result);
+
             // 最末尾
-            if (i1+len_or<str_d.length() & i1+len_or+len_or>=str_d.length()){
-                int_d = Integer.parseInt(str_d.substring(i1+len_or, str_d.length()));
-                long_result = int_d * 2>divisor ? long_result+1 : long_result;
+            if (i1+1==str_d.length()){
+                long_result = Long.valueOf(result);
+                long_result = int_d_adder * 2>divisor * 10 ? long_result+1 : long_result;
                 break;
             }
         }
         // 数据溢出的情况
         if (long_result>2147483647) return 2147483647;
         else if(long_result<-2147483648) return -2147483648;
-        return long_result.intValue();
+        return long_result.intValue() * pone_d * pone_or;
     }
 
     public static void main(String[] args){
         System.out.println(divide(10, 3));
-        Integer a1 = 0;
 
     }
 }
