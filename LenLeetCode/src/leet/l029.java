@@ -2,9 +2,8 @@ package leet;
 
 public class l029 {
     public static int divide(int dividend, int divisor) {
-        int debug = dividend % divisor;
-        int pone_d = dividend>=0 ? 1 : -1;
-        int pone_or = divisor>=0 ? 1 : -1;
+        long pone_d = dividend>=0 ? 1 : -1;
+        long pone_or = divisor>=0 ? 1 : -1;
         if ((Long.parseLong(String.valueOf(dividend))*pone_d)<(Long.parseLong(String.valueOf(divisor))*pone_or)) return 0;
         String str_d = String.valueOf(dividend).replace("-", "");
         String str_or = String.valueOf(divisor).replace("-", "");
@@ -13,16 +12,16 @@ public class l029 {
         long long_d_adder = 0L;
         int len_or = str_or.length();
         long long_result = 0L;
-        for (int i1=0; i1<str_d.length()-str_or.length(); i1++){
+        for (int i1=0; i1<=str_d.length()-str_or.length(); i1++){
             long_d = i1==0 ? Long.parseLong(String.valueOf(long_d_adder).concat(str_d.substring(i1, i1+len_or))) : Long.parseLong(String.valueOf(long_d_adder).concat(str_d.substring(i1, i1+1)));
             // 上端
             for (int i2=0; ; i2++){
-                if (long_d<divisor * pone_or){
+                if (long_d<(long)divisor * pone_or){
                     result = result.concat(String.valueOf(i2));
                     long_d_adder = long_d;
                     break;
                 }
-                long_d = long_d - divisor * pone_or;
+                long_d = long_d - (long)divisor * pone_or;
             }
         }
         // 数据溢出的情况
@@ -33,7 +32,7 @@ public class l029 {
     }
 
     public static void main(String[] args){
-        System.out.println(divide(-1021989372, -82778243));
+        System.out.println(divide(-2147483648, -2147483648));
 
     }
 }
@@ -41,3 +40,6 @@ public class l029 {
 //-1
 // -1021989372
 //-82778243
+// -2147483648
+//-2147483648
+
