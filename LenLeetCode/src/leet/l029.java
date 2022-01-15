@@ -15,18 +15,18 @@ public class l029 {
             int_d = Integer.parseInt(str_d.substring(i1, i1+len_or)) + int_d_adder;
             // 上端
             for (int i2=0; ; i2++){
-                if (int_d<divisor){
+                if (int_d<divisor * pone_or){
                     result = result.concat(String.valueOf(i2));
                     int_d_adder = int_d * 10;
                     break;
                 }
-                int_d = int_d - divisor;
+                int_d = int_d - divisor * pone_or;
             }
 
             // 最末尾
             if (i1+1==str_d.length()){
                 long_result = Long.valueOf(result);
-                long_result = int_d_adder * 2>divisor * 10 ? long_result+1 : long_result;
+                long_result = int_d_adder * 2>divisor * 10 * pone_or ? long_result+1 : long_result;
                 break;
             }
         }
@@ -37,7 +37,7 @@ public class l029 {
     }
 
     public static void main(String[] args){
-        System.out.println(divide(10, 3));
+        System.out.println(divide(7, -3));
 
     }
 }
