@@ -19,6 +19,8 @@ public class l028 {
                 to_cnt++;
                 if (to_cnt>=needle.length()) break;
             }else to_cnt = 0;
+
+            if (i1+1<be.length & to_cnt<to.length) if (be[i1+1]!=to[to_cnt]) to_cnt=0;
         }
         return to_cnt==needle.length() ? position : -1;
     }
