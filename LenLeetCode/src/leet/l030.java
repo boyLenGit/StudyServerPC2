@@ -18,21 +18,17 @@ public class l030 {
         ArrayList<Integer> result = new ArrayList<Integer>();
         ArrayList<String> compares = new ArrayList<String>(Arrays.asList(words));
         for (int i1=0; i1<list_in.size(); i1++){
-            for (int i2=0; i2<words.length; i2++){
-                if (compares.contains(list_in.get(i1))){
-                    compares.remove(list_in.get(i1));
-                }
-            }
 
             if (compares.contains(list_in.get(i1))){
-                compares.remove(list_in.get(i1));
-                result.add(i1*len_word);
-                if (compares.size()==0){
-                    return result;
+                for (int i2=0; i2<words.length; i2++){
+                    compares.remove(list_in.get(i1));
+                    if (compares.size()==0){
+                        result.add(i1*len_word);
+                        break;
+                    }
                 }
             }else {
                 compares = new ArrayList<String>(Arrays.asList(words));
-                result = new ArrayList<Integer>();
             }
         }
         return new ArrayList<Integer>();
