@@ -14,7 +14,6 @@ public class l029 {
         long long_result = 0L;
         for (int i1=0; i1<=str_d.length()-str_or.length(); i1++){
             long_d = i1==0 ? Long.parseLong(String.valueOf(long_d_adder).concat(str_d.substring(i1, i1+len_or))) : Long.parseLong(String.valueOf(long_d_adder).concat(str_d.substring(i1, i1+1)));
-            // 上端
             for (int i2=0; ; i2++){
                 if (long_d<(long)divisor * pone_or){
                     result = result.concat(String.valueOf(i2));
