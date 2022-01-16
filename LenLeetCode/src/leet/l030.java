@@ -9,6 +9,7 @@ import java.util.List;
 public class l030 {
 
     public static List<Integer> findSubstring2(String s, String[] words) {
+        // 思路：按字符向后遍历，每次遍历都截取后一段字符，判断是否等于words，是则进入遍历words循环
         String sub = "";
         int cnt = 0;
         ArrayList<Integer> result = new ArrayList<Integer>();
