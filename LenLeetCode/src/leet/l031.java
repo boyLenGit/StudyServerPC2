@@ -35,7 +35,7 @@ public class l031 {
                 }
             }
             if (isOver==1) {
-                int[] sorted = Arrays.copyOfRange(nums, index_sort_start, index_sort_start);
+                int[] sorted = Arrays.copyOfRange(nums, index_sort_start, index_sort_end+1);
                 Arrays.sort(sorted);
                 int cnt = 0;
                 for (int i3=index_sort_start; i3<index_sort_end; i3++){
