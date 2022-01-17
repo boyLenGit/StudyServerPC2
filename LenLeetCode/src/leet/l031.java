@@ -29,9 +29,13 @@ public class l031 {
             }
             if (isOver==1) break;
         }
-
         // 转换nums
         nums = list_result.stream().mapToInt(Integer::valueOf).toArray();
+        int debug1;
+    }
+
+    public static void main(String[] args){
+        nextPermutation(new int[]{1,2,3});
     }
 }
 // 453751643
