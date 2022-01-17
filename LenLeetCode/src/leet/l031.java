@@ -12,7 +12,11 @@ public class l031 {
         List<Integer> list_result = Arrays.stream(nums).boxed().collect(Collectors.toList());
         int isOver = 0;
         for (int i1=nums.length-1; i1>=0; i1--){
-            if (i1==nums.length-1) continue;
+            if (i1==nums.length-1) {
+                temp.add(nums[i1]);
+                itemp.add(i1);
+                continue;
+            }
             if (nums[i1]>nums[i1+1]){
                 temp.add(nums[i1]);
                 itemp.add(i1);
@@ -35,7 +39,7 @@ public class l031 {
     }
 
     public static void main(String[] args){
-        nextPermutation(new int[]{1,2,3});
+        nextPermutation(new int[]{1,1,5});
     }
 }
 // 453751643
