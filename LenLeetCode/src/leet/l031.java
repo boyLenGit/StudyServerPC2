@@ -9,7 +9,7 @@ public class l031 {
     public static void nextPermutation(int[] nums) {
         ArrayList<Integer> temp = new ArrayList<Integer>();
         ArrayList<Integer> itemp = new ArrayList<Integer>();
-        List<Integer> list_result = Arrays.stream(nums).boxed().collect(Collectors.toList());
+//        List<Integer> list_result = Arrays.stream(nums).boxed().collect(Collectors.toList());
         int isOver = 0;
         for (int i1=nums.length-1; i1>=0; i1--){
             if (i1==nums.length-1) {
@@ -24,22 +24,27 @@ public class l031 {
             }else if (nums[i1]<nums[i1+1]){
                 for (int i2=0; i2<temp.size(); i2++){
                     if (temp.get(i2)>nums[i1]){
-                        list_result.set(itemp.get(i2), nums[i1]);
-                        list_result.set(i1, temp.get(i2));
+//                        list_result.set(itemp.get(i2), nums[i1]);
+//                        list_result.set(i1, temp.get(i2));
+                        nums[itemp.get(i2)] = nums[i1];
+                        nums[i1] = temp.get(i2);
                         isOver = 1;
                         break;
                     }
                 }
             }
-            if (isOver==1) break;
+            if (isOver==1) {
+//                nums = Arrays.copyOf(list_result.stream().mapToInt(Integer::valueOf).toArray(), nums.length);
+                break;
+            }
         }
         // 转换nums
-        nums = list_result.stream().mapToInt(Integer::valueOf).toArray();
-        int debug1;
+//        nums = Arrays.copyOf(list_result.stream().mapToInt(Integer::valueOf).toArray(), nums.length);
+        int debug1=5;
     }
 
     public static void main(String[] args){
-        nextPermutation(new int[]{1,1,5});
+        nextPermutation(new int[]{1});
     }
 }
 // 453751643
