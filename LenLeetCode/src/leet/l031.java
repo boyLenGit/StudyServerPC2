@@ -2,16 +2,14 @@ package leet;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
+
 
 public class l031 {
     public static void nextPermutation(int[] nums) {
-        ArrayList<Integer> temp = new ArrayList<Integer>();
-        ArrayList<Integer> itemp = new ArrayList<Integer>();
+        ArrayList<Integer> temp = new ArrayList<>();
+        ArrayList<Integer> itemp = new ArrayList<>();
         int isOver = 0;
         int index_sort_start = 0;
-        int index_sort_end = 0;
         for (int i1=nums.length-1; i1>=0; i1--){
             if (i1==nums.length-1) {
                 temp.add(nums[i1]);
@@ -28,17 +26,17 @@ public class l031 {
                         nums[itemp.get(i2)] = nums[i1];
                         nums[i1] = temp.get(i2);
                         index_sort_start = i1+1;
-                        index_sort_end = itemp.get(i2);
                         isOver = 1;
                         break;
                     }
                 }
             }
             if (isOver==1) {
-                int[] sorted = Arrays.copyOfRange(nums, index_sort_start, index_sort_end+1);
+                int[] sorted = Arrays.copyOfRange(nums, index_sort_start, nums.length);
                 Arrays.sort(sorted);
                 int cnt = 0;
-                for (int i3=index_sort_start; i3<index_sort_end; i3++){
+                // 针对15432的情况（答案应为：21345）
+                for (int i3=index_sort_start; i3<nums.length; i3++){
                     nums[i3] = sorted[cnt];
                     cnt++;
                 }
@@ -46,12 +44,10 @@ public class l031 {
             }
         }
         if (isOver==0) Arrays.sort(nums);
-        // 转换nums
-        int debug1=5;
     }
 
     public static void main(String[] args){
-        nextPermutation(new int[]{1,5,4,3,2});
+        nextPermutation(new int[]{2,3,1});
     }
 }
 // 453751643
