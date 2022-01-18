@@ -1,10 +1,9 @@
 package leet;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 
 public class l070 {
+    // 题目：爬楼梯
     public static int climbStairs(int n) {
         // 思路：计算每次1、2组合的数组的排列组合数量，累加得到结果
         int result = 0;
@@ -68,7 +67,6 @@ public class l070 {
         for (; n>1; n--){
             result = result * n;
         }
-        System.out.println(result);
         return result;
     }
 
