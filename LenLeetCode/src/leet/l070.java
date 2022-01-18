@@ -6,8 +6,7 @@ import java.util.Collections;
 
 public class l070 {
     public static int climbStairs(int n) {
-        ArrayList<String> list_result = new ArrayList<>();
-        ArrayList<String> list_result_temp = new ArrayList<>();
+        // 思路：计算每次1、2组合的数组的排列组合数量，累加得到结果
         int result = 0;
         int positions = 0;
 
@@ -19,12 +18,7 @@ public class l070 {
             positions = n - 2*cnt_2 + cnt_2;
             if (positions==cnt_2){
                 result++;
-            }else {
-                long fenzi = JieCheng(positions);
-                long fenmu = (JieCheng(cnt_2)*JieCheng(positions-cnt_2));
-                result = result + (int)(fenzi/fenmu);
-                result = result + PaiLieZuHe(cnt_2, positions);
-            }
+            }else result = result + PaiLieZuHe(cnt_2, positions);
         }
         return result;
     }
@@ -36,24 +30,35 @@ public class l070 {
             list_fenzi.add(i1);
         }
         ArrayList<Integer> list_fenmu = new ArrayList<>();
-        for (int i3=1; i3<=n-m; i3++){
+        for (int i3=2; i3<=n-m; i3++){
             list_fenmu.add(i3);
         }
         //      删除分子与分母的重复项
         for (int i4=0; i4<list_fenzi.size(); i4++){
             if (list_fenmu.contains(list_fenzi.get(i4))){
-                list_fenmu.remove(list_fenmu.indexOf(list_fenmu.get(i4)));
+                list_fenmu.remove(list_fenmu.indexOf(list_fenzi.get(i4)));
                 list_fenzi.remove(i4);
                 i4--;
             }
         }
+        //      单个数组化简，如'[42]与[2]'化简为'[24]与[null]'
+        for (int i4=0; i4<list_fenmu.size(); i4++){
+            for (int i5=0; i5<list_fenzi.size(); i5++){
+                if (list_fenzi.get(i5)%list_fenmu.get(i4)==0){
+                    list_fenzi.set(i5, list_fenzi.get(i5)/list_fenmu.get(i4));
+                    list_fenmu.remove(i4);
+                    i4--;
+                    break;
+                }
+            }
+        }
         // 开始计算阶乘
         long result = 1;
-        for (int i5=0; i5<list_fenzi.size(); i5++){
-            result = result * list_fenzi.get(i5);
+        for (Integer value : list_fenzi) {
+            result = result * value;
         }
-        for (int i6=0; i6<list_fenmu.size(); i6++){
-            result = result / list_fenmu.get(i6);
+        for (Integer integer : list_fenmu) {
+            result = result / integer;
         }
         return (int) result;
     }
@@ -68,8 +73,8 @@ public class l070 {
     }
 
     public static void main(String[] args){
-//        System.out.println(climbStairs(14));
-        System.out.println(PaiLieZuHe(2, 4));
+        System.out.println(climbStairs(3));
+        System.out.println(PaiLieZuHe(1, 4));
     }
 }
 // 1111111
