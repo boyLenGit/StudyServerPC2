@@ -1,5 +1,6 @@
 package util;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class LenLog {
@@ -9,6 +10,12 @@ public class LenLog {
         String time = LenTime.ymdhms_v1();
         String print = time + " LenLog <" + name + "> Content:" + content;
         System.out.println(print);
+    }
+
+    public static void printInt2vArray(int[][] inputs){
+        for (int[] input : inputs) {
+            printString(Arrays.toString(input));
+        }
     }
 
     public static void printString(String string){
