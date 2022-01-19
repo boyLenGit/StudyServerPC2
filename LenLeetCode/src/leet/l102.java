@@ -3,21 +3,36 @@ package leet;
 import leet.help.TreeNode;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class l102 {
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public static List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
-        List<List<Integer>> temp_result = new ArrayList<>();
-        ArrayList<TreeNode> items = new ArrayList<>();
-        items.add(root);
+        List<Integer> temp_result = new ArrayList<>();
+        ArrayList<TreeNode> inputs = new ArrayList<>();
+        ArrayList<TreeNode> temp_inputs = new ArrayList<>();
+        inputs.add(root);
         for (int i1=0; ; ){
-
-            items = new ArrayList<>();
-            
+            for (int i2=0; i2<inputs.size(); i2++){
+                temp_result.add(inputs.get(i2).val);
+            }
+            result.add(temp_result);
+            if (inputs.get(i1).left==null) break;
+            temp_inputs = new ArrayList<>();
+            for (int i3=0; i3<inputs.size(); i3++){
+                temp_inputs.add(inputs.get(i3).left);
+                temp_inputs.add(inputs.get(i3).right);
+            }
+            inputs = (ArrayList<TreeNode>) temp_inputs.clone();
         }
+        return result;
     }
 
+    public static void main(String[] a){
+        TreeNode input1 = new TreeNode(3, new TreeNode(9), new TreeNode(20));
+        levelOrder(input1);
+    }
 }
 
 

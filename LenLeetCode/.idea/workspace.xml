@@ -29,7 +29,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.l200">
+  <component name="RunManager" selected="Application.l102">
     <configuration name="j0001" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JZoffer.j0001" />
       <module name="LenLeetCode" />
@@ -45,6 +45,19 @@
     </configuration>
     <configuration name="l070" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leet.l070" />
+      <module name="LenLeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="l102" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leet.l102" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
@@ -82,26 +95,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="l704" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l704" />
-      <module name="LenLeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.l102" />
         <item itemvalue="Application.l200" />
         <item itemvalue="Application.l121" />
         <item itemvalue="Application.l070" />
         <item itemvalue="Application.j0001" />
-        <item itemvalue="Application.l704" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +136,7 @@
       <workItem from="1642237100510" duration="34371000" />
       <workItem from="1642389831861" duration="582000" />
       <workItem from="1642403086182" duration="47268000" />
-      <workItem from="1642561631808" duration="2277000" />
+      <workItem from="1642561631808" duration="3393000" />
     </task>
     <servers />
   </component>
@@ -637,6 +637,11 @@
           <url>file://$PROJECT_DIR$/src/leet/l200.java</url>
           <line>15</line>
           <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/leet/l102.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="118" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
