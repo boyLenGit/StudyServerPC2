@@ -27,9 +27,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.l102">
+  <component name="RunManager" selected="Application.l200">
     <configuration name="j0001" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JZoffer.j0001" />
       <module name="LenLeetCode" />
@@ -97,8 +97,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.l102" />
         <item itemvalue="Application.l200" />
+        <item itemvalue="Application.l102" />
         <item itemvalue="Application.l121" />
         <item itemvalue="Application.l070" />
         <item itemvalue="Application.j0001" />
@@ -136,7 +136,7 @@
       <workItem from="1642237100510" duration="34371000" />
       <workItem from="1642389831861" duration="582000" />
       <workItem from="1642403086182" duration="47268000" />
-      <workItem from="1642561631808" duration="5221000" />
+      <workItem from="1642561631808" duration="9076000" />
     </task>
     <servers />
   </component>
@@ -399,12 +399,13 @@
     <state width="1638" height="324" key="GridCell.Tab.1.right/1680.25.1112.809/0.25.1680.956@0.25.1680.956" timestamp="1641485025582" />
     <state width="1638" height="280" key="GridCell.Tab.1.right/1680.25.1920.1055/0.25.1680.958@0.25.1680.958" timestamp="1642602826563" />
     <state width="1638" height="280" key="GridCell.Tab.1.right/1680.25.1920.1055/0.25.1680.964@0.25.1680.964" timestamp="1642560209778" />
-    <state x="349" y="133" key="SettingsEditor" timestamp="1642215039702">
-      <screen x="0" y="25" width="1680" height="959" />
+    <state x="349" y="133" key="SettingsEditor" timestamp="1642605795379">
+      <screen x="0" y="25" width="1680" height="958" />
     </state>
     <state x="349" y="133" key="SettingsEditor/-1920.25.1920.1055/0.25.1680.959@0.25.1680.959" timestamp="1642215039701" />
     <state x="349" y="118" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1641913810338" />
     <state x="349" y="131" key="SettingsEditor/0.25.1680.940@0.25.1680.940" timestamp="1641907684786" />
+    <state x="349" y="133" key="SettingsEditor/1680.25.1920.1055/0.25.1680.958@0.25.1680.958" timestamp="1642605795379" />
     <state x="552" y="117" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1642150121357">
       <screen x="0" y="25" width="1680" height="959" />
     </state>
