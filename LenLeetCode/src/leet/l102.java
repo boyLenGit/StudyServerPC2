@@ -10,8 +10,14 @@ public class l102 {
         List<List<Integer>> result = new ArrayList<>();
         List<List<Integer>> temp_result = new ArrayList<>();
         ArrayList<TreeNode> items = new ArrayList<>();
+        items.add(root);
         for (int i1=0; ; ){
 
+            items = new ArrayList<>();
+            
         }
     }
+
 }
+
+
