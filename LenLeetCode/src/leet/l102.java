@@ -14,15 +14,16 @@ public class l102 {
         ArrayList<TreeNode> temp_inputs = new ArrayList<>();
         inputs.add(root);
         for (int i1=0; ; ){
+            temp_result = new ArrayList<>();
             for (int i2=0; i2<inputs.size(); i2++){
                 temp_result.add(inputs.get(i2).val);
             }
             result.add(temp_result);
-            if (inputs.get(i1).left==null) break;
+            if (inputs.get(i1).left==null & inputs.get(i1).right==null) break;
             temp_inputs = new ArrayList<>();
             for (int i3=0; i3<inputs.size(); i3++){
-                temp_inputs.add(inputs.get(i3).left);
-                temp_inputs.add(inputs.get(i3).right);
+                if (inputs.get(i3).left!=null) temp_inputs.add(inputs.get(i3).left);
+                if (inputs.get(i3).right!=null) temp_inputs.add(inputs.get(i3).right);
             }
             inputs = (ArrayList<TreeNode>) temp_inputs.clone();
         }
@@ -30,7 +31,9 @@ public class l102 {
     }
 
     public static void main(String[] a){
-        TreeNode input1 = new TreeNode(3, new TreeNode(9), new TreeNode(20));
+        TreeNode input1 = new TreeNode(3,
+                new TreeNode(9),
+                new TreeNode(20, new TreeNode(15), new TreeNode(7)));
         levelOrder(input1);
     }
 }
