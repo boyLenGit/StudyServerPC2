@@ -9,6 +9,7 @@ import java.util.List;
 public class l102 {
     public static List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
+        if (root==null) return result;
         List<Integer> temp_result = new ArrayList<>();
         ArrayList<TreeNode> inputs = new ArrayList<>();
         ArrayList<TreeNode> temp_inputs = new ArrayList<>();
@@ -42,7 +43,7 @@ public class l102 {
         TreeNode input1 = new TreeNode(3,
                 new TreeNode(9),
                 new TreeNode(20, new TreeNode(15), new TreeNode(7)));
-        levelOrder(input1);
+        levelOrder(null);
     }
 }
 
