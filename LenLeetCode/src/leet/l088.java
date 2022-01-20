@@ -5,9 +5,10 @@ import java.util.Arrays;
 public class l088 {
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         int cnt = 0;
-        for (int i1=m-1; i1<m+n; i1++, cnt++){
+        for (int i1=m; i1<m+n; i1++, cnt++){
             nums1[i1] = nums2[cnt];
         }
+        Arrays.sort(nums1);
         System.out.println(Arrays.toString(nums1));
     }
 
