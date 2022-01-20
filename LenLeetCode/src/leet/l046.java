@@ -17,13 +17,15 @@ public class l046 {
 
     public static void dg(int[] ilist, List<List<Integer>> result){
         List<List<Integer>> temp = new ArrayList<>();
+        List<Integer> single_temp = new ArrayList<>();
         for (List<Integer> lists : result){
              for (Integer integer : ilist){
                  if (!lists.contains(integer)) {  // 如果不包含该字符，则add上
-                     lists.add(integer);
-                     temp.add(lists.subList(0, lists.size()));
-                     lists.remove(lists.size()-1);
+                     single_temp.addAll(lists);
+                     single_temp.add(integer);
+                     temp.add(single_temp);
                  }
+                 single_temp = new ArrayList<>();
              }
         }
         result = temp;
