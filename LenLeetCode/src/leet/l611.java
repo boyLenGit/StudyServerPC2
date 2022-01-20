@@ -45,7 +45,7 @@ public class l611 {
 
     public static int triangleNumber3(int[] nums) {
         // 双指针法+反向遍历遇到符合条件即停止遍历 [2,2,3,4]
-        // 结果：
+        // 结果：耗时比方法1更长，反向优化。
         Arrays.sort(nums);
         int cnt = 0;
         for (int i1=0; i1<nums.length-2; i1++){
@@ -59,15 +59,33 @@ public class l611 {
                     cnt = cnt + (i3-i2);
                     i2++;
                     i3=nums.length-1;
+                    continue;
                 }
                 i3--;
             }
+        }
+        return cnt;
+    }
 
+    public static int triangleNumber4(int[] nums) {
+        // 双指针法+反向遍历遇到符合条件即停止遍历+i2<i3双指针
+        // 结果：耗时比方法1更长，反向优化。
+        Arrays.sort(nums);
+        int cnt = 0;
+        for (int i1=0; i1<nums.length-2; i1++){
+            for (int i2=i1+1, i3=i2+1; i3<nums.length; ){
+                if (nums[i1]+nums[i2]<=nums[i3]){
+                    cnt = cnt + (i3-i2);
+                    i2++;
+                }else i3++;
+            }
         }
         return cnt;
     }
 
     public static void main(String[] a){
-        System.out.println(triangleNumber3(new int[]{2,2,3,4}));
+        System.out.println(triangleNumber4(new int[]{2,2,3,4}));
     }
 }
+// [2,2,3,4,5,6]
+//  ^ ^   ^
