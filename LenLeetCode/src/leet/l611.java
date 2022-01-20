@@ -20,6 +20,7 @@ public class l611 {
 
     public static int triangleNumber2(int[] nums) {
         // 双指针法优化速度
+        // 结果 耗时比方法1更长，反向优化。
         Arrays.sort(nums);
         int cnt = 0;
         for (int i1=0; i1<nums.length-2; i1++){
@@ -27,6 +28,7 @@ public class l611 {
                 if (i3>=nums.length) {
                     i2++;
                     i3 = i2 + 1;
+                    continue;
                 }
                 if (nums[i1]+nums[i2]>nums[i3]) {
                     cnt++;
