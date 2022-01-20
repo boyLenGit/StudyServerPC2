@@ -11,11 +11,12 @@ public class l046 {
         for (int num: nums){
             result.add(new ArrayList<>(Collections.singleton(num)));
         }
-        dg(nums, result);
+        if (nums.length==1) return result;
+        result = dg(nums, result);
         return result;
     }
 
-    public static void dg(int[] ilist, List<List<Integer>> result){
+    public static List<List<Integer>> dg(int[] ilist, List<List<Integer>> result){
         List<List<Integer>> temp = new ArrayList<>();
         List<Integer> single_temp = new ArrayList<>();
         for (List<Integer> lists : result){
@@ -29,11 +30,12 @@ public class l046 {
              }
         }
         result = temp;
-        if (result.get(0).size()!=ilist.length) dg(ilist, result);
+        if (result.get(0).size()!=ilist.length) result = dg(ilist, result);
+        return result;
     }
 
     public static void main(String[] a){
-        List<List<Integer>> result = permute(new int[]{1,2,3});
+        List<List<Integer>> result = permute(new int[]{1});
         System.out.println(Arrays.toString(result.toArray()));
     }
 }
