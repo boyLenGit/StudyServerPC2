@@ -6,7 +6,8 @@ public class l053 {
     public static int maxSubArray(int[] nums) {
         if (nums.length==1) return nums[0];
         int res = 0;
-        for (int i1=0; i1<nums.length-1; i1++){
+        for (int i1=0; i1<nums.length; i1++){
+            if (i1==nums.length-1) res = Math.max(res, nums[i1]);
             for (int i2=i1+1; i2<nums.length; i2++){
                 res = Math.max(res, sum(Arrays.copyOfRange(nums, i1, i2+1)));
             }
