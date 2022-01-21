@@ -22,7 +22,7 @@ public class lt001_sorts {
                 if (nums[i2]<nums[i1]) min_id=i2;
             }
             int temp = nums[i1];
-            nums[i1] = temp;
+            nums[i1] = nums[min_id];
             nums[min_id] = temp;
         }
     }
