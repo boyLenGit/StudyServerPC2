@@ -5,7 +5,7 @@ public class l136 {
         int min;
         for (int i1=0; i1<nums.length; i1++){
             min = i1;
-            for (int i2=0; i2<nums.length; i2++){
+            for (int i2=i1+1; i2<nums.length; i2++){
                 if (nums[min]>nums[i2]) min = i2;
             }
             int temp = nums[min];
