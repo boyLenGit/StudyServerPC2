@@ -14,7 +14,7 @@ public class l215 {
         for (int i1=0; i1<nums.length; i1++){
             min_id=i1;
             for (int i2=i1+1; i2<nums.length; i2++){
-                if (nums[i2]<nums[i1]) min_id=i2;
+                if (nums[i2]<nums[min_id]) min_id=i2;
             }
             int temp = nums[i1];
             nums[i1] = nums[min_id];
@@ -23,3 +23,5 @@ public class l215 {
         return nums[nums.length-k];
     }
 }
+// [5,2,4,1,3,6,0]
+//4
