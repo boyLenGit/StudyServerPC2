@@ -1,5 +1,7 @@
 package leet;
 
+import java.util.Arrays;
+
 public class l136 {
     public static int singleNumber(int[] nums) {
         int min;
@@ -22,6 +24,38 @@ public class l136 {
             }
         }
         return res;
+    }
+
+    public static int singleNumber2(int[] nums) {
+        // 使用自带排序算法,提高速度
+        Arrays.sort(nums);
+
+        int res = nums[0];
+        for (int i1=1; i1<nums.length; i1++){
+            if (i1+1<nums.length) {
+                if (nums[i1]!=nums[i1-1] & nums[i1]!=nums[i1+1]) res = nums[i1];
+            }else {
+                if (nums[i1]!=nums[i1-1]) res = nums[i1];
+            }
+        }
+        return res;
+    }
+
+    public static int singleNumber3(int[] nums) {
+        // 优化返回逻辑,判断出结果立即返回,减少遍历时间
+        Arrays.sort(nums);
+        for (int i1=1; i1<nums.length; i1++){
+            if (i1+1<nums.length) {
+                if (nums[i1]!=nums[i1-1] & nums[i1]!=nums[i1+1]) return nums[i1];
+            }else {
+                if (nums[i1]!=nums[i1-1]) return nums[i1];
+            }
+        }
+        return nums[0];
+    }
+
+    public int singleNumber_leetcode1(int[] nums) {
+        return Arrays.stream(nums).reduce((a,b)->a^b).getAsInt();
     }
 
     public static void main(String[] a){
