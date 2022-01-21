@@ -27,34 +27,40 @@ public class lt001_sorts {
         }
     }
 
-    public static void quickSort(int[] arr,int l,int r){
-        if(l<r){ //跳出递归的条件
-            //partition就是划分操作，将arr划分成满足条件的两个子表
-            int pivotpos = partition(arr,l,r);
-            //依次对左右两个子表进行递归排序
-            quickSort(arr,l,pivotpos);
-            quickSort(arr,pivotpos+1,r);
+
+    public static void quickSort(int[] arr,int low,int high){
+        int i,j,temp,t;
+        if(low>high) return;
+        i=low;
+        j=high;
+        //temp就是基准位
+        temp = arr[low];
+
+        while (i<j) {
+            //先看右边，依次往左递减
+            while (temp<=arr[j]&&i<j) j--;
+            //再看左边，依次往右递增
+            while (temp>=arr[i]&&i<j) i++;
+            //如果满足条件则交换
+            if (i<j) {
+                t = arr[j];
+                arr[j] = arr[i];
+                arr[i] = t;
+            }
         }
+        //最后将基准为与i和j相等位置的数字交换
+        arr[low] = arr[i];
+        arr[i] = temp;
+        //递归调用左半数组
+        quickSort(arr, low, j-1);
+        //递归调用右半数组
+        quickSort(arr, j+1, high);
     }
 
-    public static int partition(int[] arr,int l,int r){
-        //以当前数组的最后一个元素作为中枢pivot，进行划分
-        int pivot = arr[r];
-        while (l<r){
-            while (l<r && arr[l]<pivot) l++;
-            arr[r] = arr[l];//将比中枢值大的移动到右端r处 由于r处为中枢或者该位置值已经被替换到l处，所以直接可以替换
-            while (l<r && arr[r]>=pivot) r--;
-            arr[l] = arr[r];//将比中枢值小的移动到左端l处 由于前面l处的值已经换到r处，所以该位置值也可以替换掉
-        }
-        //l==r时，重合，这个位置就是中枢的最终位置
-        arr[l] = pivot;
-        //返回存放中枢的最终位置
-        return l;
-    }
 
     public static void main(String[] a){
         int[] inputs = new int[]{5,2,4,1,3,6,0};
-        quickSort(inputs, 0, inputs.length);
+        quickSort(inputs, 0, inputs.length-1);
         System.out.println(inputs);
     }
 }
