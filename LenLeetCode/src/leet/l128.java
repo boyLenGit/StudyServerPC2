@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class l128 {
     public static int longestConsecutive(int[] nums) {
         if (nums.length==0) return 0;
-        else if (nums.length==1) return 1;
         Arrays.sort(nums);
         int len = 1;
         int res = 1;
@@ -19,7 +18,7 @@ public class l128 {
     }
 
     public static void main(String[] a){
-        int[] inputs = new int[]{1,2,0,1};
+        int[] inputs = new int[]{1};
         longestConsecutive(inputs);
     }
 }
