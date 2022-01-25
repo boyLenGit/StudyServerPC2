@@ -30,17 +30,22 @@ public class l152 {
     public static int maxProduct2(int[] nums) {
         int res = nums[0];
         int res_temp = 1;
+        // 正序遍历
         for (int i1=0; i1<nums.length; i1++){
             if (nums[i1]==0){
+                res = Math.max(nums[i1], res);
                 res_temp = 1;
+                continue;
             }else res_temp *= nums[i1];
             res = Math.max(res, res_temp);
         }
+        // 逆序遍历
         res_temp = 1;
         for (int i1=nums.length-1; i1>=0; i1--){
             if (nums[i1]==0){
                 res_temp = 1;
-            }else res_temp *= res_temp;
+                continue;
+            }else res_temp *= nums[i1];
             res = Math.max(res, res_temp);
         }
         return res;
@@ -63,7 +68,7 @@ public class l152 {
     }
 
     public static void main(String[] sa){
-        int[] inputs = new int[]{2,-5,-2,-4,3};
+        int[] inputs = new int[]{-2,0,-1};
         System.out.println(maxProduct2(inputs));
     }
 }
