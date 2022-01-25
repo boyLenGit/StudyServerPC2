@@ -14,6 +14,7 @@ public class l152 {
             res_temp_negative = nums[i1-1]<0 ? res_temp_negative : res_temp_negative*nums[i1];
             res = Math.max(Math.max(res, nums[i1]), Math.max(res_temp_negative, res_temp));
         }
+        res_temp = nums[0];
         for (int i1=2; i1<nums.length; i1++){
             if (nums[i1-1]<0 & nums[i1-2]<0 & nums[i1]!=0){
                 res_temp = nums[i1]*nums[i1-1]*nums[i1-2];
