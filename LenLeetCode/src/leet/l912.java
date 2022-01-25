@@ -1,5 +1,8 @@
 package leet;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class l912 {
     public static int[] sortArray(int[] nums) {
         int min;
@@ -16,7 +19,7 @@ public class l912 {
     }
 
     public static int[] sortArray2(int[] nums) {
-        quickSort(nums, 0, nums.length);
+        quickSort(nums, 0, nums.length-1);
         return nums;
     }
 
@@ -51,7 +54,7 @@ public class l912 {
 
     public static void main(String[] a){
         int[] inputs = new int[]{5,1,1,2,0,0};
-        System.out.println(inputs);
+        System.out.println(Arrays.toString(sortArray2(inputs)));
     }
 }
 
