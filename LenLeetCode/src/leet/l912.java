@@ -42,7 +42,7 @@ public class l912 {
                 inputs[j] = inputs[i];
                 inputs[i] = t;
             }
-        }
+        } // while结束的时候,i=j=start
         // 最后将基准为与i和j相等位置的数字交换
         inputs[start] = inputs[i];
         inputs[i] = temp;
