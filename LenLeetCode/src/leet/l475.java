@@ -20,6 +20,23 @@ public class l475 {
 
     public static int findRadius2(int[] houses, int[] heaters) {
         // 消除排序,优化速度
+        // 效果:更慢了, 应该是因为由于没有排序,第二个for循环耗时更多了
+        Arrays.sort(heaters);
+        int res = 0;
+        int distance = 0;
+        for (int i1=0; i1<houses.length; i1++){
+            distance = Math.abs(houses[i1]-heaters[0]);
+            for (int i2=1; i2<heaters.length; i2++){
+                distance = Math.min(Math.abs(houses[i1]-heaters[i2]), distance);
+            }
+            res = Math.max(res, distance);
+        }
+        return res;
+    }
+
+    public static int findRadius3(int[] houses, int[] heaters) {
+        // 消除排序,优化速度
+        // 效果:加了个排序时间更短了, 推测是因为排序后, house是从小到大, 因此遍历heater时更快到达跳出循环的部分
         Arrays.sort(heaters);
         int res = 0;
         int distance = 0;
