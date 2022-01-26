@@ -15,7 +15,6 @@ public class l102 {
         ArrayList<TreeNode> temp_inputs = new ArrayList<>();
         inputs.add(root);
         int cntEnd;
-        // i1没有任何意义，仅记录循环次数
         while (true){
             // 初始化
             cntEnd = 0;
