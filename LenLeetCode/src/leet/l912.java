@@ -19,7 +19,7 @@ public class l912 {
     }
 
     public static int[] sortArray2(int[] nums) {
-        quickSort(nums, 0, nums.length-1);
+        lenQS(nums, 0, nums.length-1);
         return nums;
     }
 
@@ -51,6 +51,31 @@ public class l912 {
         // 递归调用右半数组
         quickSort(inputs, j+1, end);
     }
+
+    public static void lenQS(int[] inputs, int start, int end){
+        int exchange;
+        if (start>end) return;
+        int i_start = start;
+        int i_end = end;
+        int temp = inputs[start];
+
+        while (i_start<i_end){
+            while (inputs[i_end]>=temp) i_end--;
+            while (inputs[i_start]<=temp) i_start++;
+            if (i_start<i_end){
+                exchange = inputs[i_end];
+                inputs[i_end] = inputs[i_start];
+                inputs[i_start] = exchange;
+            }
+        }
+
+        inputs[start] = inputs[i_start];
+        inputs[i_start] = temp;
+
+        lenQS(inputs, start, i_end-1);
+        lenQS(inputs, i_end+1, end);
+    }
+
 
     public static void main(String[] a){
         int[] inputs = new int[]{5,1,1,2,0,0};
