@@ -29,9 +29,9 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.l226">
-    <configuration name="l128" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l128" />
+  <component name="RunManager" selected="Application.l143">
+    <configuration name="l143" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leet.l143" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
@@ -97,11 +97,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.l143" />
         <item itemvalue="Application.l226" />
         <item itemvalue="Application.l912" />
         <item itemvalue="Application.l475" />
         <item itemvalue="Application.l152" />
-        <item itemvalue="Application.l128" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +141,7 @@
       <workItem from="1642759127464" duration="7478000" />
       <workItem from="1643045567908" duration="17360000" />
       <workItem from="1643178198499" duration="5263000" />
-      <workItem from="1643201583759" duration="8599000" />
+      <workItem from="1643201583759" duration="10597000" />
     </task>
     <servers />
   </component>
@@ -832,6 +832,16 @@
           <url>file://$PROJECT_DIR$/src/leet/l226.java</url>
           <line>10</line>
           <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/leet/l143.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/leet/l143.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="165" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
