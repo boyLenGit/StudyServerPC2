@@ -29,7 +29,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.l189">
+  <component name="RunManager" selected="Application.l394">
     <configuration name="l143" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leet.l143" />
       <module name="LenLeetCode" />
@@ -82,8 +82,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="l912" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l912" />
+    <configuration name="l394" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leet.l394" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
@@ -97,11 +97,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.l394" />
         <item itemvalue="Application.l189" />
         <item itemvalue="Application.l283" />
         <item itemvalue="Application.l143" />
         <item itemvalue="Application.l226" />
-        <item itemvalue="Application.l912" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +144,7 @@
       <workItem from="1643201583759" duration="12029000" />
       <workItem from="1643253883184" duration="12945000" />
       <workItem from="1643272817565" duration="609000" />
-      <workItem from="1643276124834" duration="5956000" />
+      <workItem from="1643276124834" duration="6669000" />
     </task>
     <servers />
   </component>
