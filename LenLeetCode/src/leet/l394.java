@@ -1,11 +1,18 @@
 package leet;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class l394 {
     public static String decodeString(String s) {
         char[] inputs = s.toCharArray();
         char[] temp;
+        String temp_temp = "";
+        String str_in = s;
+        String left = "";
+        String right = "";
+        String middle = "";
+        String middle_temp = "";
         int ab_sum = 0;
         int a_sum = 0;
         int isStart = 0;
@@ -24,10 +31,22 @@ public class l394 {
             }
             // 开始进行解码
             if (isStart==1 & ab_sum==0){
-                for (int i2=0; i2<a_sum; i2++){
-                    temp = new char[b_index.get(i2)-a_index.get(i2)];
+                for (int i2=a_index.size()-1; i2>=0; i2--){
+                    left = str_in.substring(0, a_index.get(i2)-1);
+                    right = str_in.substring(b_index.get(i2), str_in.length());
+                    middle = str_in.substring(a_index.get(i2)+1, b_index.get(i2));
+                    middle_temp = "";
+                    for (int i3 = 0; i3<(int)inputs[a_index.get(i2) - 1]; i3++){
+                        middle_temp = middle_temp.concat(middle);
+                    }
+                    str_in = left + middle_temp + right;
                 }
             }
         }
     }
 }
+// 3[a2[c]b]
+// 012345678
+//    ^  ^
+// 3[accb]
+// 0123456
