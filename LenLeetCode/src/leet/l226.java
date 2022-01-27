@@ -16,17 +16,22 @@ public class l226 {
             list_tnode_temp = new ArrayList<>();
             // 将treenode值读取进arraylist
             for (int i2=0; i2<list_tnode.size(); i2++){
-                list_single.add(list_tnode.get(i2).val);
+                if (list_tnode.get(i2)!=null) list_single.add(list_tnode.get(i2).val);
+                else list_single.add(999);
             }
             list_ints.add(list_single);
             // 将treenode放进list中
             for (int i3=0; i3<list_tnode.size(); i3++){
                 if (list_tnode.get(i3).left!=null) list_tnode_temp.add(list_tnode.get(i3).left);
+                else list_tnode_temp.add(null);
                 if (list_tnode.get(i3).right!=null) list_tnode_temp.add(list_tnode.get(i3).right);
+                else list_tnode_temp.add(null);
             }
             if (list_tnode_temp.size()==0) break;
             list_tnode = list_tnode_temp;
         }
+
+
         return new TreeNode();
     }
 
