@@ -1,13 +1,14 @@
 package leet;
 
 import leet.help.ListNode;
+import util.LenLog;
 
 import java.util.ArrayList;
 
 public class l143 {
     public static void reorderList(ListNode head) {
         ArrayList<Integer> inputs = new ArrayList<>();
-        for (int i1=0; ;){
+        for (int i1=0; ;i1++){
             if (i1!=0) head = head.next;
             if (head==null)break;
             inputs.add(head.val);
@@ -21,6 +22,8 @@ public class l143 {
         for (int i1=0; i1<list_res.size(); i1++){
             head = new ListNode(list_res.get(i1), head);
         }
+        int i1=10;
+        LenLog.printString(String.valueOf(i1));
     }
 
     public static void main(String[] a){
