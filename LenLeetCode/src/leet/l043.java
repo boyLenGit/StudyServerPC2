@@ -8,30 +8,28 @@ public class l043 {
         String num_long = num1.length()>=num2.length() ? num1: num2;
         String num_short = num1.length()>=num2.length() ? num2: num1;
         int over;
-        int temp, temp1, temp2;
+        int temp, temp1;
         String res = "0";
-
-        ArrayList<String> rights = new ArrayList<>();
         for (int i0=num_short.length()-1, i0_zero=0; i0>=0; i0--, i0_zero++){
             char[] chars_long = num_long.toCharArray();
             int factor = Char2Int(num_short.charAt(i0));
             String right = "";
             over = 0;
-            Long debug = Long.parseLong(num_long) * factor;
             for (int i1=num_long.length()-1; i1>=0; i1--){
                 temp1 = Char2Int(chars_long[i1]);
                 temp = factor * temp1 + over;
                 over = temp / 10;
-                right = temp%10!=0 ? String.valueOf(temp%10).concat(right) : right;
+                right = String.valueOf(temp%10).concat(right);
             }
             if (over!=0) right = String.valueOf(over).concat(right);
             for (int i1=0; i1<i0_zero; i1++) right = right.concat("0");
             // 与上一个相加
-            Long debug2 = Long.parseLong(res) + Long.parseLong(right);
             res = StrAdd(res, right);
         }
-
-        return res;
+        // 除开头的0
+        int i_remove_zero = 0;
+        while (res.charAt(i_remove_zero)==0) i_remove_zero++;
+        return res.substring(i_remove_zero, res.length());
     }
 
     public static int Char2Int(char in){
@@ -53,16 +51,19 @@ public class l043 {
             res = String.valueOf((sum%10)).concat(res);
             over = sum/10;
         }
-        return res;
+        return over==0 ? res : String.valueOf(over).concat(res);
     }
 
     public static void main(String[] a){
-        System.out.println(multiply("123456789", "987654321"));
+        System.out.println(multiply("6", "501"));
     }
 }
 // 123 45
 // 012 01
 //  "11859268849335269"
 // "121932631112635269"
+//  111932631112635269
 // "123456789"
 //"987654321"
+// "6"
+//"501"
