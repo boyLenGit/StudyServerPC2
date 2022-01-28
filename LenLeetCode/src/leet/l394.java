@@ -2,6 +2,7 @@ package leet;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Stack;
 
 public class l394 {
     public static String decodeString(String s) {
@@ -65,7 +66,6 @@ public class l394 {
     public static String decodeString2(String s) {
         // 改成从内向外替换的方式, 成功.但是复杂度较高
         char[] inputs = s.toCharArray();
-        String str_in = s;
         String left = "";
         String right = "";
         String middle = "";
@@ -84,23 +84,48 @@ public class l394 {
                         index_length++;
                         if (i1_s-1-index_length<0) break;
                     }
-                    int i3_full = Integer.parseInt(str_in.substring(i1_s-index_length, i1_s));
+                    int i3_full = Integer.parseInt(s.substring(i1_s-index_length, i1_s));
                     // 生成32[a]的左侧\右侧\中间内容
-                    left = str_in.substring(0, i1_s-index_length);
-                    right = str_in.substring(i1_e+1, str_in.length());
-                    middle = str_in.substring(i1_s+1, i1_e);
+                    left = s.substring(0, i1_s-index_length);
+                    right = s.substring(i1_e+1, s.length());
+                    middle = s.substring(i1_s+1, i1_e);
                     middle_temp = "";
                     // 将3[a]生成aaa
                     for (int i3 = 0; i3<i3_full; i3++) middle_temp = middle_temp.concat(middle);
-                    str_in = left + middle_temp + right;
-                    inputs = str_in.toCharArray();
+                    s = left + middle_temp + right;
+                    inputs = s.toCharArray();
                     i1_s=0;i1_e=i1_s+1;continue;
                 }
                 i1_e++;
             }else { i1_s++;i1_e++; }
         }
-        return str_in;
+        return s;
     }
+
+    public String decodeString_leetcode(String s) {
+        StringBuffer ans=new StringBuffer();
+        Stack<Integer> multiStack=new Stack<>();
+        Stack<StringBuffer> ansStack=new Stack<>();
+        int multi=0;
+        for(char c:s.toCharArray()){
+            if(Character.isDigit(c))multi=multi*10+c-'0';
+            else if(c=='['){
+                ansStack.add(ans);
+                multiStack.add(multi);
+                ans=new StringBuffer();
+                multi=0;
+            }else if(Character.isAlphabetic(c)){
+                ans.append(c);
+            }else{
+                StringBuffer ansTmp=ansStack.pop();
+                int tmp=multiStack.pop();
+                for(int i=0;i<tmp;i++)ansTmp.append(ans);
+                ans=ansTmp;
+            }
+        }
+        return ans.toString();
+    }
+
 
     public static void main(String[] a){
         System.out.println(decodeString2("3[z]2[2[y]pq4[2[jk]e1[f]]]ef"));
