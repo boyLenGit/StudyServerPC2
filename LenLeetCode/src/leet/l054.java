@@ -1,5 +1,7 @@
 package leet;
 
+import util.LenLog;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -28,6 +30,7 @@ public class l054 {
                     rotate_stat = 2;
                     i1--;
                     i2--;
+                    time++;
                 }
             }else if (rotate_stat==2){
                 res.add(matrix[i1][i2]);
@@ -44,6 +47,7 @@ public class l054 {
                     rotate_stat = 4;
                     i1++;
                     i2++;
+                    time++;
                 }
             }
         }
@@ -52,6 +56,7 @@ public class l054 {
 
     public static void main(String[] a){
         int[][] input1 = new int[][]{{1,2,3},{4,5,6},{7,8,9}};
+        LenLog.printInt2vArray(input1);
         System.out.println(spiralOrder(input1));
     }
 }
