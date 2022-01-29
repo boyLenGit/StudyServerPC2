@@ -28,7 +28,7 @@ public class l043 {
         }
         // 除开头的0
         int i_remove_zero = 0;
-        while (res.charAt(i_remove_zero)==0) i_remove_zero++;
+        while (res.charAt(i_remove_zero)=='0' & i_remove_zero<res.length()-1) i_remove_zero++;
         return res.substring(i_remove_zero, res.length());
     }
 
@@ -55,7 +55,7 @@ public class l043 {
     }
 
     public static void main(String[] a){
-        System.out.println(multiply("6", "501"));
+        System.out.println(multiply("1234", "0"));
     }
 }
 // 123 45
