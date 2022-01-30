@@ -97,12 +97,61 @@ public class jz038 {
         return res;
     }
 
+    public static String[] permutation3(String s) {
+        Set<String> set_res = new HashSet<>();
+        char[] chars = s.toCharArray();
+        boolean[] help = new boolean[chars.length];
+        Arrays.fill(help, false);
+        dg3(set_res, "", chars, help);
+        return set_res.toArray(new String[0]);
+    }
 
-    
+    public static void dg3(Set<String> set_res, String grower, char[] chars, boolean[] help){
+        if (grower.length()==chars.length){
+            set_res.add(grower);
+            return;
+        }
+        for (int i1=0; i1<chars.length; i1++){
+            if (help[i1]) continue;
+            help[i1] = true;
+            dg3(set_res, grower + String.valueOf(chars[i1]), chars, help);
+            help[i1] = false;
+        }
+    }
+
+    public static String[] permutation_leetcode(String s) {
+        Set<String> list = new HashSet<>();
+        char[] arr = s.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        boolean[] visited = new boolean[arr.length];
+        dfs(arr, "", visited, list);
+        return list.toArray(new String[0]);
+    }
+    public static void dfs(char[] arr, String s,  boolean[] visited, Set<String> list)
+    {
+        if(s.length() == arr.length)
+        {
+            list.add(s);
+            return;
+        }
+        for(int i=0; i<arr.length; i++)
+        {
+            if(visited[i]) continue;
+            visited[i] = true;
+            dfs(arr, s+String.valueOf(arr[i]), visited, list);
+            visited[i] = false;
+        }
+
+    }
 
     public static void main(String[] ast){
-        String in1 = "dkjphedy";
-        System.out.println(Arrays.toString(permutation2(in1)));
+        String in1 = "aab";
+        System.out.println(Arrays.toString(permutation3(in1)));
+        Set<String> test1 = new HashSet<>();
+        test1.add("Sdf");
+        test1.add("Sdf");
+        test1.add("Sdf1");
+        System.out.println(test1);
     }
 }
 
