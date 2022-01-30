@@ -29,13 +29,13 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.m01_01">
-    <configuration name="l043" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l043" />
+  <component name="RunManager" selected="Application.jz038">
+    <configuration name="jz038" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JZoffer.jz038" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="leet.*" />
+          <option name="PATTERN" value="JZoffer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,11 +97,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.jz038" />
         <item itemvalue="Application.m01_01" />
         <item itemvalue="Application.lt002_hashmap" />
         <item itemvalue="Application.l165" />
         <item itemvalue="Application.l103" />
-        <item itemvalue="Application.l043" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +148,7 @@
       <workItem from="1643297881108" duration="8384000" />
       <workItem from="1643371041069" duration="15984000" />
       <workItem from="1643416638746" duration="14701000" />
-      <workItem from="1643450508270" duration="4378000" />
+      <workItem from="1643450508270" duration="7358000" />
     </task>
     <servers />
   </component>
