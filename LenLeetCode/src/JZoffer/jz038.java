@@ -98,6 +98,7 @@ public class jz038 {
     }
 
     public static String[] permutation3(String s) {
+        // 根据大佬的做法, 设置boolean[]与HashSet
         Set<String> set_res = new HashSet<>();
         char[] chars = s.toCharArray();
         boolean[] help = new boolean[chars.length];
