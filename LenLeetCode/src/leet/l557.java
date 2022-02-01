@@ -14,10 +14,12 @@ public class l557 {
         StringBuilder res = new StringBuilder();
         StringBuilder temp = new StringBuilder();
         for (int i1=0; i1<s.length(); i1++){
-            if (s.charAt(i1)==' '){  // 启动遍历
+            if (s.charAt(i1)==' ' | i1==s.length()-1){  // 启动遍历
+                if (i1==s.length()-1) temp.append(s.charAt(i1));
                 temp.reverse();
                 res.append(" ").append(temp);
                 temp = new StringBuilder();
+                continue;
             }
             temp.append(s.charAt(i1));
         }
