@@ -24,27 +24,32 @@ class LRUCache {
     private HashMap<Integer, Integer> map = new HashMap<>();
     private int capacity;
     private int cnt = 0;
+    private int cnt_grow = 0;
     private int[] stack;
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
         stack = new int[capacity];
-        for (int i1=0; i1<capacity; i1++) stack[i1] = i1;
     }
 
     public int get(int key) {
-        // 存stack
-        stack[this.cnt] = key;
-        this.cnt = this.cnt==this.capacity ? this.cnt-this.capacity : this.cnt++;
-        // 读map
+        // 读map不存在key的情况
         if (!map.containsKey(key)) return -1;
+        // 存stack
+        stack[cnt] = key;
+        cnt = cnt==this.capacity ? cnt-this.capacity : cnt+1;
+        // 读map
         return map.get(key);
     }
 
     public void put(int key, int value) {
         if (map.size()==this.capacity){
-            cnt = cnt+1>=capacity ? 0 : cnt+1;
+            cnt = cnt>=capacity ? 0 : cnt;
             map.remove(stack[cnt]);
+            stack[cnt] = key;
+        }else {
+            stack[cnt_grow] = key;
+            cnt_grow++;
         }
         map.put(key, value);
     }
