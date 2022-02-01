@@ -12,7 +12,6 @@ public class l557 {
         for (int i1=s.length()-1; i1>=0 & s.charAt(i1)==' '; i1--) cnt_left_null--;
         s = s.substring(cnt_right_null, cnt_left_null);
         // 翻转
-        int cnt = 0;
         StringBuilder res = new StringBuilder();
         StringBuilder temp = new StringBuilder();
         for (int i1=0; i1<s.length(); i1++){
