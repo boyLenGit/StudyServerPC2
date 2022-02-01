@@ -9,8 +9,10 @@ import java.util.Map;
 public class lt002_hashmap {
     public static void main(String[] args){
         Map<String, String> map = new HashMap<>();
-        map.put("321", "312");
-        map.put("322", "312");
+        map.put("001", "a");
+        map.put("002", "b");
+        map.merge("003", "c", (oldValue, newValue) -> oldValue + "/" + newValue);
+        map.merge("001", "d", (oldValue, newValue) -> oldValue + "/" + newValue);
         System.out.println(map);
     }
 
