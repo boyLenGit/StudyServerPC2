@@ -69,7 +69,7 @@ class LRUCache {
 }
 
 class LRUCache_leetcode {
-
+    // 效率最高的双向链表算法
     // 定义一个双向链表
     static class Node {
         Integer key;
@@ -97,7 +97,7 @@ class LRUCache_leetcode {
      * 初始化方法
      * @param capacity 指定缓存的容量
      */
-    public LRUCache(int capacity) {
+    public LRUCache_leetcode(int capacity) {
         map = new HashMap<>(capacity);
         dummyFirst = new Node(-1, -1);
         dummyLast = new Node(-1, -1);
