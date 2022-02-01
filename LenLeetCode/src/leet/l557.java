@@ -1,6 +1,7 @@
 package leet;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class l557 {
     public static String reverseWords(String s) {
@@ -26,6 +27,10 @@ public class l557 {
         }
         if (res.indexOf(" ")==0) res.delete(0, 1);
         return res.toString();
+    }
+
+    public String reverseWords_leetcode(String s) {
+        return String.join(" ", Arrays.stream(s.split(" ")).map(x -> new StringBuilder(x).reverse().toString()).toArray(CharSequence[]::new));
     }
 
     public static void main(String[] adr){
