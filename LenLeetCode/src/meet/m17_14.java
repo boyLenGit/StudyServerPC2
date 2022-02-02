@@ -20,8 +20,8 @@ public class m17_14 {
         i2 = end;
         compare = inputs[start];
         while (i1<i2){
-            while (inputs[i2]>compare & i1<i2) i2--;
-            while (inputs[i1]<compare & i1<i2) i1++;
+            while (inputs[i2]>=compare & i1<i2) i2--;
+            while (inputs[i1]<=compare & i1<i2) i1++;
             if (i1<i2){
                 exchange = inputs[i1];
                 inputs[i1] = inputs[i2];
@@ -35,8 +35,13 @@ public class m17_14 {
         dg(inputs, i1+1, end);
     }
 
+    public static int[] smallestK2(int[] arr, int k) {
+        Arrays.sort(arr);
+        return Arrays.copyOfRange(arr, 0, k);
+    }
+
     public static void main(String[] art){
-        int[] in1 = new int[]{};
+        int[] in1 = new int[]{1,3,5,7,2,4,6,8};
         System.out.println(Arrays.toString(smallestK(in1,4)));
     }
 }
