@@ -29,7 +29,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.m17_14">
+  <component name="RunManager" selected="Application.jz062">
     <configuration name="jz042" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JZoffer.jz042" />
       <module name="LenLeetCode" />
@@ -43,12 +43,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="l557" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l557" />
+    <configuration name="jz062" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JZoffer.jz062" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="leet.*" />
+          <option name="PATTERN" value="JZoffer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,11 +97,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.jz062" />
         <item itemvalue="Application.m17_14" />
         <item itemvalue="Application.lt001_sorts" />
         <item itemvalue="Application.jz042" />
         <item itemvalue="Application.lt003_object" />
-        <item itemvalue="Application.l557" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +153,7 @@
       <workItem from="1643549644151" duration="1255000" />
       <workItem from="1643552084195" duration="1736000" />
       <workItem from="1643555260799" duration="23049000" />
-      <workItem from="1643707178374" duration="19807000" />
+      <workItem from="1643707178374" duration="21523000" />
     </task>
     <servers />
   </component>
