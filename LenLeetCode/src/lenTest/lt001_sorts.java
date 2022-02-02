@@ -31,28 +31,28 @@ public class lt001_sorts {
 
 
     public static void quickSort(int[] inputs,int start,int end){
-        int s, e, temp, t;
+        int s, e, compare, exchange;
         if(start>end) return;
         s = start;
         e = end;
         //temp就是基准位
-        temp = inputs[start];
+        compare = inputs[start];
 
         while (s<e) {
             //先看右边，依次往左递减
-            while (temp<=inputs[e]&&s<e) e--;
+            while (compare<=inputs[e]&&s<e) e--;
             //再看左边，依次往右递增
-            while (temp>=inputs[s]&&s<e) s++;
+            while (compare>=inputs[s]&&s<e) s++;
             //如果满足条件则交换
             if (s<e) {
-                t = inputs[e];
+                exchange = inputs[e];
                 inputs[e] = inputs[s];
-                inputs[s] = t;
+                inputs[s] = exchange;
             }
         }
-        //最后将基准为与s和e相等位置的数字交换
+        //最后将基准为与s和e相等位置的数字交换(到这一步,s与e一定相等)
         inputs[start] = inputs[s];
-        inputs[s] = temp;
+        inputs[s] = compare;
         //递归调用左半数组
         quickSort(inputs, start, e-1);
         //递归调用右半数组
