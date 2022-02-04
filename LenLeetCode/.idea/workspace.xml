@@ -29,7 +29,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.jz062">
+  <component name="RunManager" selected="Application.l881">
     <configuration name="jz042" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JZoffer.jz042" />
       <module name="LenLeetCode" />
@@ -56,12 +56,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lt001_sorts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lenTest.lt001_sorts" />
+    <configuration name="l881" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leet.l881" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lenTest.*" />
+          <option name="PATTERN" value="leet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,8 +69,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lt003_object" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lenTest.lt003_object" />
+    <configuration name="lt001_sorts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lenTest.lt001_sorts" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
@@ -97,11 +97,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.l881" />
         <item itemvalue="Application.jz062" />
         <item itemvalue="Application.m17_14" />
         <item itemvalue="Application.lt001_sorts" />
         <item itemvalue="Application.jz042" />
-        <item itemvalue="Application.lt003_object" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +154,7 @@
       <workItem from="1643552084195" duration="1736000" />
       <workItem from="1643555260799" duration="23049000" />
       <workItem from="1643707178374" duration="26044000" />
-      <workItem from="1643872588265" duration="1326000" />
+      <workItem from="1643872588265" duration="3597000" />
     </task>
     <servers />
   </component>
