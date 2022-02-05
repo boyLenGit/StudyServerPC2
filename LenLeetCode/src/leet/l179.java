@@ -2,6 +2,7 @@ package leet;
 
 public class l179 {
     public static String largestNumber(int[] nums) {
+        lenSort(nums);
         return "";
     }
 
@@ -47,6 +48,6 @@ public class l179 {
 
     public static void main(String[] arg){
         int[] inputs = new int[]{};
-        System.out.println(lenCompare(32,3));
+        System.out.println(largestNumber(inputs));
     }
 }
