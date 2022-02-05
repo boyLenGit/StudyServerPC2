@@ -15,7 +15,23 @@ public class l415 {
         return res;
     }
 
+    public static String addStrings2(String num1, String num2) {
+        // 用了StringBuilder 提高了效率缩短时间
+        int val1, val2, over=0, single;
+        StringBuilder res = new StringBuilder();
+        for (int i1=num1.length()-1, i2=num2.length()-1; i1>=0 | i2>=0; i1--, i2--){
+            val1 = i1>=0 ? num1.charAt(i1)-'0' : 0;
+            val2 = i2>=0 ? num2.charAt(i2)-'0' : 0;
+            single = val1 + val2 + over;
+            over = single / 10;
+            res.append(single % 10);
+        }
+        if (over!=0) res.append(over);
+        return res.reverse().toString();
+    }
+
     public static void main(String[] arg){
         System.out.println(addStrings("9999", "1"));
     }
+
 }
