@@ -5,13 +5,10 @@ public class l179 {
         lenSort(nums);
         StringBuilder sb = new StringBuilder();
         boolean lock = true;
-        for (int item:nums){
-            if (item==0)
-            sb.append(item);
-        }
         for (int i1=0; i1<nums.length; i1++){
-            if (nums[i1]==0 & lock & i1<nums.length-1) lock=false;
-            else sb.append(nums[i1]);
+            if (nums[i1]==0 & lock & i1<nums.length-1) continue;
+            sb.append(nums[i1]);
+            lock = false;
         }
         return sb.toString();
     }
@@ -42,12 +39,16 @@ public class l179 {
     }
 
     public static boolean lenCompare(int num1, int num2){
+        return String.valueOf(num1).concat(String.valueOf(num2)).compareTo(String.valueOf(num2).concat(String.valueOf(num1)))>=0;
+    }
+
+    public static boolean lenCompare2(int num1, int num2){
         long long1 = Long.parseLong(String.valueOf(num1).concat(String.valueOf(num2)));
         long long2 = Long.parseLong(String.valueOf(num2).concat(String.valueOf(num1)));
         return long1>=long2;
     }
 
-    public static boolean lenCompare2(int num1, int num2){
+    public static boolean lenCompare3(int num1, int num2){
         String str1 = String.valueOf(num1);
         String str2 = String.valueOf(num2);
         char comp1, comp2;
@@ -61,8 +62,9 @@ public class l179 {
     }
 
     public static void main(String[] arg){
-        int[] inputs = new int[]{0,0};
+        int[] inputs = new int[]{0};
         System.out.println(largestNumber(inputs));
     }
+    
 }
 //[34323,3432]
