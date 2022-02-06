@@ -32,6 +32,5 @@ public class l034 {
     public static void main(String[] a){
         int[] inputs = new int[]{5,7,7,8,8,10};
         System.out.println(Arrays.toString(searchRange(inputs, 6)));
-        System.out.println(search1(inputs, 8));
     }
 }
