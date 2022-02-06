@@ -25,11 +25,10 @@ public class l092 {
             if (i1>=left-1 && i1<=right-1) array_temp[cnt++] = head.val;
             array[i1] = head.val;
         }
-//        Arrays.sort(array, left-1, right-1);
         ListNode res = null;
         for (int i1=0; i1<array.length; i1++){
-            if (i1>=left-1 && i1<=right-1) res = new ListNode(array[i1]);
-            res = new ListNode(array[i1]);
+            if (i1>=left-1 && i1<=right-1) res = new ListNode(array[cnt--], res);
+            res = new ListNode(array[i1], res);
         }
         return res;
     }
