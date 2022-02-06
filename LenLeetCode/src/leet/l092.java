@@ -17,18 +17,18 @@ public class l092 {
             depth++;
         }
         int[] array = new int[depth];
-        int[] array_temp = new int[right-left+1];
-        int cnt = 0;
+        int cnt = right-1;
         for (int i1=0; ; i1++){
             if (i1!=0) head = head.next;
             if (head==null) break;
-            if (i1>=left-1 && i1<=right-1) array_temp[cnt++] = head.val;
-            array[i1] = head.val;
+
+            if (i1>=left-1 && i1<=right-1) array[cnt--] = head.val;
+            else array[i1] = head.val;
         }
         ListNode res = null;
         for (int i1=0; i1<array.length; i1++){
             if (i1>=left-1 && i1<=right-1) res = new ListNode(array[cnt--], res);
-            res = new ListNode(array[i1], res);
+            else res = new ListNode(array[i1], res);
         }
         return res;
     }
