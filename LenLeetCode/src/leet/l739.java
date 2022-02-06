@@ -12,24 +12,9 @@ public class l739 {
                 pop = stack.pop();
                 res[pop] = i1 - pop;
             }
-            stack.push(i1);
+            stack.addFirst(i1);
         }
         return res;
-    }
-
-    public static int[] dailyTemperatures2(int[] temperatures) {
-        int length = temperatures.length;
-        int[] ans = new int[length];
-        Deque<Integer> stack = new LinkedList<>();
-        for (int i = 0; i < length; i++) {
-            int temperature = temperatures[i];
-            while (!stack.isEmpty() && temperature > temperatures[stack.peek()]) {
-                int prevIndex = stack.pop();
-                ans[prevIndex] = i - prevIndex;
-            }
-            stack.push(i);
-        }
-        return ans;
     }
 
     public static void main(String[] agr){
