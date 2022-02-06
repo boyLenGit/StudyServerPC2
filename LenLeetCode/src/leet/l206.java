@@ -27,6 +27,7 @@ public class l206 {
         return prev;
     }
 
+
     public static void main(String[] ar){
         ListNode listNode = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
         System.out.println(reverseList2(listNode).toString());
