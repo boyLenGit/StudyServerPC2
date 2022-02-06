@@ -7,26 +7,27 @@ import java.util.Collections;
 public class b6000 {
     public static int[] sortEvenOdd(int[] nums) {
         int len_odd=0;
-        for (int item: nums){
-            if (item%2!=0) len_odd++;
+        for (int i1=0; i1<nums.length; i1++){
+            if (i1%2!=0) len_odd++;
         }
         int[] array_odd = new int[len_odd];
         int[] array_eve = new int[nums.length-len_odd];
         int cnt_odd=0, cnt_eve=0;
-        for (int item: nums){
-            if (item%2==0) {
-                array_eve[cnt_eve] = item;
+        for (int i1=0; i1<nums.length; i1++){
+            if (i1%2==0) {
+                array_eve[cnt_eve] = nums[i1];
                 cnt_eve++;
             }else {
-                array_eve[cnt_odd] = item;
+                array_odd[cnt_odd] = nums[i1];
                 cnt_odd++;
             }
         }
         Arrays.sort(array_eve);
         Arrays.sort(array_odd);
         cnt_eve=0;
+        cnt_odd--;
         for (int i1=0; i1<nums.length; i1++){
-            if (nums[i1]%2==0) {
+            if (i1%2==0) {
                 nums[i1] = array_eve[cnt_eve];
                 cnt_eve++;
             }else {
@@ -64,6 +65,8 @@ public class b6000 {
     }
 
     public static void main(String[] a){
-        System.out.println(Arrays.toString(sortEvenOdd(new int[]{4,1,2,3,1})));
+        System.out.println(Arrays.toString(sortEvenOdd(new int[]{36,45,32,31,15,41,9,46,36,6,15,16,33,26,27,31,44,34})));
     }
 }
+//[] 36,45,32,31,15,41,9,46,36,6,15,16,33,26,27,31,44,34
+// [16,31,38,24,15,38,45,13,23,38,26,44,21,25,33,29,11,42]
