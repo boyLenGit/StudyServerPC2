@@ -62,25 +62,26 @@ class Node{
 class MinStack {
     Node stack;
     Node mins;
+    int size_mins = 0;
+
 
     /** initialize your data structure here. */
     public MinStack() {
-        stack = new Node();
-        mins = new Node();
     }
 
     public void push(int x) {
-        if (stack.next==null) stack.val=x;
-        else stack = new Node(x,stack);
-
-        if (mins.next==null || mins.val>=x){
-            if (mins.next==null) mins.val=x;
-            else if (mins.val>=x) mins = new Node(x, mins);
-        }
+        stack = new Node(x,stack);
+        if (size_mins!=0) {
+            if (mins.val>=x) mins = new Node(x, mins);
+        } else mins = new Node(x, mins);
+        size_mins++;
     }
 
     public void pop() {
-        if (stack.val==mins.val) mins = mins.next;
+        if (stack.val==mins.val) {
+            mins = mins.next;
+            size_mins--;
+        }
         stack = stack.next;
     }
 
