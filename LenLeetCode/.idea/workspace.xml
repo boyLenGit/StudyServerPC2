@@ -29,7 +29,20 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
-  <component name="RunManager" selected="Application.l300">
+  <component name="RunManager" selected="Application.jz030">
+    <configuration name="jz030" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JZoffer.jz030" />
+      <module name="LenLeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="JZoffer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="l092" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leet.l092" />
       <module name="LenLeetCode" />
@@ -82,26 +95,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="l543" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l543" />
-      <module name="LenLeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.jz030" />
         <item itemvalue="Application.l300" />
         <item itemvalue="Application.l169" />
         <item itemvalue="Application.l206" />
         <item itemvalue="Application.l092" />
-        <item itemvalue="Application.l543" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +155,7 @@
       <workItem from="1643555260799" duration="23049000" />
       <workItem from="1643707178374" duration="26044000" />
       <workItem from="1643872588265" duration="31074000" />
-      <workItem from="1644063281540" duration="37237000" />
+      <workItem from="1644063281540" duration="38338000" />
     </task>
     <servers />
   </component>
