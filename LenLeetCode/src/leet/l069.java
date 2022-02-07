@@ -6,6 +6,7 @@ public class l069 {
     }
 
     public static int mySqrt2(int x) {
+        if (x==2) return 1;
         int low=0, high=x-1, mid=0;
         while (low<=high){
             mid = (high-low)/2 + low;
@@ -18,6 +19,9 @@ public class l069 {
     }
 
     public static void main(String[] arg){
-        System.out.println(mySqrt2(4));
+        System.out.println(mySqrt2(2147395599));
+//        for (int i1=0; i1<100; i1++){
+//            System.out.println(mySqrt(i1)==mySqrt2(i1));
+//        }
     }
 }
