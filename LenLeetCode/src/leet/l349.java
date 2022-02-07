@@ -12,9 +12,10 @@ public class l349 {
     public static int[] help(int[] big, int[] small){
         LinkedList<Integer> array = new LinkedList<>();
         Arrays.sort(small);
+        Arrays.sort(big);
         int search_res;
         for (int i1=0; i1<small.length; i1++){
-            if (i1!=0 && small[i1]!=small[i1-1]){
+            if ((i1!=0 && small[i1]!=small[i1-1]) | (i1==0)){
                 search_res = lenSearch(big, small[i1]);
                 if (search_res!=-1) array.add(small[i1]);
             }
@@ -38,6 +39,6 @@ public class l349 {
     }
 
     public static void main(String[] arg){
-        System.out.println(Arrays.toString(intersection(new int[]{1,2,2,1}, new int[]{2,2})));
+        System.out.println(Arrays.toString(intersection(new int[]{4,9,5}, new int[]{9,4,9,8,4})));
     }
 }
