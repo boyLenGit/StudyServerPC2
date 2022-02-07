@@ -7,15 +7,38 @@ import java.util.Stack;
 
 public class jz030 {
     public static void main(String[] arg){
+//        MinStack minStack = new MinStack();
+//        minStack.push(2);
+//        minStack.push(0);
+//        minStack.push(3);
+//        minStack.push(0);
+//        System.out.println(minStack.min());
+//        minStack.pop();
+//        System.out.println(minStack.min());
+//        minStack.pop();
+//        System.out.println(minStack.min());
+//        minStack.pop();
+//        System.out.println(minStack.min());
+
+
         MinStack minStack = new MinStack();
-        minStack.push(2);
-        minStack.push(0);
-        minStack.push(3);
-        minStack.push(0);
-        System.out.println(minStack.min());
+        minStack.push(2147483646);
+        minStack.push(2147483646);
+        minStack.push(2147483647);
+
+        System.out.println(minStack.top());
         minStack.pop();
         System.out.println(minStack.min());
         minStack.pop();
+
+        System.out.println(minStack.min());
+        minStack.pop();
+        minStack.push(2147483647);
+        System.out.println(minStack.top());
+
+        System.out.println(minStack.min());
+        minStack.push(-2147483648);
+        System.out.println(minStack.top());
         System.out.println(minStack.min());
         minStack.pop();
         System.out.println(minStack.min());
@@ -72,9 +95,14 @@ class MinStack {
     public void push(int x) {
         stack = new Node(x,stack);
         if (size_mins!=0) {
-            if (mins.val>=x) mins = new Node(x, mins);
-        } else mins = new Node(x, mins);
-        size_mins++;
+            if (mins.val>=x){
+                mins = new Node(x, mins);
+                size_mins++;
+            }
+        } else {
+            mins = new Node(x, mins);
+            size_mins++;
+        }
     }
 
     public void pop() {
