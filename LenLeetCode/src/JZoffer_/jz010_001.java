@@ -9,11 +9,16 @@ public class jz010_001 {
             f_n = f_n_1 + f_n_2;
             f_n_2 = f_n_1;
             f_n_1 = f_n;
+            if (f_n_2>1000000007){
+                f_n = f_n % 1000000007;
+                f_n_1 = f_n_1 % 1000000007;
+                f_n_2 = f_n_2 % 1000000007;
+            }
         }
         return (int) (f_n%1000000007);
     }
 
     public static void main(String[] ar){
-        System.out.println(fib(95));
+        System.out.println(fib(5));
     }
 }
