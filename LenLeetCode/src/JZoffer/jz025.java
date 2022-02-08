@@ -53,7 +53,6 @@ public class jz025 {
         if (l2==null) return l1;
         if (l1==null) return l2;
         boolean l1_isUsed = false;
-        ListNode temp;
         ListNode l2_mask = l2;
         while (true){
             if (l1_isUsed) {
@@ -64,8 +63,7 @@ public class jz025 {
 
             if (l2_mask.val<l1.val){
                 if (l2_mask.next!=null && l2_mask.next.val>=l1.val){
-                    temp = l2_mask.next;
-                    l2_mask.next = new ListNode(l1.val, temp);
+                    l2_mask.next = new ListNode(l1.val, l2_mask.next);
                     l1_isUsed = true;
                 }else if (l2_mask.next!=null && l2_mask.next.val<l1.val){
                     l2_mask = l2_mask.next;
@@ -75,12 +73,8 @@ public class jz025 {
                     l1_isUsed = true;
                 }
             }else if (l2_mask.val>=l1.val){
-                if (l2_mask.next==null){
-                    l2_mask.next = new ListNode(l2_mask.val);
-                    l2_mask.val = l1.val;
-                    l1_isUsed = true;
-                }
-                l2_mask.next = new ListNode(l1.val, l2_mask.next);
+                l2_mask.next = new ListNode(l2_mask.val, l2_mask.next);
+                l2_mask.val = l1.val;
                 l1_isUsed = true;
             }
         }
@@ -90,6 +84,10 @@ public class jz025 {
     public static void main(String[] arg){
         ListNode listNode1 = new ListNode(1, new ListNode(2, new ListNode(4)));
         ListNode listNode2 = new ListNode(1, new ListNode(3, new ListNode(4)));
-        System.out.println( mergeTwoLists3(new ListNode(1), new ListNode(2)) );
+
+        ListNode listNode3 = new ListNode(-9, new ListNode(3));
+        ListNode listNode4 = new ListNode(5, new ListNode(7));
+        System.out.println( mergeTwoLists3(listNode3, listNode4) );
     }
 }
+
