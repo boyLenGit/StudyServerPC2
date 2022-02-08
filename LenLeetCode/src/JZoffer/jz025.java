@@ -20,15 +20,15 @@ public class jz025 {
         }
         Collections.sort(inputs);
         ListNode res = null;
-        for (int i1=inputs.size()-1; i1>=0; i1++){
+        for (int i1=inputs.size()-1; i1>=0; i1--){
             res = new ListNode(inputs.get(i1), res);
         }
         return res;
     }
-    
+
     public static void main(String[] arg){
         ListNode listNode1 = new ListNode(1, new ListNode(2, new ListNode(4)));
         ListNode listNode2 = new ListNode(1, new ListNode(3, new ListNode(4)));
-        System.out.println(mergeTwoLists(listNode1, listNode2).toString());
+        System.out.println(mergeTwoLists(null, new ListNode(1)));
     }
 }
