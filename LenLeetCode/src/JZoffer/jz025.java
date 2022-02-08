@@ -50,10 +50,12 @@ public class jz025 {
 
     public static ListNode mergeTwoLists3(ListNode l1, ListNode l2) {
         // 认真读了题, 根据"两个递增排序的链表"来做
+        if (l2==null) return l1;
+        if (l1==null) return l2;
         boolean l1_isUsed = false;
         ListNode temp;
         ListNode l2_mask = l2;
-        for (int i1=0; ; i1++){
+        while (true){
             if (l1_isUsed) {
                 l1 = l1.next;
                 l1_isUsed = false;
@@ -61,7 +63,7 @@ public class jz025 {
             if (l1==null) break;
 
             if (l2_mask.val<l1.val){
-                if (l2_mask.next!=null && l2_mask.next.val>l1.val){
+                if (l2_mask.next!=null && l2_mask.next.val>=l1.val){
                     temp = l2_mask.next;
                     l2_mask.next = new ListNode(l1.val, temp);
                     l1_isUsed = true;
@@ -73,6 +75,11 @@ public class jz025 {
                     l1_isUsed = true;
                 }
             }else if (l2_mask.val>=l1.val){
+                if (l2_mask.next==null){
+                    l2_mask.next = new ListNode(l2_mask.val);
+                    l2_mask.val = l1.val;
+                    l1_isUsed = true;
+                }
                 l2_mask.next = new ListNode(l1.val, l2_mask.next);
                 l1_isUsed = true;
             }
@@ -83,6 +90,6 @@ public class jz025 {
     public static void main(String[] arg){
         ListNode listNode1 = new ListNode(1, new ListNode(2, new ListNode(4)));
         ListNode listNode2 = new ListNode(1, new ListNode(3, new ListNode(4)));
-        System.out.println( mergeTwoLists3(listNode1, listNode2) );
+        System.out.println( mergeTwoLists3(new ListNode(1), new ListNode(2)) );
     }
 }
