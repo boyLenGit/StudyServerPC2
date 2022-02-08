@@ -50,29 +50,31 @@ public class jz025 {
 
     public static ListNode mergeTwoLists3(ListNode l1, ListNode l2) {
         // 认真读了题, 根据"两个递增排序的链表"来做
-        boolean isUsed = false;
+        boolean l1_isUsed = false;
         ListNode temp;
         ListNode l2_mask = l2;
         for (int i1=0; ; i1++){
-            if (i1!=0 & l2_mask.next!=null) l2_mask = l2_mask.next;
-            if (isUsed) {
+            if (l1_isUsed) {
                 l1 = l1.next;
-                isUsed = false;
+                l1_isUsed = false;
             }
             if (l1==null) break;
 
             if (l2_mask.val<l1.val){
                 if (l2_mask.next!=null && l2_mask.next.val>l1.val){
                     temp = l2_mask.next;
-                    l2_mask = new ListNode(l1.val, temp);
-                    isUsed = true;
-                }else if (l2_mask.next==null){
-                    l2_mask.next = new ListNode(l1.val);
-                    isUsed = true;
+                    l2_mask.next = new ListNode(l1.val, temp);
+                    l1_isUsed = true;
+                }else if (l2_mask.next!=null && l2_mask.next.val<l1.val){
+                    l2_mask = l2_mask.next;
                 }
-            }else if (l2_mask.val==l1.val){
-                l2_mask.next = new ListNode(l1.val, l2_mask);
-                isUsed = true;
+                else if (l2_mask.next==null){
+                    l2_mask.next = new ListNode(l1.val);
+                    l1_isUsed = true;
+                }
+            }else if (l2_mask.val>=l1.val){
+                l2_mask.next = new ListNode(l1.val, l2_mask.next);
+                l1_isUsed = true;
             }
         }
         return l2;
