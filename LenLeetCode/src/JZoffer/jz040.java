@@ -33,7 +33,7 @@ public class jz040 {
     }
 
     public static void main(String[] arg){
-        int[] inputs = new int[]{3,2,1};
+        int[] inputs = new int[]{3,2,1,2,3,5,7,88,99,4,3,5,7,0,9};
         System.out.println(Arrays.toString(getLeastNumbers(inputs, 2)));
     }
 }
