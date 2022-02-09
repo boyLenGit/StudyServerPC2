@@ -3,66 +3,48 @@ package lenTest;
 import java.util.Arrays;
 
 public class lt001_sorts {
-    public static void selectSort(int [] nums){
-        int N=nums.length;
-        for(int i=0; i<N; i++){
-            int min=i;
-            for(int j=i+1;j<N;j++){
-                if(nums[j]<nums[min]) min=j;
-            }
-            int t=nums[i];
-            nums[i]=nums[min];
-            nums[min]=t;
+    public static void heapSort(int[] arr){
+        //构建大顶堆 k为最后一个非叶子节点，逐渐-1，即从下向上，从右往左
+        for(int k = arr.length/2 - 1;k>=0;k--){
+            adjustHeap(arr,k,arr.length);
+        }
+        //排序 交换+调整
+        int temp =0;
+        for (int i = arr.length-1; i >= 0; i--) {
+            temp =arr [0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+            adjustHeap(arr,0,i);
         }
     }
 
-    public static void len_select_sort(int[] nums){
-        int min_id;
-        for (int i1=0; i1<nums.length; i1++){
-            min_id = i1;
-            for (int i2=i1+1; i2<nums.length; i2++){
-                if (nums[i2]<nums[min_id]) min_id=i2;
+    /**
+     *
+     * @param arr 待调整数组
+     * @param i 非叶子节点在数组中的索引
+     * @param length 对多少个元素进行调整
+     */
+    public static void adjustHeap(int[] arr,int i,int length){
+        int temp = arr[i];//取出当前非叶子叶结点的值
+        //k为当前节点的左子节点
+        for(int k = 2*i+1;k<length;k=2*k+1){
+            if(k+1<length && arr[k+1]>arr[k]){//右子节点大于左子节点
+                k++;//k指向右子节点
             }
-            int temp = nums[i1];
-            nums[i1] = nums[min_id];
-            nums[min_id] = temp;
-        }
-    }
-
-
-    public static void quickSort(int[] inputs,int start,int end){
-        int s, e, compare, exchange;
-        if(start>end) return;
-        s = start;
-        e = end;
-        //temp就是基准位
-        compare = inputs[start];
-
-        while (s<e) {
-            //先看右边，依次往左递减
-            while (compare<=inputs[e]&&s<e) e--;
-            //再看左边，依次往右递增
-            while (compare>=inputs[s]&&s<e) s++;
-            //如果满足条件则交换
-            if (s<e) {
-                exchange = inputs[e];
-                inputs[e] = inputs[s];
-                inputs[s] = exchange;
+            if(arr[k]>temp){//如果当前节点大于父节点就交换
+                arr[i] = arr[k];
+                i = k;//!!!!!!精髓，因为该子节点值大小发生了改变，可能会使其子根堆发生改变，索引要调整其子根堆
+            }else {
+                break;//否则直接退出，因为其后面的节点一定满足堆定义
             }
         }
-        //最后将基准为与s和e相等位置的数字交换(到这一步,s与e一定相等)
-        inputs[start] = inputs[s];
-        inputs[s] = compare;
-        //递归调用左半数组
-        quickSort(inputs, start, e-1);
-        //递归调用右半数组
-        quickSort(inputs, e+1, end);
+        arr[i] = temp;
     }
 
 
     public static void main(String[] a){
         int[] inputs = new int[]{5,2,4,1,1,3,6,0};
-        quickSort(inputs, 0, inputs.length-1);
+        heapSort(inputs);
         System.out.println(Arrays.toString(inputs));
     }
 }

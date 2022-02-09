@@ -13,8 +13,8 @@ public class jz040 {
         if (start>end)return;
         compare = inputs[start];
         while (i1<i2){
-            while (compare>=inputs[i2] && i1<i2) i2--;
-            while (compare<=inputs[i1] && i1<i2) i1++;
+            while (compare<=inputs[i2] && i1<i2) i2--;
+            while (compare>=inputs[i1] && i1<i2) i1++;
             if (i1<i2){
                 exchange = inputs[i1];
                 inputs[i1] = inputs[i2];
@@ -31,6 +31,12 @@ public class jz040 {
         Arrays.sort(arr);
         return Arrays.copyOfRange(arr, 0, k);
     }
+
+    public static int[] getLeastNumbers3(int[] arr, int k) {
+        // 堆方法:我们用一个大根堆实时维护数组的前 kk 小值
+        return new int[]{};
+    }
+
 
     public static void main(String[] arg){
         int[] inputs = new int[]{3,2,1,2,3,5,7,88,99,4,3,5,7,0,9};
