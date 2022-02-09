@@ -18,9 +18,5 @@ public class l067 {
 
     public static void main(String[] ar){
         System.out.println(addBinary("0", "0"));
-        System.out.println(Integer.toBinaryString(8));
-        System.out.println(Integer.parseInt("1011"));
-        System.out.println(Integer.parseInt("1011", 2));
-        System.out.println(Integer.parseInt("F", 16));
     }
 }
