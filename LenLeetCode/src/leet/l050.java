@@ -6,38 +6,30 @@ public class l050 {
         if (x==1.0) return x;
         double res;
         if (n>=0){
-            res = posPow(x, n);
+            res = dg(x, n);
         }else {
-//            for (long i1=0; i1<-n1; i1++) res = res / x;
-            res = negPow(x, n);
+            if (n!=-2147483648) res = 1/dg(x, -n);
+            else res = 1/( dg(x, -(n+1))*x );
         }
         return res;
     }
 
-    public static double posPow(double x, int n){
-        double res = 1;
+    public static double dg(double x, int n){
         double temp = x;
-        while (n%2==0){
+        while (n>1){
+            if (n%2!=0) {
+                n--;
+                temp = temp * dg(temp, n);
+                break;
+            }
             temp = temp * temp;
             n = n / 2;
         }
-        for (int i1=0; i1<n; i1++)res *= temp;
-        return res;
-    }
-
-    public static double negPow(double x, int n){
-        double res = 1;
-        double temp = x;
-        for (int i1=0; n%2==0; i1++){
-            temp = 1 / temp;
-            n = n / 2;
-        }
-        for (int i1=0; i1<n; i1++)res *= temp;
-        return res;
+        return temp;
     }
 
     public static void main(String[] arg){
-        System.out.println(myPow(2.0000, -4));
+        System.out.println(myPow(2.0000, -2147483648));
         System.out.println(2.00/5.00);
     }
 }
@@ -45,4 +37,11 @@ public class l050 {
 //  4 50
 //  16 25
 //  2.00000
+//-2147483648
+
+// 2 2 2 2 2 2 2 2 2 2 *10
+// 4 4 4 4 4 *5
+//(4 4 4 4) 4
+//(16 16 *2) 4
+// 2.00000
 //-2147483648
