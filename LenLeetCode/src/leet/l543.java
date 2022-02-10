@@ -1,9 +1,6 @@
 package leet;
 
 import leet.help.TreeNode;
-import sun.jvm.hotspot.oops.Array;
-
-import java.util.ArrayList;
 
 public class l543 {
     private static int max;
