@@ -3,23 +3,26 @@ package leet;
 import leet.help.TreeNode;
 
 public class l124 {
-    public static int maxPathSum(TreeNode root) {
-        return dg(root);
+    private int max_value = 0;
+
+    public int maxPathSum(TreeNode root) {
+        dg(root);
+        return max_value;
     }
 
-    public static int dg(TreeNode treeNode){
-        int max_val;
-        if (treeNode.left==null && treeNode.right==null) max_val = treeNode.val;
-        else if (treeNode.left!=null && treeNode.right==null) max_val = Math.max(dg(treeNode.left)+treeNode.val, dg(treeNode.left));
-        else if (treeNode.left==null && treeNode.right!=null) max_val = Math.max(dg(treeNode.right)+treeNode.val, dg(treeNode.right));
-        else max_val = Math.max(Math.max(dg(treeNode.left), dg(treeNode.right)), dg(treeNode.left)+dg(treeNode.right)+treeNode.val);
-        return max_val;
+    public  int dg(TreeNode treeNode){
+        if (treeNode.left==null && treeNode.right==null) return treeNode.val;
+        int left_val = treeNode.left!=null ? dg(treeNode.left) : 0;
+        int right_val = treeNode.right!=null ? dg(treeNode.right) : 0;
+        max_value = Math.max(Math.max(left_val+right_val+treeNode.val, max_value), Math.max(left_val, right_val));
+        return Math.max(left_val, right_val) + treeNode.val;
     }
 
     public static void main(String[] a){
         TreeNode input1 = new TreeNode(-10,
                 new TreeNode(9),
                 new TreeNode(20, new TreeNode(15), new TreeNode(7)));
-        System.out.println(maxPathSum(input1));
+        l124 ccc = new l124();
+        System.out.println(ccc.maxPathSum(input1));
     }
 }
