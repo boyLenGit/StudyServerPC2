@@ -25,6 +25,6 @@ public class l062 {
 
     public static void main(String[] arg){
         l062 a = new l062();
-        System.out.println(a.uniquePaths(3,2));
+        System.out.println(a.uniquePaths(51,9));
     }
 }
