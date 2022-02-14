@@ -31,7 +31,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.c6005">
+  <component name="RunManager" selected="Application.l122">
     <configuration name="c6004" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="competition.No280.c6004" />
       <module name="LenLeetCode" />
@@ -51,19 +51,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="competition.No280.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="l050" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l050" />
-      <module name="LenLeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,13 +84,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="l122" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leet.l122" />
+      <module name="LenLeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.l122" />
         <item itemvalue="Application.c6005" />
         <item itemvalue="Application.c6004" />
         <item itemvalue="Application.l062" />
         <item itemvalue="Application.l061" />
-        <item itemvalue="Application.l050" />
       </list>
     </recent_temporary>
   </component>
