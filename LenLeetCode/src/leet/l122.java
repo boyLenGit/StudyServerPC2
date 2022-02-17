@@ -17,6 +17,7 @@ public class l122 {
         return res;
     }
 
+    
     public static void main(String[] arg){
         System.out.println(maxProfit(new int[]{1,2,3,4,5}));
     }
