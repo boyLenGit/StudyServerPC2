@@ -15,3 +15,5 @@ def get_host_ip():
 if __name__ == '__main__':
     # For Test
     print(get_host_ip())
+    import sys
+    print(sys.path)

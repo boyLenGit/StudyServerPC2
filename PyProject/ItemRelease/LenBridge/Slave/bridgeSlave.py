@@ -13,7 +13,7 @@ path_info = paths.cleanPath(paths.Bridge_root + '/info')
 library.saveToJson(path_info, [port])
 
 
-def lenMain():
+def Actuator():
     global port
     while True:
         print("[⊙ LenBridge] Server start, address is '{0}:{1}'.".format(host, port))
@@ -44,9 +44,9 @@ def lenMain():
         socket1.close()  # 关闭服务端套接字（本端）
 
 
-def forceActivate():
+def Daemon():
     global port
-    progress1 = multiprocessing.Process(target=lenMain, name='S01Len')
+    progress1 = multiprocessing.Process(target=Actuator, name='S01Len')
     progress1.start()
     progress_pid = progress1.pid
     print('[⊙ LenBridge] Progress guard start.')
@@ -59,7 +59,7 @@ def forceActivate():
             print('[⊙ LenBridge] Process stat: x. LenGuard is trying to restart it.')
             # 重启服务准备工作
             os.system('kill ' + str(progress_pid))
-            progress1 = multiprocessing.Process(target=lenMain, name='S01Len')
+            progress1 = multiprocessing.Process(target=Actuator, name='S01Len')
             progress1.start()
             progress_pid = progress1.pid
         else:
@@ -70,4 +70,4 @@ def forceActivate():
 
 
 if __name__ == '__main__':
-    forceActivate()
+    Daemon()
