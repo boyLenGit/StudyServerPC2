@@ -1,5 +1,5 @@
 # 聊天软件服务端
-import psutil, time, os, socket
+import time, socket
 import ItemRelease.LenBridge.Slave.paths as paths
 import ItemRelease.LenBridge.Master.library as library
 path_info = paths.cleanPath(paths.Bridge_root + '/info')

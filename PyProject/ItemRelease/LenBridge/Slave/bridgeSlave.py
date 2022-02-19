@@ -56,7 +56,7 @@ def forceActivate():
         pid_name = str(psutil.Process(progress_pid).status())
         if pid_name == 'zombie':  # 服务出错，则重启服务
             PROGRESS_STAT = 0
-            print('[⊙ LenGuard] Process stat: x. LenBridge is trying to restart it.')
+            print('[⊙ LenBridge] Process stat: x. LenGuard is trying to restart it.')
             # 重启服务准备工作
             os.system('kill ' + str(progress_pid))
             progress1 = multiprocessing.Process(target=lenMain, name='S01Len')
@@ -64,7 +64,7 @@ def forceActivate():
             progress_pid = progress1.pid
         else:
             if PROGRESS_STAT != 1:
-                print('[⊙ LenGuard] Process stat: √.')
+                print('[⊙ LenBridge] Process stat: √.')
             PROGRESS_STAT = 1
             continue
 

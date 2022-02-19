@@ -3,7 +3,7 @@ import ItemRelease.LenBridge.Master.library as library
 import time
 
 
-#
+# 必须严格按照下面实例代码的格式书写。其中逻辑区可以是调用算法接口，也可以是全部算法逻辑代码
 def addNumber(path):
     # --------------- ↓读取数据↓ ---------------
     list1 = library.readFromJson(path)
