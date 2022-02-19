@@ -3,13 +3,13 @@ import json, socket
 
 def saveToJson(filepath, data):
     # data为list结构，支持任意的维度，如三维list[[[1,2],3],4]
-    with open(filepath + '.json', 'w') as jsonWrite:
+    with open(filepath + '.bridge', 'w') as jsonWrite:
         json.dump(data, jsonWrite)
     return filepath
 
 
 def readFromJson(filepath):
-    with open(filepath + '.json') as jsonRead:
+    with open(filepath + '.bridge') as jsonRead:
         data = json.load(jsonRead)
     return data
 
