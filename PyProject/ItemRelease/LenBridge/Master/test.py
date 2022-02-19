@@ -1,5 +1,7 @@
+PATH_ENV_PROJECT = ['/Users/mabolun/Project/Python/PyProject/']
+import sys
+for i in PATH_ENV_PROJECT: sys.path.append(i)
 import ItemRelease.LenBridge.Master.bridgeMaster as bridgeMaster
-import random
 
 def test_long_2vlist():
     list1 = []
