@@ -12,3 +12,14 @@ def addNumber(path):
     result = num1 + num2
     # --------------- ↓写入结果↓ ---------------
     library.saveToJson(path, [result, 4])
+
+
+def list2vSquare(path):
+    # --------------- ↓读取数据↓ ---------------
+    list1 = library.readFromJson(path)
+    # --------------- ↓逻辑代码↓ ---------------
+    for i1 in range(len(list1)):
+        for i2 in range(len(list1[i1])):
+            list1[i1][i2] = list1[i1][i2] * list1[i1][i2]
+    # --------------- ↓写入结果↓ ---------------
+    library.saveToJson(path, list1)
