@@ -5,7 +5,7 @@ import ItemRelease.LenBridge.Master.library as library
 path_info = paths.cleanPath(paths.Bridge_root + '/info')
 
 
-def scheduler(func_name, params):
+def Scheduler(func_name, params):
     """
     :param func_name:
     :param params: 必须是list格式
@@ -32,4 +32,4 @@ def scheduler(func_name, params):
 
 
 if __name__ == '__main__':
-    print(scheduler('addNumber', [1, 2]))
+    print(Scheduler('addNumber', [1, 2]))

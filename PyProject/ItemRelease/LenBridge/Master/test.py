@@ -10,7 +10,7 @@ def test_long_2vlist():
         for i2 in range(200):
             list2.append(i2)
         list1.append(list2)
-    result = bridgeMaster.scheduler("list2vSquare", list1)
+    result = bridgeMaster.Scheduler("list2vSquare", list1)
     print(list1[5])
     print(result[5])
 
