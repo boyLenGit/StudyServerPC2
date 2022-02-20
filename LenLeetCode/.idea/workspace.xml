@@ -31,7 +31,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.c6013">
+  <component name="RunManager" selected="Application.c6012">
     <configuration name="c6004" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="competition.No280.c6004" />
       <module name="LenLeetCode" />
@@ -58,8 +58,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="c6013" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="competition.No281.c6013" />
+    <configuration name="c6012" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="competition.No281.c6012" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
@@ -71,12 +71,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="l062" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l062" />
+    <configuration name="c6013" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="competition.No281.c6013" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="leet.*" />
+          <option name="PATTERN" value="competition.No281.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,11 +99,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.c6012" />
         <item itemvalue="Application.c6013" />
         <item itemvalue="Application.l122" />
         <item itemvalue="Application.c6005" />
         <item itemvalue="Application.c6004" />
-        <item itemvalue="Application.l062" />
       </list>
     </recent_temporary>
   </component>
@@ -894,6 +894,16 @@
           <url>file://$PROJECT_DIR$/src/leet/l122.java</url>
           <line>13</line>
           <option name="timeStamp" value="285" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/competition/No281/c6013.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="286" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/competition/No281/c6012.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="287" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
