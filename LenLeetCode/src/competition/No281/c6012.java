@@ -8,7 +8,7 @@ public class c6012 {
         for (int i1=1; i1<=num; i1++){
             sum=0;
             temp=i1;
-            while (temp==0){
+            while (temp!=0){
                 sum += temp%10;
                 temp = temp/10;
             }
@@ -18,7 +18,7 @@ public class c6012 {
     }
 
     public static void main(String[] arg){
-        System.out.println(countEven(4));
+        System.out.println(countEven(1));
     }
 
 

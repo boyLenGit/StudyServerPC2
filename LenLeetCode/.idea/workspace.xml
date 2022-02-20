@@ -31,20 +31,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.c6012">
-    <configuration name="c6004" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="competition.No280.c6004" />
-      <module name="LenLeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="competition.No280.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.c6014">
     <configuration name="c6005" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="competition.No280.c6005" />
       <module name="LenLeetCode" />
@@ -84,6 +71,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="c6014" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="competition.No281.c6014" />
+      <module name="LenLeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="competition.No281.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="l122" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leet.l122" />
       <module name="LenLeetCode" />
@@ -99,11 +99,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.c6014" />
         <item itemvalue="Application.c6012" />
         <item itemvalue="Application.c6013" />
         <item itemvalue="Application.l122" />
         <item itemvalue="Application.c6005" />
-        <item itemvalue="Application.c6004" />
       </list>
     </recent_temporary>
   </component>
@@ -902,8 +902,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/competition/No281/c6012.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="287" />
+          <line>7</line>
+          <option name="timeStamp" value="288" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/competition/No281/c6014.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="289" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
