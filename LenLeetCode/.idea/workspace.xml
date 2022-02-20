@@ -31,7 +31,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.l122">
+  <component name="RunManager" selected="Application.c6013">
     <configuration name="c6004" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="competition.No280.c6004" />
       <module name="LenLeetCode" />
@@ -58,12 +58,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="l061" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l061" />
+    <configuration name="c6013" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="competition.No281.c6013" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="leet.*" />
+          <option name="PATTERN" value="competition.No281.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,11 +99,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.c6013" />
         <item itemvalue="Application.l122" />
         <item itemvalue="Application.c6005" />
         <item itemvalue="Application.c6004" />
         <item itemvalue="Application.l062" />
-        <item itemvalue="Application.l061" />
       </list>
     </recent_temporary>
   </component>

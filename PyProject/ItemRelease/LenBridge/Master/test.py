@@ -16,4 +16,5 @@ def test_long_2vlist():
 
 
 if __name__ == '__main__':
+    print()
     test_long_2vlist()
