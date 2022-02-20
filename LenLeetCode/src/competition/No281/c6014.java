@@ -7,6 +7,7 @@ public class c6014 {
         char[] inputs = s.toCharArray();
         Arrays.sort(inputs);
         int repeatCount = 1;
+        int index_repeat = 0;
         char exchange;
         for (int i1=inputs.length-1; i1>=0; i1--){
             if (i1!=inputs.length-1 && inputs[i1+1]!='0'){
