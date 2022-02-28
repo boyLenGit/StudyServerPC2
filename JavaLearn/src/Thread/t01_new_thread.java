@@ -5,13 +5,21 @@ public class t01_new_thread {
         Thread thread = new WelcomeThread();
         thread.start();
         System.out.println("1"+Thread.currentThread().getName());
+
     }
 }
-
 
 class WelcomeThread extends Thread{
     @Override
     public void run(){
         System.out.println("2"+Thread.currentThread().getName());
+        // TODO
+    }
+}
+
+class WelcomeRunnable implements Runnable{
+    @Override
+    public void run(){
+        System.out.println();
     }
 }
