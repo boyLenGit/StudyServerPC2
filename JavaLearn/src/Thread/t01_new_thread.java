@@ -10,6 +10,16 @@ public class t01_new_thread {
         Thread thread2 = new Thread(new WelcomeRunnable());
         thread2.start();
         System.out.println(Thread.currentThread().getName());
+
+        // 方法三
+        Thread thread3 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("方法三 new Runnable:"+Thread.currentThread().getName());
+                // TODO
+            }
+        });
+        thread3.start();
     }
 }
 
