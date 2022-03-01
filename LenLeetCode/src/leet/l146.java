@@ -1,6 +1,7 @@
 package leet;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
@@ -62,6 +63,71 @@ class LRUCache2 {
     }
 }
 // [null,null,null,null,null,null,-1,null,19,17,null,-1,null,null,null,-1,null,-1,5,-1,12,null,null,3,5,5,null,null,1,null,-1,null,30,5,30,null,null,null,-1,null,-1,24,null,null,18,null,null,null,null,-1,null,null,18,null,null,11,null,null,null,null,null,18,null,null,24,null,4,29,30,null,12,11,null,null,null,null,29,null,null,null,null,17,22,18,null,null,null,24,null,null,null,20,null,null,null,29,18,18,null,null,null,null,20,null,null,null,null,null,null,null]
+
+
+// LeetCode:调用默认的API
+class LRUCache3 extends LinkedHashMap<Integer, Integer> {
+    private int capacity;
+
+    public LRUCache3(int capacity) {
+        super(capacity, 0.75F, true);
+        this.capacity = capacity;
+    }
+
+    public int get(int key) {
+        return super.getOrDefault(key, -1);
+    }
+
+    public void put(int key, int value) {
+        super.put(key, value);
+    }
+
+    @Override
+    protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest){
+        return size() > capacity;
+    }
+}
+
+
+// 面试官:双向链表实现按使用顺序排列
+
+
+class LRUCache4 {
+
+    class DLinkedNode{
+        int key, value;
+        DLinkedNode prev, next;
+
+        public DLinkedNode() {
+        }
+
+        public DLinkedNode(int key, int value) {
+            this.key = key;
+            this.value = value;
+        }
+    }
+
+    private Map<Integer, DLinkedNode> map = new HashMap<>();
+    private int size, capacity;
+    private DLinkedNode head, tail;
+
+    public LRUCache4(int capacity) {
+
+    }
+
+    public int get(int key) {
+
+    }
+
+    public void put(int key, int value) {
+
+    }
+
+    private void removeNode(DLinkedNode node){
+
+    }
+}
+
 
 class LRUCache {
     class DLinkedNode {
