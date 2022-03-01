@@ -2,10 +2,14 @@ package Thread;
 
 public class t01_new_thread {
     public static void main(String[] args){
-        Thread thread = new WelcomeThread();
-        thread.start();
+        Thread thread1 = new WelcomeThread();
+        thread1.start();
         System.out.println("1"+Thread.currentThread().getName());
 
+        // 方法二
+        Thread thread2 = new Thread(new WelcomeRunnable());
+        thread2.start();
+        System.out.println(Thread.currentThread().getName());
     }
 }
 
