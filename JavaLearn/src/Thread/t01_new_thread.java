@@ -16,7 +16,7 @@ public class t01_new_thread {
 class WelcomeThread extends Thread{
     @Override
     public void run(){
-        System.out.println("2"+Thread.currentThread().getName());
+        System.out.println("方法一 Thread:"+Thread.currentThread().getName());
         // TODO
     }
 }
@@ -24,6 +24,7 @@ class WelcomeThread extends Thread{
 class WelcomeRunnable implements Runnable{
     @Override
     public void run(){
-        System.out.println();
+        System.out.println("方法二 Runnable:"+Thread.currentThread().getName());
+        // TODO
     }
 }
