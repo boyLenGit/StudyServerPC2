@@ -112,7 +112,13 @@ class LRUCache4 {
     private DLinkedNode head, tail;
 
     public LRUCache4(int capacity) {
-
+        this.capacity = capacity;
+        this.size = 0;
+        // 初始化双向链表,让首尾相接(双向链表的特性)
+        head = new DLinkedNode();
+        tail = new DLinkedNode();
+        head.next = tail;
+        tail.prev = head;
     }
 
     public int get(int key) {
