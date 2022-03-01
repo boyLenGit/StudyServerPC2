@@ -108,12 +108,11 @@ class LRUCache4 {
     }
 
     private Map<Integer, DLinkedNode> map = new HashMap<>();
-    private int size, capacity;
+    private int capacity;
     private DLinkedNode head, tail;
 
     public LRUCache4(int capacity) {
         this.capacity = capacity;
-        this.size = 0;
         // 初始化双向链表,让首尾相接(双向链表的特性)
         head = new DLinkedNode();
         tail = new DLinkedNode();
@@ -122,15 +121,45 @@ class LRUCache4 {
     }
 
     public int get(int key) {
-
+        DLinkedNode node = map.get(key);
+        if (node==null) return -1;
+        moveToHead(node);
+        return node.value;
     }
 
     public void put(int key, int value) {
+        DLinkedNode node = map.get(key);
+        if (node==null){
+            DLinkedNode newNode = new DLinkedNode(key, value);
+            map.put(key, newNode);
+            addToHead(newNode);
+            if (capacity>=map.size()){
 
+            }
+        }
     }
 
     private void removeNode(DLinkedNode node){
+        node.next.prev = node.prev;
+        node.prev.next = node.next;
+    }
 
+    private void addToHead(DLinkedNode node){
+        node.next = head.next;
+        node.prev = head;
+        head.next.prev = node;
+        head.next = node;
+    }
+
+    private void moveToHead(DLinkedNode node){
+        removeNode(node);
+        moveToHead(node);
+    }
+
+    private DLinkedNode removeTail(){
+        DLinkedNode res = tail.prev;
+        removeNode(res);
+        return res;
     }
 }
 
