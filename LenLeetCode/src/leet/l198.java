@@ -72,7 +72,28 @@ public class l198 {
 
     public static void main(String[] arg){
         int[] input1 = new int[]{1,2,3,1};
+        lenSortDFX(input1, 0, input1.length-1);
+        System.out.println();
         System.out.println(rob3(input1));
+    }
+
+    public static void lenSortDFX(int[] inputs, int start, int end){
+        int i1=start, i2=end, exchange, compare;
+        if (start>end)return;
+        compare = inputs[start];
+        while (i1<i2){
+            while (inputs[i2]>compare && i1<i2) i2--;
+            while (inputs[i1]<compare && i1<i2) i1++;
+            if (i1<i2){
+                exchange = inputs[i1];
+                inputs[i1] = inputs[i2];
+                inputs[i2] = exchange;
+            }
+        }
+        inputs[start] = inputs[i1];
+        inputs[i1] = compare;
+        lenSortDFX(inputs, 0, i1-1);
+        lenSortDFX(inputs, i1+1, inputs.length-1);
     }
 }
 //[1,2,3,1]
