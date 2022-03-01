@@ -130,13 +130,13 @@ class LRUCache4 {
     public void put(int key, int value) {
         DLinkedNode node = map.get(key);
         if (node==null){
-            DLinkedNode newNode = new DLinkedNode(key, value);
-            map.put(key, newNode);
-            addToHead(newNode);
             if (capacity<=map.size()){
                 DLinkedNode deleted = removeTail();
                 map.remove(deleted.key);
             }
+            DLinkedNode newNode = new DLinkedNode(key, value);
+            map.put(key, newNode);
+            addToHead(newNode);
         }else {
             node.value = value;
             moveToHead(node);
