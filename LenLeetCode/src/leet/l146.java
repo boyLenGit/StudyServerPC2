@@ -33,7 +33,7 @@ class LRUCache2 {
     private LinkedList<String> used = new LinkedList<>();
     private int capacity;
 
-    public LRUCache(int capacity) {
+    public LRUCache2(int capacity) {
         this.capacity = capacity;
     }
 
