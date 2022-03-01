@@ -7,25 +7,25 @@ import java.util.Map;
 
 public class l146 {
     public static void main(String[] arg){
-//        LRUCache lRUCache = new LRUCache(2);
-//        lRUCache.put(1, 1);                     // 缓存是 {1=1}
-//        lRUCache.put(2, 2);                     // 缓存是 {1=1, 2=2}
-//        System.out.println(lRUCache.get(1));    // 返回 1
-//        lRUCache.put(3, 3);                     // 该操作会使得关键字 2 作废，缓存是 {1=1, 3=3}
-//        System.out.println(lRUCache.get(2));;    // 返回 -1 (未找到)
-//        lRUCache.put(4, 4);                     // 该操作会使得关键字 1 作废，缓存是 {4=4, 3=3}
-//        System.out.println(lRUCache.get(1));;    // 返回 -1 (未找到)
-//        System.out.println(lRUCache.get(3));;    // 返回 3
-//        System.out.println(lRUCache.get(4));;    // 返回 4
+        LRUCache4 lRUCache = new LRUCache4(2);
+        lRUCache.put(1, 1);                     // 缓存是 {1=1}
+        lRUCache.put(2, 2);                     // 缓存是 {1=1, 2=2}
+        System.out.println(lRUCache.get(1));    // 返回 1
+        lRUCache.put(3, 3);                     // 该操作会使得关键字 2 作废，缓存是 {1=1, 3=3}
+        System.out.println(lRUCache.get(2));;    // 返回 -1 (未找到)
+        lRUCache.put(4, 4);                     // 该操作会使得关键字 1 作废，缓存是 {4=4, 3=3}
+        System.out.println(lRUCache.get(1));;    // 返回 -1 (未找到)
+        System.out.println(lRUCache.get(3));;    // 返回 3
+        System.out.println(lRUCache.get(4));;    // 返回 4
 
-        LRUCache lRUCache = new LRUCache(2);
-        System.out.println(lRUCache.get(2));
-        lRUCache.put(2, 6);
-        System.out.println(lRUCache.get(1));
-        lRUCache.put(1, 5);
-        lRUCache.put(1, 2);
-        System.out.println(lRUCache.get(1));
-        System.out.println(lRUCache.get(2));
+//        LRUCache4 lRUCache = new LRUCache4(2);
+//        System.out.println(lRUCache.get(2));
+//        lRUCache.put(2, 6);
+//        System.out.println(lRUCache.get(1));
+//        lRUCache.put(1, 5);
+//        lRUCache.put(1, 2);
+//        System.out.println(lRUCache.get(1));
+//        System.out.println(lRUCache.get(2));
     }
 }
 
@@ -133,9 +133,13 @@ class LRUCache4 {
             DLinkedNode newNode = new DLinkedNode(key, value);
             map.put(key, newNode);
             addToHead(newNode);
-            if (capacity>=map.size()){
-
+            if (capacity<=map.size()){
+                DLinkedNode deleted = removeTail();
+                map.remove(deleted.key);
             }
+        }else {
+            node.value = value;
+            moveToHead(node);
         }
     }
 
@@ -153,7 +157,7 @@ class LRUCache4 {
 
     private void moveToHead(DLinkedNode node){
         removeNode(node);
-        moveToHead(node);
+        addToHead(node);
     }
 
     private DLinkedNode removeTail(){
