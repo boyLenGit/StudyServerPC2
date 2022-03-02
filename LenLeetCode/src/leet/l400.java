@@ -3,15 +3,16 @@ package leet;
 public class l400 {
     public static int findNthDigit(int n) {
         String debug1 = "1234567891011121314151617181920212223242526";
-        int[] max_s = new int[]{9,99,999,9999,99999,999999,9999999,99999999,999999999};
-        int[] min_s = new int[]{1,10,100,1000,10000,100000,1000000,10000000,100000000};
+        long[] max_s = new long[]{9,99,999,9999,99999,999999,9999999,99999999,999999999,9999999999L,99999999999L};
+        long[] min_s = new long[]{1,10,100,1000,10000,100000,1000000,10000000,100000000,1000000000L,10000000000L};
+        //                                                                              1000000000
         long[] max_s_len = new long[max_s.length];
         for (int i1=0; i1<max_s.length; i1++){
             max_s_len[i1] = (long) (max_s[i1] - min_s[i1] + 1) * (i1+1);
         }
-        int sum = 0;
+        long sum = 0;
         int index_ = 0;
-        int distance = 0;
+        long distance = 0;
         for (int i1=0; i1<n; i1++){
             distance = n-sum;
             sum += max_s_len[i1];
@@ -20,16 +21,17 @@ public class l400 {
                 break;
             }
         }
+        // 如果distance==0,说明位于"当前位数的全部数字中"的最后一个数字的最后一位,需要特殊处理
         if (distance==0){
-
-            return String.valueOf();
+            String spe_str = String.valueOf(min_s[index_]-1);
+            return spe_str.charAt(spe_str.length()-1) - '0';
         }
-        int position = (distance + index_)/(index_+1);
-        int mod = (distance-(position-1)*(index_+1));
-        int start_num = min_s[index_];
-        int aim_num = start_num + position-1;
+        long position = (distance + index_)/(index_+1);  // position表示"当前位数的全部数字中"第几个数字
+        long mod = (distance-(position-1)*(index_+1));  // mod表示该数字中的第几位是所需的
+        long start_num = min_s[index_];
+        long aim_num = start_num + position-1;
         String result_num = String.valueOf(aim_num);
-        return result_num.charAt(mod-1)-'0';
+        return result_num.charAt((int) (mod-1))-'0';
     }
 
 
@@ -50,7 +52,7 @@ public class l400 {
 
 
     public static void main(String[] ar){
-        findNthDigit(11);
+        findNthDigit(1000000000);
         for(int i1=1; i1<1000; i1++){
             System.out.println(String.valueOf(i1)+" "+String.valueOf(findNthDigit(i1))+" | "+String.valueOf(findNthDigit2(i1))+
                     " | "+String.valueOf(findNthDigit(i1)==findNthDigit2(i1)));
