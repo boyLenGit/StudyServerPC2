@@ -20,12 +20,12 @@ public class l400 {
                 break;
             }
         }
-        int position = distance/(index_+1);
-        int mod = distance%(index_+1);
+        int position = (distance + index_)/(index_+1);
+        int mod = distance>(index_+1)? distance%(index_+1) : distance;
         int start_num = min_s[index_];
-        int aim_num = start_num + position;
+        int aim_num = start_num + position-1;
         String result_num = String.valueOf(aim_num);
-        return result_num.charAt(result_num.length()-1-mod)-'0';
+        return result_num.charAt(mod-1)-'0';
     }
 
     public static int findNthDigit2(int n) {
@@ -45,8 +45,10 @@ public class l400 {
 
 
     public static void main(String[] ar){
-        int input1 = 11;
-        System.out.println(findNthDigit(input1));
-        System.out.println(findNthDigit2(input1));
+        findNthDigit(190);
+        for(int i1=1; i1<1000; i1++){
+            System.out.println(String.valueOf(i1)+" "+String.valueOf(findNthDigit(i1))+" | "+String.valueOf(findNthDigit2(i1))+
+                    " | "+String.valueOf(findNthDigit(i1)==findNthDigit2(i1)));
+        }
     }
 }
