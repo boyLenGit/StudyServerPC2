@@ -42,9 +42,29 @@ public class lt001_sorts {
     }
 
 
+    public static void lenSortDFX(int[] inputs, int start, int end){
+        int i1=start, i2=end, exchange, compare;
+        if (start>end)return;
+        compare = inputs[start];
+        while (i1<i2){
+            while (inputs[i2]>=compare && i1<i2) i2--;
+            while (inputs[i1]<=compare && i1<i2) i1++;
+            if (i1<i2){
+                exchange = inputs[i1];
+                inputs[i1] = inputs[i2];
+                inputs[i2] = exchange;
+            }
+        }
+        inputs[start] = inputs[i1];
+        inputs[i1] = compare;
+        lenSortDFX(inputs,start, i1-1);
+        lenSortDFX(inputs,i1+1, end);
+    }
+
+
     public static void main(String[] a){
         int[] inputs = new int[]{5,2,4,1,1,3,6,0};
-        heapSort(inputs);
+        lenSortDFX(inputs,0,inputs.length-1);
         System.out.println(Arrays.toString(inputs));
     }
 }

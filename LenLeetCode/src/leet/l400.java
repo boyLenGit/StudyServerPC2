@@ -22,10 +22,30 @@ public class l400 {
         }
         int position = neg_/(index_+1);
         int mod = neg_%(index_+1);
-        return 0;
+        int start_num = min_s[index_];
+        int aim_num = start_num + position-1;
+        String result_num = String.valueOf(aim_num);
+        return result_num.charAt(result_num.length()-1-mod)-'0';
     }
 
+    public static int findNthDigit2(int n) {
+        int d = 1, count = 9;
+        while (n > (long) d * count) {
+            n -= d * count;
+            d++;
+            count *= 10;
+        }
+        int index = n - 1;
+        int start = (int) Math.pow(10, d - 1);
+        int num = start + index / d;
+        int digitIndex = index % d;
+        int digit = (num / (int)(Math.pow(10, d - digitIndex - 1))) % 10;
+        return digit;
+    }
+
+
     public static void main(String[] ar){
-        System.out.println(findNthDigit(11));
+        System.out.println(findNthDigit(3));
+        System.out.println();
     }
 }
