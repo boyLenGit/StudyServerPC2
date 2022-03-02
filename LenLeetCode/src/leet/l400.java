@@ -11,19 +11,19 @@ public class l400 {
         }
         int sum = 0;
         int index_ = 0;
-        int neg_ = 0;
+        int distance = 0;
         for (int i1=0; i1<n; i1++){
-            neg_ = n-sum;
+            distance = n-sum;
             sum += max_s_len[i1];
             if (sum>n) {
                 index_ = i1;
                 break;
             }
         }
-        int position = neg_/(index_+1);
-        int mod = neg_%(index_+1);
+        int position = distance/(index_+1);
+        int mod = distance%(index_+1);
         int start_num = min_s[index_];
-        int aim_num = start_num + position-1;
+        int aim_num = start_num + position;
         String result_num = String.valueOf(aim_num);
         return result_num.charAt(result_num.length()-1-mod)-'0';
     }
@@ -45,7 +45,8 @@ public class l400 {
 
 
     public static void main(String[] ar){
-        System.out.println(findNthDigit(3));
-        System.out.println();
+        int input1 = 11;
+        System.out.println(findNthDigit(input1));
+        System.out.println(findNthDigit2(input1));
     }
 }
