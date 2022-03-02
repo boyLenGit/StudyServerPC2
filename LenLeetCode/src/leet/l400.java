@@ -2,6 +2,7 @@ package leet;
 
 public class l400 {
     public static int findNthDigit(int n) {
+        String debug1 = "1234567891011121314151617181920212223242526";
         int[] max_s = new int[]{9,99,999,9999,99999,999999,9999999,99999999,999999999};
         int[] min_s = new int[]{1,10,100,1000,10000,100000,1000000,10000000,100000000};
         long[] max_s_len = new long[max_s.length];
