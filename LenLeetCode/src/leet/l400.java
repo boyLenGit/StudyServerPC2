@@ -1,5 +1,7 @@
 package leet;
 
+import java.util.ArrayList;
+
 public class l400 {
     public static int findNthDigit(int n) {
         String debug1 = "1234567891011121314151617181920212223242526";
@@ -28,8 +30,7 @@ public class l400 {
         }
         long position = (distance + index_)/(index_+1);  // position表示"当前位数的全部数字中"第几个数字
         long mod = (distance-(position-1)*(index_+1));  // mod表示该数字中的第几位是所需的
-        long start_num = min_s[index_];
-        long aim_num = start_num + position-1;
+        long aim_num = min_s[index_] + position-1;  // 用于找出这个数
         String result_num = String.valueOf(aim_num);
         return result_num.charAt((int) (mod-1))-'0';
     }
@@ -56,6 +57,10 @@ public class l400 {
         for(int i1=1; i1<1000; i1++){
             System.out.println(String.valueOf(i1)+" "+String.valueOf(findNthDigit(i1))+" | "+String.valueOf(findNthDigit2(i1))+
                     " | "+String.valueOf(findNthDigit(i1)==findNthDigit2(i1)));
+        }
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i1=0; i1<list.size(); i1++){
+            
         }
     }
 }

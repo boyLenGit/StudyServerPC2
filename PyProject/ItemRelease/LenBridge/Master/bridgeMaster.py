@@ -17,7 +17,7 @@ def Scheduler(func_name, params):
     # 连接并传参
     path_data = library.saveToJson(paths.cleanPath(paths.Bridge_root+'/Slave/exchange/'+func_name), params)
     socket2.connect((host, port))
-    print('> Client Connected address:', host, port)
+    print('> Client Connected pipeline:', port)
     send_data = '{0}&{1}'.format(func_name, path_data)
     socket2.send(send_data.encode())
     # 接收回复

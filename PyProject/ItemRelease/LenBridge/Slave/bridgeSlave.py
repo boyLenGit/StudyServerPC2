@@ -16,7 +16,7 @@ library.saveToJson(path_info, [port])
 def Actuator():
     global port
     while True:
-        print("[⊙ LenBridge] Server start, address is '{0}:{1}'.".format(host, port))
+        print("[⊙ LenBridge] Server start, pipeline is '{0}'.".format(port))
         socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         try:
             socket1.bind((host, port))
