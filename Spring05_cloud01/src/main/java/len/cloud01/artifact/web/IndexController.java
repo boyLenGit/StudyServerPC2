@@ -1,12 +1,14 @@
 package len.cloud01.artifact.web;
 
 import len.cloud01.artifact.error.NotFoundException;
+import len.cloud01.artifact.po.Blog;
 import len.cloud01.artifact.service.BlogService;
 import len.cloud01.artifact.service.CommentService;
 import len.cloud01.artifact.service.TagService;
 import len.cloud01.artifact.service.TypeService;
 import len.cloud01.artifact.util.base.LenLog;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -43,8 +45,11 @@ public class IndexController {
     @PostMapping("/search")
     public String search(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable,
                          @RequestParam String query, Model model){
+        Page<Blog> result = blogService.listBlog("%"+query+"%", pageable);
         LenLog.staticInfo("search", query);
-        model.addAttribute("page", blogService.listBlog("%"+query+"%", pageable));
+        LenLog.staticInfo("search", String.valueOf(pageable));
+        LenLog.staticInfo("search", result.toString());
+        model.addAttribute("page", result);
         model.addAttribute("query", query);
         return "search";
     }

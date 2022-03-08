@@ -35,6 +35,7 @@ public class BlogServiceImpl implements BlogService{
 
     @Override
     public Blog getBlog(Long id) {
+        // 后期复习发现这点,可以用这个?: blogRepository.findById(id);
         return blogRepository.getOne(id);
     }
 

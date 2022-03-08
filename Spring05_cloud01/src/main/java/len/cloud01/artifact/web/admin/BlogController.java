@@ -9,6 +9,7 @@ import len.cloud01.artifact.vo.BlogQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -50,7 +51,8 @@ public class BlogController {
     public String search(@PageableDefault(size = 8, sort = {"updateTime"}, direction = Sort.Direction.DESC) Pageable pageable, BlogQuery blog, Model model){
         // ~解释@PageableDefault(size = 2, sort = {"updateTime"}, direction = Sort.Direction.DESC)
         //      ·让pageable按照updateTime更新时间倒序排序，每页2条
-        model.addAttribute("page", blogService.listBlog(pageable, blog));
+        Page<Blog> result = blogService.listBlog(pageable, blog);
+        model.addAttribute("page", result);
         return "admin/admin_article :: blogList";  // 返回页面admin_article下的blogList片段
     }
 

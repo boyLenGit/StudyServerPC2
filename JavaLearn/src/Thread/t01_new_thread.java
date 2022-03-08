@@ -15,11 +15,17 @@ public class t01_new_thread {
         Thread thread3 = new Thread(new Runnable() {
             @Override
             public void run() {
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 System.out.println("方法三 new Runnable:"+Thread.currentThread().getName());
                 // TODO
             }
         });
         thread3.start();
+        System.out.println("4"+Thread.currentThread().getName());
     }
 }
 
