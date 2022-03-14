@@ -15,7 +15,7 @@ public class jz009 {
 
 class CQueue {
     List<Integer> res;
-    public void CQueue() {
+    public CQueue() {
         res=new LinkedList<>();
     }
 
