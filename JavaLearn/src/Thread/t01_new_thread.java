@@ -26,7 +26,7 @@ public class t01_new_thread {
         });
         thread3.start();
         System.out.println("4"+Thread.currentThread().getName());
-
+        System.out.println(thread3.getState());
 
     }
 }
