@@ -2,6 +2,8 @@ package lenTest;
 
 import leet.help.TreeNode;
 
+import java.util.List;
+
 public class lt003_object {
     public static void main(String[] ad){
         int[] in1 = new int[]{1,2,3};
@@ -9,5 +11,6 @@ public class lt003_object {
         System.out.println(in1.equals(in2));
         TreeNode[] aa = new TreeNode[0];
         TreeNode bb = new TreeNode();
+        List<Integer>
     }
 }
