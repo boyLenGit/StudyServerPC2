@@ -11,6 +11,12 @@ public class lt003_object {
         System.out.println(in1.equals(in2));
         TreeNode[] aa = new TreeNode[0];
         TreeNode bb = new TreeNode();
-        List<Integer>
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("1");
+            }
+        });
+        thread.start();
     }
 }
