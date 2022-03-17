@@ -6,6 +6,7 @@ import len.cloud02.geodata.gd_client.util.out.LenLog;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +17,7 @@ public class GetDgController {
     private RestOneWellService restOneWellService;
 
     @GetMapping("/queryByIdRest/{oneWellId}")
-    public OneWell queryOneWellByIdWithRest(@Param("oneWellId")int oneWellId){
+    public OneWell queryOneWellByIdWithRest(@PathVariable("oneWellId")int oneWellId){
         OneWell oneWell = restOneWellService.queryOneWellByIdWithRest(oneWellId);
         LenLog.staticInfo("queryOneWellByIdWithRest", oneWell.toString());
         return oneWell;

@@ -11,7 +11,7 @@ public class RestOneWellService {
     private RestTemplate restTemplate;
 
     public OneWell queryOneWellByIdWithRest(int id){
-        String url = "http://geodata_service:8082/geodata/queryById/" + id;
+        String url = "http://geodataservice/geodata/queryById/" + id;
         OneWell oneWell = restTemplate.getForObject(url, OneWell.class);
         return oneWell;
     }
