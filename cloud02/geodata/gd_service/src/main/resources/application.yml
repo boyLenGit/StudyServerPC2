@@ -14,7 +14,7 @@ spring:
     active: dev # 环境
   # 微服务
   application:
-    name: userservice
+    name: geodata_service
   cloud:
     nacos:
       server-addr: localhost:8848 # nacos地址
