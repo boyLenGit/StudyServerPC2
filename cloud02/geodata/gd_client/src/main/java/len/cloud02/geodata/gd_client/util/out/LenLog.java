@@ -1,7 +1,8 @@
 package len.cloud02.geodata.gd_client.util.out;
 
 
-import len.cloud02.geodata.gd_service.util.time.LenTime;
+
+import len.cloud02.geodata.gd_client.util.time.LenTime;
 
 import java.util.Date;
 
