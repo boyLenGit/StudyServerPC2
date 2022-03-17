@@ -3,10 +3,13 @@ server:
 
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.50.102:3306/heima?useUnicode=true&amp;characterEncoding=UTF-8&useSSL=false
-    username: "root"
-    password: "0000"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.103.160.64:3306/cloud01?useUnicode=true&amp&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: boyLen.6886
+#    url: jdbc:mysql://192.168.50.102:3306/heima?useUnicode=true&amp;characterEncoding=UTF-8&useSSL=false
+#    username: "root"
+#    password: "0000"
   profiles:
     active: dev # 环境
   # 微服务

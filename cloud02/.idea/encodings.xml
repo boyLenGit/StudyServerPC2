@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/cluster_service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/geodata_client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/geodata_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/geodata_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
 </project>
