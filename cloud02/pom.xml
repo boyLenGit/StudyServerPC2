@@ -10,8 +10,8 @@
 
     <modules>
         <module>blog</module>
-        <module>geodata_service</module>
-        <module>geodata_client</module>
+        <module>cluster</module>
+        <module>geodata</module>
     </modules>
 
 <!--    <parent>-->

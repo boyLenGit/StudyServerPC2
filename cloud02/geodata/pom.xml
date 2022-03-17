@@ -11,6 +11,7 @@
 
     <modules>
         <module>gd_service</module>
+        <module>gd_client</module>
     </modules>
 
     <packaging>pom</packaging>

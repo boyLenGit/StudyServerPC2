@@ -9,20 +9,13 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>len.cloud02.cluster</groupId>
-    <artifactId>cluster</artifactId>
+    <artifactId>c_client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cluster</name>
+    <name>c_client</name>
     <description>Demo project for Spring Boot</description>
-
-    <modules>
-        <module>c_client</module>
-        <module>c_service</module>
-    </modules>
-
     <properties>
         <java.version>1.8</java.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

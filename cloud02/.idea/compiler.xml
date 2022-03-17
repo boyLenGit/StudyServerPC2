@@ -7,11 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="c_client" />
+        <module name="cloud02" />
+        <module name="c_service" />
         <module name="cluster" />
         <module name="gd_service" />
-        <module name="cloud02" />
-        <module name="blog" />
         <module name="gd_client" />
+        <module name="blog" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +25,8 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="blog" options="-parameters" />
+      <module name="c_client" options="-parameters" />
+      <module name="c_service" options="-parameters" />
       <module name="cloud02" options="" />
       <module name="cluster" options="-parameters" />
       <module name="cluster_service" options="-parameters" />
