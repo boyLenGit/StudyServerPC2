@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/geodata/pom.xml" />
         <option value="$PROJECT_DIR$/geodata/gd_service/pom.xml" />
         <option value="$PROJECT_DIR$/geodata/gd_client/pom.xml" />
+        <option value="$PROJECT_DIR$/cluster/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

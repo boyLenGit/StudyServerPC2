@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cluster" />
         <module name="gd_service" />
         <module name="cloud02" />
         <module name="blog" />
@@ -23,6 +24,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="blog" options="-parameters" />
       <module name="cloud02" options="" />
+      <module name="cluster" options="-parameters" />
       <module name="cluster_service" options="-parameters" />
       <module name="gd_client" options="-parameters" />
       <module name="gd_service" options="-parameters" />
