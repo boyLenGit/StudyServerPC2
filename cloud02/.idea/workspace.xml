@@ -22,15 +22,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/geodata_service" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/geodata/gd_service/src/main/resources" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/geodata/gd_service/src/main/resources" />
       <recent name="$PROJECT_DIR$/geodata_service" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/geodata_service/src/main/java/len/cloud02/geodata_service" />
       <recent name="$PROJECT_DIR$/geodata_service/src/main/resources" />
-      <recent name="$PROJECT_DIR$/blog/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -51,7 +52,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GeodataServiceApplication">
+  <component name="RunManager" selected="Spring Boot.GdServiceApplication">
     <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="blog" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="len.cloud02.blog.BlogApplication" />
@@ -59,9 +60,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClusterServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="cluster_service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="len.cloud02.cluster_service.ClusterServiceApplication" />
+    <configuration name="GdServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gd_service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="len.cloud02.geodata.gd_service.GdServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeodataApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="geodata" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="len.cloud02.geodata.GeodataApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -92,7 +100,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647496840400</updated>
       <workItem from="1647496844631" duration="6667000" />
-      <workItem from="1647504435390" duration="424000" />
+      <workItem from="1647504435390" duration="2028000" />
     </task>
     <servers />
   </component>
@@ -104,57 +112,66 @@
       <screen x="0" y="25" width="1680" height="966" />
     </state>
     <state x="461" y="118" key="#GeodataClientApplication/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.966@0.25.1680.966" timestamp="1647500280344" />
-    <state x="440" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1647504498640">
+    <state x="440" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1647505402298">
       <screen x="0" y="25" width="1680" height="965" />
     </state>
-    <state x="440" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647504498640" />
-    <state width="1222" height="301" key="GridCell.Tab.0.bottom" timestamp="1647504842019">
+    <state x="440" y="170" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647505402298" />
+    <state width="1222" height="301" key="GridCell.Tab.0.bottom" timestamp="1647506456084">
       <screen x="0" y="25" width="1680" height="965" />
     </state>
-    <state width="1222" height="301" key="GridCell.Tab.0.bottom/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647504842019" />
+    <state width="1222" height="301" key="GridCell.Tab.0.bottom/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647506456084" />
     <state width="1222" height="302" key="GridCell.Tab.0.bottom/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.966@0.25.1680.966" timestamp="1647501463094" />
-    <state width="1222" height="301" key="GridCell.Tab.0.center" timestamp="1647504842017">
+    <state width="1222" height="301" key="GridCell.Tab.0.center" timestamp="1647506456082">
       <screen x="0" y="25" width="1680" height="965" />
     </state>
-    <state width="1222" height="301" key="GridCell.Tab.0.center/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647504842017" />
+    <state width="1222" height="301" key="GridCell.Tab.0.center/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647506456082" />
     <state width="1222" height="302" key="GridCell.Tab.0.center/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.966@0.25.1680.966" timestamp="1647501463093" />
-    <state width="1222" height="301" key="GridCell.Tab.0.left" timestamp="1647504842016">
+    <state width="1222" height="301" key="GridCell.Tab.0.left" timestamp="1647506456081">
       <screen x="0" y="25" width="1680" height="965" />
     </state>
-    <state width="1222" height="301" key="GridCell.Tab.0.left/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647504842016" />
+    <state width="1222" height="301" key="GridCell.Tab.0.left/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647506456081" />
     <state width="1222" height="302" key="GridCell.Tab.0.left/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.966@0.25.1680.966" timestamp="1647501463092" />
-    <state width="1222" height="301" key="GridCell.Tab.0.right" timestamp="1647504842018">
+    <state width="1222" height="301" key="GridCell.Tab.0.right" timestamp="1647506456083">
       <screen x="0" y="25" width="1680" height="965" />
     </state>
-    <state width="1222" height="301" key="GridCell.Tab.0.right/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647504842018" />
+    <state width="1222" height="301" key="GridCell.Tab.0.right/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647506456083" />
     <state width="1222" height="302" key="GridCell.Tab.0.right/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.966@0.25.1680.966" timestamp="1647501463093" />
-    <state width="1222" height="301" key="GridCell.Tab.1.bottom" timestamp="1647504842021">
+    <state width="1222" height="301" key="GridCell.Tab.1.bottom" timestamp="1647506456087">
       <screen x="0" y="25" width="1680" height="965" />
     </state>
-    <state width="1222" height="301" key="GridCell.Tab.1.bottom/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647504842021" />
+    <state width="1222" height="301" key="GridCell.Tab.1.bottom/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647506456087" />
     <state width="1222" height="302" key="GridCell.Tab.1.bottom/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.966@0.25.1680.966" timestamp="1647501463098" />
-    <state width="1222" height="301" key="GridCell.Tab.1.center" timestamp="1647504842020">
+    <state width="1222" height="301" key="GridCell.Tab.1.center" timestamp="1647506456085">
       <screen x="0" y="25" width="1680" height="965" />
     </state>
-    <state width="1222" height="301" key="GridCell.Tab.1.center/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647504842020" />
+    <state width="1222" height="301" key="GridCell.Tab.1.center/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647506456085" />
     <state width="1222" height="302" key="GridCell.Tab.1.center/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.966@0.25.1680.966" timestamp="1647501463096" />
-    <state width="1222" height="301" key="GridCell.Tab.1.left" timestamp="1647504842019">
+    <state width="1222" height="301" key="GridCell.Tab.1.left" timestamp="1647506456084">
       <screen x="0" y="25" width="1680" height="965" />
     </state>
-    <state width="1222" height="301" key="GridCell.Tab.1.left/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647504842019" />
+    <state width="1222" height="301" key="GridCell.Tab.1.left/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647506456084" />
     <state width="1222" height="302" key="GridCell.Tab.1.left/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.966@0.25.1680.966" timestamp="1647501463095" />
-    <state width="1222" height="301" key="GridCell.Tab.1.right" timestamp="1647504842020">
+    <state width="1222" height="301" key="GridCell.Tab.1.right" timestamp="1647506456086">
       <screen x="0" y="25" width="1680" height="965" />
     </state>
-    <state width="1222" height="301" key="GridCell.Tab.1.right/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647504842020" />
+    <state width="1222" height="301" key="GridCell.Tab.1.right/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647506456086" />
     <state width="1222" height="302" key="GridCell.Tab.1.right/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.966@0.25.1680.966" timestamp="1647501463097" />
     <state x="-911" y="25" width="910" height="1055" key="dock-window-1" timestamp="1647504864694">
       <screen x="-1920" y="25" width="1920" height="1055" />
     </state>
     <state x="-911" y="25" width="910" height="1055" key="dock-window-1/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647504864694" />
-    <state x="246" y="168" key="new project wizard" timestamp="1647499605460">
-      <screen x="0" y="25" width="1680" height="966" />
+    <state x="-1271" y="25" width="960" height="1051" key="dock-window-2" timestamp="1647506155032">
+      <screen x="-1920" y="25" width="1920" height="1055" />
     </state>
+    <state x="-1271" y="25" width="960" height="1051" key="dock-window-2/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647506155032" />
+    <state x="-996" y="25" width="995" height="1055" key="dock-window-3" timestamp="1647506155036">
+      <screen x="-1920" y="25" width="1920" height="1055" />
+    </state>
+    <state x="-996" y="25" width="995" height="1055" key="dock-window-3/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647506155036" />
+    <state x="246" y="168" key="new project wizard" timestamp="1647505747750">
+      <screen x="0" y="25" width="1680" height="965" />
+    </state>
+    <state x="246" y="168" key="new project wizard/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647505747750" />
     <state x="246" y="168" key="new project wizard/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.966@0.25.1680.966" timestamp="1647499605460" />
   </component>
 </project>

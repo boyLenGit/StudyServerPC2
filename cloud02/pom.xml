@@ -12,14 +12,18 @@
         <module>blog</module>
         <module>geodata_service</module>
         <module>geodata_client</module>
-        <module>cluster_service</module>
     </modules>
 
+<!--    <parent>-->
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
+<!--        <version>2.3.9.RELEASE</version>-->
+<!--        <relativePath/>-->
+<!--    </parent>-->
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
-
 
     <dependencies>
 

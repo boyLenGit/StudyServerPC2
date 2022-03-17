@@ -7,18 +7,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloud02" />
-        <module name="geodata_client" />
-        <module name="cluster_service" />
         <module name="blog" />
+        <module name="cloud02" />
+        <module name="gd_service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cluster_service" target="1.8" />
+      <module name="geodata_client" target="1.8" />
+      <module name="geodata_service" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="blog" options="-parameters" />
       <module name="cloud02" options="" />
       <module name="cluster_service" options="-parameters" />
+      <module name="gd_service" options="-parameters" />
+      <module name="geodata" options="-parameters" />
       <module name="geodata_client" options="-parameters" />
       <module name="geodata_service" options="-parameters" />
     </option>
