@@ -1,0 +1,24 @@
+/*.LenCssLogic-mobile-hide{*/
+/*    display: inline-block !important;*/
+/*}*/
+
+/* LenCssLogic-mobile-show必须放在@media的上面，否则无效！ */
+.LenCssLogic-mobile-show {
+    display: none !important;
+}
+
+@media screen and (max-width: 768px){
+    .LenCssLogic-mobile-hide{
+        display: none !important;
+    }
+    .LenCssLogic-mobile-show{
+        display: block !important;
+    }
+    .LenCssText-padding-middle{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .LenCssButton-length-full{
+        width: 100% !important;
+    }
+}
