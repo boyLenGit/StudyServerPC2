@@ -21,7 +21,7 @@ spring:
       config:
         file-extension: yaml # 文件后缀名
       discovery:
-        cluster-name: HangZhou
+        cluster-name: Beijing
 
 mybatis:
   type-aliases-package: len.cloud02.geodata.gd_service.pojo
