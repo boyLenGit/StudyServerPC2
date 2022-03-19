@@ -31,7 +31,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.jz009">
+  <component name="RunManager" selected="Application.l237">
     <configuration name="jz009" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JZoffer.jz009" />
       <module name="LenLeetCode" />
@@ -45,8 +45,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="l066" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l066" />
+    <configuration name="l237" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leet.l237" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
@@ -58,8 +58,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="l146" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l146" />
+    <configuration name="l344" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leet.l344" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
@@ -84,8 +84,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lt001_sorts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lenTest.lt001_sorts" />
+    <configuration name="lt003_object" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lenTest.lt003_object" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
@@ -99,11 +99,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.l237" />
+        <item itemvalue="Application.l344" />
+        <item itemvalue="Application.lt003_object" />
         <item itemvalue="Application.jz009" />
         <item itemvalue="Application.l400" />
-        <item itemvalue="Application.lt001_sorts" />
-        <item itemvalue="Application.l146" />
-        <item itemvalue="Application.l066" />
       </list>
     </recent_temporary>
   </component>

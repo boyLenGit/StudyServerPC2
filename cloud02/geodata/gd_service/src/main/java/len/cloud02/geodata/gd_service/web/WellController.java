@@ -15,6 +15,7 @@ public class WellController {
     @Autowired
     private WellService wellService;
 
+    // Test:http://localhost:8082/geodata/queryById/1
     @GetMapping("/queryById/{oneWellId}")
     public OneWell queryOneWellById(@PathVariable("oneWellId")int oneWellId){
         LenLog.staticInfo("queryOneWellById", String.valueOf(oneWellId));

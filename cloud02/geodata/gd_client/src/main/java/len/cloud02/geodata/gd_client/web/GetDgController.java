@@ -16,6 +16,7 @@ public class GetDgController {
     @Autowired
     private RestOneWellService restOneWellService;
 
+    // Test:http://localhost:8088/geodata/queryByIdRest/5
     @GetMapping("/queryByIdRest/{oneWellId}")
     public OneWell queryOneWellByIdWithRest(@PathVariable("oneWellId")int oneWellId){
         OneWell oneWell = restOneWellService.queryOneWellByIdWithRest(oneWellId);
