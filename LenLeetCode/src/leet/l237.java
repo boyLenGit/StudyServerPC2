@@ -6,8 +6,7 @@ import java.util.List;
 
 public class l237 {
     public void deleteNode(ListNode node) {
-        ListNode temp = node.next;
-        node = temp;
+        node = node.next;
     }
 
     public static void main(String[] args) {
