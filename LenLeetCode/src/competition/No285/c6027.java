@@ -4,10 +4,12 @@ public class c6027 {
     public int countHillValley(int[] nums) {
         int cnt = 0;
         for (int i1=1; i1<nums.length-1; i1++){
-            if (nums[i1-1]<nums[i1] && nums[i1]<nums[i1+1]){ // 极大
+            if (nums[i1-1]<nums[i1] && nums[i1]>nums[i1+1]){ // 极大
                 cnt++;
-            }else if (nums[i1-1]<nums[i1] && nums[i1]>nums[i1+1]){ // 极小
+            }else if (nums[i1-1]>nums[i1] && nums[i1]<nums[i1+1]){ // 极小
                 cnt++;
+            }else if (nums[i1]==nums[i1+1]){
+                nums[i1]=nums[i1-1];
             }
         }
         return cnt;

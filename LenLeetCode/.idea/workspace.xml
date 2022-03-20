@@ -31,7 +31,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.c6027">
+  <component name="RunManager" selected="Application.c6028">
     <configuration name="c6027" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="competition.No285.c6027" />
       <module name="LenLeetCode" />
@@ -45,12 +45,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="jz009" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JZoffer.jz009" />
+    <configuration name="c6028" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="competition.No285.c6028" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="JZoffer.*" />
+          <option name="PATTERN" value="competition.No285.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,11 +99,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.c6028" />
         <item itemvalue="Application.c6027" />
         <item itemvalue="Application.l237" />
         <item itemvalue="Application.l344" />
         <item itemvalue="Application.lt003_object" />
-        <item itemvalue="Application.jz009" />
       </list>
     </recent_temporary>
   </component>
@@ -965,6 +965,16 @@
           <line>14</line>
           <option name="timeStamp" value="302" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/competition/No285/c6027.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="303" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/competition/No285/c6028.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="304" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -972,6 +982,11 @@
         <PinnedItemInfo />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="directions" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LenLeetCode$l019.ic" NAME="l019 Coverage Results" MODIFIED="1641986963634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
