@@ -31,7 +31,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.c6028">
+  <component name="RunManager" selected="Application.l237">
     <configuration name="c6027" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="competition.No285.c6027" />
       <module name="LenLeetCode" />
@@ -99,9 +99,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.l237" />
         <item itemvalue="Application.c6028" />
         <item itemvalue="Application.c6027" />
-        <item itemvalue="Application.l237" />
         <item itemvalue="Application.l344" />
         <item itemvalue="Application.lt003_object" />
       </list>
@@ -957,12 +957,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/leet/l237.java</url>
-          <line>15</line>
+          <line>18</line>
           <option name="timeStamp" value="301" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/leet/l237.java</url>
-          <line>14</line>
+          <line>17</line>
           <option name="timeStamp" value="302" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -982,11 +982,6 @@
         <PinnedItemInfo />
       </pinned-members>
     </pin-to-top-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="directions" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LenLeetCode$l019.ic" NAME="l019 Coverage Results" MODIFIED="1641986963634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
