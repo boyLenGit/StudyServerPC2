@@ -149,6 +149,7 @@
       <workItem from="1647506935153" duration="3848000" />
       <workItem from="1647518509094" duration="9181000" />
       <workItem from="1647615755384" duration="1248000" />
+      <workItem from="1647939148637" duration="1333000" />
     </task>
     <servers />
   </component>
@@ -196,6 +197,10 @@
       <screen x="0" y="25" width="1680" height="965" />
     </state>
     <state x="502" y="436" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647507628767" />
+    <state x="614" y="372" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1647939195275">
+      <screen x="0" y="25" width="1680" height="956" />
+    </state>
+    <state x="614" y="372" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.25.1920.1055/0.25.1680.956@0.25.1680.956" timestamp="1647939195275" />
     <state width="1249" height="301" key="GridCell.Tab.0.bottom" timestamp="1647571425375">
       <screen x="0" y="25" width="1680" height="964" />
     </state>
@@ -277,6 +282,10 @@
     </state>
     <state x="353" y="162" key="new project wizard/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647509691667" />
     <state x="246" y="168" key="new project wizard/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.966@0.25.1680.966" timestamp="1647499605460" />
+    <state x="505" y="235" width="670" height="676" key="search.everywhere.popup" timestamp="1647939214135">
+      <screen x="0" y="25" width="1680" height="956" />
+    </state>
+    <state x="505" y="235" width="670" height="676" key="search.everywhere.popup/-1920.25.1920.1055/0.25.1680.956@0.25.1680.956" timestamp="1647939214135" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

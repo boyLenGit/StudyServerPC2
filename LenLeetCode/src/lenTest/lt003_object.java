@@ -24,15 +24,6 @@ public class lt003_object {
         });
         thread.start();
 
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        Integer[] integers = list.toArray(new Integer[list.size()]);
-        System.out.println(Arrays.toString(integers));
-
-        LinkedList<Integer> list1 = new LinkedList<>();
-        LinkedList<Integer> list2;
-        list1.add(9);list1.add(5);list1.add(4);
 
     }
 }

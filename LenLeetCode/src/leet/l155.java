@@ -1,13 +1,10 @@
 package leet;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.*;
 
 public class l155 {
     public static void main(String[] args) {
-        MinStack minStack = new MinStack();
+        MinStack2 minStack = new MinStack2();
         minStack.push(-2);
         minStack.push(0);
         minStack.push(-3);
@@ -17,7 +14,7 @@ public class l155 {
         System.out.println(minStack.getMin());;   //--> 返回 -2.
     }
 
-
+// int num1 = 条件 ? 条件成立赋的值 : 条件不成立赋的值;
 }
 
 
@@ -50,5 +47,35 @@ class MinStack {
 
     public int getMin() {
         return min_val;
+    }
+}
+
+
+class MinStack2 {
+    Deque<Integer> xStack;
+    Deque<Integer> minStack;
+
+    public MinStack2() {
+        xStack = new LinkedList<Integer>();
+        minStack = new LinkedList<Integer>();
+        minStack.push(Integer.MAX_VALUE);
+    }
+
+    public void push(int x) {
+        xStack.push(x);
+        minStack.push(Math.min(minStack.peek(), x));
+    }
+
+    public void pop() {
+        xStack.pop();
+        minStack.pop();
+    }
+
+    public int top() {
+        return xStack.peek();
+    }
+
+    public int getMin() {
+        return minStack.peek();
     }
 }
