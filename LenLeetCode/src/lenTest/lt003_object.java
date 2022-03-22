@@ -4,6 +4,7 @@ import leet.help.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class lt003_object {
@@ -28,5 +29,10 @@ public class lt003_object {
         list.add(2);
         Integer[] integers = list.toArray(new Integer[list.size()]);
         System.out.println(Arrays.toString(integers));
+
+        LinkedList<Integer> list1 = new LinkedList<>();
+        LinkedList<Integer> list2;
+        list1.add(9);list1.add(5);list1.add(4);
+
     }
 }
