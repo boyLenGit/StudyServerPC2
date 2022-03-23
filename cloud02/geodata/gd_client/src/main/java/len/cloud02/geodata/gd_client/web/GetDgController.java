@@ -3,7 +3,6 @@ package len.cloud02.geodata.gd_client.web;
 import len.cloud02.geodata.gd_client.pojo.OneWell;
 import len.cloud02.geodata.gd_client.service.RestOneWellService;
 import len.cloud02.geodata.gd_client.util.out.LenLog;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
