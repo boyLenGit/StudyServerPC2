@@ -31,6 +31,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/geodata/gd_client/src/main/resources" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
@@ -149,7 +152,7 @@
       <workItem from="1647506935153" duration="3848000" />
       <workItem from="1647518509094" duration="9181000" />
       <workItem from="1647615755384" duration="1248000" />
-      <workItem from="1647939148637" duration="9295000" />
+      <workItem from="1647939148637" duration="10327000" />
     </task>
     <servers />
   </component>
@@ -269,6 +272,10 @@
       <screen x="0" y="25" width="1680" height="965" />
     </state>
     <state width="1249" height="301" key="GridCell.Tab.2.right/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647521601952" />
+    <state x="328" y="116" key="SettingsEditor" timestamp="1648043981577">
+      <screen x="0" y="25" width="1680" height="1025" />
+    </state>
+    <state x="328" y="116" key="SettingsEditor/-1920.25.1920.1055/0.25.1680.1025@0.25.1680.1025" timestamp="1648043981577" />
     <state x="-1257" y="25" width="1254" height="1055" key="dock-window-1" timestamp="1647518974876">
       <screen x="-1920" y="25" width="1920" height="1055" />
     </state>
