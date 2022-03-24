@@ -31,8 +31,9 @@ public class l144 {
             temp = stack.pop();
             if (temp==null) break;
             list.add(temp.val);
-            if (temp.left!=null) stack.add(temp.left);
             if (temp.right!=null) stack.add(temp.right);
+            if (temp.left!=null) stack.add(temp.left);
+
         }
         return list;
     }

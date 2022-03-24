@@ -995,6 +995,11 @@
           <line>34</line>
           <option name="timeStamp" value="309" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/leet/l144.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="311" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
