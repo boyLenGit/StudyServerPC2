@@ -22,6 +22,7 @@ public class l144 {
         if (node.right!=null) dg(node.right);
     }
 
+    // ↓ 用循环的方式做的
     public List<Integer> preorderTraversal2(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         stack.add(root);
@@ -33,7 +34,6 @@ public class l144 {
             list.add(temp.val);
             if (temp.right!=null) stack.add(temp.right);
             if (temp.left!=null) stack.add(temp.left);
-
         }
         return list;
     }
