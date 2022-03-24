@@ -24,6 +24,6 @@ public class lt003_object {
         });
         thread.start();
 
-
     }
 }
+
