@@ -11,8 +11,11 @@ public class l094 {
         TreeNode in1 = new TreeNode(1,
                 new TreeNode(2, new TreeNode(4), new TreeNode(5)),
                 new TreeNode(3, null, new TreeNode(6)));
+        TreeNode in2 = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
+        TreeNode in3 = new TreeNode(2, new TreeNode(3, new TreeNode(1), null), null);
         Solution solution = new Solution();
-        System.out.println(solution.inorderTraversal2(in1));
+        System.out.println(solution.inorderTraversal3(in2));
+        System.out.println(1);
     }
 }
 
@@ -32,21 +35,50 @@ class Solution {
     }
 
     public List<Integer> inorderTraversal2(TreeNode root) {
+        // 自己尝试的循环法,错误,做不出来
         List<Integer> res = new LinkedList<>();
         Stack<TreeNode> stack = new Stack<>();
         TreeNode current = root;
-        while (!stack.isEmpty()){
+        if (current==null) return res;
+        while (true){
             while (current.left!=null){
                 stack.add(current);
                 current = current.left;
             }
             res.add(current.val);
-            current = stack.pop();
-            res.add(current.val);
-            if (current.right!=null){
-                current  = current.right;
+            if (!stack.isEmpty()){
+                current = stack.pop();
+                res.add(current.val);
+            }
+            while (!stack.isEmpty() && current.right==null){
+                current = stack.pop();
+                res.add(current.val);
+                current = current.right;
+            }
+            if (stack.isEmpty() && current.right==null) break;
+        }
+        return res;
+    }
+
+    public List<Integer> inorderTraversal3(TreeNode root) {
+        List<Integer> res = new LinkedList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode deep_left = root;
+        TreeNode temp;
+        if (deep_left==null) return res;
+        while (!stack.isEmpty() || deep_left!=null){
+            while (deep_left!=null){
+                stack.push(deep_left);
+                deep_left = deep_left.left;
+            }
+            // ↓ 如果没有right,则一直pop,然后存就行了
+            temp = stack.pop();
+            res.add(temp.val);
+            if (temp.right!=null){
+                deep_left = temp.right;
             }
         }
         return res;
     }
+
 }
