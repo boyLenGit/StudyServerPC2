@@ -2,10 +2,7 @@ package lenTest;
 
 import leet.help.TreeNode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class lt003_object {
     public static void main(String[] ad){
@@ -23,6 +20,9 @@ public class lt003_object {
             }
         });
         thread.start();
+        int[] array = new int[]{1,2,3,4,5,6};
+        System.out.println(array);
+
 
     }
 }
