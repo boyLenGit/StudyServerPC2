@@ -177,7 +177,7 @@
                     var series = this.series[0];
                     setInterval(function () {
                         var x = (new Date()).getTime(), // current time
-                            y = mem_usage
+                            y = mem_usage  // 获取mem_usage，mem_usage通过定时函数，定期刷新，
                         series.addPoint([x, y], true, true);
                     }, data_refresh_time);
                 }
