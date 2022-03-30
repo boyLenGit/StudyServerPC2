@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- LenUpdate: 文章部分为动态内容，将index的内容承接了过来 -->
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
@@ -25,11 +26,11 @@
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 
 <!--****** 导航 ******-->
-<!--
-ui:表示调用Semantic的导航模版
-inverted:表示导航采用白色反转的颜色——黑色
-attached:轨道可以依附在主窗口
--->
+    <!--
+    ui:表示调用Semantic的导航模版
+    inverted:表示导航采用白色反转的颜色——黑色
+    attached:轨道可以依附在主窗口
+    -->
 <nav class="ui inverted attached segment LenCSS-m-padded-tb-mini LenCssDisplay-shadow-middle">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
@@ -178,7 +179,7 @@ attached:轨道可以依附在主窗口
         <div class="ui attached segment">
             <!-- 功能列表 -->
             <div>
-                <a class="ui facebook button">
+                <button class="ui facebook button">
                     <div class="ui items">
                         <div class="item">
                             <i class="huge random icon"></i>
@@ -187,9 +188,9 @@ attached:轨道可以依附在主窗口
                             <h2>工作流编辑器</h2>
                         </div>
                     </div>
-                </a>
+                </button>
 
-                <a class="ui brown button" href="#" th:href="@{/cluster/monitor/singleServerMonitor}">
+                <button class="ui brown button">
                     <div class="ui items">
                         <div class="item">
                             <i class="huge sitemap icon"></i>
@@ -198,9 +199,9 @@ attached:轨道可以依附在主窗口
                             <h2>分布式集群</h2>
                         </div>
                     </div>
-                </a>
+                </button>
 
-                <a class="ui linkedin button">
+                <button class="ui linkedin button">
                     <div class="ui items">
                         <div class="item">
                             <i class="huge edit icon"></i>
@@ -209,9 +210,9 @@ attached:轨道可以依附在主窗口
                             <h2>自定义模块</h2>
                         </div>
                     </div>
-                </a>
+                </button>
 
-                <a class="ui teal button">
+                <button class="ui teal button">
                     <div class="ui items">
                         <div class="item">
                             <i class="huge images icon"></i>
@@ -220,9 +221,9 @@ attached:轨道可以依附在主窗口
                             <h2>可视化绘图</h2>
                         </div>
                     </div>
-                </a>
+                </button>
 
-                <a class="ui orange button">
+                <button class="ui orange button">
                     <div class="ui items">
                         <div class="item">
                             <i class="huge database icon"></i>
@@ -231,9 +232,9 @@ attached:轨道可以依附在主窗口
                             <h2>MySQL数据库</h2>
                         </div>
                     </div>
-                </a>
+                </button>
 
-                <a class="ui olive button">
+                <button class="ui olive button">
                     <div class="ui items">
                         <div class="item">
                             <i class="huge puzzle piece icon"></i>
@@ -242,7 +243,7 @@ attached:轨道可以依附在主窗口
                             <h2>外部插件挂载</h2>
                         </div>
                     </div>
-                </a>
+                </button>
             </div>
         </div>
 
@@ -465,7 +466,7 @@ attached:轨道可以依附在主窗口
 <!--****** 底部footer ******-->
 <footer class="ui inverted vertical segment">
     <div class="ui center aligned container">
-        <!--        grid一共有16份-->
+<!--        grid一共有16份-->
         <div class="ui inverted divided stackable grid">
             <div class="four wide column">
                 <img src="../static/image/index/bottom_code.png" th:src="@{/image/index/bottom_code.png}" class="ui rounded image" alt="" style="width: 7em">
