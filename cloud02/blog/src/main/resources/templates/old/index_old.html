@@ -8,14 +8,14 @@
     <!--    Semantic的CSS包-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <!--    自定义CSS导入。必须加rel="stylesheet"才可以生效！-->
-    <link rel="stylesheet" href="../static/css/index.css" th:href="@{/css/index.css}">
-    <link rel="stylesheet" href="../static/css/text.css" th:href="@{/css/text.css}">
-    <link rel="stylesheet" href="../static/css/logic.css" th:href="@{/css/logic.css}">
-    <link rel="stylesheet" href="../static/css/button.css" th:href="@{/css/button.css}">
-    <link rel="stylesheet" href="../static/css/display.css" th:href="@{/css/display.css}">
-    <link rel="stylesheet" href="../static/css/LRMme.css" th:href="@{/css/LRMme.css}">
-    <link rel="stylesheet" href="../static/css/LRManimate.css" th:href="@{/css/LRManimate.css}">
-    <link rel="stylesheet" href="../static/css/LRMtypo.css" th:href="@{/css/LRMtypo.css}">
+    <link rel="stylesheet" href="../../static/css/index.css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" href="../../static/css/text.css" th:href="@{/css/text.css}">
+    <link rel="stylesheet" href="../../static/css/logic.css" th:href="@{/css/logic.css}">
+    <link rel="stylesheet" href="../../static/css/button.css" th:href="@{/css/button.css}">
+    <link rel="stylesheet" href="../../static/css/display.css" th:href="@{/css/display.css}">
+    <link rel="stylesheet" href="../../static/css/LRMme.css" th:href="@{/css/LRMme.css}">
+    <link rel="stylesheet" href="../../static/css/LRManimate.css" th:href="@{/css/LRManimate.css}">
+    <link rel="stylesheet" href="../../static/css/LRMtypo.css" th:href="@{/css/LRMtypo.css}">
 </head>
 <body>
 <!--****** 导包 ******-->
@@ -25,11 +25,11 @@
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 
 <!--****** 导航 ******-->
-<!--
-ui:表示调用Semantic的导航模版
-inverted:表示导航采用白色反转的颜色——黑色
-attached:轨道可以依附在主窗口
--->
+    <!--
+    ui:表示调用Semantic的导航模版
+    inverted:表示导航采用白色反转的颜色——黑色
+    attached:轨道可以依附在主窗口
+    -->
 <nav class="ui inverted attached segment LenCSS-m-padded-tb-mini LenCssDisplay-shadow-middle">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
@@ -60,208 +60,6 @@ attached:轨道可以依附在主窗口
 
 <!--****** 中间内容 ******-->
 <div class="LenCSS-Pad-middle-div1">
-
-    <!--****** 中间内容-任务状态部分 ******-->
-    <div class="ui container">
-        <!-- container要包含下面两个侧栏。container可以更好适配屏幕尺寸-->
-        <!-- 文章列表头部     top attached搭配下面“文章列表本体”，用于让两者连接起来-->
-        <div class="ui top attached segment">
-            <!-- 配置grid -->
-            <div class="ui middle aligned two column grid">
-                <div class="column">
-                    <h2 class="ui red header">状态</h2>
-                </div>
-                <div class="right aligned column">
-                    <h3 class="ui red header LenCSS-Pad-middle-blog-left-front">3</h3>项任务
-                </div>
-            </div>
-        </div>
-
-        <!-- 状态区主体 -->
-        <div class="ui attached segment">
-            <!-- 用户状态列表（正在运行、最近使用） -->
-            <div class="ui cards">
-                <!-- 1.正在运行 -->
-                <div class="ui card">
-                    <div class="image dimmable">
-                        <div class="ui blurring inverted dimmer transition hidden">
-                            <div class="content">
-                                <div class="center">
-                                    <div class="ui teal button">继续任务</div>
-                                </div>
-                            </div>
-                        </div>
-                        <img src="../static/image/module/clowdflows/web_editor_01.jpg" th:src="@{/image/module/clowdflows/web_editor_01.jpg}">
-                    </div>
-                    <div class="content">
-                        <div class="header">生成对抗网络曲面拟合</div>
-                        <div class="meta">
-                            <a class="group">运行环境 : Anaconda-Python37</a>
-                        </div>
-                        <div class="description">程序说明 : 设计优化的生成对抗网络架构，实现稀疏地震数据超分辨率重建。</div>
-                    </div>
-                    <div class="ui extra content">
-                        <i class="red play icon"></i> 正在运行
-                    </div>
-                </div>
-
-                <!-- 2.正在运行 -->
-                <div class="ui card">
-                    <div class="image dimmable">
-                        <div class="ui blurring inverted dimmer transition hidden">
-                            <div class="content">
-                                <div class="center">
-                                    <div class="ui teal button">继续任务</div>
-                                </div>
-                            </div>
-                        </div>
-                        <img src="../static/image/module/clowdflows/web_editor_01.jpg" th:src="@{/image/module/clowdflows/web_editor_01.jpg}">
-                    </div>
-                    <div class="content">
-                        <div class="header">曲波变换数据去噪</div>
-                        <div class="meta">
-                            <a class="group">运行环境 : Matlab 2021a</a>
-                        </div>
-                        <div class="description">程序说明 : 设计优化的生成对抗网络架构，实现稀疏地震数据超分辨率重建。</div>
-                    </div>
-                    <div class="extra content">
-                        <i class="red play icon"></i> 正在运行
-                    </div>
-                </div>
-
-                <!-- 3.等待队列 -->
-                <div class="ui card">
-                    <div class="image dimmable">
-                        <div class="ui blurring inverted dimmer transition hidden">
-                            <div class="content">
-                                <div class="center">
-                                    <div class="ui teal button">继续任务</div>
-                                </div>
-                            </div>
-                        </div>
-                        <img src="../static/image/module/clowdflows/web_editor_01.jpg" th:src="@{/image/module/clowdflows/web_editor_01.jpg}">
-                    </div>
-                    <div class="content">
-                        <div class="header">加权抛物Radon变换</div>
-                        <div class="meta">
-                            <a class="group">运行环境 : 暂未运行</a>
-                        </div>
-                        <div class="description">程序说明 : 于部分动校正(NMO)后反射同相轴在CMP道集上的抛物线走时近似。</div>
-                    </div>
-                    <div class="extra content">
-                        <i class="pause icon"></i> 等待队列
-                    </div>
-                </div>
-            </div>
-            <br><!-- 系统状态列表（正在运行、正在队列、可用资源） -->
-        </div>
-        <br>
-    </div>
-
-    <!--****** 中间内容-功能部分 ******-->
-    <div class="ui container">
-        <!-- container要包含下面两个侧栏。container可以更好适配屏幕尺寸-->
-        <!-- 文章列表头部     top attached搭配下面“文章列表本体”，用于让两者连接起来-->
-        <div class="ui top attached segment">
-            <!-- 配置grid -->
-            <div class="ui middle aligned two column grid ">
-                <div class="column">
-                    <h2 class="ui blue header">功能</h2>
-                </div>
-                <div class="right aligned column">
-                    共<h2 class="ui blue header LenCSS-Pad-middle-blog-left-front">5</h2>页
-                </div>
-            </div>
-        </div>
-
-        <!-- 功能区主体 -->
-        <div class="ui attached segment">
-            <!-- 功能列表 -->
-            <div>
-                <button class="ui facebook button">
-                    <div class="ui items">
-                        <div class="item">
-                            <i class="huge random icon"></i>
-                        </div>
-                        <div class="item">
-                            <h2>工作流编辑器</h2>
-                        </div>
-                    </div>
-                </button>
-
-                <button class="ui brown button">
-                    <div class="ui items">
-                        <div class="item">
-                            <i class="huge sitemap icon"></i>
-                        </div>
-                        <div class="item">
-                            <h2>分布式集群</h2>
-                        </div>
-                    </div>
-                </button>
-
-                <button class="ui linkedin button">
-                    <div class="ui items">
-                        <div class="item">
-                            <i class="huge edit icon"></i>
-                        </div>
-                        <div class="item">
-                            <h2>自定义模块</h2>
-                        </div>
-                    </div>
-                </button>
-
-                <button class="ui teal button">
-                    <div class="ui items">
-                        <div class="item">
-                            <i class="huge images icon"></i>
-                        </div>
-                        <div class="item">
-                            <h2>可视化绘图</h2>
-                        </div>
-                    </div>
-                </button>
-
-                <button class="ui orange button">
-                    <div class="ui items">
-                        <div class="item">
-                            <i class="huge database icon"></i>
-                        </div>
-                        <div class="item">
-                            <h2>MySQL数据库</h2>
-                        </div>
-                    </div>
-                </button>
-
-                <button class="ui olive button">
-                    <div class="ui items">
-                        <div class="item">
-                            <i class="huge puzzle piece icon"></i>
-                        </div>
-                        <div class="item">
-                            <h2>外部插件挂载</h2>
-                        </div>
-                    </div>
-                </button>
-            </div>
-        </div>
-
-        <!--                左侧栏的最底部【翻页按钮部分】-->
-        <div class="ui bottom attached segment">
-            <div class="ui middle aligned two column grid">
-                <div class="column">
-                    <a href="#" class="ui mini teal basic button">上一页</a>
-                </div>
-                <div class="right aligned column">
-                    <a href="#" class="ui mini teal basic button">下一页</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-
-
-    <!--****** 中间内容-博客部分 ******-->
     <div class="ui container">
         <!--        container要包含下面两个侧栏。container可以更好适配屏幕尺寸-->
         <div class="ui stackable grid">
@@ -465,10 +263,10 @@ attached:轨道可以依附在主窗口
 <!--****** 底部footer ******-->
 <footer class="ui inverted vertical segment">
     <div class="ui center aligned container">
-        <!--        grid一共有16份-->
+<!--        grid一共有16份-->
         <div class="ui inverted divided stackable grid">
             <div class="four wide column">
-                <img src="../static/image/index/bottom_code.png" th:src="@{/image/index/bottom_code.png}" class="ui rounded image" alt="" style="width: 7em">
+                <img src="../../static/image/index/bottom_code.png" th:src="@{/image/index/bottom_code.png}" class="ui rounded image" alt="" style="width: 7em">
             </div>
 
             <div class="ui four wide column">
