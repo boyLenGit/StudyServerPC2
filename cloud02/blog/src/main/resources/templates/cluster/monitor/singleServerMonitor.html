@@ -149,6 +149,7 @@
             }
         });
     }, data_refresh_time)
+
     setInterval(function(){
         $.ajax({
             url : "/cluster/monitor/singleServerMonitor/ajaxObject_vmstat",
@@ -167,6 +168,7 @@
             useUTC : false
         }
     });
+    
     // ------------------------------------------------- mem-usage -------------------------------------------------
     Highcharts.stockChart('container-mem-usage', {
         chart : {

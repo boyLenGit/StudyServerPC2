@@ -17,7 +17,7 @@ import java.util.Arrays;
 public class LogAspect {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Pointcut("execution(* len.cloud01.artifact.test.*.*(..))") //切入点表达式。表示len.cloud01.artifact下所有类中所有方法都拦截掉。第一个*是指返回值。execution中内容规范：返回值类型 包名.类名.方法名(参数）
+    @Pointcut("execution(* len.cloud02.blog.test.*.*(..))") //切入点表达式。表示len.cloud01.artifact下所有类中所有方法都拦截掉。第一个*是指返回值。execution中内容规范：返回值类型 包名.类名.方法名(参数）
     public void entry_point(){
         // 定义了切入点
     }
