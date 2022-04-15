@@ -1050,6 +1050,11 @@
           <line>6</line>
           <option name="timeStamp" value="323" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/lenTest/lt005_threadlocal.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="324" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

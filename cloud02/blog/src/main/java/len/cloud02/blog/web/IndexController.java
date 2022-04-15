@@ -7,6 +7,7 @@ import len.cloud02.blog.service.CommentService;
 import len.cloud02.blog.service.TagService;
 import len.cloud02.blog.service.TypeService;
 import len.cloud02.blog.util.base.LenLog;
+import org.apache.catalina.core.ApplicationContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -60,4 +61,5 @@ public class IndexController {
         model.addAttribute("comments", commentService.listCommentByBlogIdAndParentCommentNull(id));
         return "article";
     }
+
 }
