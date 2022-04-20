@@ -12,7 +12,7 @@ import java.io.*;
 @Service
 public class LinuxSessionHandle implements LinuxSessionHandleImpl, Closeable {
     Logger logger = LoggerFactory.getLogger(LinuxSessionHandle.class);
-    private Session session;
+    private Session session;  // session.cn.stdoutBuffer中存储了执行命令的返回内容，如果要查看
 
     /**
      * open session then execute commands on remote server and return the result of it
