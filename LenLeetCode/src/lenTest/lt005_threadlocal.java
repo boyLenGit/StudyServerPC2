@@ -22,6 +22,7 @@ public class lt005_threadlocal {
             System.out.println(tt.get());
         });
         thread2.start();
+        int[] a = new int[]{3};
     }
 
 }
