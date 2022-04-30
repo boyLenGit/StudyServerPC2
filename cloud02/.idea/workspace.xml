@@ -70,7 +70,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReadFile">
+  <component name="RunManager" selected="Application.SSH2">
     <configuration name="ReadFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="len.cloud02.blog.ReadFile" />
       <module name="blog" />
@@ -84,13 +84,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SSH2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="len.cloud02.blog.SSH2" />
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="len.cloud02.blog.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="len.cloud02.blog in blog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="len.cloud02.blog.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="len.cloud02.blog" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/cloud02/blog/templates/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="index_v3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/cloud02/blog/templates/old/index_v3.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="index_v4.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/cloud02/blog/templates/old/index_v4.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/cloud02/blog/templates/admin/login.html" useBuiltInWebServerPort="true">
@@ -166,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SSH2" />
+        <item itemvalue="JUnit.len.cloud02.blog in blog" />
         <item itemvalue="Application.ReadFile" />
         <item itemvalue="JavaScript Debug.login.html" />
         <item itemvalue="JavaScript Debug.index.html" />
-        <item itemvalue="JavaScript Debug.index_v4.html" />
-        <item itemvalue="JavaScript Debug.index_v3.html" />
       </list>
     </recent_temporary>
   </component>
@@ -194,7 +215,8 @@
       <workItem from="1650425887968" duration="6975000" />
       <workItem from="1650463122077" duration="3209000" />
       <workItem from="1650806041356" duration="614000" />
-      <workItem from="1650896881065" duration="1799000" />
+      <workItem from="1650896881065" duration="2403000" />
+      <workItem from="1651329291908" duration="1264000" />
     </task>
     <servers />
   </component>
