@@ -11,7 +11,7 @@ import java.util.Vector;
 public class SSH2 {
     public static void main(String[] args) {
 //        command();
-        file_test();
+        getFilename_test();
     }
 
     public static void command_test(){
@@ -51,10 +51,30 @@ public class SSH2 {
 
         try {
             connection.authenticateWithPassword("cloud", "123");
-            Session session = connection.openSession();
             SCPClient scpClient = connection.createSCPClient();
             SFTPv3Client client = new SFTPv3Client(connection);
             scpClient.put("/Volumes/nvme/nvmeDownload/shuliehe.zip","/home/cloud/Users/mbl/data");
+            Vector<SFTPv3DirectoryEntry> files = client.ls("/home/cloud/Users/mbl/data");
+            for (SFTPv3DirectoryEntry item: files){
+                System.out.println(item.filename);
+            }
+            client.close();
+            connection.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static String[] getFilename_test(){
+        Connection connection = new Connection("172.19.144.52");
+        try {
+            connection.connect();
+        }catch (IOException exception){
+            exception.printStackTrace();
+        }
+        try {
+            connection.authenticateWithPassword("cloud", "123");
+            SFTPv3Client client = new SFTPv3Client(connection);
             Vector<SFTPv3DirectoryEntry> files = client.ls("/home/cloud/Users/mbl/data");
             for (SFTPv3DirectoryEntry item: files){
                 System.out.println(item.filename);
