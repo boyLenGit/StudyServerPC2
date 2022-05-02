@@ -10,10 +10,11 @@ import java.util.Vector;
 
 public class SSH2 {
     public static void main(String[] args) {
-        command();
+//        command();
+        file_test();
     }
 
-    public static void command(){
+    public static void command_test(){
         Connection connection = new Connection("172.19.144.52");
         try {
             connection.connect();
@@ -33,12 +34,14 @@ public class SSH2 {
                 String line = bufferedReader.readLine();
                 System.out.println(line);
             }
+            client.close();
+            connection.close();
         }catch (IOException e){
             e.printStackTrace();
         }
     }
 
-    public static void file(){
+    public static void file_test(){
         Connection connection = new Connection("172.19.144.52");
         try {
             connection.connect();
@@ -51,18 +54,13 @@ public class SSH2 {
             Session session = connection.openSession();
             SCPClient scpClient = connection.createSCPClient();
             SFTPv3Client client = new SFTPv3Client(connection);
-            scpClient.put("","");
-            Vector<SFTPv3DirectoryEntry> files = client.ls("");
-
-
-            session.execCommand("free -m");
-            InputStream inputStream = session.getStdout();
-            InputStreamReader reader = new InputStreamReader(inputStream);
-            BufferedReader bufferedReader = new BufferedReader(reader);
-            for (int i1=0; i1<3; i1++){
-                String line = bufferedReader.readLine();
-                System.out.println(line);
+            scpClient.put("/Volumes/nvme/nvmeDownload/shuliehe.zip","/home/cloud/Users/mbl/data");
+            Vector<SFTPv3DirectoryEntry> files = client.ls("/home/cloud/Users/mbl/data");
+            for (SFTPv3DirectoryEntry item: files){
+                System.out.println(item.filename);
             }
+            client.close();
+            connection.close();
         }catch (IOException e){
             e.printStackTrace();
         }
