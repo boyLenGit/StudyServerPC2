@@ -25,6 +25,14 @@ public class lt005_threadlocal {
         int[] a = new int[]{3};
     }
 
+    static ThreadLocal<Integer> threadLocal1 = new ThreadLocal<>();
+    public static void cleanThreadLocal(){
+        try {
+            // 业务逻辑
+        }finally {
+            threadLocal1.remove();
+        }
+    }
 }
 
 class Test005_Threadlocal{
