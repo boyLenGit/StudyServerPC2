@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>书籍列表</title>
@@ -14,8 +14,23 @@
 <h1>书籍管理系统</h1>
 
 <div class="ui container">
-    <div class="ui button">
-        <a>书籍添加</a>
+    <div class="ui attached segment">
+        <h1>这里是书籍管理系统</h1>
+
+        <!--书籍管理页面按钮-->
+        <div>
+            <div class="ui button">
+                <i class="huge archive icon"></i>
+                <a>书籍添加</a>
+            </div>
+        </div>
+
+        <!--书籍显示列表-->
+        <div>
+            <div class="ui padded vertical segment" th:each>
+
+            </div>
+        </div>
     </div>
 </div>
 
