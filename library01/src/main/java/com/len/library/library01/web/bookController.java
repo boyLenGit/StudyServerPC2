@@ -32,13 +32,13 @@ public class bookController {
         return "book_list";
     }
 
-    @GetMapping
+    @GetMapping("/books/add")
     public String addBook_jump(Model model){
         model.addAttribute("book", new Book());
-        return "books/add";
+        return "add_book";
     }
 
-    @PostMapping("/books/add")
+    @PostMapping("/books/add_main")
     public String addBook(Book book, RedirectAttributes redirectAttributes, HttpSession httpSession){
         System.out.println("LenTest-addBook: " + book.toString());
         bookService.addBook(book);
