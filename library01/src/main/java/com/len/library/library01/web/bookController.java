@@ -42,6 +42,6 @@ public class bookController {
     public String addBook(Book book, RedirectAttributes redirectAttributes, HttpSession httpSession){
         System.out.println("LenTest-addBook: " + book.toString());
         bookService.addBook(book);
-        return "redirect:book_list";
+        return "redirect:/books";
     }
 }
