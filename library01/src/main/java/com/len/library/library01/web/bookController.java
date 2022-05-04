@@ -32,7 +32,7 @@ public class bookController {
 
     @GetMapping("/books/add")
     public String addBook(Book book, RedirectAttributes redirectAttributes, HttpSession httpSession){
-        System.out.println(book.toString());
+        System.out.println("LenTest: " + book.toString());
         bookService.addBook(book);
         return "redirect:/books";
     }
