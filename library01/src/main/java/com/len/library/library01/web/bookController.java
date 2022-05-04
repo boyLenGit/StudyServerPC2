@@ -23,6 +23,7 @@ public class bookController {
                                         Model model)
     {
         Page<Book> books = bookService.getBookList(pageable);
+        System.out.println("LenTest: " + books.getTotalElements());
         model.addAttribute("books", books);
         return "book_list";
     }
