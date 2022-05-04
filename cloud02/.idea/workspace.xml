@@ -71,7 +71,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SSH2">
+  <component name="RunManager" selected="JavaScript Debug.admin_publish.html">
     <configuration name="ReadFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="len.cloud02.blog.ReadFile" />
       <module name="blog" />
@@ -112,7 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/cloud02/blog/templates/index.html" useBuiltInWebServerPort="true">
+    <configuration name="admin_publish.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cloud02/blog/templates/admin/admin_publish.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/cloud02/blog/templates/admin/login.html" useBuiltInWebServerPort="true">
@@ -188,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.admin_publish.html" />
         <item itemvalue="Application.SSH2" />
         <item itemvalue="JUnit.len.cloud02.blog in blog" />
         <item itemvalue="Application.ReadFile" />
         <item itemvalue="JavaScript Debug.login.html" />
-        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +220,7 @@
       <workItem from="1651329291908" duration="13353000" />
       <workItem from="1651671788103" duration="237000" />
       <workItem from="1651672051289" duration="32000" />
-      <workItem from="1651672369242" duration="4667000" />
+      <workItem from="1651672369242" duration="4976000" />
     </task>
     <servers />
   </component>
