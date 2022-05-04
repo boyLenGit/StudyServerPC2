@@ -1,11 +1,20 @@
 package com.len.library.library01.pojo;
 
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
+@Entity(name = "user")
+@Table
 public class User {
+    @Id
+    @GeneratedValue
     private int id;
     private String name;
-    private Book book;
+
+    @OneToMany(mappedBy = "user")
+    private List<Book> books = new ArrayList<>();
 
     public User() {
     }
@@ -26,12 +35,12 @@ public class User {
         this.name = name;
     }
 
-    public Book getBook() {
-        return book;
+    public List<Book> getBooks() {
+        return books;
     }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public void setBooks(List<Book> books) {
+        this.books = books;
     }
 
     @Override
@@ -39,7 +48,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", book=" + book +
+                ", books=" + books +
                 '}';
     }
 }

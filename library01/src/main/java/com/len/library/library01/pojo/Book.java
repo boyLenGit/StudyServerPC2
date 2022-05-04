@@ -1,15 +1,19 @@
 package com.len.library.library01.pojo;
 
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
+@Entity(name = "book")
+@Table
 public class Book {
+    @Id
+    @GeneratedValue
     private int id;
-    private String name;
-    private String author;
-    private String publisher;
+    private String name;  // 书名
+    private String author;  // 作者
+    private String publisher; // 出版社
     private int view_time;
 
-//    @ManyToOne // 多本书对应一个用户，即一个用户可以借多本书。这句代码用于进行对象之间的关系绑定，从而方便数据库数据的获取。
+    @ManyToOne // 多本书对应一个用户，即一个用户可以借多本书。这句代码用于进行对象之间的关系绑定，从而方便数据库数据的获取。
     private User user;
 
     public Book() {
