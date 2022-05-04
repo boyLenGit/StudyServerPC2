@@ -10,7 +10,9 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -26,5 +28,12 @@ public class bookController {
         System.out.println("LenTest: " + books);
         model.addAttribute("books", books);
         return "book_list";
+    }
+
+    @GetMapping("/books/add")
+    public String addBook(Book book, RedirectAttributes redirectAttributes, HttpSession httpSession){
+        System.out.println(book.toString());
+        bookService.addBook(book);
+        return "redirect:/books";
     }
 }

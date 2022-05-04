@@ -7,11 +7,11 @@ import javax.persistence.*;
 public class Book {
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     private String name;  // 书名
     private String author;  // 作者
     private String publisher; // 出版社
-    private int view_time;
+    private Integer view_time;
 
     @ManyToOne // 多本书对应一个用户，即一个用户可以借多本书。这句代码用于进行对象之间的关系绑定，从而方便数据库数据的获取。
     private User user;
@@ -19,11 +19,11 @@ public class Book {
     public Book() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -51,11 +51,11 @@ public class Book {
         this.publisher = publisher;
     }
 
-    public int getView_time() {
+    public Integer getView_time() {
         return view_time;
     }
 
-    public void setView_time(int view_time) {
+    public void setView_time(Integer view_time) {
         this.view_time = view_time;
     }
 

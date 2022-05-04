@@ -18,4 +18,11 @@ public class BookService {
         Page<Book> books = bookRepository.findAll(pageable);
         return books;
     }
+
+    public Book addBook(Book book){
+        if (book.getId()==null){
+            book.setView_time(0);
+        }
+        return bookRepository.save(book);
+    }
 }
