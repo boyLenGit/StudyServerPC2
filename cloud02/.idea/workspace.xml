@@ -31,9 +31,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/blog/src/main/resources/templates" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.20574713" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
@@ -220,7 +220,7 @@
       <workItem from="1651329291908" duration="13353000" />
       <workItem from="1651671788103" duration="237000" />
       <workItem from="1651672051289" duration="32000" />
-      <workItem from="1651672369242" duration="5385000" />
+      <workItem from="1651672369242" duration="5690000" />
     </task>
     <servers />
   </component>
@@ -448,11 +448,12 @@
     <state width="714" height="608" key="GridCell.Tab.2.right/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.958@1680.-515.1080.1895" timestamp="1649987853048" />
     <state width="1139" height="302" key="GridCell.Tab.2.right/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.960@0.25.1680.960" timestamp="1650463098788" />
     <state width="1249" height="301" key="GridCell.Tab.2.right/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1647521601952" />
-    <state x="328" y="110" key="SettingsEditor" timestamp="1651672074139">
-      <screen x="0" y="25" width="1680" height="958" />
+    <state x="-1545" y="119" key="SettingsEditor" timestamp="1651677956895">
+      <screen x="-1920" y="25" width="1920" height="1055" />
     </state>
     <state x="328" y="116" key="SettingsEditor/-1920.25.1920.1055/0.25.1680.1025@0.25.1680.1025" timestamp="1648043981577" />
     <state x="328" y="110" key="SettingsEditor/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.958@0.25.1680.958" timestamp="1651672074139" />
+    <state x="-1545" y="119" key="SettingsEditor/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.959@-1920.25.1920.1055" timestamp="1651677956895" />
     <state width="840" height="480" key="XDebugger.FullValuePopup" timestamp="1650463758847">
       <screen x="0" y="25" width="1680" height="960" />
     </state>
