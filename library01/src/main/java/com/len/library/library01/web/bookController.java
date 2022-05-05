@@ -2,6 +2,7 @@ package com.len.library.library01.web;
 
 import com.len.library.library01.pojo.Book;
 import com.len.library.library01.service.BookService;
+import com.len.library.library01.util.LenLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -9,11 +10,14 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 @Controller
 public class bookController {
@@ -33,15 +37,28 @@ public class bookController {
     @GetMapping("/books/add")
     public String addBook_jump(Model model){
         Book book = new Book();
-        book.setName("博客名称测试");
         model.addAttribute("book", book);
         return "book_add";
     }
 
-    @PostMapping("/books/add1")
-    public String addBook(Book book, RedirectAttributes redirectAttributes, HttpSession httpSession){
-        System.out.println("LenTest-addBook: " + book.toString());
+    @PostMapping("/books/add")
+    public String addBook(@Valid Book book, BindingResult bindingResult, RedirectAttributes redirectAttributes){
+        LenLog.info("addBook", book.toString());
         bookService.addBook(book);
+        return "redirect:/books";
+    }
+
+    @PostMapping("/books/modify/{id}")
+    public String modifyBook(@Valid Book book, BindingResult bindingResult, RedirectAttributes redirectAttributes){
+        LenLog.info("modifyBook", book.toString());
+        bookService.modifyBook(book);
+        return "redirect:/books";
+    }
+
+    @GetMapping("/books/delete/{id}")
+    public String deleteBook(@PathVariable Integer id, Model model){
+        LenLog.info("deleteBook", String.valueOf(id));
+        bookService.deleteBook(id);
         return "redirect:/books";
     }
 }

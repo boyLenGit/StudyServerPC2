@@ -16,8 +16,6 @@
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 <!--******     ******-->
 
-<h1>书籍管理系统</h1>
-
 <div class="ui container">
     <div class="ui attached segment">
         <h1>这里是书籍管理系统</h1>
@@ -27,7 +25,7 @@
             <a href="#" th:href="@{/books/add}">
                 <div class="ui button">
                     <i class="archive icon"></i>
-                    <a>书籍列表</a>
+                    <a>增加书籍</a>
                 </div>
             </a>
         </div>
@@ -52,8 +50,8 @@
                             <td th:text="${book.author}">测试作者</td>
                             <td th:text="${book.publisher}">测试出版社</td>
                             <td>
-                                <a href="#" class="ui mini teal basic button">编辑</a>
-                                <a href="#" class="ui mini teal basic button">删除</a>
+                                <a href="#" class="ui mini teal basic button" th:href="@{/books/modify/{id}(id=${book.id})">编辑</a>
+                                <a href="#" class="ui mini teal basic button" th:href="@{/books/delete/{id}(id=${book.id})">删除</a>
                             </td>
                         </tr>
                     </tbody>

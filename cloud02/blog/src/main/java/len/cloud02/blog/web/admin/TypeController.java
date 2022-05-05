@@ -76,7 +76,7 @@ public class TypeController {
 
     // 修改type
     @PostMapping("/admin_types/{id}")
-    public String editPost(@Valid Type type, BindingResult result,@PathVariable Long id, RedirectAttributes attributes) {
+    public String editPost(@Valid Type type, BindingResult result, @PathVariable Long id, RedirectAttributes attributes) {
         // 验证要更新的type的name是否已存在
         Type type1 = typeService.getTypeByName(type.getName());
         if (type1 != null) {

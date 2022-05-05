@@ -19,10 +19,18 @@ public class BookService {
         return books;
     }
 
-    public Book addBook(Book book){
+    public void addBook(Book book){
         if (book.getId()==null){
             book.setView_time(0);
         }
+        bookRepository.save(book);
+    }
+
+    public Book modifyBook(Book book){
         return bookRepository.save(book);
+    }
+
+    public void deleteBook(Integer id){
+        bookRepository.deleteById(Long.valueOf(id));
     }
 }
