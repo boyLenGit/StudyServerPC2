@@ -24,7 +24,7 @@
 
         <!--书籍显示列表-->
         <div>
-            <form id="book_form" action="#" th:object="${book}" th:aciton="@{/books/add}" method="post" class="ui form">
+            <form id="book_form" method="post" action="#" th:object="${book}" th:aciton="@{/books/add}" class="ui form">
                 <div>
                     <input type="hidden" name="id" placeholder="书籍ID" th:value="*{id}">
                     <input type="text" name="name" placeholder="书籍名称" th:value="*{name}">
@@ -35,7 +35,7 @@
                     <br>
                     <!--书籍保存页面按钮-->
                     <div class="ui right aligned container">
-                        <button type="button" id="save_button" class="ui secondary button">保存</button>
+                        <button type="button" id="save_button" class="ui teal submit button">保存</button>
                     </div>
                 </div>
             </form>
@@ -47,11 +47,11 @@
 <script>
     console.log('Test');
     console.log($("[name='name']").val);
-
-    $('#save_button').click(function () {
-        alert('即将提交')
-        $('#book_form').submit();
-    });
+    //
+    // $('#save_button').click(function () {
+    //     alert('即将提交')
+    //     $('#book_form').submit();
+    // });
 </script>
 
 </body>
