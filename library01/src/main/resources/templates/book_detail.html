@@ -24,13 +24,10 @@
         <!--书籍显示列表-->
         <form action="#" method="post" th:object="${book}" th:action="@{/books/modify/{id}(id=*{id})}" class="ui form">
             <a>书籍ID: <a th:text="@{/books/modify/{id}(id=*{id})}">ID</a></a>
-            <input type="hidden" name="id" placeholder="书籍ID" th:value="*{id}">
+            <input type="hidden" name="id" th:value="*{id}">
             <input type="text" name="name" placeholder="书籍名称" th:value="*{name}">
             <input type="text" name="author" placeholder="书籍作者" th:value="*{author}">
             <input type="text" name="publisher" placeholder="出版社" th:value="*{publisher}">
-            <input type="text" name="content" placeholder="简介" th:value="*{content}">
-            <input type="text" name="picture" placeholder="封面图" th:value="*{picture}">
-            <input type="text" name="amount" placeholder="总库存" th:value="*{amount}">
             <!--书籍保存页面按钮-->
             <div class="ui right aligned container">
                 <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>

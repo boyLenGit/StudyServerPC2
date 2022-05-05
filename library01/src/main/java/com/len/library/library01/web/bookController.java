@@ -34,6 +34,7 @@ public class bookController {
         return "book_list";
     }
 
+    // 添加book-跳转
     @GetMapping("/books/add")
     public String addBook_jump(Model model){
         Book book = new Book();
@@ -41,6 +42,7 @@ public class bookController {
         return "book_add";
     }
 
+    // 添加book
     @PostMapping("/books/add")
     public String addBook(@Valid Book book, BindingResult bindingResult, RedirectAttributes redirectAttributes){
         LenLog.info("addBook", book.toString());
@@ -48,22 +50,25 @@ public class bookController {
         return "redirect:/books";
     }
 
-    @GetMapping("/books/modify_get/{id}")
-    public String modifyBook_Get(@PathVariable Integer id, Model model){
-        LenLog.info("modifyBook_Get", String.valueOf(id));
+    // 修改book-跳转
+    @GetMapping("/books/modify/{id}/get")
+    public String updateBook_Get(@PathVariable Integer id, Model model){
+        LenLog.info("updateBook_Get", String.valueOf(id));
         Book book = bookService.getBookById(id);
         model.addAttribute("book", book);
-        LenLog.info("modifyBook_Get", book.toString());
+        LenLog.info("updateBook_Get", book.toString());
         return "book_modify";
     }
 
-    @PostMapping("/books/modify_post/{id}")
-    public String modifyBook_POST(@Valid Book book, BindingResult bindingResult, @PathVariable Integer id, RedirectAttributes redirectAttributes){
-        LenLog.info("modifyBook", book.toString());
-        bookService.modifyBook(book);
+    // 修改book
+    @PostMapping("/books/modify/{id}")
+    public String updateBook_Post(@Valid Book book, BindingResult bindingResult, @PathVariable Integer id, RedirectAttributes redirectAttributes){
+        LenLog.info("updateBook_Post", id + " | " + book.toString());
+        bookService.updateBook(id, book);
         return "redirect:/books";
     }
 
+    // 删除book
     @GetMapping("/books/delete/{id}")
     public String deleteBook(@PathVariable Integer id, Model model){
         LenLog.info("deleteBook", String.valueOf(id));

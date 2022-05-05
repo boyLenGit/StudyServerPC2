@@ -2,6 +2,7 @@ package com.len.library.library01.service;
 
 import com.len.library.library01.dao.BookRepository;
 import com.len.library.library01.pojo.Book;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -32,8 +33,10 @@ public class BookService {
     }
 
     @Transactional  // JPA要求，没有事务支持（即没有给方法加@Transactional），不能执行更新和删除操作，会报错”Executing an update/delete query“
-    public Book modifyBook(Book book){
-        return bookRepository.save(book);
+    public Book updateBook(Integer id, Book book){
+        Book book_from_sql = getBookById(id);
+        BeanUtils.copyProperties(book, book_from_sql);
+        return bookRepository.save(book_from_sql);
     }
 
     @Transactional  // JPA要求，没有事务支持（即没有给方法加@Transactional），不能执行更新和删除操作，会报错”Executing an update/delete query“

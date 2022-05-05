@@ -40,6 +40,8 @@
                             <th>书名</th>
                             <th>作者</th>
                             <th>出版社</th>
+                            <th>借阅次数</th>
+                            <th>已借阅/总</th>
                             <th>操作</th>
                         </tr>
                     </thead>
@@ -49,8 +51,10 @@
                             <td th:text="${book.name}">测试书名</td>
                             <td th:text="${book.author}">测试作者</td>
                             <td th:text="${book.publisher}">测试出版社</td>
+                            <td th:text="${book.view_time}">测试借阅次数</td>
+                            <td><a th:text="${book.remain}">测试库存</a>/<a th:text="${book.amount}"></a></td>
                             <td>
-                                <a href="#" th:href="@{/books/modify_get/{id}(id=${book.id})}" class="ui mini teal basic button">编辑</a>
+                                <a href="#" th:href="@{/books/modify/{id}/get(id=${book.id})}" class="ui mini teal basic button">编辑</a>
                                 <a href="#" th:href="@{/books/delete/{id}(id=${book.id})}" class="ui mini teal basic button">删除</a>
                             </td>
                         </tr>
