@@ -34,7 +34,9 @@ public class bookController {
 
     @GetMapping("/books/add")
     public String addBook_jump(Model model){
-        model.addAttribute("book", new Book());
+        Book book = new Book();
+        book.setName("博客名称测试");
+        model.addAttribute("book", book);
         return "add_book";
     }
 
