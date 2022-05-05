@@ -50,8 +50,8 @@
                             <td th:text="${book.author}">测试作者</td>
                             <td th:text="${book.publisher}">测试出版社</td>
                             <td>
-                                <a href="#" class="ui mini teal basic button" th:href="@{/books/modify/{id}(id=${book.id})">编辑</a>
-                                <a href="#" class="ui mini teal basic button" th:href="@{/books/delete/{id}(id=${book.id})">删除</a>
+                                <a href="#" th:href="@{/books/modify/{id}/d(id=${book.id})}" class="ui mini teal basic button" >编辑</a>
+                                <a href="#" th:href="@{/books/delete/{id}/d(id=${book.id})}" class="ui mini teal basic button">删除</a>
                             </td>
                         </tr>
                     </tbody>
