@@ -45,7 +45,11 @@
 </div>
 
 <script>
+    console.log('Test');
+    console.log($('#book.name').value);
+
     $('#save_button').click(function () {
+        alert('即将提交')
         $('#book_form').submit();
     });
 </script>
