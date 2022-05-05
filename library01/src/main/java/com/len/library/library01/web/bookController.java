@@ -48,8 +48,15 @@ public class bookController {
         return "redirect:/books";
     }
 
+    @GetMapping("/books/modify/{id}")
+    public String modifyBook_Get(@Valid Book book, BindingResult bindingResult, RedirectAttributes redirectAttributes){
+        LenLog.info("modifyBook", book.toString());
+        bookService.modifyBook(book);
+        return "redirect:/books";
+    }
+
     @PostMapping("/books/modify/{id}")
-    public String modifyBook(@Valid Book book, BindingResult bindingResult, RedirectAttributes redirectAttributes){
+    public String modifyBook_Post(@Valid Book book, BindingResult bindingResult, RedirectAttributes redirectAttributes){
         LenLog.info("modifyBook", book.toString());
         bookService.modifyBook(book);
         return "redirect:/books";
