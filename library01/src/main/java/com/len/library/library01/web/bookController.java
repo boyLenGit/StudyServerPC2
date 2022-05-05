@@ -38,7 +38,7 @@ public class bookController {
         return "book_add";
     }
 
-    @PostMapping("/books/add")
+    @PostMapping("/books/add1")
     public String addBook(Book book, RedirectAttributes redirectAttributes, HttpSession httpSession){
         System.out.println("LenTest-addBook: " + book.toString());
         bookService.addBook(book);

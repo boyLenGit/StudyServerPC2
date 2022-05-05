@@ -71,7 +71,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.admin_publish.html">
+  <component name="RunManager" selected="Spring Boot.BlogApplication">
     <configuration name="ReadFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="len.cloud02.blog.ReadFile" />
       <module name="blog" />
@@ -221,7 +221,7 @@
       <workItem from="1651671788103" duration="237000" />
       <workItem from="1651672051289" duration="32000" />
       <workItem from="1651672369242" duration="8537000" />
-      <workItem from="1651719268818" duration="2354000" />
+      <workItem from="1651719268818" duration="3512000" />
     </task>
     <servers />
   </component>
