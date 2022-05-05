@@ -15,6 +15,10 @@ public class BookService {
     @Autowired
     private BookRepository bookRepository;
 
+    public Book getBookById(Integer id){
+        return bookRepository.getByIntId(id);
+    }
+
     public Page<Book> getBookList(Pageable pageable){
         Page<Book> books = bookRepository.findAll(pageable);
         return books;

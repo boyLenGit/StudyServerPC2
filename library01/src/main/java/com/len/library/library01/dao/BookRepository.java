@@ -13,4 +13,7 @@ public interface BookRepository extends JpaRepository<Book, Long>, JpaSpecificat
     @Modifying  // update、delete需要加这个
     @Query("DELETE FROM book b WHERE b.id=?1")
     void deleteByIntId(int id);
+
+    @Query("SELECT b FROM book b WHERE b.id=?1")
+    Book getByIntId(int id);
 }

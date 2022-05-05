@@ -48,15 +48,17 @@ public class bookController {
         return "redirect:/books";
     }
 
-    @GetMapping("/books/modify/{id}")
-    public String modifyBook_Get(@Valid Book book, BindingResult bindingResult, RedirectAttributes redirectAttributes){
-        LenLog.info("modifyBook", book.toString());
-        bookService.modifyBook(book);
-        return "redirect:/books";
+    @GetMapping("/books/modify_get/{id}")
+    public String modifyBook_Get(@PathVariable Integer id, Model model){
+        LenLog.info("modifyBook_Get", String.valueOf(id));
+        Book book = bookService.getBookById(id);
+        model.addAttribute("book", book);
+        LenLog.info("modifyBook_Get", book.toString());
+        return "book_modify";
     }
 
-    @PostMapping("/books/modify/{id}")
-    public String modifyBook_Post(@Valid Book book, BindingResult bindingResult, RedirectAttributes redirectAttributes){
+    @PostMapping("/books/modify_post/{id}")
+    public String modifyBook_POST(@Valid Book book, BindingResult bindingResult, @PathVariable Integer id, RedirectAttributes redirectAttributes){
         LenLog.info("modifyBook", book.toString());
         bookService.modifyBook(book);
         return "redirect:/books";
