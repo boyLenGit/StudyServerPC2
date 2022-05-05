@@ -30,7 +30,7 @@ public class bookController {
         return "book_list";
     }
 
-    @GetMapping("/book_add")
+    @GetMapping("/books/add")
     public String addBook_jump(Model model){
         Book book = new Book();
         book.setName("博客名称测试");
@@ -38,7 +38,7 @@ public class bookController {
         return "book_add";
     }
 
-    @PostMapping("/book_add")
+    @PostMapping("/books/add")
     public String addBook(Book book, RedirectAttributes redirectAttributes, HttpSession httpSession){
         System.out.println("LenTest-addBook: " + book.toString());
         bookService.addBook(book);
