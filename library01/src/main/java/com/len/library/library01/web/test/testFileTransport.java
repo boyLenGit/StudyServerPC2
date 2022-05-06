@@ -39,15 +39,16 @@ public class testFileTransport {
 
     @PostMapping("/upload01_multi_post")
     @ResponseBody
-    public String testUploadMultiFile_post(MultipartFile files[]) throws IOException {
-        for(int i=0;i<files.length;i++)
+    public String testUploadMultiFile_post(MultipartFile files1[]) throws IOException {
+        LenLog.info("testUploadMultiFile_post", String.valueOf(files1.length));
+        for(int i=0;i<files1.length;i++)
         {
-            if(!files[i].isEmpty())//文件不空
+            if(!files1[i].isEmpty())//文件不空
             {
-                File imgfile =new File("/Users/mabolun/Downloads/"+files[i].getOriginalFilename());
+                File imgfile =new File("/Users/mabolun/Downloads/"+files1[i].getOriginalFilename());
                 imgfile.createNewFile();
-                files[i].transferTo(imgfile);
-                LenLog.info("testUploadMultiFile_post", files[i].getOriginalFilename());
+                files1[i].transferTo(imgfile);
+                LenLog.info("testUploadMultiFile_post", files1[i].getOriginalFilename());
             }
         }
         return "sucucess";
