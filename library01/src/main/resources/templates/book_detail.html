@@ -3,10 +3,12 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>添加书籍</title>
+    <title th:text="${book.name}">书籍名字</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
     <!--    Semantic的CSS包-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/layout.css" th:href="@{/css/layout.css}">
+    <link rel="stylesheet" href="../static/css/font.css" th:href="@{/css/font.css}">
 </head>
 <body>
 <!--****** 导包 ******-->
@@ -19,31 +21,88 @@
 
 <div class="ui container">
     <div class="ui attached segment">
-        <h1>在这里添加书籍</h1>
+        <div class="ui padded vertical segment">
+            <div class="ui mobile reversed stackable grid">
+                <div class="five wide column">
+                    <a href="#" target="_blank">
+                        <img src="https://picsum.photos/300/400" alt="" class="ui rounded image">
+                    </a>
+                </div>
 
-        <!--书籍显示列表-->
-        <form action="#" method="post" th:object="${book}" th:action="@{/books/modify/{id}(id=*{id})}" class="ui form">
-            <a>书籍ID: <a th:text="@{/books/modify/{id}(id=*{id})}">ID</a></a>
-            <input type="hidden" name="id" th:value="*{id}">
-            <input type="text" name="name" placeholder="书籍名称" th:value="*{name}">
-            <input type="text" name="author" placeholder="书籍作者" th:value="*{author}">
-            <input type="text" name="publisher" placeholder="出版社" th:value="*{publisher}">
-            <!--书籍保存页面按钮-->
-            <div class="ui right aligned container">
-                <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>
-                <button class="ui teal submit button">保存</button>
+                <div class="eleven wide column">
+                    <div class="ui huge header volume-huge-level1" th:text="${book.name}">书籍名称</div>
+                    <div>
+                        <div class="ui horizontal link list">
+                            <div class="item">
+                                <div class="middle aligned content">
+                                    <div class="header">
+                                        <i class="big user icon"></i>
+                                        <b class="volume-big-level1" th:text="${book.author}">作者名</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="middle aligned content">
+                                    <div class="header">
+                                        <i class="big print icon"></i>
+                                        <b class="volume-big-level1" th:text="${book.publisher}">出版社</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="middle aligned content">
+                                    <div class="header">
+                                        <i class="big calendar icon"></i>
+                                        <b class="volume-big-level1">2022-02-30</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vertical-pad-middle">
+                        <div class="ui horizontal link list">
+                            <div class="item">
+                                <div class="ui blue large label">
+                                    <i class="eye icon"></i> <b th:text="${book.view_time}">523</b>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ui green large label">
+                                    <i class="check square icon"></i> <b th:text="${book.remain}">523</b>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="ui teal large label">
+                                    <i class="grid layout icon"></i> <b th:text="${book.amount}">523</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="vertical-pad-small-level2 volume-big-level1" th:text="${book.content}">书籍正文</p>
+                </div>
             </div>
-        </form>
+        </div>
+
+<!--        &lt;!&ndash;书籍显示列表&ndash;&gt;-->
+<!--        <form action="#" method="post" th:object="${book}" th:action="@{/books/modify/{id}(id=*{id})}" class="ui form">-->
+<!--            <a>书籍ID: <a th:text="@{/books/modify/{id}(id=*{id})}">ID</a></a>-->
+<!--            <input type="hidden" name="id" th:value="*{id}">-->
+<!--            <input type="text" name="name" placeholder="书籍名称" th:value="*{name}">-->
+<!--            <input type="text" name="author" placeholder="书籍作者" th:value="*{author}">-->
+<!--            <input type="text" name="publisher" placeholder="出版社" th:value="*{publisher}">-->
+<!--            &lt;!&ndash;书籍保存页面按钮&ndash;&gt;-->
+<!--            <div class="ui right aligned container">-->
+<!--                <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>-->
+<!--                <button class="ui teal submit button">保存</button>-->
+<!--            </div>-->
+<!--        </form>-->
     </div>
 </div>
 
 <script>
-    // console.log($("[name='name']").val);
 
-    // $('#save_button').click(function () {
-    //     alert('即将提交')
-    //     $('#book_form').submit();
-    // });
 </script>
 
 </body>

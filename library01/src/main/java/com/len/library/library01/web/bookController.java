@@ -3,6 +3,7 @@ package com.len.library.library01.web;
 import com.len.library.library01.pojo.Book;
 import com.len.library.library01.service.BookService;
 import com.len.library.library01.util.LenLog;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -74,5 +75,14 @@ public class bookController {
         LenLog.info("deleteBook", String.valueOf(id));
         bookService.deleteBook(id);
         return "redirect:/books";
+    }
+
+    @GetMapping("/books/detail/{id}")
+    public String detailBook(@PathVariable Integer id, Model model){
+        Book book = bookService.getBookById(id);
+        book.setView_time(book.getView_time()+1);
+        model.addAttribute("book", book);
+        bookService.updateBook(book.getId(), book);
+        return "book_detail";
     }
 }

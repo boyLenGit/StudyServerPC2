@@ -36,7 +36,7 @@
                 <table class="ui compact teal table">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>序号</th>
                             <th>书名</th>
                             <th>作者</th>
                             <th>出版社</th>
@@ -48,7 +48,7 @@
                     <tbody>
                         <tr th:each="book,iterStat : ${books.content}">
                             <td th:text="${iterStat.count}">1</td>
-                            <td th:text="${book.name}">测试书名</td>
+                            <td><a th:text="${book.name}" th:href="@{/books/detail/{id}(id=${book.id})}">测试书名</a></td>
                             <td th:text="${book.author}">测试作者</td>
                             <td th:text="${book.publisher}">测试出版社</td>
                             <td th:text="${book.view_time}">测试借阅次数</td>
