@@ -18,13 +18,15 @@ public class User {
     private boolean isRoot;
 
     @ManyToMany(cascade = {CascadeType.PERSIST})
-    private List<Book> books = new ArrayList<>();
+    private List<Book> books;
     @ManyToMany(cascade = {CascadeType.PERSIST})
-    private List<Book> books_history = new ArrayList<>();
+    private List<Book> books_history;
 
     public User() {
         isAdmin = false;
         isRoot = false;
+        books = new ArrayList<>();
+        books_history = new ArrayList<>();
     }
 
     public Integer getId() {
@@ -83,12 +85,20 @@ public class User {
         this.books = books;
     }
 
+    public void addBook(Book book) {
+        this.books.add(book);
+    }
+
     public List<Book> getBooks_history() {
         return books_history;
     }
 
     public void setBooks_history(List<Book> books_history) {
         this.books_history = books_history;
+    }
+
+    public void addBook_history(Book book_history) {
+        this.books_history.add(book_history);
     }
 
     @Override

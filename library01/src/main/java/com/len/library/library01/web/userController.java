@@ -1,6 +1,7 @@
 package com.len.library.library01.web;
 
 import com.len.library.library01.pojo.User;
+import com.len.library.library01.service.BookService;
 import com.len.library.library01.service.UserService;
 import com.len.library.library01.util.LenPath;
 import com.len.library.library01.util.LenTime;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
 
@@ -20,6 +22,8 @@ import java.io.IOException;
 public class userController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private BookService bookService;
 
     // http://localhost:8081/user/sign_in_get
     @GetMapping("/sign_in_get")
@@ -29,7 +33,7 @@ public class userController {
     }
 
     @PostMapping("/sign_in_post")
-    public String signIn_post(User user, MultipartFile image1) throws IOException {
+    public String signIn_post(@Valid User user, MultipartFile image1) throws IOException {
         String icon_path = "https://picsum.photos/50/50";
         if (image1!=null){
             icon_path = "/upload/user_icon/" + user.getName().hashCode() + "_" + LenTime.ymdhms_pure_num() + "_" + image1.getOriginalFilename();
@@ -41,6 +45,6 @@ public class userController {
         }
         user.setUser_icon(icon_path);
         userService.addUser(user);
-        return "redirect:/";
+        return "redirect:/books";
     }
 }
