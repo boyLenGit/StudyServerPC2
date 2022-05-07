@@ -23,9 +23,9 @@
     <div class="ui attached segment">
         <div class="ui padded vertical segment">
             <div class="ui mobile reversed stackable grid">
-                <div class="five wide column">
+                <div class="three wide column">
                     <a href="#" target="_blank">
-                        <img src="https://picsum.photos/300/400" alt="" class="ui rounded image">
+                        <img src="https://picsum.photos/150/220" th:src="${book.picture}" alt="" class="ui rounded image">
                     </a>
                 </div>
 
@@ -84,20 +84,6 @@
                 </div>
             </div>
         </div>
-
-<!--        &lt;!&ndash;书籍显示列表&ndash;&gt;-->
-<!--        <form action="#" method="post" th:object="${book}" th:action="@{/books/modify/{id}(id=*{id})}" class="ui form">-->
-<!--            <a>书籍ID: <a th:text="@{/books/modify/{id}(id=*{id})}">ID</a></a>-->
-<!--            <input type="hidden" name="id" th:value="*{id}">-->
-<!--            <input type="text" name="name" placeholder="书籍名称" th:value="*{name}">-->
-<!--            <input type="text" name="author" placeholder="书籍作者" th:value="*{author}">-->
-<!--            <input type="text" name="publisher" placeholder="出版社" th:value="*{publisher}">-->
-<!--            &lt;!&ndash;书籍保存页面按钮&ndash;&gt;-->
-<!--            <div class="ui right aligned container">-->
-<!--                <button type="button" class="ui button" onclick="window.history.go(-1)">返回</button>-->
-<!--                <button class="ui teal submit button">保存</button>-->
-<!--            </div>-->
-<!--        </form>-->
     </div>
 </div>
 

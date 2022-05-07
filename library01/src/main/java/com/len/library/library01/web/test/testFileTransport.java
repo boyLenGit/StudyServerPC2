@@ -2,10 +2,7 @@ package com.len.library.library01.web.test;
 
 import com.len.library.library01.util.LenLog;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -22,7 +19,7 @@ public class testFileTransport {
     }
 
     @PostMapping("/upload01_post")
-    @ResponseBody
+//    @ResponseBody
     public String testUploadFile_post(MultipartFile file) throws IOException {
         File file1 =new File("/Users/mabolun/Downloads/"+file.getOriginalFilename());//创建file对象
         if(!file1.exists())

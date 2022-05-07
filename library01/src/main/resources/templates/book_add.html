@@ -20,12 +20,12 @@
 <div class="ui container">
     <div class="ui attached segment">
         <h1>在这里添加书籍</h1>
-
         <!--书籍显示列表-->
         <div>
-            <form action="#" id="book_form" method="post" th:object="${book}" th:action="@{/books/add}" class="ui form">
+            <form action="#" method="post" th:object="${book}" th:action="@{/books/add}" class="ui form" enctype='multipart/form-data'>
                 <div>
                     <input type="hidden" name="id" placeholder="书籍ID" th:value="*{id}">
+                    <input type="hidden" name="view_time" placeholder="书籍ID" th:value="*{view_time}">
                     <div class="required field">
                         <div class="ui left labeled input">
                             <label class="ui teal basic label">名称</label>
@@ -59,29 +59,22 @@
                     <div class="required field">
                         <div class="ui left labeled input">
                             <label class="ui teal basic label">封面</label>
-                            <input type="text" name="image1" placeholder="封面图" th:value="*{picture}">
-                            <input type="file" name="image1" placeholder="封面图" th:value="*{picture}">
+                            <input type="text" placeholder="封面图" th:value="*{picture}">
+                            <input type="file" name="image1">
                         </div>
                     </div>
                     <!--书籍保存页面按钮-->
                     <div class="ui right aligned container">
-                        <button type="submit" id="save_button" class="ui teal submit button">保存</button>
+                        <button type="submit" class="ui teal submit button">保存</button>
                     </div>
                 </div>
             </form>
-
         </div>
     </div>
 </div>
 
 <script>
-    console.log('Test');
-    console.log($("[name='name']").val);
 
-    // $('#save_button').click(function () {
-    //     alert('即将提交')
-    //     $('#book_form').submit();
-    // });
 </script>
 
 </body>
