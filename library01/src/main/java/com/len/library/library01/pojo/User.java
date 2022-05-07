@@ -23,6 +23,8 @@ public class User {
     private List<Book> books_history = new ArrayList<>();
 
     public User() {
+        isAdmin = false;
+        isRoot = false;
     }
 
     public Integer getId() {
