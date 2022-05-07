@@ -1,6 +1,7 @@
 package com.len.library.library01.pojo;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity(name = "book")
 @Table
@@ -17,8 +18,11 @@ public class Book {
     private Integer amount; // 总数
     private Integer remain; // 剩余
 
-    @ManyToOne // 多本书对应一个用户，即一个用户可以借多本书。这句代码用于进行对象之间的关系绑定，从而方便数据库数据的获取。
-    private User user;
+    @ManyToMany(mappedBy = "books") // 多本书对应一个用户，即一个用户可以借多本书。这句代码用于进行对象之间的关系绑定，从而方便数据库数据的获取。
+    private List<User> users;
+
+    @ManyToMany(mappedBy = "books_history") // 多本书对应一个用户，即一个用户可以借多本书。这句代码用于进行对象之间的关系绑定，从而方便数据库数据的获取。
+    private List<User> users_history;
 
     public Book() {
     }
@@ -55,22 +59,6 @@ public class Book {
         this.publisher = publisher;
     }
 
-    public Integer getView_time() {
-        return view_time;
-    }
-
-    public void setView_time(Integer view_time) {
-        this.view_time = view_time;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     public String getContent() {
         return content;
     }
@@ -85,6 +73,14 @@ public class Book {
 
     public void setPicture(String picture) {
         this.picture = picture;
+    }
+
+    public Integer getView_time() {
+        return view_time;
+    }
+
+    public void setView_time(Integer view_time) {
+        this.view_time = view_time;
     }
 
     public Integer getAmount() {
@@ -103,6 +99,22 @@ public class Book {
         this.remain = remain;
     }
 
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
+    public List<User> getUsers_history() {
+        return users_history;
+    }
+
+    public void setUsers_history(List<User> users_history) {
+        this.users_history = users_history;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -115,7 +127,8 @@ public class Book {
                 ", view_time=" + view_time +
                 ", amount=" + amount +
                 ", remain=" + remain +
-                ", user=" + user +
+                ", users=" + users +
+                ", users_history=" + users_history +
                 '}';
     }
 }

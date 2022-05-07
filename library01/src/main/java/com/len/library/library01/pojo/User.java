@@ -12,9 +12,15 @@ public class User {
     @GeneratedValue
     private Integer id;
     private String name;
+    private String password;
+    private String user_icon;
+    private boolean isAdmin;
+    private boolean isRoot;
 
-    @OneToMany(mappedBy = "user")
+    @ManyToMany(cascade = {CascadeType.PERSIST})
     private List<Book> books = new ArrayList<>();
+    @ManyToMany(cascade = {CascadeType.PERSIST})
+    private List<Book> books_history = new ArrayList<>();
 
     public User() {
     }
@@ -35,6 +41,38 @@ public class User {
         this.name = name;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUser_icon() {
+        return user_icon;
+    }
+
+    public void setUser_icon(String user_icon) {
+        this.user_icon = user_icon;
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean admin) {
+        isAdmin = admin;
+    }
+
+    public boolean isRoot() {
+        return isRoot;
+    }
+
+    public void setRoot(boolean root) {
+        isRoot = root;
+    }
+
     public List<Book> getBooks() {
         return books;
     }
@@ -43,12 +81,25 @@ public class User {
         this.books = books;
     }
 
+    public List<Book> getBooks_history() {
+        return books_history;
+    }
+
+    public void setBooks_history(List<Book> books_history) {
+        this.books_history = books_history;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", user_icon='" + user_icon + '\'' +
+                ", isAdmin=" + isAdmin +
+                ", isRoot=" + isRoot +
                 ", books=" + books +
+                ", books_history=" + books_history +
                 '}';
     }
 }
