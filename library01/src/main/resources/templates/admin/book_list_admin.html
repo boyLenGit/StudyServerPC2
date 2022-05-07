@@ -22,7 +22,7 @@
 
         <!--书籍管理页面按钮-->
         <div>
-            <a href="#" th:href="@{/books/add}">
+            <a href="#" th:href="@{/admin/books/add}">
                 <div class="ui button">
                     <i class="archive icon"></i>
                     <a>增加书籍</a>
@@ -54,7 +54,8 @@
                             <td th:text="${book.view_time}">测试借阅次数</td>
                             <td><a th:text="${book.remain}">测试库存</a>/<a th:text="${book.amount}"></a></td>
                             <td>
-                                <a href="#" th:href="@{/books/modify/{id}/get(id=${book.id})}" class="ui mini teal basic button">借阅</a>
+                                <a href="#" th:href="@{/admin/books/modify/{id}/get(id=${book.id})}" class="ui mini teal basic button">编辑</a>
+                                <a href="#" th:href="@{/admin/books/delete/{id}(id=${book.id})}" class="ui mini teal basic button">删除</a>
                             </td>
                         </tr>
                     </tbody>

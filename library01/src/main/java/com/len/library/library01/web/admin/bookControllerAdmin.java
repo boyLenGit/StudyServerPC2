@@ -7,6 +7,10 @@ import com.len.library.library01.util.LenLog;
 import com.len.library.library01.util.LenPath;
 import com.len.library.library01.util.LenTime;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -26,13 +30,23 @@ public class bookControllerAdmin {
     @Autowired
     private BookService bookService;
 
+    @GetMapping("/books")
+    public String getBookListController(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable,
+                                        Model model)
+    {
+        Page<Book> books = bookService.getBookList(pageable);  // 拿到Book列表，从数据库里拿
+        System.out.println("LenTest: " + books);
+        model.addAttribute("books", books);  // 把book列表传递给网页
+        return "admin/book_list_admin";  // 打开这个网页
+    }
+
     // 添加book-跳转
     @GetMapping("/books/add")
     public String addBook_jump(Model model){
         Book book = new Book();
         book.setView_time(0);
         model.addAttribute("book", book);
-        return "book_add";
+        return "admin/book_add";
     }
 
     // 添加book
@@ -52,7 +66,7 @@ public class bookControllerAdmin {
         LenLog.info("addBook", file_path);
         book.setPicture(file_path);
         bookService.addBook(book);
-        return "redirect:/books";
+        return "redirect:/admin/books";
     }
 
     // 修改book-跳转
@@ -62,7 +76,7 @@ public class bookControllerAdmin {
         Book book = bookService.getBookById(id);
         model.addAttribute("book", book);
         LenLog.info("updateBook_Get", book.toString());
-        return "book_modify";
+        return "admin/book_modify";
     }
 
     // 修改book
@@ -84,7 +98,7 @@ public class bookControllerAdmin {
         }
         LenLog.info("updateBook_Post", id + " | " + book.toString());
         bookService.updateBook(id, book);
-        return "redirect:/books";
+        return "redirect:/admin/books";
     }
 
     // 删除book
@@ -94,6 +108,6 @@ public class bookControllerAdmin {
         LenLog.info("deleteBook", String.valueOf(id) + " " + delete_path);
         LenFile.deleteFile(delete_path);
         bookService.deleteBook(id);
-        return "redirect:/books";
+        return "redirect:/admin/books";
     }
 }

@@ -22,7 +22,7 @@
         <h1>在这里修改书籍</h1>
 
         <!--书籍显示列表-->
-        <form action="#" method="post" th:object="${book}" th:action="@{/books/modify/{id}(id=*{id})}" class="ui form" enctype='multipart/form-data'>
+        <form action="#" method="post" th:object="${book}" th:action="@{/admin/books/modify/{id}(id=*{id})}" class="ui form" enctype='multipart/form-data'>
             <input type="hidden" name="id" placeholder="书籍ID" th:value="*{id}">
             <input type="hidden" name="view_time" placeholder="书籍ID" th:value="*{view_time}">
             <div class="required field">
