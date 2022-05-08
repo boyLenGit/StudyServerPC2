@@ -10,6 +10,7 @@
         <module name="c_client" />
         <module name="cloud02" />
         <module name="c_service" />
+        <module name="article_service" />
         <module name="cluster" />
         <module name="gd_service" />
         <module name="gd_client" />
@@ -24,6 +25,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="article_service" options="-parameters" />
       <module name="blog" options="-parameters" />
       <module name="c_client" options="-parameters" />
       <module name="c_service" options="-parameters" />

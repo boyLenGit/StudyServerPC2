@@ -31,7 +31,7 @@
                 </h1>
                 <br>
                 <br>
-                <form class="ui large form" method="post" action="#" th:object="${user}" th:action="@{/user/sign_in_post}" enctype='multipart/form-data'>
+                <form class="ui large form" method="post" action="#" th:object="${user}" th:action="@{/user/sign_in_post}" enctype="multipart/form-data">
                     <input type="hidden" name="id" placeholder="用户名" th:value="*{id}">
                     <div class="ui segment">
                         <div class="field">

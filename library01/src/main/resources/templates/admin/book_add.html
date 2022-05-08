@@ -22,7 +22,7 @@
         <h1>在这里添加书籍</h1>
         <!--书籍显示列表-->
         <div>
-            <form action="#" method="post" th:object="${book}" th:action="@{/admin/books/add}" class="ui form" enctype='multipart/form-data'>
+            <form action="#" method="post" th:object="${book}" th:action="@{/admin/books/add}" class="ui form" enctype="multipart/form-data">
                 <div>
                     <input type="hidden" name="id" placeholder="书籍ID" th:value="*{id}">
                     <input type="hidden" name="view_time" placeholder="书籍ID" th:value="*{view_time}">
