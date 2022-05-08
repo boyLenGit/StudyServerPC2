@@ -29,6 +29,6 @@ public class PaperController {
     public String paperDetail(@PathVariable Long id, Model model){
         Paper paper = paperService.findPaperById(id);
         model.addAttribute("paper", paper);
-        return "";
+        return "paper_detail";
     }
 }
