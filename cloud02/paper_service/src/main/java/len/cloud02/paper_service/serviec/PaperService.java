@@ -12,7 +12,7 @@ public class PaperService {
     @Autowired
     private PaperRepository paperRepository;
 
-    public Page<Paper> getBookList(Pageable pageable){
+    public Page<Paper> getPaperList(Pageable pageable){
         Page<Paper> articles = paperRepository.findAll(pageable);
         return articles;
     }

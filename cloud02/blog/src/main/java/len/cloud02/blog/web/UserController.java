@@ -92,10 +92,11 @@ public class UserController {
         if (user!=null){
             user.setPassword(null);
             httpSession.setAttribute("user", user_sql);
-            return "user/user_articles";
+//            return "user/user_articles";
+            return "redirect:/user/articles";
         }else {
             redirectAttributes.addFlashAttribute("message", "用户名或密码错误");
-            return "redirect:user/login";
+            return "redirect:/user/login";
         }
     }
 }
