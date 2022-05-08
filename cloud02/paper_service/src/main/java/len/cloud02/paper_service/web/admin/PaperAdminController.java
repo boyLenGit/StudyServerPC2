@@ -41,16 +41,36 @@ public class PaperAdminController {
     }
 
     @PostMapping("/add_paper_post")
-    public String addPaper_Post(Paper paper, MultipartFile image1) throws IOException {
-        String file_path = "https://picsum.photos/300/400";
+    public String addPaper_Post(Paper paper, MultipartFile file[]) throws IOException {
+        // 保存图片
+        String image_path = "https://picsum.photos/300/400";
+        MultipartFile image1 = file[0];
+        MultipartFile file1 = file[1];
         if (image1 != null){
-            file_path = "/upload/paper_picture/" + paper.getName().hashCode() + "_" + LenTime.ymdhms_pure_num() + "_" + image1.getOriginalFilename();
+            image_path = "/upload/paper_picture/" + paper.getName().hashCode() + "_" + LenTime.ymdhms_pure_num() + "_" + image1.getOriginalFilename();
+            String image_path_store = LenPath.getData() + image_path;
+            File file_store = new File(image_path_store);
+            if (!file_store.exists())
+                file_store.createNewFile();
+            image1.transferTo(file_store);
+        }
+        paper.setFirst_picture(image_path);
+        // 保存文件
+        String file_path = "https://picsum.photos/300/400";
+        if (file1 != null){
+            file_path = "/upload/paper_file/" + paper.getName().hashCode() + "_" + LenTime.ymdhms_pure_num() + "_" + image1.getOriginalFilename();
             String file_path_store = LenPath.getData() + file_path;
             File file_store = new File(file_path_store);
             if (!file_store.exists())
                 file_store.createNewFile();
             image1.transferTo(file_store);
         }
+        paper.setFirst_picture(file_path);
+        // 设置Paper其他属性
+        paper.setView_time(0);
+        paperService.addPaper(paper);
         return "redirect:/admin/paper_list";
     }
+
+
 }

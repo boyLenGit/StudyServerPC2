@@ -17,4 +17,12 @@ public class PaperService {
         return articles;
     }
 
+    public void addPaper(Paper paper){
+        paperRepository.save(paper);
+    }
+
+    public Paper findPaperById(Long id){
+        return paperRepository.getById(id);
+    }
+
 }

@@ -17,6 +17,7 @@ public class Paper {
     private String introduce;
     private String first_picture;
     private Integer view_time;
+    private String file_path;
 
 //    @OneToMany()
 //    private List<User> starers;
@@ -80,9 +81,17 @@ public class Paper {
         this.view_time = view_time;
     }
 
+    public String getFile_path() {
+        return file_path;
+    }
+
+    public void setFile_path(String file_path) {
+        this.file_path = file_path;
+    }
+
     @Override
     public String toString() {
-        return "Article{" +
+        return "Paper{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", author='" + author + '\'' +
@@ -90,6 +99,7 @@ public class Paper {
                 ", introduce='" + introduce + '\'' +
                 ", first_picture='" + first_picture + '\'' +
                 ", view_time=" + view_time +
+                ", file_path='" + file_path + '\'' +
                 '}';
     }
 }

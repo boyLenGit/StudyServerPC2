@@ -10,6 +10,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class PaperController {
@@ -24,5 +25,10 @@ public class PaperController {
         return "paper_list";
     }
 
-
+    @GetMapping("/detail/{id}")
+    public String paperDetail(@PathVariable Long id, Model model){
+        Paper paper = paperService.findPaperById(id);
+        model.addAttribute("paper", paper);
+        return "";
+    }
 }
