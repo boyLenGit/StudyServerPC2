@@ -1,6 +1,6 @@
 package len.cloud02.blog.dao;
 
-import len.cloud02.blog.po.Comment;
+import len.cloud02.common.entity.user.Comment;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 

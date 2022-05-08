@@ -1,6 +1,6 @@
 package len.cloud02.blog.dao;
 
-import len.cloud02.blog.po.User;
+import len.cloud02.common.entity.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> { // 这里的Long是主键的数据类型

@@ -1,9 +1,6 @@
 package len.cloud02.article_service.pojo;
 
-import len.cloud02.blog.po.User;
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity(name = "article")
 @Table
@@ -18,8 +15,8 @@ public class Article {
     private String first_picture;
     private Integer view_time;
 
-    @ManyToMany(cascade = {CascadeType.PERSIST})
-    private List<User> starers;
+//    @OneToMany()
+//    private List<User> starers;
 
     public Article() {
     }

@@ -1,6 +1,5 @@
 package len.cloud02.blog.web.admin;
 
-import len.cloud02.blog.po.Tag;
 import len.cloud02.blog.service.TagService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

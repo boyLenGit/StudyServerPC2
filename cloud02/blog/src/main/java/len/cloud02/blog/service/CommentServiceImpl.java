@@ -1,8 +1,8 @@
 package len.cloud02.blog.service;
 
 import len.cloud02.blog.dao.CommentRepository;
-import len.cloud02.blog.po.Comment;
 import len.cloud02.blog.util.base.LenLog;
+import len.cloud02.common.entity.user.Comment;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;

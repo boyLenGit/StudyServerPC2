@@ -1,6 +1,6 @@
 package len.cloud02.blog.dao;
 
-import len.cloud02.blog.po.Blog;
+import len.cloud02.common.entity.user.Blog;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

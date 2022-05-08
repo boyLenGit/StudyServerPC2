@@ -2,8 +2,8 @@ package len.cloud02.blog.service;
 
 import len.cloud02.blog.dao.BlogRepository;
 import len.cloud02.blog.error.NotFoundException;
-import len.cloud02.blog.po.Blog;
-import len.cloud02.blog.po.Type;
+import len.cloud02.common.entity.user.Blog;
+import len.cloud02.common.entity.user.Type;
 import len.cloud02.blog.util.LenBeanUtils;
 import len.cloud02.blog.util.MarkdownUtils;
 import len.cloud02.blog.vo.BlogQuery;

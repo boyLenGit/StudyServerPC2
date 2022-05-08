@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="c_client" />
         <module name="cloud02" />
+        <module name="common" />
         <module name="c_service" />
         <module name="article_service" />
         <module name="cluster" />
@@ -32,6 +33,7 @@
       <module name="cloud02" options="" />
       <module name="cluster" options="-parameters" />
       <module name="cluster_service" options="-parameters" />
+      <module name="common" options="-parameters" />
       <module name="gd_client" options="-parameters" />
       <module name="gd_service" options="-parameters" />
       <module name="geodata" options="-parameters" />

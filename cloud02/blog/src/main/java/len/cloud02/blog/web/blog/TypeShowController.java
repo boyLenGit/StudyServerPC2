@@ -1,8 +1,8 @@
 package len.cloud02.blog.web.blog;
 
-import len.cloud02.blog.po.Type;
 import len.cloud02.blog.service.TypeService;
 import len.cloud02.blog.util.base.LenLog;
+import len.cloud02.common.entity.user.Type;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;

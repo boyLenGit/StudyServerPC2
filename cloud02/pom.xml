@@ -12,6 +12,7 @@
         <module>blog</module>
         <module>cluster</module>
         <module>geodata</module>
+        <module>common</module>
     </modules>
 
 <!--    <parent>-->

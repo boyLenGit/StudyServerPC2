@@ -1,13 +1,11 @@
 package len.cloud02.blog.web;
 
-import len.cloud02.blog.error.NotFoundException;
-import len.cloud02.blog.po.Blog;
 import len.cloud02.blog.service.BlogService;
 import len.cloud02.blog.service.CommentService;
 import len.cloud02.blog.service.TagService;
 import len.cloud02.blog.service.TypeService;
 import len.cloud02.blog.util.base.LenLog;
-import org.apache.catalina.core.ApplicationContext;
+import len.cloud02.common.entity.user.Blog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

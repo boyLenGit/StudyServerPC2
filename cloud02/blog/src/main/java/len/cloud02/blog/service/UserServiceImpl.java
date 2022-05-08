@@ -1,8 +1,8 @@
 package len.cloud02.blog.service;
 
 import len.cloud02.blog.dao.UserRepository;
-import len.cloud02.blog.po.User;
 import len.cloud02.blog.util.MD5Utils;
+import len.cloud02.common.entity.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,4 +18,8 @@ public class UserServiceImpl implements UserService{
         return user;
     }
 
+    @Override
+    public void addUser(User user) {
+        userRepository.save(user);
+    }
 }

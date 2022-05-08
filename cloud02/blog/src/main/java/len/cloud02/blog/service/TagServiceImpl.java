@@ -2,8 +2,8 @@ package len.cloud02.blog.service;
 
 import len.cloud02.blog.dao.TagRepository;
 import len.cloud02.blog.error.NotFoundException;
-import len.cloud02.blog.po.Tag;
 import len.cloud02.blog.util.LenList;
+import len.cloud02.common.entity.user.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;

@@ -2,7 +2,7 @@ package len.cloud02.blog.service;
 
 import len.cloud02.blog.dao.TypeRepository;
 import len.cloud02.blog.error.NotFoundException;
-import len.cloud02.blog.po.Type;
+import len.cloud02.common.entity.user.Type;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

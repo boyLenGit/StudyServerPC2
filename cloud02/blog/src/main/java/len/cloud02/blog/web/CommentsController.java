@@ -1,11 +1,11 @@
 package len.cloud02.blog.web;
 
-import len.cloud02.blog.po.Blog;
-import len.cloud02.blog.po.Comment;
-import len.cloud02.blog.po.User;
 import len.cloud02.blog.service.BlogService;
 import len.cloud02.blog.service.CommentService;
 import len.cloud02.blog.util.base.LenLog;
+import len.cloud02.common.entity.user.Blog;
+import len.cloud02.common.entity.user.Comment;
+import len.cloud02.common.entity.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;

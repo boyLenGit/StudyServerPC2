@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <!--    用于设置尺寸适配移动端-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <!--    Semantic的CSS包-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!--    自定义CSS导入。必须加rel="stylesheet"才可以生效！-->
+    <link rel="stylesheet" href="../../static/css/index.css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" href="../../static/css/text.css" th:href="@{/css/text.css}">
+    <link rel="stylesheet" href="../../static/css/logic.css" th:href="@{/css/logic.css}">
+    <link rel="stylesheet" href="../../static/css/button.css" th:href="@{/css/button.css}">
+    <link rel="stylesheet" href="../../static/css/display.css" th:href="@{/css/display.css}">
+    <link rel="stylesheet" href="../../static/css/LRMme.css" th:href="@{/css/LRMme.css}">
+    <link rel="stylesheet" href="../../static/css/LRManimate.css" th:href="@{/css/LRManimate.css}">
+    <link rel="stylesheet" href="../../static/css/LRMtypo.css" th:href="@{/css/LRMtypo.css}">
+</head>
+<body>
+<!--****** 导包 ******-->
+<!--    JQuery包-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    Semantic的JS包-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+<br>
+<br>
+<br>
+<div class="m-container-small m-padded-tb-massive" style="max-width: 30em !important;">
+    <div class="ur container">
+        <div class="ui middle aligned center aligned grid">
+            <div class="column">
+                <h1 class="ui teal image header">
+                    <div class="content">
+                        用户注册
+                    </div>
+                </h1>
+                <br>
+                <br>
+                <form class="ui large form" method="post" action="#" th:object="${user}" th:action="@{/admin/login}" enctype="multipart/form-data">
+                    <div class="ui  segment">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="username" placeholder="用户名">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" name="password" placeholder="密码">
+                            </div>
+                        </div>
+
+                        <div class="required field">
+                            <div class="ui left labeled input">
+                                <label class="ui grey basic label">用户头像</label>
+                                <input type="file" name="image1">
+                            </div>
+                        </div>
+
+                        <button class="ui fluid large teal submit button">注册</button>
+                    </div>
+
+                    <div class="ui error mini message"></div>
+                    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">用户名和密码错误</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $('.ui.form').form({
+        fields : {
+            username : {
+                identifier: 'username',
+                rules: [{
+                    type : 'empty',
+                    prompt: '请输入用户名'
+                }]
+            },
+            password : {
+                identifier: 'password',
+                rules: [{
+                    type : 'empty',
+                    prompt: '请输入密码'
+                }]
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

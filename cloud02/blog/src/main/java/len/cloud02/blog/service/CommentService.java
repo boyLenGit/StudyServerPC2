@@ -1,6 +1,6 @@
 package len.cloud02.blog.service;
 
-import len.cloud02.blog.po.Comment;
+import len.cloud02.common.entity.user.Comment;
 
 import java.util.List;
 

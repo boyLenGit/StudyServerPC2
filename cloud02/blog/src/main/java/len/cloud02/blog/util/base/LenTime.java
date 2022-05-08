@@ -10,4 +10,10 @@ public class LenTime {
         Date date = new Date(System.currentTimeMillis());
         return formatter.format(date);
     }
+
+    public static String ymdhms_pure_num(){
+        SimpleDateFormat formatter= new SimpleDateFormat("yyyyMMddHHmmss");
+        Date date = new Date(System.currentTimeMillis());
+        return formatter.format(date);
+    }
 }

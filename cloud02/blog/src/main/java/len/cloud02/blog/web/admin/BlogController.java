@@ -1,11 +1,11 @@
 package len.cloud02.blog.web.admin;
 
-import len.cloud02.blog.po.Blog;
-import len.cloud02.blog.po.User;
 import len.cloud02.blog.service.BlogService;
 import len.cloud02.blog.service.TagService;
 import len.cloud02.blog.service.TypeService;
 import len.cloud02.blog.vo.BlogQuery;
+import len.cloud02.common.entity.user.Blog;
+import len.cloud02.common.entity.user.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
