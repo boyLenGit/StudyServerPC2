@@ -11,8 +11,8 @@
         <module name="cloud02" />
         <module name="common" />
         <module name="c_service" />
-        <module name="article_service" />
         <module name="cluster" />
+        <module name="paper_service" />
         <module name="gd_service" />
         <module name="gd_client" />
         <module name="blog" />
@@ -22,11 +22,11 @@
       <module name="cluster_service" target="1.8" />
       <module name="geodata_client" target="1.8" />
       <module name="geodata_service" target="1.5" />
+      <module name="papera_service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="article_service" options="-parameters" />
       <module name="blog" options="-parameters" />
       <module name="c_client" options="-parameters" />
       <module name="c_service" options="-parameters" />
@@ -39,6 +39,8 @@
       <module name="geodata" options="-parameters" />
       <module name="geodata_client" options="-parameters" />
       <module name="geodata_service" options="-parameters" />
+      <module name="paper_service" options="-parameters" />
+      <module name="papera_service" options="-parameters" />
     </option>
   </component>
 </project>

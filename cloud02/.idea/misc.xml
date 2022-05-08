@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/cluster/c_service/pom.xml" />
         <option value="$PROJECT_DIR$/cluster/c_client/pom.xml" />
         <option value="$PROJECT_DIR$/article_service/pom.xml" />
+        <option value="$PROJECT_DIR$/paper_service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

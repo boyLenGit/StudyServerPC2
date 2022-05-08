@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 @Controller
 @RequestMapping("/user")
@@ -21,6 +22,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    // 用户注册
     @GetMapping("/register_get")
     private String register(Model model){
         model.addAttribute("user", new User());
@@ -39,7 +41,14 @@ public class UserController {
             image1.transferTo(file_store);
         }
         user.setAvatar(icon_path);
+        user.setCreateTime(new Date());
         userService.addUser(user);
-        return "redirect:/books";
+        return "redirect:/";
+    }
+
+    // 浏览用户的文章列表
+    @GetMapping("/articles")
+    public String articles(Model model){
+        return "/user/user_articles";
     }
 }

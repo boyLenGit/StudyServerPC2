@@ -38,7 +38,7 @@
                 </h1>
                 <br>
                 <br>
-                <form class="ui large form" method="post" action="#" th:object="${user}" th:action="@{/admin/login}" enctype="multipart/form-data">
+                <form class="ui large form" method="post" action="#" th:object="${user}" th:action="@{/user/register_post}" enctype="multipart/form-data">
                     <div class="ui  segment">
                         <div class="field">
                             <div class="ui left icon input">
@@ -54,7 +54,7 @@
                         </div>
                         <div class="field">
                             <div class="ui left icon input">
-                                <i class="lock icon"></i>
+                                <i class="at icon"></i>
                                 <input type="text" name="nickname" placeholder="昵称" th:value="*{nickname}">
                             </div>
                         </div>
