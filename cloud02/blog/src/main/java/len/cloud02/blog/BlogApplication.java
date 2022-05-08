@@ -4,8 +4,10 @@ import len.cloud02.blog.util.base.LenLog;
 import org.apache.catalina.core.ApplicationContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ConfigurableApplicationContext;
 
+@EntityScan(basePackages = {"len.cloud02.common.entity"})
 @SpringBootApplication
 public class BlogApplication {
 
