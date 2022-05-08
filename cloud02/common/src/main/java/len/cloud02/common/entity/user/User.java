@@ -16,12 +16,11 @@ public class User {
     private String password;
     private String email;
     private String avatar; // 用户头像
-    private Integer type;
+    private Integer type;  // 0 普通用户  1 管理员用户  2 su用户
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
-    private boolean is_admin;
 
     @OneToMany(mappedBy = "user")
     private List<Blog> blogs = new ArrayList<>();
@@ -30,7 +29,6 @@ public class User {
 //    private List<Article> articles = new ArrayList<>();
 
     public User() {
-        is_admin = false;
     }
 
     public Long getId() {
@@ -113,14 +111,6 @@ public class User {
         this.blogs = blogs;
     }
 
-    public boolean isIs_admin() {
-        return is_admin;
-    }
-
-    public void setIs_admin(boolean is_admin) {
-        this.is_admin = is_admin;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -133,7 +123,6 @@ public class User {
                 ", type=" + type +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
-                ", is_admin=" + is_admin +
                 ", blogs=" + blogs +
                 '}';
     }

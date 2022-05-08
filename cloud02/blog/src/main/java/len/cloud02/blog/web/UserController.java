@@ -31,7 +31,7 @@ public class UserController {
     private String register_post(@Valid User user, MultipartFile image1) throws IOException {
         String icon_path = "https://picsum.photos/50/50";
         if (image1!=null){
-            icon_path = "/upload/user_icon/" + user.getUsername().hashCode() + "_" + LenTime.ymdhms_pure_num() + "_" + image1.getOriginalFilename();
+            icon_path = "/Upload/user_icon/" + user.getUsername().hashCode() + "_" + LenTime.ymdhms_pure_num() + "_" + image1.getOriginalFilename();
             String file_path_store = LenPath.getData() + icon_path;
             File file_store = new File(file_path_store);
             if (!file_store.exists())
