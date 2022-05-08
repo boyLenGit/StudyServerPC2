@@ -31,7 +31,7 @@ public class LoginController {
     public String login(@RequestParam String username, @RequestParam String password, HttpSession httpSession, RedirectAttributes attributes){
         logger.info("Len logger <Controller-login-init>|| username={}, password={}", username, password);
         User user = userService.checkUser(username, password);
-        logger.info("Len logger <Controller-login-user>|| user={}", user);
+        logger.info("Len logger <Controller-login-user>|| user={}", user.getUsername());
         if (user != null){
             user.setPassword(null);
             httpSession.setAttribute("user", user);

@@ -15,7 +15,7 @@ public class Blog {
     private String title;  // 标题
 
     // ↓ 下面的Basic和Lob只有第一次生成时才有用
-    @Basic(fetch = FetchType.LAZY)  // 设定该变量只有用到的时候再加载，避免资源浪费，因为content是文本内容，占用资源大
+    //@Basic(fetch = FetchType.LAZY)  // 设定该变量只有用到的时候再加载，避免资源浪费，因为content是文本内容，占用资源大
     @Lob  // 说明这个是大字段类型，因为如果是String，对应到数据库会生成char(255)，所以文章内容长了会报错
     private String content;  // 内容
     private String firstPicture;  // 首图

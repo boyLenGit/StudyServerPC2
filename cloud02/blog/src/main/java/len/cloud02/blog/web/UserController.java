@@ -62,11 +62,11 @@ public class UserController {
     @GetMapping("/articles")
     public String articles(@PageableDefault(size = 9, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable, Model model, HttpServletRequest request){
         User user_web = (User) request.getSession().getAttribute("user");
-        LenLog.info2(this.getClass(), "articles", user_web.toString());
+        LenLog.info2(this.getClass(), "articles", user_web.getUsername());
         User user_sql = userService.getUser(user_web.getId());
-        LenLog.info2(this.getClass(), "articles", user_sql.toString());
+        LenLog.info2(this.getClass(), "articles", user_sql.getUsername());
         Page<Blog> blogPage = blogService.listBlogByUser(pageable, user_sql);
-        LenLog.info2(this.getClass(), "articles", blogPage.toString());
+        LenLog.info2(this.getClass(), "articles", String.valueOf(blogPage.getTotalPages()));
         model.addAttribute("page", blogPage);
         return "/user/user_articles";
     }
