@@ -1,5 +1,8 @@
 package len.cloud02.blog.po;
 
+import len.cloud02.article_service.pojo.Article;
+import len.cloud02.blog.util.base.LenTime;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,11 +24,16 @@ public class User {
     private Date createTime;
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
+    private boolean is_admin;
 
     @OneToMany(mappedBy = "user")
     private List<Blog> blogs = new ArrayList<>();
 
+    @ManyToMany(mappedBy = )
+    private List<Article> articles = new ArrayList<>();
+
     public User() {
+        is_admin = false;
     }
 
     public Long getId() {
@@ -108,6 +116,14 @@ public class User {
         this.blogs = blogs;
     }
 
+    public boolean isIs_admin() {
+        return is_admin;
+    }
+
+    public void setIs_admin(boolean is_admin) {
+        this.is_admin = is_admin;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -120,6 +136,8 @@ public class User {
                 ", type=" + type +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
+                ", is_admin=" + is_admin +
+                ", blogs=" + blogs +
                 '}';
     }
 }
