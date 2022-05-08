@@ -1,6 +1,7 @@
 package len.cloud02.blog.dao;
 
 import len.cloud02.common.entity.user.Blog;
+import len.cloud02.common.entity.user.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -23,4 +24,10 @@ public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificat
     @Modifying // ← 因为update是修改，因此要加上这个注解
     @Query("update t_blog blog set blog.views = blog.views + 1 where blog.id = ?1")
     int updateViews(Long id);
+
+    @Query("SELECT b FROM t_blog b WHERE b.user=?1")
+    Page<Blog> findByUser(User user, Pageable pageable);
+
+//    @Query("SELECT b FROM t_blog b WHERE b.user=?1")
+//    Page<Blog> findByUserNoPage(User user);
 }

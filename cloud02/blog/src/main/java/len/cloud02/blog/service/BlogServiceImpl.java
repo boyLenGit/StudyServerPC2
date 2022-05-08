@@ -7,6 +7,7 @@ import len.cloud02.common.entity.user.Type;
 import len.cloud02.blog.util.LenBeanUtils;
 import len.cloud02.blog.util.MarkdownUtils;
 import len.cloud02.blog.vo.BlogQuery;
+import len.cloud02.common.entity.user.User;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -68,6 +69,16 @@ public class BlogServiceImpl implements BlogService{
     public Page<Blog> listBlog(String query, Pageable pageable) {
         return blogRepository.findByQuery(query, pageable);
     }
+
+    @Override
+    public Page<Blog> listBlogByUser(Pageable pageable, User user) {
+        return blogRepository.findByUser(user, pageable);
+    }
+
+//    @Override
+//    public Page<Blog> listBlogByUserNoPage(User user) {
+//        return blogRepository.findByUserNoPage(user);
+//    }
 
     @Override
     public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {

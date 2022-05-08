@@ -13,6 +13,7 @@
         <module>cluster</module>
         <module>geodata</module>
         <module>common</module>
+        <module>paper_service</module>
     </modules>
 
 <!--    <parent>-->

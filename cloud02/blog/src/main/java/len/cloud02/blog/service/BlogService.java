@@ -2,6 +2,7 @@ package len.cloud02.blog.service;
 
 import len.cloud02.blog.vo.BlogQuery;
 import len.cloud02.common.entity.user.Blog;
+import len.cloud02.common.entity.user.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -24,6 +25,10 @@ public interface BlogService {
     Page<Blog> listBlog(Long tagId,Pageable pageable);
 
     Page<Blog> listBlog(String query,Pageable pageable);
+
+    Page<Blog> listBlogByUser(Pageable pageable, User user);
+
+//    Page<Blog> listBlogByUserNoPage(User user);
 
     Page<Blog> listBlog(Pageable pageable, BlogQuery blog);
 
