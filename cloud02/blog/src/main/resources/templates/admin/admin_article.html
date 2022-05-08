@@ -130,7 +130,7 @@ attached:轨道可以依附在主窗口
                 <tr th:each="blog,iterStat : ${page.content}">
                     <td th:text="${iterStat.count}">1</td>
                     <td th:text="${blog.title}">刻意练习清单</td>
-                    <td th:text="${blog.username}">甲乙丙</td>
+                    <td th:text="${blog.user.nickname}">甲乙丙</td>
                     <td th:text="${blog.type.name}">认知升级</td>
                     <td th:text="${blog.recommend} ? '是':'否'">是</td>
                     <td th:text="${blog.published} ? '发布':'草稿'">草稿</td>
@@ -146,8 +146,9 @@ attached:轨道可以依附在主窗口
                     <th colspan="7">
                         <div class="ui mini pagination menu" th:if="${page.totalPages}>1" >
                             <a onclick="page(this)" th:attr="data-page=${page.number}-1" class="item" th:unless="${page.first}">上一页</a>
-                            <a onclick="page(this)" th:attr="data-page=${page.number}+1" class=" item" th:unless="${page.last}">下一页</a>
+                            <a onclick="page(this)" th:attr="data-page=${page.number}+1" class="item" th:unless="${page.last}">下一页</a>
                         </div>
+                        <b th:text="${page.number}">1</b>/<b th:text="${page.totalPages}">9</b>页
                         <a href="#" th:href="@{/admin/admin_article/admin_publish}" class="ui mini right floated teal basic button">新增</a>
                     </th>
                 </tr>
