@@ -5,6 +5,8 @@
     <!--    用于设置尺寸适配移动端-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录页面</title>
+    <!--JQuery-->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
     <!--    Semantic的CSS包-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <!--    自定义CSS导入。必须加rel="stylesheet"才可以生效！-->
@@ -33,7 +35,7 @@ attached:轨道可以依附在主窗口
 <nav class="ui inverted attached segment LenCSS-m-padded-tb-mini LenCssDisplay-shadow-middle">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
-            <h1 class="ui blue header item">LenCloud Admin</h1>
+            <h1 class="ui white header item">LenCloud</h1>
             <a href="#" th:href="@{/admin/admin_article}" id="a_top_label1" class="active item LenCssLogic-mobile-hide"><i class="home icon"></i>文章</a>
             <a href="#" th:href="@{/admin/admin_types}" id="a_top_label2" class="item LenCssLogic-mobile-hide"><i class="idea icon"></i>分类</a>
             <a href="#" th:href="@{/admin/admin_tags}" id="a_top_label3" class="item LenCssLogic-mobile-hide"><i class="tags icon"></i>标签</a>

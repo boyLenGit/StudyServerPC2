@@ -31,12 +31,18 @@ public class LoginController {
     public String login(@RequestParam String username, @RequestParam String password, HttpSession httpSession, RedirectAttributes attributes){
         logger.info("Len logger <Controller-login-init>|| username={}, password={}", username, password);
         User user = userService.checkUser(username, password);
-        logger.info("Len logger <Controller-login-user>|| user={}", user.getUsername());
         if (user != null){
-            user.setPassword(null);
-            httpSession.setAttribute("user", user);
-            return "admin/admin_index";
+            logger.info("Len logger <Controller-login-user>|| user={}", user.getUsername());
+            if (user.getType()==0){
+                attributes.addFlashAttribute("message", "不是管理员账号！已报告给管理员！");
+                return "redirect:/admin";
+            }else {  // 是管理员用户或者su用户
+                user.setPassword(null);
+                httpSession.setAttribute("user", user);
+                return "admin/admin_index";
+            }
         }else {
+            logger.info("Len logger <Controller-login-user>|| user={}", "查询的用户为空");
             attributes.addFlashAttribute("message", "用户名或密码错误");
             return "redirect:/admin";
         }
