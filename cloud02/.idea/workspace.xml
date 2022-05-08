@@ -73,7 +73,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ArticleServiceApplication">
+  <component name="RunManager" selected="Spring Boot.CommonApplication">
     <configuration name="ReadFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="len.cloud02.blog.ReadFile" />
       <module name="blog" />
@@ -298,6 +298,10 @@
       <screen x="0" y="25" width="1680" height="956" />
     </state>
     <state x="614" y="372" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.25.1920.1055/0.25.1680.956@0.25.1680.956" timestamp="1647939195275" />
+    <state x="578" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1651978642281">
+      <screen x="0" y="25" width="1680" height="965" />
+    </state>
+    <state x="578" y="258" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.25.1920.1055/1680.-515.1080.1895/0.25.1680.965@0.25.1680.965" timestamp="1651978642281" />
     <state width="457" height="466" key="DebuggerActiveHint" timestamp="1650460329011">
       <screen x="0" y="25" width="1680" height="960" />
     </state>

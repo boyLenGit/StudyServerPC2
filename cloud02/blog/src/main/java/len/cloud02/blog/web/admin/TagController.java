@@ -1,6 +1,7 @@
 package len.cloud02.blog.web.admin;
 
 import len.cloud02.blog.service.TagService;
+import len.cloud02.common.entity.user.Tag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

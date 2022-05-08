@@ -1,7 +1,7 @@
 package len.cloud02.article_service.service;
 
 import len.cloud02.article_service.dao.ArticleRepository;
-import len.cloud02.article_service.pojo.Article;
+import len.cloud02.common.entity.article.Article;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
