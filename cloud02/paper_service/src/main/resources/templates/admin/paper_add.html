@@ -3,7 +3,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>添加书籍</title>
+    <title>添加文献</title>
     <link rel="stylesheet" href="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
     <!--    Semantic的CSS包-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
@@ -19,48 +19,48 @@
 
 <div class="ui container">
     <div class="ui attached segment">
-        <h1>在这里添加书籍</h1>
+        <h1>添加文献</h1>
         <!--书籍显示列表-->
         <div>
             <form action="#" method="post" th:object="${paper}" th:action="@{/admin/add_paper_post}" class="ui form" enctype="multipart/form-data">
                 <div>
                     <input type="hidden" name="id" placeholder="书籍ID" th:value="*{id}">
-                    <input type="hidden" name="view_time" placeholder="书籍ID" th:value="*{view_time}">
+                    <input type="hidden" name="view_time" placeholder="文献浏览量" th:value="*{view_time}">
                     <div class="required field">
                         <div class="ui left labeled input">
                             <label class="ui teal basic label">名称</label>
-                            <input type="text" name="name" placeholder="书籍名称" th:value="*{name}">
+                            <input type="text" name="name" placeholder="文献名称" th:value="*{name}">
                         </div>
                     </div>
                     <div class="required field">
                         <div class="ui left labeled input">
                             <label class="ui teal basic label">作者</label>
-                            <input type="text" name="author" placeholder="书籍作者" th:value="*{author}">
+                            <input type="text" name="author" placeholder="文献作者" th:value="*{author}">
                         </div>
                     </div>
                     <div class="required field">
                         <div class="ui left labeled input">
-                            <label class="ui teal basic label">出版社</label>
-                            <input type="text" name="publisher" placeholder="出版社" th:value="*{publisher}">
+                            <label class="ui teal basic label">期刊</label>
+                            <input type="text" name="publisher" placeholder="文献期刊" th:value="*{publisher}">
                         </div>
                     </div>
                     <div class="required field">
                         <div class="ui left labeled input">
                             <label class="ui teal basic label">简介</label>
-                            <input type="text" name="introduce" placeholder="简介" th:value="*{introduce}">
+                            <input type="text" name="introduce" placeholder="文献简介" th:value="*{introduce}">
                         </div>
                     </div>
                     <div class="required field">
                         <div class="ui left labeled input">
                             <label class="ui teal basic label">封面</label>
-                            <input type="text" placeholder="封面图" th:value="*{first_picture}">
+                            <input type="text" placeholder="文献首页图" th:value="*{first_picture}">
                             <input type="file" name="files">
                         </div>
                     </div>
                     <div class="required field">
                         <div class="ui left labeled input">
                             <label class="ui teal basic label">文件</label>
-                            <input type="text" placeholder="文件" th:value="*{file_path}">
+                            <input type="text" placeholder="文献PDF文件" th:value="*{file_path}">
                             <input type="file" name="files">
                         </div>
                     </div>

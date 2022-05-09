@@ -20,14 +20,25 @@
     <div class="ui attached segment">
         <h1>这里是文献管理系统</h1>
 
-        <!--书籍管理页面按钮-->
         <div>
-            <a href="#" th:href="@{/admin/add_paper}">
-                <div class="ui button">
-                    <i class="archive icon"></i>
-                    <a>增加文献</a>
+            <form action="#" method="post" th:action="@{/admin/paper_query/one_keyword}" class="ui form">
+                <div class="ui grid">
+                    <div class="left aligned six wide column">
+                        <div class="ui left labeled input">
+                            <label class="ui teal basic label">搜索书籍</label>
+                            <input type="text" name="keyword" placeholder="关键词">
+                        </div>
+                    </div>
+                    <div class="left aligned five wide column">
+                        <button type="submit" class="ui teal submit button">
+                            <i class="search icon"></i>搜索
+                        </button>
+                        <a class="ui blue button" th:href="@{/admin/add_paper}">
+                            <i class="add circle icon"></i>增加文献
+                        </a>
+                    </div>
                 </div>
-            </a>
+            </form>
         </div>
 
         <!--书籍显示列表-->

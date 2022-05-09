@@ -80,4 +80,12 @@ public class PaperAdminController {
         paperService.deleteBook(id);
         return "redirect:/admin/papers";
     }
+
+    // Paper的关键词查询
+    @PostMapping("/paper_query/one_keyword")
+    public String queryPaperByOneKeyword(@RequestParam String keyword, @PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable, Model model){
+        Page<Paper> paperPage = paperService.findPapersByOneKeyword(pageable, keyword);
+        model.addAttribute("page", paperPage);
+        return "/admin/paper_list";
+    }
 }
