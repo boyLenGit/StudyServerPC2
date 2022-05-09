@@ -13,6 +13,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+
 @Service
 public class PaperService {
     @Autowired
@@ -21,8 +23,13 @@ public class PaperService {
 //    private PaperMapper paperMapper;
 
     public Page<Paper> getPaperList(Pageable pageable){
-        Page<Paper> articles = paperRepository.findAll(pageable);
-        return articles;
+        Page<Paper> papers = paperRepository.findAll(pageable);
+        return papers;
+    }
+
+    public ArrayList<Paper> getPaperListNoPageable(){
+        ArrayList<Paper> papers = paperRepository.listPaperByNoPageable();
+        return papers;
     }
 
     public void addPaper(Paper paper){

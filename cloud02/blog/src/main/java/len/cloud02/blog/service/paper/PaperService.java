@@ -12,23 +12,26 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+
 @Service
 public class PaperService {
     @Autowired
     private RestTemplate restTemplate;
 
-    public Page<Paper> getPaperList(Pageable pageable){
-        String url = "http://paperservice/geodata/queryById/rest_paper/papers";
-        PagePaper pagePaper = restTemplate.postForObject(url, pageable, PagePaper.class);
-        if (pagePaper == null){
+    public ArrayList<Paper> getPaperList(Pageable pageable){
+        String url = "http://paperservice/rest_paper/papers";
+        ArrayList<Paper> papers = restTemplate.getForObject(url, ArrayList.class);
+        if (papers == null){
             LenLog.info2(getClass(), "getPaperList", "NULL");
         }
-        return pagePaper.getPaperPage();
+        return papers;
     }
 
-//    public void addPaper(Paper paper){
-//        paperRepository.save(paper);
-//    }
+    public void addPaper(Paper paper){
+        String url = "http://paperservice/rest_paper/admin/paper_add_post";
+        restTemplate.postForObject(url, paper, String.class);
+    }
 
     public Paper getPaperById(Long id){
         String url = "http://paperservice/rest_paper/detail/" + id;
@@ -37,7 +40,7 @@ public class PaperService {
     }
 
     public void updateBook(Long id, Paper paper){
-        String url = "http://paperservice/rest_paper/paper_update_post/" + id;
+        String url = "http://paperservice/rest_paper/admin/paper_update_post/" + id;
         restTemplate.postForObject(url, paper, String.class);
     }
 //

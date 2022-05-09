@@ -58,7 +58,7 @@
                     <tbody>
                         <tr th:each="paper,iterStat : ${page.content}">
                             <td th:text="${iterStat.count}">1</td>
-                            <td><a th:text="${paper.name}" th:href="@{/detail/{id}(id=${paper.id})}">测试书名</a></td>
+                            <td><a th:text="${paper.name}" th:href="@{/paper/detail/{id}(id=${paper.id})}">测试书名</a></td>
                             <td th:text="${paper.author}">测试作者</td>
                             <td th:text="${paper.publisher}">测试出版社</td>
                             <td th:text="${paper.view_time}">测试借阅次数</td>

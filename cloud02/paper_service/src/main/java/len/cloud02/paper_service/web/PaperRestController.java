@@ -2,6 +2,7 @@ package len.cloud02.paper_service.web;
 
 import len.cloud02.common.Util.LenLog;
 import len.cloud02.common.Util.LenPath;
+import len.cloud02.common.entity.helper.PagePaper;
 import len.cloud02.common.entity.paper.Paper;
 import len.cloud02.paper_service.serviec.PaperService;
 import org.hibernate.Hibernate;
@@ -22,6 +23,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/rest_paper")
@@ -29,13 +31,23 @@ public class PaperRestController {
     @Autowired
     private PaperService paperService;
 
+    // http://localhost:8086/rest_paper/papers
     @GetMapping("/papers")
-    public Page<Paper> paperList(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable,
-                            Model model){
-        Page<Paper> paperPage = paperService.getPaperList(pageable);
+    public ArrayList<Paper> paperList(){
+        ArrayList<Paper> paperPage = paperService.getPaperListNoPageable();
         return paperPage;
 //        model.addAttribute("page", paperPage);
 //        return "paper_list";
+    }
+
+    @PostMapping("/papers")
+    public PagePaper paperListAdmin(@RequestBody Pageable pageable, Model model){
+        Page<Paper> paperPage = paperService.getPaperList(pageable);
+        PagePaper pagePaper = new PagePaper();
+        pagePaper.setPaperPage(paperPage);
+        return pagePaper;
+//        model.addAttribute("page", paperPage);
+//        return "/admin/paper_list";
     }
 
     // 文献详情

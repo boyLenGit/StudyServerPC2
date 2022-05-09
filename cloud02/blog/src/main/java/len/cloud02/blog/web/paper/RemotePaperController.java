@@ -6,6 +6,7 @@ import len.cloud02.common.Util.LenPath;
 import len.cloud02.common.entity.paper.Paper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -21,6 +22,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 @Controller
 @RequestMapping("/paper")
@@ -28,14 +30,16 @@ public class RemotePaperController {
     @Autowired
     private PaperService paperService;
 
+    // http://localhost:8080/admin/papers
     @GetMapping("/papers")
-    public String paperList(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable,
-                            Model model){
-        Page<Paper> paperPage = paperService.getPaperList(pageable);
-        model.addAttribute("page", paperPage);
-        return "paper/paper_list";
+    public String paperListAdmin(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable,
+                                 Model model){
+        ArrayList<Paper> arrayList = paperService.getPaperList(pageable);
+        Page<Paper> pages = new PageImpl<>(arrayList, pageable, arrayList.size());
+        model.addAttribute("page", pages);
+        return "/admin/paper/paper_list";
     }
-//
+
     // 文献详情
     @GetMapping("/detail/{id}")
     public String paperDetail(@PathVariable Long id, Model model){
