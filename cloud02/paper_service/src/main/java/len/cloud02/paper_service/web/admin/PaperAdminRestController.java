@@ -5,6 +5,7 @@ import len.cloud02.common.Util.LenLog;
 import len.cloud02.common.Util.LenPath;
 import len.cloud02.common.Util.LenTime;
 import len.cloud02.common.entity.helper.PagePaper;
+import len.cloud02.common.entity.helper.RestString;
 import len.cloud02.common.entity.paper.Paper;
 import len.cloud02.paper_service.serviec.PaperService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,8 +53,8 @@ public class PaperAdminRestController {
 
     // Paper的关键词查询
     @PostMapping("/paper_query/one_keyword")
-    public ArrayList<Paper> queryPaperByOneKeyword(@RequestBody String keyword, Model model){
-        return paperService.findPapersByOneKeyword(keyword);
+    public ArrayList<Paper> queryPaperByOneKeyword(@RequestBody RestString restString, Model model){
+        return paperService.findPapersByOneKeyword(restString.getString1());
     }
 
     @PostMapping("/paper_update_post/{id}")

@@ -3,6 +3,7 @@ package len.cloud02.blog.service.paper;
 import len.cloud02.common.Util.LenLog;
 import len.cloud02.common.Util.LenText;
 import len.cloud02.common.entity.helper.PagePaper;
+import len.cloud02.common.entity.helper.RestString;
 import len.cloud02.common.entity.paper.Paper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,8 +54,8 @@ public class PaperService {
         // keyword传入的时候不需要加%
         keyword = LenText.makeTextUseful(keyword);
         LenLog.info2(getClass(), "findPapersByOneKeyword", keyword);
-        String url = "http://paperservice/rest_paper/papers";
-        ArrayList<Paper> papers = restTemplate.postForObject(url, keyword, ArrayList.class);
+        String url = "http://paperservice/rest_paper/admin/paper_query/one_keyword";
+        ArrayList<Paper> papers = restTemplate.postForObject(url, new RestString(keyword), ArrayList.class);
         if (papers == null){
             LenLog.info2(getClass(), "getPaperList", "NULL");
         }
