@@ -99,14 +99,15 @@ public class RemotePaperAdminController {
         paperService.deleteBook(id);
         return "redirect:/admin/papers";
     }
-//
-//    // Paper的关键词查询
-//    @PostMapping("/paper_query/one_keyword")
-//    public String queryPaperByOneKeyword(@RequestParam String keyword, @PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable, Model model){
-//        Page<Paper> paperPage = paperService.findPapersByOneKeyword(pageable, keyword);
-//        model.addAttribute("page", paperPage);
-//        return "/admin/paper_list";
-//    }
+
+    // Paper的关键词查询
+    @PostMapping("/paper_query/one_keyword")
+    public String queryPaperByOneKeyword(@RequestParam String keyword, @PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable, Model model){
+        ArrayList<Paper> arrayList = paperService.findPapersByOneKeyword(keyword);
+        Page<Paper> pages = new PageImpl<>(arrayList, pageable, arrayList.size());
+        model.addAttribute("page", pages);
+        return "/admin/paper/paper_list";
+    }
 
     // 更新  http://localhost:8080/admin/paper_update/100
     @GetMapping("/paper_update/{id}")

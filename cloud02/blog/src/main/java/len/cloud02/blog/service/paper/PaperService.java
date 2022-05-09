@@ -48,11 +48,16 @@ public class PaperService {
         String url = "http://paperservice/rest_paper/admin/paper_delete/" + id;
         restTemplate.getForObject(url, String.class);
     }
-//
-//    public Page<Paper> findPapersByOneKeyword(Pageable pageable, String keyword){
-//        // keyword传入的时候不需要加%
-//        keyword = LenText.makeTextUseful(keyword);
-//        LenLog.info2(getClass(), "findPapersByOneKeyword", keyword);
-//        return paperRepository.findPapersByOneKeyword(pageable, "%"+keyword+"%");
-//    }
+
+    public ArrayList<Paper> findPapersByOneKeyword(String keyword){
+        // keyword传入的时候不需要加%
+        keyword = LenText.makeTextUseful(keyword);
+        LenLog.info2(getClass(), "findPapersByOneKeyword", keyword);
+        String url = "http://paperservice/rest_paper/papers";
+        ArrayList<Paper> papers = restTemplate.postForObject(url, keyword, ArrayList.class);
+        if (papers == null){
+            LenLog.info2(getClass(), "getPaperList", "NULL");
+        }
+        return papers;
+    }
 }
