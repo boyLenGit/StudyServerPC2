@@ -5,7 +5,10 @@ import org.apache.catalina.core.ApplicationContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @EntityScan(basePackages = {"len.cloud02.common.entity"})
 @SpringBootApplication
@@ -22,4 +25,9 @@ public class BlogApplication {
 //        LenLog.staticInfo("main", String.valueOf(bean_num));
     }
 
+    @LoadBalanced
+    @Bean
+    public RestTemplate loadBalanced(){
+        return new RestTemplate();
+    }
 }

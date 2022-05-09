@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--xmlns:th="http://www.w3.org/1999/xhtml"  用于引入thymeleaf-->
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${paper.name}">文献名字</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    <!--    Semantic的CSS包-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/layout.css" th:href="@{/css/layout.css}">
+    <link rel="stylesheet" href="../static/css/font.css" th:href="@{/css/font.css}">
+</head>
+<body>
+<!--****** 导包 ******-->
+<!--    JQuery包-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    Semantic的JS包-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--******     ******-->
+
+
+<div class="ui container">
+    <div class="ui attached segment">
+        <div class="ui padded vertical segment">
+            <div class="ui mobile reversed stackable grid">
+                <div class="five wide column">
+                    <a href="#" target="_blank">
+                        <img src="../static/image/paper_firstpicture.png" th:src="${paper.first_picture}" alt="" class="ui rounded image">
+                    </a>
+                </div>
+
+                <div class="eleven wide column">
+                    <div class="ui huge header volume-huge-level1" th:text="${paper.name}">文献名称</div>
+                    <div>
+                        <div class="ui horizontal link list">
+                            <div class="item">
+                                <div class="middle aligned content">
+                                    <div class="header">
+                                        <i class="large user icon"></i>
+                                        <b class="volume-big-level1" th:text="${paper.author}">作者名</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="middle aligned content">
+                                    <div class="header">
+                                        <i class="large print icon"></i>
+                                        <b class="volume-big-level1" th:text="${paper.publisher}">出版社</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vertical-pad-middle">
+                        <div class="ui horizontal link list">
+                            <div class="item">
+                                <div class="ui blue large label">
+                                    <i class="eye icon"></i> <b th:text="${paper.view_time}">523</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="vertical-pad-small-level2" th:text="${paper.introduce}">书籍正文</p>
+                </div>
+
+                <div class="3 fluid ui buttons">
+                    <a class="ui blue button" th:href="@{/download/{id}(id=${paper.id})}">
+                        <i class="download icon"></i>下载
+                    </a>
+                    <a class="ui teal button" th:href="@{/quote/{id}(id=${paper.id})}">
+                        <i class="send icon"></i>引用
+                    </a>
+                    <a class="ui yellow button">
+                        <i class="star icon"></i>收藏
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>

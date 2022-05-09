@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="eleven wide column">
-                    <div class="ui huge header volume-huge-level1" th:text="${paper.name}">书籍名称</div>
+                    <div class="ui huge header volume-huge-level1" th:text="${paper.name}">文献名称</div>
                     <div>
                         <div class="ui horizontal link list">
                             <div class="item">
@@ -62,17 +62,17 @@
                         </div>
                     </div>
                     <hr>
-                    <p class="vertical-pad-small-level2 volume-big-level1" th:text="${paper.introduce}">书籍正文</p>
+                    <p class="vertical-pad-small-level2" th:text="${paper.introduce}">书籍正文</p>
                 </div>
 
                 <div class="3 fluid ui buttons">
-                    <a class="ui active blue button" th:href="@{/download/{id}(id=${paper.id})}">
+                    <a class="ui blue button" th:href="@{/download/{id}(id=${paper.id})}">
                         <i class="download icon"></i>下载
                     </a>
-                    <a class="ui active teal button" th:href="@{/quote/{id}(id=${paper.id})}">
+                    <a class="ui teal button" th:href="@{/quote/{id}(id=${paper.id})}">
                         <i class="send icon"></i>引用
                     </a>
-                    <a class="ui active yellow button">
+                    <a class="ui yellow button">
                         <i class="star icon"></i>收藏
                     </a>
                 </div>

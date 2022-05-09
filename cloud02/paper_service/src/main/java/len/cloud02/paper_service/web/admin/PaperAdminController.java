@@ -64,7 +64,6 @@ public class PaperAdminController {
         }
         paper.setFile_path(file_path);
         // 设置Paper其他属性
-        paper.setName(LenText.makeTextUseful(paper.getName()));
         paper.setView_time(0);
         paperService.addPaper(paper);
         return "redirect:/admin/papers";
