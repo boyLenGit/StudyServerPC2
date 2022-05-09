@@ -1,9 +1,6 @@
 package len.cloud02.common.entity.paper;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity(name = "paper")
 @Table
@@ -14,6 +11,7 @@ public class Paper {
     private String name;
     private String author;
     private String publisher;
+    @Lob
     private String introduce;
     private String first_picture;
     private Integer view_time;

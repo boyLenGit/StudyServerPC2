@@ -23,9 +23,9 @@
     <div class="ui attached segment">
         <div class="ui padded vertical segment">
             <div class="ui mobile reversed stackable grid">
-                <div class="three wide column">
+                <div class="five wide column">
                     <a href="#" target="_blank">
-                        <img src="https://picsum.photos/150/220" th:src="${paper.first_picture}" alt="" class="ui rounded image">
+                        <img src="../static/image/paper_firstpicture.png" th:src="${paper.first_picture}" alt="" class="ui rounded image">
                     </a>
                 </div>
 
@@ -69,15 +69,12 @@
                     <a class="ui active blue button" th:href="@{/download/{id}(id=${paper.id})}">
                         <i class="download icon"></i>下载
                     </a>
-                    <div class="ui active teal button" th:href="@{/quote/{id}(id=${paper.id})}">
+                    <a class="ui active teal button" th:href="@{/quote/{id}(id=${paper.id})}">
                         <i class="send icon"></i>引用
-                    </div>
-                    <div class="ui active yellow button">
+                    </a>
+                    <a class="ui active yellow button">
                         <i class="star icon"></i>收藏
-                    </div>
-<!--                    <button type="button" class="ui blue button">下载</button>-->
-<!--                    <button type="button" class="ui teal button">引用</button>-->
-<!--                    <button type="button" class="ui purple button">收藏</button>-->
+                    </a>
                 </div>
             </div>
         </div>
