@@ -33,6 +33,11 @@ public class RemotePaperAdminController {
     @GetMapping("/papers")
     public String paperListAdmin(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable,
                                  Model model){
+//        //当前页第一条数据在list中的位置
+//        int start = (int) pageable.getOffset();
+//        //当前页最后一条数据在list中的位置
+//        int end = (start + pageable.getPageSize()) > list.size() ? list.size() : (start + pageable.getPageSize());
+//        Page<object> List = new PageImpl<>(list.subList(start, end), pageable, list.size());
         ArrayList<Paper> arrayList = paperService.getPaperList(pageable);
         Page<Paper> pages = new PageImpl<>(arrayList, pageable, arrayList.size());
         model.addAttribute("page", pages);
@@ -81,6 +86,11 @@ public class RemotePaperAdminController {
 
     @GetMapping("/paper_delete/{id}")
     public String deletePaper (@PathVariable Long id) throws IOException{
+        Paper paper = paperService.getPaperById(id);
+        if (paper==null){
+            LenLog.info2(getClass(), "deletePaper", "删除失败！Paper为Null！不存在此ID的Paper！");
+            return "redirect:/admin/papers";
+        }
         String file_path = LenPath.getData() + paperService.getPaperById(id).getFile_path();
         LenFile.deleteFile(file_path);
         String image_path = LenPath.getData() + paperService.getPaperById(id).getFirst_picture();
