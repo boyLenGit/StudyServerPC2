@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 @Controller
@@ -87,7 +88,7 @@ public class PaperAdminController {
     public String queryPaperByOneKeyword(@RequestParam String keyword, @PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable, Model model){
         Page<Paper> paperPage = paperService.findPapersByOneKeyword(pageable, keyword);
         model.addAttribute("page", paperPage);
-        return "/admin/paper_list";
+        return "/paper_list";
     }
 
     // 更新

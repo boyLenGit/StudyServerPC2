@@ -95,10 +95,8 @@ public class PaperRestController {
     }
 
     @PostMapping("/paper_query/one_keyword")
-    public Page<Paper> queryPaperByOneKeyword(@RequestParam String keyword, @PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable, Model model){
-        Page<Paper> paperPage = paperService.findPapersByOneKeyword(pageable, keyword);
-        return paperPage;
-//        model.addAttribute("page", paperPage);
-//        return "/paper_list";
+    public ArrayList<Paper> queryPaperByOneKeyword(@RequestParam String keyword, @PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable, Model model){
+        ArrayList<Paper> arrayList = paperService.findPapersByOneKeyword(keyword);
+        return arrayList;
     }
 }
