@@ -21,7 +21,7 @@
         <h1>这里是文献管理系统</h1>
 
         <div>
-            <form action="#" method="post" th:action="@{/paper_query/one_keyword}" class="ui form">
+            <form action="#" method="post" th:action="@{/paper/paper_query/one_keyword}" class="ui form">
                 <div class="ui grid">
                     <div class="left aligned six wide column">
                         <div class="ui left labeled input">
@@ -53,13 +53,13 @@
                     <tbody>
                         <tr th:each="paper,iterStat : ${page.content}">
                             <td th:text="${iterStat.count}">1</td>
-                            <td><a th:text="${paper.name}" th:href="@{/detail/{id}(id=${paper.id})}">测试书名</a></td>
+                            <td><a th:text="${paper.name}" th:href="@{/paper/detail/{id}(id=${paper.id})}">测试书名</a></td>
                             <td th:text="${paper.author}">测试作者</td>
                             <td th:text="${paper.publisher}">测试出版社</td>
                             <td th:text="${paper.view_time}">测试借阅次数</td>
                             <td>
-                                <a href="#" th:href="@{/quote/{id}(id=${paper.id})}" class="ui mini teal basic button">引用</a>
-                                <a href="#" th:href="@{/download/{id}(id=${paper.id})}" class="ui mini teal basic button">下载</a>
+                                <a href="#" th:href="@{/paper/quote/{id}(id=${paper.id})}" class="ui mini teal basic button">引用</a>
+                                <a href="#" th:href="@{/paper/download/{id}(id=${paper.id})}" class="ui mini teal basic button">下载</a>
                             </td>
                         </tr>
                     </tbody>

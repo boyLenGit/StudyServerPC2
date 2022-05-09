@@ -36,18 +36,6 @@ public class PaperRestController {
     public ArrayList<Paper> paperList(){
         ArrayList<Paper> paperPage = paperService.getPaperListNoPageable();
         return paperPage;
-//        model.addAttribute("page", paperPage);
-//        return "paper_list";
-    }
-
-    @PostMapping("/papers")
-    public PagePaper paperListAdmin(@RequestBody Pageable pageable, Model model){
-        Page<Paper> paperPage = paperService.getPaperList(pageable);
-        PagePaper pagePaper = new PagePaper();
-        pagePaper.setPaperPage(paperPage);
-        return pagePaper;
-//        model.addAttribute("page", paperPage);
-//        return "/admin/paper_list";
     }
 
     // 文献详情
@@ -58,8 +46,6 @@ public class PaperRestController {
         paper.setView_time(paper.getView_time()+1);
         paperService.updateBook(id, paper);
         return paper;
-//        model.addAttribute("paper", paper);
-//        return "paper_detail";
     }
 
     // 下载
