@@ -1,10 +1,7 @@
 package len.cloud02.paper_service.web.admin;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
-import len.cloud02.common.Util.LenFile;
-import len.cloud02.common.Util.LenLog;
-import len.cloud02.common.Util.LenPath;
-import len.cloud02.common.Util.LenTime;
+import len.cloud02.common.Util.*;
 import len.cloud02.common.entity.paper.Paper;
 import len.cloud02.paper_service.serviec.PaperService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,6 +64,7 @@ public class PaperAdminController {
         }
         paper.setFile_path(file_path);
         // 设置Paper其他属性
+        paper.setName(LenText.makeTextUseful(paper.getName()));
         paper.setView_time(0);
         paperService.addPaper(paper);
         return "redirect:/admin/papers";
