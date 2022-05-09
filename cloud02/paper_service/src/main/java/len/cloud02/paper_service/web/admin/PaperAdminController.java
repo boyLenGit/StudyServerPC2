@@ -1,6 +1,8 @@
 package len.cloud02.paper_service.web.admin;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import len.cloud02.common.Util.LenFile;
+import len.cloud02.common.Util.LenLog;
 import len.cloud02.common.Util.LenPath;
 import len.cloud02.common.Util.LenTime;
 import len.cloud02.common.entity.paper.Paper;
@@ -12,9 +14,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -26,7 +26,7 @@ public class PaperAdminController {
     @Autowired
     private PaperService paperService;
 
-    @GetMapping("/paper_list")
+    @GetMapping("/papers")
     public String paperListAdmin(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable,
                                  Model model){
         Page<Paper> paperPage = paperService.getPaperList(pageable);
@@ -65,12 +65,21 @@ public class PaperAdminController {
                 file_store.createNewFile();
             file1.transferTo(file_store);
         }
-        paper.setFirst_picture(file_path);
+        paper.setFile_path(file_path);
         // 设置Paper其他属性
         paper.setView_time(0);
         paperService.addPaper(paper);
-        return "redirect:/admin/paper_list";
+        return "redirect:/admin/papers";
     }
 
-
+    @GetMapping("/paper_delete/{id}")
+    public String deletePaper (@PathVariable Long id) throws IOException{
+        String file_path = LenPath.getData() + paperService.getPaperById(id).getFile_path();
+        LenFile.deleteFile(file_path);
+        String image_path = LenPath.getData() + paperService.getPaperById(id).getFirst_picture();
+        LenFile.deleteFile(image_path);
+        LenLog.info2(this.getClass(), "deleteBook", String.valueOf(id) + " " + file_path + " | " + image_path);
+        paperService.deleteBook(id);
+        return "redirect:/admin/papers";
+    }
 }

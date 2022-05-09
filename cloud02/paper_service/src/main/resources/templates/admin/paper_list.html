@@ -18,7 +18,7 @@
 
 <div class="ui container">
     <div class="ui attached segment">
-        <h1>这里是书籍管理系统</h1>
+        <h1>这里是文献管理系统</h1>
 
         <!--书籍管理页面按钮-->
         <div>
@@ -52,8 +52,8 @@
                             <td th:text="${paper.publisher}">测试出版社</td>
                             <td th:text="${paper.view_time}">测试借阅次数</td>
                             <td>
-                                <a href="#" th:href="@{/books/modify/{id}/get(id=${paper.id})}" class="ui mini teal basic button">编辑</a>
-                                <a href="#" th:href="@{/books/modify/{id}/get(id=${paper.id})}" class="ui mini teal basic button">删除</a>
+                                <a href="#" th:href="@{/admin/paper_update/{id}(id=${paper.id})}" class="ui mini teal basic button">编辑</a>
+                                <a href="#" th:href="@{/admin/paper_delete/{id}(id=${paper.id})}" class="ui mini teal basic button">删除</a>
                             </td>
                         </tr>
                     </tbody>
