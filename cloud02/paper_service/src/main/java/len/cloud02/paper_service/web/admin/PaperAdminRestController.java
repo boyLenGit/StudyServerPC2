@@ -19,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 @RestController
@@ -51,11 +52,8 @@ public class PaperAdminRestController {
 
     // Paper的关键词查询
     @PostMapping("/paper_query/one_keyword")
-    public Page<Paper> queryPaperByOneKeyword(@RequestParam String keyword, @PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable, Model model){
-        Page<Paper> paperPage = paperService.findPapersByOneKeyword(pageable, keyword);
-        return paperPage;
-//        model.addAttribute("page", paperPage);
-//        return "/admin/paper_list";
+    public ArrayList<Paper> queryPaperByOneKeyword(@RequestBody String keyword, Model model){
+        return paperService.findPapersByOneKeyword(keyword);
     }
 
     @PostMapping("/paper_update_post/{id}")

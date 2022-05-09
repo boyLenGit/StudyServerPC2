@@ -13,6 +13,9 @@ public interface PaperRepository extends JpaRepository<Paper, Long>, JpaSpecific
     @Query("SELECT p FROM paper p WHERE p.name LIKE ?1")
     Page<Paper> findPapersByOneKeyword(Pageable pageable, String keyword);
 
+    @Query("SELECT p FROM paper p WHERE p.name LIKE ?1")
+    ArrayList<Paper> findPapersByOneKeyword(String keyword);
+
     @Query("SELECT p FROM paper p")
     ArrayList<Paper> listPaperByNoPageable();
 }

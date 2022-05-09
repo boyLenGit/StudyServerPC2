@@ -58,10 +58,10 @@ public class PaperService {
         paperRepository.deleteById(id);
     }
 
-    public Page<Paper> findPapersByOneKeyword(Pageable pageable, String keyword){
+    public ArrayList<Paper> findPapersByOneKeyword(String keyword){
         // keyword传入的时候不需要加%
         keyword = LenText.makeTextUseful(keyword);
         LenLog.info2(getClass(), "findPapersByOneKeyword", keyword);
-        return paperRepository.findPapersByOneKeyword(pageable, "%"+keyword+"%");
+        return paperRepository.findPapersByOneKeyword("%"+keyword+"%");
     }
 }
