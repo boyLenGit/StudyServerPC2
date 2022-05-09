@@ -4,6 +4,7 @@ import len.cloud02.common.Util.LenFile;
 import len.cloud02.common.Util.LenLog;
 import len.cloud02.common.Util.LenPath;
 import len.cloud02.common.Util.LenTime;
+import len.cloud02.common.entity.helper.PagePaper;
 import len.cloud02.common.entity.paper.Paper;
 import len.cloud02.paper_service.serviec.PaperService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/rest_paper/admin")
@@ -24,10 +27,12 @@ public class PaperAdminRestController {
     @Autowired
     private PaperService paperService;
 
-    @GetMapping("/papers")
-    public Page<Paper> paperListAdmin(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable, Model model){
+    @PostMapping("/papers")
+    public PagePaper paperListAdmin(Pageable pageable, Model model){
         Page<Paper> paperPage = paperService.getPaperList(pageable);
-        return paperPage;
+        PagePaper pagePaper = new PagePaper();
+        pagePaper.setPaperPage(paperPage);
+        return pagePaper;
 //        model.addAttribute("page", paperPage);
 //        return "/admin/paper_list";
     }
@@ -91,5 +96,11 @@ public class PaperAdminRestController {
         return paperPage;
 //        model.addAttribute("page", paperPage);
 //        return "/admin/paper_list";
+    }
+
+    @PostMapping("/paper_update_post/{id}")
+    public String updatePaper_Post(@Valid Paper paper, @PathVariable Long id) throws IOException{
+        paperService.updateBook(id, paper);
+        return "redirect:/admin/papers";
     }
 }

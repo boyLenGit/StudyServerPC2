@@ -1,7 +1,10 @@
 package len.cloud02.common.entity.paper;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
+@JsonIgnoreProperties(value = { "hibernateLazyInitializer", "handler" })
 @Entity(name = "paper")
 @Table
 public class Paper {

@@ -41,11 +41,10 @@ public class PaperRestController {
     // 文献详情
     @GetMapping("/detail/{id}")
     public Paper paperDetail(@PathVariable Long id, Model model){
-//        Paper paper = paperService.getPaperById(id);
-        Paper paper = paperService.getPaperByIdByMapper(id);
+        Paper paper = paperService.getPaperById(id);
+//        Paper paper = paperService.getPaperByIdByMapper(id);
         paper.setView_time(paper.getView_time()+1);
         paperService.updateBook(id, paper);
-        Hibernate.initialize(paper);
         return paper;
 //        model.addAttribute("paper", paper);
 //        return "paper_detail";

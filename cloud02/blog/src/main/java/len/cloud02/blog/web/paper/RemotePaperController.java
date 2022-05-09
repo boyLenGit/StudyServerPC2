@@ -28,13 +28,13 @@ public class RemotePaperController {
     @Autowired
     private PaperService paperService;
 
-//    @GetMapping("/papers")
-//    public String paperList(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable,
-//                            Model model){
-//        Page<Paper> paperPage = paperService.getPaperList(pageable);
-//        model.addAttribute("page", paperPage);
-//        return "paper_list";
-//    }
+    @GetMapping("/papers")
+    public String paperList(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable,
+                            Model model){
+        Page<Paper> paperPage = paperService.getPaperList(pageable);
+        model.addAttribute("page", paperPage);
+        return "paper/paper_list";
+    }
 //
     // 文献详情
     @GetMapping("/detail/{id}")

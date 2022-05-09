@@ -2,6 +2,7 @@ package len.cloud02.blog.service.paper;
 
 import len.cloud02.common.Util.LenLog;
 import len.cloud02.common.Util.LenText;
+import len.cloud02.common.entity.helper.PagePaper;
 import len.cloud02.common.entity.paper.Paper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +17,14 @@ public class PaperService {
     @Autowired
     private RestTemplate restTemplate;
 
-//    public Page<Paper> getPaperList(Pageable pageable){
-//        String url = "http://paperservice/geodata/queryById/rest_paper/papers";
-//        Page<Paper> paperPage = restTemplate.getForObject(url, Page<Paper>.getClass());
-//        return articles;
-//    }
+    public Page<Paper> getPaperList(Pageable pageable){
+        String url = "http://paperservice/geodata/queryById/rest_paper/papers";
+        PagePaper pagePaper = restTemplate.postForObject(url, pageable, PagePaper.class);
+        if (pagePaper == null){
+            LenLog.info2(getClass(), "getPaperList", "NULL");
+        }
+        return pagePaper.getPaperPage();
+    }
 
 //    public void addPaper(Paper paper){
 //        paperRepository.save(paper);
@@ -32,14 +36,11 @@ public class PaperService {
         return paper;
     }
 
-//    @Transactional  // JPA要求，没有事务支持（即没有给方法加@Transactional），不能执行更新和删除操作，会报错”Executing an update/delete query“
-//    public Paper updateBook(Long id, Paper book){
-//        Paper book_from_sql = getPaperById(id);
-//        BeanUtils.copyProperties(book, book_from_sql);
-//        return paperRepository.save(book_from_sql);
-//    }
+    public void updateBook(Long id, Paper paper){
+        String url = "http://paperservice/rest_paper/paper_update_post/" + id;
+        restTemplate.postForObject(url, paper, String.class);
+    }
 //
-//    @Transactional  // JPA要求，没有事务支持（即没有给方法加@Transactional），不能执行更新和删除操作，会报错”Executing an update/delete query“
 //    public void deleteBook(Long id){
 //        paperRepository.deleteById(id);
 //    }
