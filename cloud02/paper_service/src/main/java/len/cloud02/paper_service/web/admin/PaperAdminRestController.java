@@ -44,15 +44,9 @@ public class PaperAdminRestController {
     }
 
     @GetMapping("/paper_delete/{id}")
-    public String deletePaper (@PathVariable Long id) throws IOException{
-        String file_path = LenPath.getData() + paperService.getPaperById(id).getFile_path();
-        LenFile.deleteFile(file_path);
-        String image_path = LenPath.getData() + paperService.getPaperById(id).getFirst_picture();
-        LenFile.deleteFile(image_path);
-        LenLog.info2(this.getClass(), "deleteBook", String.valueOf(id) + " " + file_path + " | " + image_path);
+    public String deletePaper (@PathVariable Long id){
         paperService.deleteBook(id);
         return "Success";
-//        return "redirect:/admin/papers";
     }
 
     // Paper的关键词查询

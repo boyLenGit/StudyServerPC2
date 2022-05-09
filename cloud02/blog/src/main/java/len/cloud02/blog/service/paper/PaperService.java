@@ -29,7 +29,7 @@ public class PaperService {
     }
 
     public void addPaper(Paper paper){
-        String url = "http://paperservice/rest_paper/admin/paper_add_post";
+        String url = "http://paperservice/rest_paper/admin/add_paper_post";
         restTemplate.postForObject(url, paper, String.class);
     }
 
@@ -43,10 +43,11 @@ public class PaperService {
         String url = "http://paperservice/rest_paper/admin/paper_update_post/" + id;
         restTemplate.postForObject(url, paper, String.class);
     }
-//
-//    public void deleteBook(Long id){
-//        paperRepository.deleteById(id);
-//    }
+
+    public void deleteBook(Long id){
+        String url = "http://paperservice/rest_paper/admin/paper_delete/" + id;
+        restTemplate.getForObject(url, String.class);
+    }
 //
 //    public Page<Paper> findPapersByOneKeyword(Pageable pageable, String keyword){
 //        // keyword传入的时候不需要加%

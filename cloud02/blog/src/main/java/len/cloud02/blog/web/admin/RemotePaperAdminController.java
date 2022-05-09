@@ -78,17 +78,17 @@ public class RemotePaperAdminController {
         paperService.addPaper(paper);
         return "redirect:/admin/papers";
     }
-//
-//    @GetMapping("/paper_delete/{id}")
-//    public String deletePaper (@PathVariable Long id) throws IOException{
-//        String file_path = LenPath.getData() + paperService.getPaperById(id).getFile_path();
-//        LenFile.deleteFile(file_path);
-//        String image_path = LenPath.getData() + paperService.getPaperById(id).getFirst_picture();
-//        LenFile.deleteFile(image_path);
-//        LenLog.info2(this.getClass(), "deleteBook", String.valueOf(id) + " " + file_path + " | " + image_path);
-//        paperService.deleteBook(id);
-//        return "redirect:/admin/papers";
-//    }
+
+    @GetMapping("/paper_delete/{id}")
+    public String deletePaper (@PathVariable Long id) throws IOException{
+        String file_path = LenPath.getData() + paperService.getPaperById(id).getFile_path();
+        LenFile.deleteFile(file_path);
+        String image_path = LenPath.getData() + paperService.getPaperById(id).getFirst_picture();
+        LenFile.deleteFile(image_path);
+        LenLog.info2(this.getClass(), "deleteBook", String.valueOf(id) + " " + file_path + " | " + image_path);
+        paperService.deleteBook(id);
+        return "redirect:/admin/papers";
+    }
 //
 //    // Paper的关键词查询
 //    @PostMapping("/paper_query/one_keyword")
