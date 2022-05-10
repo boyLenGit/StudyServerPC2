@@ -34,13 +34,14 @@ attached:轨道可以依附在主窗口
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h1 class="ui blue header item">LenCloud Admin</h1>
-            <a href="#" th:href="@{/admin/admin_article}" id="a_top_label1" class="item LenCssLogic-mobile-hide"><i class="home icon"></i>文章</a>
-            <a href="#" th:href="@{/admin/admin_types}" id="a_top_label2" class="item LenCssLogic-mobile-hide"><i class="idea icon"></i>分类</a>
-            <a href="#" th:href="@{/admin/admin_tags}" id="a_top_label3" class="item LenCssLogic-mobile-hide"><i class="tags icon"></i>标签</a>
+            <a href="#" th:href="@{/admin/admin_article}" id="a_top_label1" class="item LenCssLogic-mobile-hide"><i class="home icon"></i>文章管理</a>
+            <a href="#" th:href="@{/admin/papers}" id="a_top_labelIMG_2327.jpg2" class="item LenCssLogic-mobile-hide"><i class="book icon"></i>文献管理</a>
+            <a href="#" th:href="@{/admin/admin_types}" id="a_top_label3" class="item LenCssLogic-mobile-hide"><i class="idea icon"></i>分类管理</a>
+            <a href="#" th:href="@{/admin/admin_tags}" id="a_top_label4" class="item LenCssLogic-mobile-hide"><i class="tags icon"></i>标签管理</a>
             <div id="div_dropdown_user_label" class="right menu LenCssLogic-mobile-hide">
                 <div id="dropdown_user_label" class="ui dropdown item">
                     <div class="text">
-                        <img src="../../static/image/icon_little/icon020.png" class="ui avatar image" th:src="@{/image/icon_little/icon020.png}">
+                        <img src="../../static/image/icon_little/icon020.png" class="ui avatar image" th:src="${session.user.avatar}">
                         <span th:text="${session.user.nickname}">用户名</span>
                     </div>
                     <i class="dropdown icon"></i>
@@ -63,14 +64,14 @@ attached:轨道可以依附在主窗口
 
 
 <!--****** 中间内容 ******-->
-<div  class="m-container-small m-padded-tb-big">
+<div class="m-container-small m-padded-tb-big">
     <div class="ui container">
+        <img src="../../static/image/IMG_2327.jpg" th:src="@{/upload/user_wallpaper/IMG_2327.jpg}" alt="" class="ui rounded bordered fluid image">
         <div class="ui success large message">
-            <h3 th:text="管理员+${session.user.nickname}">用户名</h3>
+            <h3 th:text="*{session.user.type}==1 ? 管理员+${session.user.nickname} : 超级管理员+${session.user.nickname}">用户名</h3>
             <h1>Hi，欢迎登录！</h1>
         </div>
-
-        <img src="https://unsplash.it/1000/400?image=1005" alt="" class="ui rounded bordered fluid image">
+        </div>
     </div>
 </div>
 
@@ -125,7 +126,7 @@ attached:轨道可以依附在主窗口
 
 <script>
     $('#button_sidebar').click(function () {
-        $('#a_top_label1, #a_top_label2, #a_top_label3, #div_dropdown_user_label').toggleClass('LenCssLogic-mobile-hide');
+        $('#a_top_label1, #a_top_label2, #a_top_label3, #a_top_label4, #div_dropdown_user_label').toggleClass('LenCssLogic-mobile-hide');
     });
 
     $('#dropdown_user_label.dropdown').dropdown({
