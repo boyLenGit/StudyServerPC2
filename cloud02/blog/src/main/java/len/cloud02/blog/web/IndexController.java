@@ -57,7 +57,16 @@ public class IndexController {
     public String article(@PathVariable Long id, Model model){
         model.addAttribute("blog", blogService.getAndConvert(id));
         model.addAttribute("comments", commentService.listCommentByBlogIdAndParentCommentNull(id));
-        return "/blog/article_list";
+        return "/blog/article_detail";
     }
 
+    @GetMapping("/features")
+    public String features(){
+        return "features";
+    }
+
+    @GetMapping("/workflows")
+    public String workflows(){
+        return "workflows";
+    }
 }

@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <!--    用于设置尺寸适配移动端-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文献列表</title>
+    <title>工作流</title>
     <!--JQuery-->
     <link rel="stylesheet" href="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
     <!--Semantic的CSS包-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <!--    自定义CSS导入。必须加rel="stylesheet"才可以生效！-->
-    <link rel="stylesheet" href="../../static/css/index.css" th:href="@{/css/index.css}">
-    <link rel="stylesheet" href="../../static/css/text.css" th:href="@{/css/text.css}">
-    <link rel="stylesheet" href="../../static/css/logic.css" th:href="@{/css/logic.css}">
-    <link rel="stylesheet" href="../../static/css/button.css" th:href="@{/css/button.css}">
-    <link rel="stylesheet" href="../../static/css/display.css" th:href="@{/css/display.css}">
-    <link rel="stylesheet" href="../../static/css/LRMme.css" th:href="@{/css/LRMme.css}">
-    <link rel="stylesheet" href="../../static/css/LRManimate.css" th:href="@{/css/LRManimate.css}">
-    <link rel="stylesheet" href="../../static/css/LRMtypo.css" th:href="@{/css/LRMtypo.css}">
+    <link rel="stylesheet" href="../static/css/index.css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" href="../static/css/text.css" th:href="@{/css/text.css}">
+    <link rel="stylesheet" href="../static/css/logic.css" th:href="@{/css/logic.css}">
+    <link rel="stylesheet" href="../static/css/button.css" th:href="@{/css/button.css}">
+    <link rel="stylesheet" href="../static/css/display.css" th:href="@{/css/display.css}">
+    <link rel="stylesheet" href="../static/css/LRMme.css" th:href="@{/css/LRMme.css}">
+    <link rel="stylesheet" href="../static/css/LRManimate.css" th:href="@{/css/LRManimate.css}">
+    <link rel="stylesheet" href="../static/css/LRMtypo.css" th:href="@{/css/LRMtypo.css}">
 </head>
 <body>
 <!--****** 导包 ******-->
@@ -36,10 +36,10 @@ attached:轨道可以依附在主窗口
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h1 class="ui blue header item">LenCloud</h1>
-            <a href="#" id="a_top_label1" class="item LenCssLogic-mobile-hide" th:href="@{/}"><i class="home icon"></i>首页</a>
+            <a href="#" id="a_top_label1" class="active item LenCssLogic-mobile-hide" th:href="@{/}"><i class="home icon"></i>首页</a>
             <a href="#" id="a_top_label2" class="item LenCssLogic-mobile-hide" th:href="@{/features}"><i class="block layout icon"></i>功能</a>
             <a href="#" id="a_top_label3" class="item LenCssLogic-mobile-hide" th:href="@{/blog/list}"><i class="book icon"></i>文章</a>
-            <a href="#" id="a_top_label4" class="active item LenCssLogic-mobile-hide" th:href="@{/paper/papers}"><i class="file icon"></i>文献</a>
+            <a href="#" id="a_top_label4" class="item LenCssLogic-mobile-hide" th:href="@{/paper/papers}"><i class="file icon"></i>文献</a>
 
             <div id="div_search1" class="right LenCssLogic-mobile-hide item">
                 <form name="form_search1" action="#" th:action="@{/search}" method="post" target="_blank">
@@ -83,59 +83,11 @@ attached:轨道可以依附在主窗口
 
 
 
+
 <!--****** 中间内容 ******-->
-<div class="m-container-small m-padded-tb-big">
+<div class="LenCSS-Pad-middle-div1">
     <div class="ui container">
-        <div class="ui attached segment">
-            <h1>这里是文献管理系统</h1>
-
-            <div>
-                <form action="#" method="post" th:action="@{/paper/paper_query/one_keyword}" class="ui form">
-                    <div class="ui grid">
-                        <div class="left aligned six wide column">
-                            <div class="ui left labeled input">
-                                <label class="ui teal basic label">搜索文献</label>
-                                <input type="text" name="keyword" placeholder="关键词">
-                            </div>
-                        </div>
-                        <div class="left aligned four wide column">
-                            <button type="submit" class="ui teal submit button">搜索</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-            <!--书籍显示列表-->
-            <div>
-                <div class="ui padded vertical segment" >
-                    <table class="ui compact teal table">
-                        <thead>
-                        <tr>
-                            <th>序号</th>
-                            <th>文献名</th>
-                            <th>作者</th>
-                            <th>发表期刊</th>
-                            <th>浏览次数</th>
-                            <th>操作</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr th:each="paper,iterStat : ${page.content}">
-                            <td th:text="${iterStat.count}">1</td>
-                            <td><a th:text="${paper.name}" th:href="@{/paper/detail/{id}(id=${paper.id})}">测试书名</a></td>
-                            <td th:text="${paper.author}">测试作者</td>
-                            <td th:text="${paper.publisher}">测试出版社</td>
-                            <td th:text="${paper.view_time}">测试借阅次数</td>
-                            <td>
-                                <a href="#" th:href="@{/paper/quote/{id}(id=${paper.id})}" class="ui mini teal basic button">引用</a>
-                                <a href="#" th:href="@{/paper/download/{id}(id=${paper.id})}" class="ui mini teal basic button">下载</a>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+        <h2>Opps!  "智能地球物理云平台"还没有和"技术社区与文献管理系统"融合！</h2>
     </div>
 </div>
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!--    用于设置尺寸适配移动端-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录页面</title>
+    <title>文章列表</title>
     <!--    Semantic的CSS包-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <!--    自定义CSS导入。必须加rel="stylesheet"才可以生效！-->
@@ -130,7 +130,7 @@ attached:轨道可以依附在主窗口
                 <tbody>
                 <tr th:each="blog,iterStat : ${page.content}">
                     <td th:text="${iterStat.count}">1</td>
-                    <td th:text="${blog.title}">刻意练习清单</td>
+                    <td><a th:text="${blog.title}" th:href="@{/article/{id}(id=${blog.id})}">刻意练习清单</a></td>
                     <td th:text="${blog.user.nickname}">甲乙丙</td>
                     <td th:text="${blog.type.name}">认知升级</td>
                     <td th:text="${blog.recommend} ? '是':'否'">是</td>
