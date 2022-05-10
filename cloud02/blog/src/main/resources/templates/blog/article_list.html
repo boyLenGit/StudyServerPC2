@@ -33,22 +33,19 @@ attached:轨道可以依附在主窗口
 <nav class="ui inverted attached segment LenCSS-m-padded-tb-mini LenCssDisplay-shadow-middle">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
-            <h1 class="ui blue header item">LenCloud Admin</h1>
-            <a href="#" th:href="@{/admin/admin_article}" id="a_top_label1" class="item LenCssLogic-mobile-hide"><i class="home icon"></i>文章管理</a>
-            <a href="#" th:href="@{/admin/papers}" id="a_top_label2" class="item LenCssLogic-mobile-hide"><i class="book icon"></i>文献管理</a>
-            <a href="#" th:href="@{/admin/admin_types}" id="a_top_label3" class="item LenCssLogic-mobile-hide"><i class="idea icon"></i>分类管理</a>
-            <a href="#" th:href="@{/admin/admin_tags}" id="a_top_label4" class="item LenCssLogic-mobile-hide"><i class="tags icon"></i>标签管理</a>
-            <div id="div_dropdown_user_label" class="right menu LenCssLogic-mobile-hide">
-                <div id="dropdown_user_label" class="ui dropdown item">
-                    <div class="text">
-                        <img src="../../static/image/icon_little/icon020.png" class="ui avatar image" th:src="${session.user.avatar}">
-                        <span th:text="${session.user.nickname}">用户名</span>
+            <h1 class="ui blue header item">LenCloud</h1>
+            <a href="#" id="a_top_label1" class="active item LenCssLogic-mobile-hide"><i class="home icon"></i>首页</a>
+            <a href="#" id="a_top_label2" class="item LenCssLogic-mobile-hide"><i class="idea icon"></i>功能</a>
+            <a href="#" id="a_top_label3" class="item LenCssLogic-mobile-hide"><i class="tags icon"></i>文章</a>
+            <a href="#" id="a_top_label4" class="item LenCssLogic-mobile-hide"><i class="info icon" th:href="@{/paper/papers}"></i>文献</a>
+            <a href="#" id="a_top_label5" class="item LenCssLogic-mobile-hide"><i class="info icon"></i>关于</a>
+            <div id="div_search1" class="right LenCssLogic-mobile-hide item">
+                <form name="form_search1" action="#" th:action="@{/search}" method="post" target="_blank">
+                    <div class="ui icon inverted transparent input">
+                        <input type="text" name="query" placeholder="搜索内容" th:value="${query}">
+                        <i onclick="document.forms['form_search1'].submit()" class="search inverted link icon"></i>
                     </div>
-                    <i class="dropdown icon"></i>
-                    <div class="menu">
-                        <a href="#" class="item" th:href="@{/admin/logout}">注销</a>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -124,7 +121,6 @@ attached:轨道可以依附在主窗口
                     <th>推荐</th>
                     <th>状态</th>
                     <th>更新时间</th>
-                    <th>操作</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -136,10 +132,6 @@ attached:轨道可以依附在主窗口
                     <td th:text="${blog.recommend} ? '是':'否'">是</td>
                     <td th:text="${blog.published} ? '发布':'草稿'">草稿</td>
                     <td th:text="${blog.updateTime}">2017-10-02 09:45</td>
-                    <td>
-                        <a href="#" th:href="@{/admin/admin_article/{id}/admin_publish(id=${blog.id})}" class="ui mini teal basic button">编辑</a>
-                        <a href="#" th:href="@{/admin/admin_article/{id}/delete(id=${blog.id})}" class="ui mini red basic button">删除</a>
-                    </td>
                 </tr>
                 </tbody>
                 <tfoot>
