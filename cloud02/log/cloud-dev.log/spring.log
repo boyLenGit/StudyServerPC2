@@ -2297,3 +2297,708 @@ org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as express
 2022-05-10 21:37:57.724  INFO 69842 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
 2022-05-10 21:37:57.763  INFO 69842 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.50.150\",\"port\":8080,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"HangZhou\",\"serviceName\":\"DEFAULT_GROUP@@blog\",\"ephemeral\":true}],\"dom\":\"DEFAULT_GROUP@@blog\",\"name\":\"DEFAULT_GROUP@@blog\",\"cacheMillis\":10000,\"lastRefTime\":1652189877763,\"checksum\":\"b6e5647bba17425aceef7bae78809d76\",\"useSpecifiedURL\":false,\"clusters\":\"HangZhou\",\"env\":\"\",\"metadata\":{}}","lastRefTime":195286834375979} from /192.168.50.150
 2022-05-10 21:37:58.078  INFO 69842 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 21:39:21.021  INFO 69842 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-10 21:39:21.021  INFO 69842 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-10 21:39:21.040  INFO 69842 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2022-05-10 21:39:21.116  WARN 69842 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@427a805e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-10 21:39:21.119  WARN 69842 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@91c0e10 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-10 21:39:21.121  WARN 69842 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ff2171d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-10 21:39:21.124  WARN 69842 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@70196c6d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-10 21:39:21.126  WARN 69842 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5299b228 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-10 21:39:21.128  WARN 69842 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3b9c4ae5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-10 21:39:21.130  WARN 69842 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3459e874 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-10 21:39:21.133  WARN 69842 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@f189096 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-10 21:39:21.135  WARN 69842 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@100f6baf (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-10 21:39:21.137  WARN 69842 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@499dc029 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-05-10 21:39:21.770  WARN 69842 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2022-05-10 21:39:21.806  WARN 69842 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2022-05-10 21:39:22.321 ERROR 69842 --- [http-nio-8080-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8080-exec-1] Exception processing template "index": An error happened during template parsing (template: "class path resource [templates/index.html]")
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "session.user.avatar" (template: "index" - line 53, col 90)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "session.user.avatar" (template: "index" - line 53, col 90)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+	at org.thymeleaf.standard.expression.SelectionVariableExpression.executeSelectionVariableExpression(SelectionVariableExpression.java:158)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:92)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.EqualsExpression.executeEquals(EqualsExpression.java:73)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:95)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardUnlessTagProcessor.isVisible(StandardUnlessTagProcessor.java:58)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'avatar' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	... 75 common frames omitted
+
+2022-05-10 21:39:22.329 ERROR 69842 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/index.html]")] with root cause
+
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'avatar' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	at org.thymeleaf.standard.expression.SelectionVariableExpression.executeSelectionVariableExpression(SelectionVariableExpression.java:158)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:92)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.EqualsExpression.executeEquals(EqualsExpression.java:73)
+	at org.thymeleaf.standard.expression.ComplexExpression.executeComplex(ComplexExpression.java:95)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:112)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardUnlessTagProcessor.isVisible(StandardUnlessTagProcessor.java:58)
+	at org.thymeleaf.standard.processor.AbstractStandardConditionalVisibilityTagProcessor.doProcess(AbstractStandardConditionalVisibilityTagProcessor.java:61)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-05-10 21:39:53.701  WARN 69842 --- [Thread-36] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-05-10 21:39:53.701  WARN 69842 --- [Thread-8] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-05-10 21:39:53.702  WARN 69842 --- [Thread-36] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-05-10 21:39:53.702  INFO 69842 --- [Thread-45] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-05-10 21:39:53.703  WARN 69842 --- [Thread-8] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-05-10 21:39:54.863  INFO 69842 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-10 21:39:54.875  INFO 69842 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-05-10 21:39:54.876  INFO 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@blog:192.168.50.150:8080 from beat map.
+2022-05-10 21:39:54.876  INFO 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='192.168.50.150', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HangZhou', serviceName='null', metadata={}}
+2022-05-10 21:39:54.882  INFO 69842 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-05-10 21:39:54.882  INFO 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-05-10 21:39:55.900  INFO 69842 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"dom\":\"DEFAULT_GROUP@@blog\",\"name\":\"DEFAULT_GROUP@@blog\",\"cacheMillis\":10000,\"lastRefTime\":1652189995898,\"checksum\":\"020437d3f03bce96f9d9f22c3b6a4b4b\",\"useSpecifiedURL\":false,\"clusters\":\"HangZhou\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":195404969605588} from /192.168.50.150
+2022-05-10 21:39:55.901  INFO 69842 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-10 21:39:55.903  INFO 69842 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@blog@@HangZhou -> []
+2022-05-10 21:39:56.966  INFO 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-05-10 21:39:56.966  INFO 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-05-10 21:39:58.230  INFO 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-05-10 21:40:01.243  INFO 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-05-10 21:40:01.244  INFO 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-05-10 21:40:01.244  INFO 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-05-10 21:40:01.244  INFO 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-05-10 21:40:01.245  INFO 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-05-10 21:40:01.246  WARN 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-05-10 21:40:01.246  WARN 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-05-10 21:40:01.246  INFO 69842 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-05-10 21:40:01.247  INFO 69842 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-05-10 21:40:01.247  INFO 69842 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-05-10 21:40:01.248  WARN 69842 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-05-10 21:40:01.249  INFO 69842 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-10 21:40:01.255  INFO 69842 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 21:40:01.261  INFO 69842 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-10 21:40:01.276  INFO 69842 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-10 21:40:07.658  INFO 69978 --- [restartedMain] c.a.n.c.c.impl.LocalConfigInfoProcessor  : LOCAL_SNAPSHOT_PATH:/Users/mabolun/nacos/config
+2022-05-10 21:40:07.725  INFO 69978 --- [restartedMain] c.a.nacos.client.config.impl.Limiter     : limitTime:5.0
+2022-05-10 21:40:07.812  WARN 69978 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-10 21:40:07.819  WARN 69978 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.properties] & group[DEFAULT_GROUP]
+2022-05-10 21:40:07.822  WARN 69978 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog-dev.properties] & group[DEFAULT_GROUP]
+2022-05-10 21:40:07.823  INFO 69978 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-10 21:40:07.878  INFO 69978 --- [restartedMain] len.cloud02.blog.BlogApplication         : The following profiles are active: dev
+2022-05-10 21:40:09.058  INFO 69978 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-10 21:40:09.229  INFO 69978 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153ms. Found 5 JPA repository interfaces.
+2022-05-10 21:40:09.578  INFO 69978 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5046674a-944b-321e-9a24-b001cf2d6174
+2022-05-10 21:40:10.849  INFO 69978 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-10 21:40:10.869  INFO 69978 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-10 21:40:10.871  INFO 69978 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-10 21:40:11.099  INFO 69978 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-10 21:40:11.100  INFO 69978 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3208 ms
+2022-05-10 21:40:11.421  INFO 69978 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-10 21:40:11.512  INFO 69978 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2022-05-10 21:40:11.672  INFO 69978 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-10 21:40:11.767  INFO 69978 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-10 21:40:12.723  INFO 69978 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-10 21:40:12.774  INFO 69978 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-10 21:40:14.428  INFO 69978 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-10 21:40:14.436  INFO 69978 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 21:40:14.526  WARN 69978 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-05-10 21:40:15.752  WARN 69978 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-10 21:40:15.752  INFO 69978 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-10 21:40:15.757  WARN 69978 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-10 21:40:15.757  INFO 69978 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-10 21:40:15.881  WARN 69978 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-10 21:40:16.446  INFO 69978 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-10 21:40:16.811  INFO 69978 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-10 21:40:16.997  INFO 69978 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-10 21:40:17.778  INFO 69978 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-10 21:40:17.780  INFO 69978 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-05-10 21:40:17.783  INFO 69978 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-10 21:40:18.031  INFO 69978 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-10 21:40:18.039  INFO 69978 --- [restartedMain] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8080, ip='192.168.50.150', weight=1.0, serviceName='DEFAULT_GROUP@@blog', cluster='HangZhou', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-05-10 21:40:18.041  INFO 69978 --- [restartedMain] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='192.168.50.150', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HangZhou', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-05-10 21:40:18.048  INFO 69978 --- [restartedMain] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP blog 192.168.50.150:8080 register finished
+2022-05-10 21:40:18.066  INFO 69978 --- [restartedMain] len.cloud02.blog.BlogApplication         : Started BlogApplication in 12.434 seconds (JVM running for 13.673)
+2022-05-10 21:40:18.072  INFO 69978 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog.properties+DEFAULT_GROUP
+2022-05-10 21:40:18.073  INFO 69978 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog.properties, group=DEFAULT_GROUP, cnt=1
+2022-05-10 21:40:18.073  INFO 69978 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog-dev.properties+DEFAULT_GROUP
+2022-05-10 21:40:18.074  INFO 69978 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog-dev.properties, group=DEFAULT_GROUP, cnt=1
+2022-05-10 21:40:18.074  INFO 69978 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog+DEFAULT_GROUP
+2022-05-10 21:40:18.074  INFO 69978 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog, group=DEFAULT_GROUP, cnt=1
+2022-05-10 21:40:18.717  INFO 69978 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 21:40:18.741  INFO 69978 --- [restartedMain] c.netflix.loadbalancer.BaseLoadBalancer  : Client: paperservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-05-10 21:40:18.759  INFO 69978 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-05-10 21:40:18.806  INFO 69978 --- [restartedMain] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"192.168.50.150#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"192.168.50.150","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 21:40:18.845  INFO 69978 --- [restartedMain] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"192.168.50.150#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"192.168.50.150","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 21:40:18.892  INFO 69978 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 21:40:18.895  INFO 69978 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client paperservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[192.168.50.150:8086],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.50.150:8086;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@19ffef61
+2022-05-10 21:40:19.002  INFO 69978 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 21:40:19.005  INFO 69978 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 21:40:19.058  INFO 69978 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.50.150\",\"port\":8080,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"HangZhou\",\"serviceName\":\"DEFAULT_GROUP@@blog\",\"ephemeral\":true}],\"dom\":\"DEFAULT_GROUP@@blog\",\"name\":\"DEFAULT_GROUP@@blog\",\"cacheMillis\":10000,\"lastRefTime\":1652190019057,\"checksum\":\"b6e5647bba17425aceef7bae78809d76\",\"useSpecifiedURL\":false,\"clusters\":\"HangZhou\",\"env\":\"\",\"metadata\":{}}","lastRefTime":195428128102056} from /192.168.50.150
+2022-05-10 21:40:19.771  INFO 69978 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 21:43:07.584  INFO 69978 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-10 21:43:07.584  INFO 69978 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-10 21:43:07.606  INFO 69978 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2022-05-10 21:43:08.152  WARN 69978 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2022-05-10 21:43:08.195  WARN 69978 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2022-05-10 21:46:47.305  WARN 69978 --- [Thread-9] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-05-10 21:46:47.305  WARN 69978 --- [Thread-41] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-05-10 21:46:47.305  INFO 69978 --- [Thread-54] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-05-10 21:46:47.306  WARN 69978 --- [Thread-41] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-05-10 21:46:47.306  WARN 69978 --- [Thread-9] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-05-10 21:46:48.535  INFO 69978 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-10 21:46:48.549  INFO 69978 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-05-10 21:46:48.550  INFO 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@blog:192.168.50.150:8080 from beat map.
+2022-05-10 21:46:48.550  INFO 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='192.168.50.150', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HangZhou', serviceName='null', metadata={}}
+2022-05-10 21:46:48.567  INFO 69978 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-05-10 21:46:48.567  INFO 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-05-10 21:46:48.685  INFO 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-05-10 21:46:48.686  INFO 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-05-10 21:46:49.423  INFO 69978 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 21:46:49.425  INFO 69978 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@blog@@HangZhou -> []
+2022-05-10 21:46:49.583  INFO 69978 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"dom\":\"DEFAULT_GROUP@@blog\",\"name\":\"DEFAULT_GROUP@@blog\",\"cacheMillis\":10000,\"lastRefTime\":1652190409581,\"checksum\":\"020437d3f03bce96f9d9f22c3b6a4b4b\",\"useSpecifiedURL\":false,\"clusters\":\"HangZhou\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":195818650470150} from /192.168.50.150
+2022-05-10 21:46:50.205  INFO 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-05-10 21:46:53.220  INFO 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-05-10 21:46:53.221  INFO 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-05-10 21:46:53.221  INFO 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-05-10 21:46:53.221  INFO 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-05-10 21:46:53.221  INFO 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-05-10 21:46:53.222  WARN 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-05-10 21:46:53.222  WARN 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-05-10 21:46:53.222  INFO 69978 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-05-10 21:46:53.222  INFO 69978 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-05-10 21:46:53.222  INFO 69978 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-05-10 21:46:53.222  WARN 69978 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-05-10 21:46:53.223  INFO 69978 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-10 21:46:53.228  INFO 69978 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 21:46:53.236  INFO 69978 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-10 21:46:53.247  INFO 69978 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-10 21:46:59.045  INFO 70429 --- [restartedMain] c.a.n.c.c.impl.LocalConfigInfoProcessor  : LOCAL_SNAPSHOT_PATH:/Users/mabolun/nacos/config
+2022-05-10 21:46:59.073  INFO 70429 --- [restartedMain] c.a.nacos.client.config.impl.Limiter     : limitTime:5.0
+2022-05-10 21:46:59.109  WARN 70429 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-10 21:46:59.114  WARN 70429 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.properties] & group[DEFAULT_GROUP]
+2022-05-10 21:46:59.120  WARN 70429 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog-dev.properties] & group[DEFAULT_GROUP]
+2022-05-10 21:46:59.121  INFO 70429 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-10 21:46:59.188  INFO 70429 --- [restartedMain] len.cloud02.blog.BlogApplication         : The following profiles are active: dev
+2022-05-10 21:47:00.211  INFO 70429 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-10 21:47:00.318  INFO 70429 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98ms. Found 5 JPA repository interfaces.
+2022-05-10 21:47:00.560  INFO 70429 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5046674a-944b-321e-9a24-b001cf2d6174
+2022-05-10 21:47:01.522  INFO 70429 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-10 21:47:01.532  INFO 70429 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-10 21:47:01.532  INFO 70429 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-10 21:47:01.644  INFO 70429 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-10 21:47:01.644  INFO 70429 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2438 ms
+2022-05-10 21:47:01.898  INFO 70429 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-10 21:47:01.944  INFO 70429 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2022-05-10 21:47:02.069  INFO 70429 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-10 21:47:02.171  INFO 70429 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-10 21:47:02.877  INFO 70429 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-10 21:47:02.904  INFO 70429 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-10 21:47:04.240  INFO 70429 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-10 21:47:04.249  INFO 70429 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 21:47:04.326  WARN 70429 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-05-10 21:47:05.521  WARN 70429 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-10 21:47:05.521  INFO 70429 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-10 21:47:05.525  WARN 70429 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-10 21:47:05.525  INFO 70429 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-10 21:47:05.608  WARN 70429 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-10 21:47:05.845  INFO 70429 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-10 21:47:06.000  INFO 70429 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-10 21:47:06.151  INFO 70429 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-10 21:47:06.583  INFO 70429 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-10 21:47:06.584  INFO 70429 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-05-10 21:47:06.584  INFO 70429 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-10 21:47:06.747  INFO 70429 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-10 21:47:06.754  INFO 70429 --- [restartedMain] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8080, ip='192.168.50.150', weight=1.0, serviceName='DEFAULT_GROUP@@blog', cluster='HangZhou', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-05-10 21:47:06.755  INFO 70429 --- [restartedMain] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='192.168.50.150', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HangZhou', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-05-10 21:47:06.763  INFO 70429 --- [restartedMain] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP blog 192.168.50.150:8080 register finished
+2022-05-10 21:47:06.782  INFO 70429 --- [restartedMain] len.cloud02.blog.BlogApplication         : Started BlogApplication in 8.653 seconds (JVM running for 9.719)
+2022-05-10 21:47:06.789  INFO 70429 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog.properties+DEFAULT_GROUP
+2022-05-10 21:47:06.792  INFO 70429 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog.properties, group=DEFAULT_GROUP, cnt=1
+2022-05-10 21:47:06.792  INFO 70429 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog-dev.properties+DEFAULT_GROUP
+2022-05-10 21:47:06.792  INFO 70429 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog-dev.properties, group=DEFAULT_GROUP, cnt=1
+2022-05-10 21:47:06.792  INFO 70429 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog+DEFAULT_GROUP
+2022-05-10 21:47:06.793  INFO 70429 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog, group=DEFAULT_GROUP, cnt=1
+2022-05-10 21:47:07.228  INFO 70429 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 21:47:07.254  INFO 70429 --- [restartedMain] c.netflix.loadbalancer.BaseLoadBalancer  : Client: paperservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-05-10 21:47:07.263  INFO 70429 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-05-10 21:47:07.287  INFO 70429 --- [restartedMain] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"192.168.50.150#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"192.168.50.150","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-10 21:47:07.297  INFO 70429 --- [restartedMain] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"192.168.50.150#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"192.168.50.150","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-10 21:47:07.309  INFO 70429 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 21:47:07.311  INFO 70429 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client paperservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[192.168.50.150:8086],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.50.150:8086;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@2de81313
+2022-05-10 21:47:07.733  INFO 70429 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-10 21:47:07.735  INFO 70429 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-10 21:47:07.772  INFO 70429 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.50.150\",\"port\":8080,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"HangZhou\",\"serviceName\":\"DEFAULT_GROUP@@blog\",\"ephemeral\":true}],\"dom\":\"DEFAULT_GROUP@@blog\",\"name\":\"DEFAULT_GROUP@@blog\",\"cacheMillis\":10000,\"lastRefTime\":1652190427771,\"checksum\":\"b6e5647bba17425aceef7bae78809d76\",\"useSpecifiedURL\":false,\"clusters\":\"HangZhou\",\"env\":\"\",\"metadata\":{}}","lastRefTime":195836841140750} from /192.168.50.150
+2022-05-10 21:47:08.272  INFO 70429 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 21:51:52.714  INFO 70429 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-10 21:51:52.715  INFO 70429 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-10 21:51:52.729  INFO 70429 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2022-05-10 21:51:53.253  WARN 70429 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2022-05-10 21:51:53.302  WARN 70429 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2022-05-10 21:58:38.040  WARN 70429 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-05-10 21:58:38.041  INFO 70429 --- [Thread-46] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-05-10 21:58:38.040  WARN 70429 --- [Thread-34] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-05-10 21:58:38.042  WARN 70429 --- [Thread-34] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-05-10 21:58:38.044  WARN 70429 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-05-10 21:58:39.216  INFO 70429 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-10 21:58:39.230  INFO 70429 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-05-10 21:58:39.231  INFO 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@blog:192.168.50.150:8080 from beat map.
+2022-05-10 21:58:39.231  INFO 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='192.168.50.150', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HangZhou', serviceName='null', metadata={}}
+2022-05-10 21:58:39.238  INFO 70429 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-05-10 21:58:39.239  INFO 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-05-10 21:58:40.257  INFO 70429 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"dom\":\"DEFAULT_GROUP@@blog\",\"name\":\"DEFAULT_GROUP@@blog\",\"cacheMillis\":10000,\"lastRefTime\":1652191120248,\"checksum\":\"020437d3f03bce96f9d9f22c3b6a4b4b\",\"useSpecifiedURL\":false,\"clusters\":\"HangZhou\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":196529316264218} from /192.168.50.150
+2022-05-10 21:58:40.258  INFO 70429 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-10 21:58:40.261  INFO 70429 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@blog@@HangZhou -> []
+2022-05-10 21:58:42.253  INFO 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-05-10 21:58:42.254  INFO 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-05-10 21:58:45.269  INFO 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-05-10 21:58:48.286  INFO 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-05-10 21:58:48.287  INFO 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-05-10 21:58:48.287  INFO 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-05-10 21:58:48.287  INFO 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-05-10 21:58:48.287  INFO 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-05-10 21:58:48.288  WARN 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-05-10 21:58:48.288  WARN 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-05-10 21:58:48.289  INFO 70429 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-05-10 21:58:48.289  INFO 70429 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-05-10 21:58:48.289  INFO 70429 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-05-10 21:58:48.290  WARN 70429 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-05-10 21:58:48.291  INFO 70429 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-10 21:58:48.297  INFO 70429 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 21:58:48.313  INFO 70429 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-10 21:58:48.329  INFO 70429 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-10 21:58:53.786  INFO 70738 --- [restartedMain] c.a.n.c.c.impl.LocalConfigInfoProcessor  : LOCAL_SNAPSHOT_PATH:/Users/mabolun/nacos/config
+2022-05-10 21:58:53.845  INFO 70738 --- [restartedMain] c.a.nacos.client.config.impl.Limiter     : limitTime:5.0
+2022-05-10 21:58:53.912  WARN 70738 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-10 21:58:53.929  WARN 70738 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.properties] & group[DEFAULT_GROUP]
+2022-05-10 21:58:53.980  WARN 70738 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog-dev.properties] & group[DEFAULT_GROUP]
+2022-05-10 21:58:53.984  INFO 70738 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-10 21:58:54.278  INFO 70738 --- [restartedMain] len.cloud02.blog.BlogApplication         : The following profiles are active: dev
+2022-05-10 21:58:55.666  INFO 70738 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-10 21:58:55.760  INFO 70738 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87ms. Found 5 JPA repository interfaces.
+2022-05-10 21:58:55.989  INFO 70738 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5046674a-944b-321e-9a24-b001cf2d6174
+2022-05-10 21:58:57.567  INFO 70738 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-10 21:58:57.579  INFO 70738 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-10 21:58:57.580  INFO 70738 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-10 21:58:57.725  INFO 70738 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-10 21:58:57.726  INFO 70738 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3390 ms
+2022-05-10 21:58:58.098  INFO 70738 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-10 21:58:58.160  INFO 70738 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2022-05-10 21:58:58.328  INFO 70738 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-10 21:58:58.441  INFO 70738 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-10 21:58:59.202  INFO 70738 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-10 21:58:59.252  INFO 70738 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-10 21:59:00.881  INFO 70738 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-10 21:59:00.894  INFO 70738 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 21:59:00.986  WARN 70738 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-05-10 21:59:02.295  WARN 70738 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-10 21:59:02.295  INFO 70738 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-10 21:59:02.300  WARN 70738 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-10 21:59:02.300  INFO 70738 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-10 21:59:02.383  WARN 70738 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-10 21:59:02.644  INFO 70738 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-10 21:59:02.876  INFO 70738 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-10 21:59:03.045  INFO 70738 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-10 21:59:03.622  INFO 70738 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-10 21:59:03.623  INFO 70738 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-05-10 21:59:03.624  INFO 70738 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-10 21:59:03.928  INFO 70738 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-10 21:59:03.941  INFO 70738 --- [restartedMain] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8080, ip='192.168.50.150', weight=1.0, serviceName='DEFAULT_GROUP@@blog', cluster='HangZhou', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-05-10 21:59:03.942  INFO 70738 --- [restartedMain] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='192.168.50.150', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HangZhou', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-05-10 21:59:03.957  INFO 70738 --- [restartedMain] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP blog 192.168.50.150:8080 register finished
+2022-05-10 21:59:03.977  INFO 70738 --- [restartedMain] len.cloud02.blog.BlogApplication         : Started BlogApplication in 11.557 seconds (JVM running for 12.497)
+2022-05-10 21:59:03.982  INFO 70738 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog.properties+DEFAULT_GROUP
+2022-05-10 21:59:03.985  INFO 70738 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog.properties, group=DEFAULT_GROUP, cnt=1
+2022-05-10 21:59:03.985  INFO 70738 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog-dev.properties+DEFAULT_GROUP
+2022-05-10 21:59:03.986  INFO 70738 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog-dev.properties, group=DEFAULT_GROUP, cnt=1
+2022-05-10 21:59:03.987  INFO 70738 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog+DEFAULT_GROUP
+2022-05-10 21:59:03.987  INFO 70738 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog, group=DEFAULT_GROUP, cnt=1
+2022-05-10 21:59:04.418  INFO 70738 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 21:59:04.489  INFO 70738 --- [restartedMain] c.netflix.loadbalancer.BaseLoadBalancer  : Client: paperservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-05-10 21:59:04.541  INFO 70738 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-05-10 21:59:04.584  INFO 70738 --- [restartedMain] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"192.168.50.150#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"192.168.50.150","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 21:59:04.602  INFO 70738 --- [restartedMain] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"192.168.50.150#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"192.168.50.150","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 21:59:04.619  INFO 70738 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 21:59:04.623  INFO 70738 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client paperservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[192.168.50.150:8086],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.50.150:8086;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@743a789a
+2022-05-10 21:59:04.887  INFO 70738 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 21:59:04.888  INFO 70738 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 21:59:04.960  INFO 70738 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.50.150\",\"port\":8080,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"HangZhou\",\"serviceName\":\"DEFAULT_GROUP@@blog\",\"ephemeral\":true}],\"dom\":\"DEFAULT_GROUP@@blog\",\"name\":\"DEFAULT_GROUP@@blog\",\"cacheMillis\":10000,\"lastRefTime\":1652191144959,\"checksum\":\"b6e5647bba17425aceef7bae78809d76\",\"useSpecifiedURL\":false,\"clusters\":\"HangZhou\",\"env\":\"\",\"metadata\":{}}","lastRefTime":196554028116664} from /192.168.50.150
+2022-05-10 21:59:05.560  INFO 70738 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 22:00:19.155  WARN 70738 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-05-10 22:00:19.155  WARN 70738 --- [Thread-39] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-05-10 22:00:19.155  INFO 70738 --- [Thread-51] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-05-10 22:00:19.156  WARN 70738 --- [Thread-39] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-05-10 22:00:19.156  WARN 70738 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-05-10 22:00:20.337  INFO 70738 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-10 22:00:20.345  INFO 70738 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-05-10 22:00:20.345  INFO 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@blog:192.168.50.150:8080 from beat map.
+2022-05-10 22:00:20.346  INFO 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='192.168.50.150', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HangZhou', serviceName='null', metadata={}}
+2022-05-10 22:00:20.348  INFO 70738 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-05-10 22:00:20.348  INFO 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-05-10 22:00:21.351  INFO 70738 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"dom\":\"DEFAULT_GROUP@@blog\",\"name\":\"DEFAULT_GROUP@@blog\",\"cacheMillis\":10000,\"lastRefTime\":1652191221351,\"checksum\":\"020437d3f03bce96f9d9f22c3b6a4b4b\",\"useSpecifiedURL\":false,\"clusters\":\"HangZhou\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":196630419353213} from /192.168.50.150
+2022-05-10 22:00:21.353  INFO 70738 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 22:00:21.355  INFO 70738 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@blog@@HangZhou -> []
+2022-05-10 22:00:23.357  INFO 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-05-10 22:00:23.358  INFO 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-05-10 22:00:25.704  INFO 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-05-10 22:00:28.716  INFO 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-05-10 22:00:28.717  INFO 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-05-10 22:00:28.717  INFO 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-05-10 22:00:28.717  INFO 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-05-10 22:00:28.717  INFO 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-05-10 22:00:28.718  WARN 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-05-10 22:00:28.719  WARN 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-05-10 22:00:28.719  INFO 70738 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-05-10 22:00:28.719  INFO 70738 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-05-10 22:00:28.719  INFO 70738 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-05-10 22:00:28.720  WARN 70738 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-05-10 22:00:28.720  INFO 70738 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-10 22:00:28.723  INFO 70738 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 22:00:28.728  INFO 70738 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-10 22:00:28.742  INFO 70738 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-10 22:00:34.713  INFO 70787 --- [restartedMain] c.a.n.c.c.impl.LocalConfigInfoProcessor  : LOCAL_SNAPSHOT_PATH:/Users/mabolun/nacos/config
+2022-05-10 22:00:34.768  INFO 70787 --- [restartedMain] c.a.nacos.client.config.impl.Limiter     : limitTime:5.0
+2022-05-10 22:00:34.847  WARN 70787 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-10 22:00:34.873  WARN 70787 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.properties] & group[DEFAULT_GROUP]
+2022-05-10 22:00:34.891  WARN 70787 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog-dev.properties] & group[DEFAULT_GROUP]
+2022-05-10 22:00:34.892  INFO 70787 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-10 22:00:35.134  INFO 70787 --- [restartedMain] len.cloud02.blog.BlogApplication         : The following profiles are active: dev
+2022-05-10 22:00:36.123  INFO 70787 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-10 22:00:36.287  INFO 70787 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147ms. Found 5 JPA repository interfaces.
+2022-05-10 22:00:36.581  INFO 70787 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5046674a-944b-321e-9a24-b001cf2d6174
+2022-05-10 22:00:37.645  INFO 70787 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-10 22:00:37.657  INFO 70787 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-10 22:00:37.657  INFO 70787 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-10 22:00:37.775  INFO 70787 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-10 22:00:37.775  INFO 70787 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2591 ms
+2022-05-10 22:00:38.153  INFO 70787 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-10 22:00:38.204  INFO 70787 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2022-05-10 22:00:38.341  INFO 70787 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-10 22:00:38.459  INFO 70787 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-10 22:00:39.235  INFO 70787 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-10 22:00:39.262  INFO 70787 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-10 22:00:41.197  INFO 70787 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-10 22:00:41.208  INFO 70787 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 22:00:41.281  WARN 70787 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-05-10 22:00:42.931  WARN 70787 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-10 22:00:42.931  INFO 70787 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-10 22:00:42.937  WARN 70787 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-10 22:00:42.937  INFO 70787 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-10 22:00:43.021  WARN 70787 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-10 22:00:43.259  INFO 70787 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-10 22:00:43.397  INFO 70787 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-10 22:00:43.557  INFO 70787 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-10 22:00:43.953  INFO 70787 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-10 22:00:43.953  INFO 70787 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-05-10 22:00:43.954  INFO 70787 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-10 22:00:44.122  INFO 70787 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-10 22:00:44.127  INFO 70787 --- [restartedMain] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8080, ip='192.168.50.150', weight=1.0, serviceName='DEFAULT_GROUP@@blog', cluster='HangZhou', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-05-10 22:00:44.128  INFO 70787 --- [restartedMain] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='192.168.50.150', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HangZhou', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-05-10 22:00:44.135  INFO 70787 --- [restartedMain] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP blog 192.168.50.150:8080 register finished
+2022-05-10 22:00:44.151  INFO 70787 --- [restartedMain] len.cloud02.blog.BlogApplication         : Started BlogApplication in 11.062 seconds (JVM running for 12.24)
+2022-05-10 22:00:44.157  INFO 70787 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog.properties+DEFAULT_GROUP
+2022-05-10 22:00:44.158  INFO 70787 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog.properties, group=DEFAULT_GROUP, cnt=1
+2022-05-10 22:00:44.159  INFO 70787 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog-dev.properties+DEFAULT_GROUP
+2022-05-10 22:00:44.159  INFO 70787 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog-dev.properties, group=DEFAULT_GROUP, cnt=1
+2022-05-10 22:00:44.159  INFO 70787 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog+DEFAULT_GROUP
+2022-05-10 22:00:44.159  INFO 70787 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog, group=DEFAULT_GROUP, cnt=1
+2022-05-10 22:00:44.460  INFO 70787 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 22:00:44.491  INFO 70787 --- [restartedMain] c.netflix.loadbalancer.BaseLoadBalancer  : Client: paperservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-05-10 22:00:44.502  INFO 70787 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-05-10 22:00:44.526  INFO 70787 --- [restartedMain] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"192.168.50.150#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"192.168.50.150","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-10 22:00:44.537  INFO 70787 --- [restartedMain] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"192.168.50.150#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"192.168.50.150","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-10 22:00:44.549  INFO 70787 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 22:00:44.552  INFO 70787 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client paperservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[192.168.50.150:8086],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.50.150:8086;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@77bfad63
+2022-05-10 22:00:45.103  INFO 70787 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-10 22:00:45.104  INFO 70787 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-10 22:00:45.146  INFO 70787 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.50.150\",\"port\":8080,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"HangZhou\",\"serviceName\":\"DEFAULT_GROUP@@blog\",\"ephemeral\":true}],\"dom\":\"DEFAULT_GROUP@@blog\",\"name\":\"DEFAULT_GROUP@@blog\",\"cacheMillis\":10000,\"lastRefTime\":1652191245145,\"checksum\":\"b6e5647bba17425aceef7bae78809d76\",\"useSpecifiedURL\":false,\"clusters\":\"HangZhou\",\"env\":\"\",\"metadata\":{}}","lastRefTime":196654213309546} from /192.168.50.150
+2022-05-10 22:00:45.510  INFO 70787 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 22:03:42.971  INFO 70787 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-10 22:03:42.972  INFO 70787 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-10 22:03:43.015  INFO 70787 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 43 ms
+2022-05-10 22:03:43.692  WARN 70787 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2022-05-10 22:03:43.739  WARN 70787 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2022-05-10 22:06:06.074  WARN 70787 --- [Thread-39] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-05-10 22:06:06.074  INFO 70787 --- [Thread-51] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-05-10 22:06:06.076  WARN 70787 --- [Thread-8] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-05-10 22:06:06.076  WARN 70787 --- [Thread-39] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-05-10 22:06:06.077  WARN 70787 --- [Thread-8] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-05-10 22:06:07.379  INFO 70787 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-10 22:06:07.504  INFO 70787 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-05-10 22:06:07.504  INFO 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@blog:192.168.50.150:8080 from beat map.
+2022-05-10 22:06:07.506  INFO 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='192.168.50.150', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HangZhou', serviceName='null', metadata={}}
+2022-05-10 22:06:07.522  INFO 70787 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-05-10 22:06:07.523  INFO 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-05-10 22:06:08.535  INFO 70787 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"dom\":\"DEFAULT_GROUP@@blog\",\"name\":\"DEFAULT_GROUP@@blog\",\"cacheMillis\":10000,\"lastRefTime\":1652191568533,\"checksum\":\"020437d3f03bce96f9d9f22c3b6a4b4b\",\"useSpecifiedURL\":false,\"clusters\":\"HangZhou\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":196977599710739} from /192.168.50.150
+2022-05-10 22:06:08.536  INFO 70787 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-10 22:06:08.538  INFO 70787 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@blog@@HangZhou -> []
+2022-05-10 22:06:09.723  INFO 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-05-10 22:06:09.723  INFO 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-05-10 22:06:12.734  INFO 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-05-10 22:06:15.744  INFO 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-05-10 22:06:15.745  INFO 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-05-10 22:06:15.745  INFO 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-05-10 22:06:15.745  INFO 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-05-10 22:06:15.745  INFO 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-05-10 22:06:15.745  WARN 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-05-10 22:06:15.745  WARN 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-05-10 22:06:15.746  INFO 70787 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-05-10 22:06:15.746  INFO 70787 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-05-10 22:06:15.746  INFO 70787 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-05-10 22:06:15.748  WARN 70787 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-05-10 22:06:15.749  INFO 70787 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-10 22:06:15.757  INFO 70787 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 22:06:15.768  INFO 70787 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-10 22:06:15.785  INFO 70787 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-10 22:06:21.453  INFO 70958 --- [restartedMain] c.a.n.c.c.impl.LocalConfigInfoProcessor  : LOCAL_SNAPSHOT_PATH:/Users/mabolun/nacos/config
+2022-05-10 22:06:21.485  INFO 70958 --- [restartedMain] c.a.nacos.client.config.impl.Limiter     : limitTime:5.0
+2022-05-10 22:06:21.528  WARN 70958 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-10 22:06:21.532  WARN 70958 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.properties] & group[DEFAULT_GROUP]
+2022-05-10 22:06:21.537  WARN 70958 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog-dev.properties] & group[DEFAULT_GROUP]
+2022-05-10 22:06:21.538  INFO 70958 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-10 22:06:21.628  INFO 70958 --- [restartedMain] len.cloud02.blog.BlogApplication         : The following profiles are active: dev
+2022-05-10 22:06:22.820  INFO 70958 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-10 22:06:22.935  INFO 70958 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104ms. Found 5 JPA repository interfaces.
+2022-05-10 22:06:23.201  INFO 70958 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5046674a-944b-321e-9a24-b001cf2d6174
+2022-05-10 22:06:24.219  INFO 70958 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-10 22:06:24.230  INFO 70958 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-10 22:06:24.230  INFO 70958 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-10 22:06:24.346  INFO 70958 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-10 22:06:24.346  INFO 70958 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2689 ms
+2022-05-10 22:06:24.633  INFO 70958 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-10 22:06:24.692  INFO 70958 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2022-05-10 22:06:24.861  INFO 70958 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-10 22:06:24.993  INFO 70958 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-10 22:06:25.743  INFO 70958 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-10 22:06:25.763  INFO 70958 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-10 22:06:27.109  INFO 70958 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-10 22:06:27.117  INFO 70958 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 22:06:27.190  WARN 70958 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-05-10 22:06:28.442  WARN 70958 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-10 22:06:28.442  INFO 70958 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-10 22:06:28.446  WARN 70958 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-10 22:06:28.447  INFO 70958 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-10 22:06:28.523  WARN 70958 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-10 22:06:28.778  INFO 70958 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-10 22:06:28.926  INFO 70958 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-10 22:06:29.108  INFO 70958 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-10 22:06:29.630  INFO 70958 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-10 22:06:29.630  INFO 70958 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-05-10 22:06:29.631  INFO 70958 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-10 22:06:29.814  INFO 70958 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-10 22:06:29.819  INFO 70958 --- [restartedMain] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8080, ip='192.168.50.150', weight=1.0, serviceName='DEFAULT_GROUP@@blog', cluster='HangZhou', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-05-10 22:06:29.821  INFO 70958 --- [restartedMain] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='192.168.50.150', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HangZhou', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-05-10 22:06:29.832  INFO 70958 --- [restartedMain] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP blog 192.168.50.150:8080 register finished
+2022-05-10 22:06:29.850  INFO 70958 --- [restartedMain] len.cloud02.blog.BlogApplication         : Started BlogApplication in 9.44 seconds (JVM running for 10.233)
+2022-05-10 22:06:29.858  INFO 70958 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog.properties+DEFAULT_GROUP
+2022-05-10 22:06:29.860  INFO 70958 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog.properties, group=DEFAULT_GROUP, cnt=1
+2022-05-10 22:06:29.861  INFO 70958 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog-dev.properties+DEFAULT_GROUP
+2022-05-10 22:06:29.861  INFO 70958 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog-dev.properties, group=DEFAULT_GROUP, cnt=1
+2022-05-10 22:06:29.861  INFO 70958 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-localhost_8848] [subscribe] blog+DEFAULT_GROUP
+2022-05-10 22:06:29.862  INFO 70958 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=blog, group=DEFAULT_GROUP, cnt=1
+2022-05-10 22:06:30.184  INFO 70958 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 22:06:30.203  INFO 70958 --- [restartedMain] c.netflix.loadbalancer.BaseLoadBalancer  : Client: paperservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-05-10 22:06:30.211  INFO 70958 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-05-10 22:06:30.229  INFO 70958 --- [restartedMain] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"192.168.50.150#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"192.168.50.150","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 22:06:30.239  INFO 70958 --- [restartedMain] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"192.168.50.150#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"192.168.50.150","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 22:06:30.248  INFO 70958 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 22:06:30.250  INFO 70958 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client paperservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[192.168.50.150:8086],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.50.150:8086;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@21dad12
+2022-05-10 22:06:30.779  INFO 70958 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 22:06:30.780  INFO 70958 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 22:06:30.843  INFO 70958 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"hosts\":[{\"ip\":\"192.168.50.150\",\"port\":8080,\"valid\":true,\"healthy\":true,\"marked\":false,\"instanceId\":\"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog\",\"metadata\":{\"preserved.register.source\":\"SPRING_CLOUD\"},\"enabled\":true,\"weight\":1.0,\"clusterName\":\"HangZhou\",\"serviceName\":\"DEFAULT_GROUP@@blog\",\"ephemeral\":true}],\"dom\":\"DEFAULT_GROUP@@blog\",\"name\":\"DEFAULT_GROUP@@blog\",\"cacheMillis\":10000,\"lastRefTime\":1652191590842,\"checksum\":\"b6e5647bba17425aceef7bae78809d76\",\"useSpecifiedURL\":false,\"clusters\":\"HangZhou\",\"env\":\"\",\"metadata\":{}}","lastRefTime":196999909715547} from /192.168.50.150
+2022-05-10 22:06:31.219  INFO 70958 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-10 22:07:04.787  INFO 70958 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-10 22:07:04.788  INFO 70958 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-10 22:07:04.812  INFO 70958 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2022-05-10 22:07:05.405  WARN 70958 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2022-05-10 22:07:05.456  WARN 70958 --- [http-nio-8080-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2022-05-10 22:08:01.221  WARN 70958 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2022-05-10 22:08:01.222  WARN 70958 --- [Thread-34] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2022-05-10 22:08:01.222  INFO 70958 --- [Thread-46] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2022-05-10 22:08:01.222  WARN 70958 --- [Thread-34] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2022-05-10 22:08:01.223  WARN 70958 --- [Thread-5] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2022-05-10 22:08:02.433  INFO 70958 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-10 22:08:02.442  INFO 70958 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-05-10 22:08:02.443  INFO 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@blog:192.168.50.150:8080 from beat map.
+2022-05-10 22:08:02.453  INFO 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='192.168.50.150', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='HangZhou', serviceName='null', metadata={}}
+2022-05-10 22:08:02.458  INFO 70958 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-05-10 22:08:02.458  INFO 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-05-10 22:08:03.470  INFO 70958 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : received push data: {"type":"dom","data":"{\"dom\":\"DEFAULT_GROUP@@blog\",\"name\":\"DEFAULT_GROUP@@blog\",\"cacheMillis\":10000,\"lastRefTime\":1652191683469,\"checksum\":\"020437d3f03bce96f9d9f22c3b6a4b4b\",\"useSpecifiedURL\":false,\"clusters\":\"HangZhou\",\"env\":\"\",\"hosts\":[],\"metadata\":{}}","lastRefTime":197092535859146} from /192.168.50.150
+2022-05-10 22:08:03.470  INFO 70958 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : removed ips(1) service: DEFAULT_GROUP@@blog@@HangZhou -> [{"instanceId":"192.168.50.150#8080#HangZhou#DEFAULT_GROUP@@blog","ip":"192.168.50.150","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"HangZhou","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2022-05-10 22:08:03.472  INFO 70958 --- [com.alibaba.nacos.naming.push.receiver] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@blog@@HangZhou -> []
+2022-05-10 22:08:04.990  INFO 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-05-10 22:08:04.991  INFO 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-05-10 22:08:08.002  INFO 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-05-10 22:08:11.014  INFO 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-05-10 22:08:11.015  INFO 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-05-10 22:08:11.016  INFO 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-05-10 22:08:11.017  INFO 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-05-10 22:08:11.018  INFO 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-05-10 22:08:11.020  WARN 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-05-10 22:08:11.020  WARN 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-05-10 22:08:11.021  INFO 70958 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-05-10 22:08:11.021  INFO 70958 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-05-10 22:08:11.021  INFO 70958 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-05-10 22:08:11.022  WARN 70958 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-05-10 22:08:11.024  INFO 70958 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-10 22:08:11.028  INFO 70958 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-10 22:08:11.041  INFO 70958 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-10 22:08:11.067  INFO 70958 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

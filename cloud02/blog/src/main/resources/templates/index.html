@@ -50,11 +50,22 @@ attached:轨道可以依附在主窗口
                 </form>
             </div>
 
-            <div id="div_dropdown_user_label" class="right menu LenCssLogic-mobile-hide" th:unless="*{session.user.avatar}==null">
+            <div id="div_dropdown_user_regist_label" class="right menu LenCssLogic-mobile-hide" th:unless="*{session.user}!=null">
+                <div id="dropdown_user_regist_label" class="ui item">
+                    <div class="text">
+                        <a href="#" class="item" th:href="@{/user/register_get}">注册</a>
+                    </div>
+                    <div class="text">
+                        <a href="#" class="item" th:href="@{/user/login}">登录</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="div_dropdown_user_label" class="right menu LenCssLogic-mobile-hide" th:unless="*{session.user}==null">
                 <div id="dropdown_user_label" class="ui dropdown item">
                     <div class="text">
-                        <img src="../static/image/icon_little/icon020.png" class="ui avatar image" th:src="*{session.user.avatar}==null ? @{image/icon_little/icon020.png}: ${session.user.avatar}">
-                        <span th:text="*{session.user.avatar}==null ? 未登录: ${session.user.nickname}">用户名</span>
+                        <img src="../static/image/icon_little/icon020.png" class="ui avatar image" th:src="*{session.user}==null ? @{image/icon_little/icon020.png} : ${session.user.avatar}">
+                        <span th:text="*{session.user}==null ? 未登录: ${session.user.nickname}">用户名</span>
                     </div>
                     <i class="dropdown icon"></i>
                     <div class="menu">

@@ -76,7 +76,8 @@ public class UserController {
             Page<Blog> blogPage = blogService.listBlogByUser(pageable, user_sql);
             LenLog.info2(this.getClass(), "articles", String.valueOf(blogPage.getTotalPages()));
             model.addAttribute("page", blogPage);
-            return "/user/user_articles";
+            return "/index";
+//            return "/user/user_articles";
         }
     }
 
