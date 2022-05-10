@@ -88,57 +88,67 @@ attached:轨道可以依附在主窗口
 <div class="m-container-small m-padded-tb-big">
     <div class="ui container">
         <div class="ui attached segment">
-            <h1>这里是文献管理系统</h1>
+            <div class="ui padded vertical segment">
+                <div class="ui mobile reversed stackable grid">
+                    <div class="five wide column">
+                        <a href="#" target="_blank">
+                            <img src="../static/image/paper_firstpicture.png" th:src="${paper.first_picture}" alt="" class="ui rounded image">
+                        </a>
+                    </div>
 
-            <div>
-                <form action="#" method="post" th:action="@{/paper/paper_query/one_keyword}" class="ui form">
-                    <div class="ui grid">
-                        <div class="left aligned six wide column">
-                            <div class="ui left labeled input">
-                                <label class="ui teal basic label">搜索文献</label>
-                                <input type="text" name="keyword" placeholder="关键词">
+                    <div class="eleven wide column">
+                        <div class="ui huge header volume-huge-level1" th:text="${paper.name}">文献名称</div>
+                        <div>
+                            <div class="ui horizontal link list">
+                                <div class="item">
+                                    <div class="middle aligned content">
+                                        <div class="header">
+                                            <i class="large user icon"></i>
+                                            <b class="volume-big-level1" th:text="${paper.author}">作者名</b>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="middle aligned content">
+                                        <div class="header">
+                                            <i class="large print icon"></i>
+                                            <b class="volume-big-level1" th:text="${paper.publisher}">出版社</b>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="left aligned four wide column">
-                            <button type="submit" class="ui teal submit button">搜索</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
 
-            <!--书籍显示列表-->
-            <div>
-                <div class="ui padded vertical segment" >
-                    <table class="ui compact teal table">
-                        <thead>
-                        <tr>
-                            <th>序号</th>
-                            <th>文献名</th>
-                            <th>作者</th>
-                            <th>发表期刊</th>
-                            <th>浏览次数</th>
-                            <th>操作</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr th:each="paper,iterStat : ${page.content}">
-                            <td th:text="${iterStat.count}">1</td>
-                            <td><a th:text="${paper.name}" th:href="@{/paper/detail/{id}(id=${paper.id})}">测试书名</a></td>
-                            <td th:text="${paper.author}">测试作者</td>
-                            <td th:text="${paper.publisher}">测试出版社</td>
-                            <td th:text="${paper.view_time}">测试借阅次数</td>
-                            <td>
-                                <a href="#" th:href="@{/paper/quote/{id}(id=${paper.id})}" class="ui mini teal basic button">引用</a>
-                                <a href="#" th:href="@{/paper/download/{id}(id=${paper.id})}" class="ui mini teal basic button">下载</a>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                        <div class="vertical-pad-middle">
+                            <div class="ui horizontal link list">
+                                <div class="item">
+                                    <div class="ui blue large label">
+                                        <i class="eye icon"></i> <b th:text="${paper.view_time}">523</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <p class="vertical-pad-small-level2" th:text="${paper.introduce}">书籍正文</p>
+                    </div>
+
+                    <div class="3 fluid ui buttons">
+                        <a class="ui blue button" th:href="@{/paper/download/{id}(id=${paper.id})}">
+                            <i class="download icon"></i>下载
+                        </a>
+                        <a class="ui teal button" th:href="@{/paper/quote/{id}(id=${paper.id})}">
+                            <i class="send icon"></i>引用
+                        </a>
+                        <a class="ui yellow button">
+                            <i class="star icon"></i>收藏
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 
 
