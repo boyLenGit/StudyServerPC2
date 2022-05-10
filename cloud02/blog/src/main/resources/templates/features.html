@@ -163,7 +163,7 @@ attached:轨道可以依附在主窗口
 <!--                    </div>-->
 <!--                </a>-->
 
-                <a class="ui orange button" href="#" th:href="@{/admin}">
+                <a class="ui orange button" href="#" th:href="@{/admin/index}">
                     <div class="ui items">
                         <div class="item">
                             <i class="huge chess rook icon"></i>
@@ -241,6 +241,10 @@ attached:轨道可以依附在主窗口
     $('#button_sidebar').click(function () {
         $('#a_top_label1, #a_top_label2, #a_top_label3, #a_top_label4, #a_top_label5, #div_search1').toggleClass('LenCssLogic-mobile-hide');
     })
+
+    $('#dropdown_user_label.dropdown').dropdown({
+        on : 'hover'
+    });
 </script>
 
 </body>

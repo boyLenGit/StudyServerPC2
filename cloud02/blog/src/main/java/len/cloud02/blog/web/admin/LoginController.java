@@ -27,6 +27,11 @@ public class LoginController {
         return "admin/login";
     }
 
+    @GetMapping("/index")
+    public String index(){
+        return "admin/admin_index";
+    }
+
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password, HttpSession httpSession, RedirectAttributes attributes){
         logger.info("Len logger <Controller-login-init>|| username={}, password={}", username, password);
@@ -51,6 +56,6 @@ public class LoginController {
     @GetMapping("/logout")
     public String logout(HttpSession httpSession){
         httpSession.removeAttribute("user");
-        return "redirect:/admin";
+        return "redirect:/";
     }
 }

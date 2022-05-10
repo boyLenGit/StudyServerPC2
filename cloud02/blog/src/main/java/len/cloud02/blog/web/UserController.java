@@ -76,7 +76,7 @@ public class UserController {
             Page<Blog> blogPage = blogService.listBlogByUser(pageable, user_sql);
             LenLog.info2(this.getClass(), "articles", String.valueOf(blogPage.getTotalPages()));
             model.addAttribute("page", blogPage);
-            return "/index";
+            return "/user/user_articles";
 //            return "/user/user_articles";
         }
     }
@@ -94,7 +94,7 @@ public class UserController {
             user.setPassword(null);
             httpSession.setAttribute("user", user_sql);
 //            return "user/user_articles";
-            return "redirect:/user/articles";
+            return "redirect:/";
         }else {
             redirectAttributes.addFlashAttribute("message", "用户名或密码错误");
             return "redirect:/user/login";

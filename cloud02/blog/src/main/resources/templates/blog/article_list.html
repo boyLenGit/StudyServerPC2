@@ -117,7 +117,12 @@ attached:轨道可以依附在主窗口
                     </div>
                 </div>
                 <div class="field">
-                    <button type="button" id="search-btn" class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
+                    <div class="left aligned five wide column">
+                        <button type="button" id="search-btn" class="ui teal basic button"><i class="search icon"></i>搜索</button>
+                        <a class="ui teal button" href="#" th:href="@{/user/articles}">
+                            <i class="user icon"></i>只看我的
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
