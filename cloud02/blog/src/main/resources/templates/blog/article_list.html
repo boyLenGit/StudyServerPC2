@@ -34,10 +34,10 @@ attached:轨道可以依附在主窗口
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
             <h1 class="ui blue header item">LenCloud</h1>
-            <a href="#" id="a_top_label1" class="active item LenCssLogic-mobile-hide"><i class="home icon"></i>首页</a>
-            <a href="#" id="a_top_label2" class="item LenCssLogic-mobile-hide"><i class="block layout icon"></i>功能</a>
-            <a href="#" id="a_top_label3" class="item LenCssLogic-mobile-hide"><i class="book icon" th:href="@{/blog/list}"></i>文章</a>
-            <a href="#" id="a_top_label4" class="item LenCssLogic-mobile-hide"><i class="info icon" th:href="@{/paper/papers}"></i>文献</a>
+            <a href="#" id="a_top_label1" class="active item LenCssLogic-mobile-hide" th:href="@{/}"><i class="home icon"></i>首页</a>
+            <a href="#" id="a_top_label2" class="item LenCssLogic-mobile-hide" th:href="@{/features}"><i class="block layout icon"></i>功能</a>
+            <a href="#" id="a_top_label3" class="item LenCssLogic-mobile-hide" th:href="@{/blog/list}"><i class="book icon"></i>文章</a>
+            <a href="#" id="a_top_label4" class="item LenCssLogic-mobile-hide" th:href="@{/paper/papers}"><i class="info icon"></i>文献</a>
 
             <div id="div_search1" class="right LenCssLogic-mobile-hide item">
                 <form name="form_search1" action="#" th:action="@{/search}" method="post" target="_blank">
@@ -62,7 +62,7 @@ attached:轨道可以依附在主窗口
             <div id="div_dropdown_user_label" class="right menu LenCssLogic-mobile-hide" th:unless="*{session.user}==null">
                 <div id="dropdown_user_label" class="ui dropdown item">
                     <div class="text">
-                        <img src="../../static/image/icon_little/icon020.png" class="ui avatar image" th:src="*{session.user}==null ? @{image/icon_little/icon020.png} : ${session.user.avatar}">
+                        <img src="../static/image/icon_little/icon020.png" class="ui avatar image" th:src="*{session.user}==null ? @{image/icon_little/icon020.png} : ${session.user.avatar}">
                         <span th:text="*{session.user}==null ? 未登录: ${session.user.nickname}">用户名</span>
                     </div>
                     <i class="dropdown icon"></i>
@@ -77,17 +77,6 @@ attached:轨道可以依附在主窗口
         <i class="sidebar icon"></i>
     </a>
 </nav>
-
-<!--导航栏下面的标签页-->
-<div class="ui attached pointing menu">
-    <div class="ui container">
-        <div class="right menu">
-            <a href="#" class="item">发布</a>
-            <a href="#" class="teal active item">列表</a>
-        </div>
-    </div>
-</div>
-
 
 
 

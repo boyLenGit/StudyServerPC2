@@ -50,14 +50,14 @@ public class IndexController {
         LenLog.staticInfo("search", result.toString());
         model.addAttribute("page", result);
         model.addAttribute("query", query);
-        return "search";
+        return "/blog/search";
     }
 
     @GetMapping("/article/{id}")
     public String article(@PathVariable Long id, Model model){
         model.addAttribute("blog", blogService.getAndConvert(id));
         model.addAttribute("comments", commentService.listCommentByBlogIdAndParentCommentNull(id));
-        return "article";
+        return "/blog/article_list";
     }
 
 }
