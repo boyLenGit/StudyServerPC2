@@ -50,11 +50,11 @@ attached:轨道可以依附在主窗口
                 </form>
             </div>
 
-            <div id="div_dropdown_user_label" class="right menu LenCssLogic-mobile-hide">
+            <div id="div_dropdown_user_label" class="right menu LenCssLogic-mobile-hide" th:unless="*{session.user.avatar}==null">
                 <div id="dropdown_user_label" class="ui dropdown item">
                     <div class="text">
-                        <img src="../../static/image/icon_little/icon020.png" class="ui avatar image" th:src="${session.user.avatar}">
-                        <span th:text="${session.user.nickname}">用户名</span>
+                        <img src="../static/image/icon_little/icon020.png" class="ui avatar image" th:src="*{session.user.avatar}==null ? @{image/icon_little/icon020.png}: ${session.user.avatar}">
+                        <span th:text="*{session.user.avatar}==null ? 未登录: ${session.user.nickname}">用户名</span>
                     </div>
                     <i class="dropdown icon"></i>
                     <div class="menu">
