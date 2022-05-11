@@ -1,0 +1,78 @@
+2022-05-11 10:05:21.665  INFO 84279 --- [main] l.cloud02.common.CommonApplicationTests  : Starting CommonApplicationTests using Java 1.8.0_311 on Macbookro15Inch with PID 84279 (started by mabolun in /Users/mabolun/Project/Java/cloud02/common)
+2022-05-11 10:05:21.666  INFO 84279 --- [main] l.cloud02.common.CommonApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2022-05-11 10:05:22.449  INFO 84279 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-11 10:05:22.471  INFO 84279 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2022-05-11 10:05:23.196  INFO 84279 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-11 10:05:23.310  INFO 84279 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.8.Final
+2022-05-11 10:05:23.618  INFO 84279 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-11 10:05:23.805  INFO 84279 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-11 10:05:24.738  INFO 84279 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-11 10:05:24.795  INFO 84279 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-11 10:05:26.388  INFO 84279 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-11 10:05:26.403  INFO 84279 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 10:05:26.719  WARN 84279 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 10:05:27.629  WARN 84279 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-05-11 10:05:27.871  INFO 84279 --- [main] l.cloud02.common.CommonApplicationTests  : Started CommonApplicationTests in 6.662 seconds (JVM running for 7.903)
+2022-05-11 10:05:28.059  INFO 84279 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 10:05:28.061  INFO 84279 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-11 10:05:28.075  INFO 84279 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-11 14:35:35.973  INFO 87303 --- [main] l.cloud02.common.CommonApplicationTests  : Starting CommonApplicationTests on Macbookro15Inch with PID 87303 (started by mabolun in /Users/mabolun/Project/Java/cloud02/common)
+2022-05-11 14:35:35.974  INFO 87303 --- [main] l.cloud02.common.CommonApplicationTests  : No active profile set, falling back to default profiles: default
+2022-05-11 14:35:36.833  INFO 87303 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-11 14:35:36.867  INFO 87303 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 JPA repository interfaces.
+2022-05-11 14:35:37.656  INFO 87303 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-11 14:35:37.749  INFO 87303 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2022-05-11 14:35:37.983  INFO 87303 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-11 14:35:38.212  INFO 87303 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-11 14:35:38.972  INFO 87303 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-11 14:35:39.033  INFO 87303 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-11 14:35:40.613  INFO 87303 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-11 14:35:40.629  INFO 87303 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 14:35:41.123  WARN 87303 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 14:35:41.755  INFO 87303 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-11 14:35:42.137  WARN 87303 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-05-11 14:35:42.382  INFO 87303 --- [main] l.cloud02.common.CommonApplicationTests  : Started CommonApplicationTests in 6.826 seconds (JVM running for 8.3)
+2022-05-11 14:35:42.564  INFO 87303 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-11 14:35:42.566  INFO 87303 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 14:35:42.570  INFO 87303 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-11 14:35:42.590  INFO 87303 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-11 16:27:48.960  INFO 89524 --- [main] l.cloud02.common.CommonApplicationTests  : Starting CommonApplicationTests on Macbookro15Inch with PID 89524 (started by mabolun in /Users/mabolun/Project/Java/cloud02/common)
+2022-05-11 16:27:48.962  INFO 89524 --- [main] l.cloud02.common.CommonApplicationTests  : No active profile set, falling back to default profiles: default
+2022-05-11 16:27:49.638  INFO 89524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-11 16:27:49.669  INFO 89524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 JPA repository interfaces.
+2022-05-11 16:27:50.384  INFO 89524 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-11 16:27:50.451  INFO 89524 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2022-05-11 16:27:50.611  INFO 89524 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-11 16:27:50.833  INFO 89524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-11 16:27:51.629  INFO 89524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-11 16:27:51.669  INFO 89524 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-11 16:27:53.025  INFO 89524 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-11 16:27:53.036  INFO 89524 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 16:27:53.350  WARN 89524 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 16:27:53.696  INFO 89524 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-11 16:27:54.110  WARN 89524 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-05-11 16:27:54.494  INFO 89524 --- [main] l.cloud02.common.CommonApplicationTests  : Started CommonApplicationTests in 5.87 seconds (JVM running for 6.892)
+2022-05-11 16:27:54.662  INFO 89524 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-11 16:27:54.663  INFO 89524 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 16:27:54.665  INFO 89524 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-11 16:27:54.678  INFO 89524 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-11 16:28:03.845  INFO 89543 --- [main] l.cloud02.common.CommonApplicationTests  : Starting CommonApplicationTests on Macbookro15Inch with PID 89543 (started by mabolun in /Users/mabolun/Project/Java/cloud02/common)
+2022-05-11 16:28:03.846  INFO 89543 --- [main] l.cloud02.common.CommonApplicationTests  : No active profile set, falling back to default profiles: default
+2022-05-11 16:28:04.469  INFO 89543 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-11 16:28:04.495  INFO 89543 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 JPA repository interfaces.
+2022-05-11 16:28:05.227  INFO 89543 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-11 16:28:05.335  INFO 89543 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2022-05-11 16:28:05.504  INFO 89543 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-11 16:28:05.776  INFO 89543 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-11 16:28:06.896  INFO 89543 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-11 16:28:06.936  INFO 89543 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-11 16:28:08.705  INFO 89543 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-11 16:28:08.715  INFO 89543 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 16:28:09.027  WARN 89543 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-11 16:28:09.358  INFO 89543 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-11 16:28:09.656  WARN 89543 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-05-11 16:28:09.985  INFO 89543 --- [main] l.cloud02.common.CommonApplicationTests  : Started CommonApplicationTests in 6.48 seconds (JVM running for 7.841)
+2022-05-11 16:28:10.162  INFO 89543 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-11 16:28:10.163  INFO 89543 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-11 16:28:10.166  INFO 89543 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-11 16:28:10.184  INFO 89543 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

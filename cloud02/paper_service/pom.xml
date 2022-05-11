@@ -3,19 +3,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.9.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>len.cloud02</groupId>
+        <artifactId>cloud02</artifactId>
+        <version>1.0-SNAPSHOT</version>
+<!--        <relativePath>../pom.xml</relativePath> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
-    <groupId>len.cloud02</groupId>
+
+<!--    <groupId>len.cloud02.paper</groupId>-->
     <artifactId>paper_service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>paper_service</name>
     <description>Demo project for Spring Boot</description>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -65,11 +68,7 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+
 
         <!-- 用于单元测试 -->
         <dependency>
@@ -102,6 +101,8 @@
             <groupId>len.cloud02</groupId>
             <artifactId>common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+<!--            <systemPath>/Users/mabolun/Project/Java/cloud02/common/target/common-0.0.1-SNAPSHOT.jar</systemPath>-->
         </dependency>
 
         <!-- nacos客户端依赖包 -->

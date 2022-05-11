@@ -24,21 +24,25 @@ public class PaperService {
 
     public Page<Paper> getPaperList(Pageable pageable){
         Page<Paper> papers = paperRepository.findAll(pageable);
+        LenLog.info2(getClass(), "getPaperList", String.valueOf(papers.getNumberOfElements()));
         return papers;
     }
 
     public ArrayList<Paper> getPaperListNoPageable(){
         ArrayList<Paper> papers = paperRepository.listPaperByNoPageable();
+        LenLog.info2(getClass(), "getPaperListNoPageable", String.valueOf(papers.size()));
         return papers;
     }
 
     public void addPaper(Paper paper){
+        LenLog.info2(getClass(), "addPaper", paper.getName());
         paperRepository.save(paper);
     }
 
     public Paper getPaperById(Long id){
         Paper paper = paperRepository.getOne(id);
-        Hibernate.initialize(Paper.class);
+        LenLog.info2(getClass(), "getPaperById", paper.getName());
+//        Hibernate.initialize(Paper.class);
         return paper;
     }
 
@@ -49,12 +53,14 @@ public class PaperService {
     @Transactional  // JPA要求，没有事务支持（即没有给方法加@Transactional），不能执行更新和删除操作，会报错”Executing an update/delete query“
     public Paper updateBook(Long id, Paper book){
         Paper book_from_sql = getPaperById(id);
+        LenLog.info2(getClass(), "updateBook", book_from_sql.getName());
         BeanUtils.copyProperties(book, book_from_sql);
         return paperRepository.save(book_from_sql);
     }
 
     @Transactional  // JPA要求，没有事务支持（即没有给方法加@Transactional），不能执行更新和删除操作，会报错”Executing an update/delete query“
     public void deleteBook(Long id){
+        LenLog.info2(getClass(), "updateBook", String.valueOf(id));
         paperRepository.deleteById(id);
     }
 

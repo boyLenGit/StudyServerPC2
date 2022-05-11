@@ -20,4 +20,4 @@ comment.avatar: /image/icon_little/icon002.png
 
 
 server:
-  port: 8083
+  port: 8087

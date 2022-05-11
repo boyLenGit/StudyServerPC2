@@ -7,7 +7,7 @@
         <groupId>len.cloud02.geodata</groupId>
         <artifactId>geodata</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+<!--        <relativePath>../pom.xml</relativePath> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
 
 <!--    <groupId>len.cloud02.geodata</groupId>-->

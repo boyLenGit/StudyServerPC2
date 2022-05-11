@@ -1,5 +1,6 @@
 spring:
   profiles:
     active: dev
+# 配置
 
 comment.avatar: /image/icon_little/icon002.png

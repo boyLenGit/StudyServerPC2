@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="c_client" />
-        <module name="cloud02" />
         <module name="common" />
         <module name="c_service" />
         <module name="cluster" />
@@ -30,7 +29,7 @@
       <module name="blog" options="-parameters" />
       <module name="c_client" options="-parameters" />
       <module name="c_service" options="-parameters" />
-      <module name="cloud02" options="" />
+      <module name="cloud02" options="-parameters" />
       <module name="cluster" options="-parameters" />
       <module name="cluster_service" options="-parameters" />
       <module name="common" options="-parameters" />
