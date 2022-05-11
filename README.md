@@ -1,15 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# StudyServerPC2
-=======
-# StudyServerPC
->>>>>>> a746426 (Initial commit)
-=======
-<<<<<<< HEAD
-# StudyServerPC2
-=======
-# StudyServerPC
->>>>>>> a746426 (Initial commit)
->>>>>>> 1da3f48 (first commit)
-# test
-# test
+## 感谢来访！
+
+非常感谢您来访问我的Github项目，这里有我学习Java、SpringMVC、SpringBoot的成长记录，并且有一些“成长中”的小项目。
+
+项目会持续更新~
+
+## 主要项目
+
+### cloud02：技术社区与文献管理系统
+
+技术栈：SpringBoot、MyBatis、FastJson、Nacos、Trilead-ssh2、HighChart、SemanticUI
+
+数据库：MySQL
+
+进展：技术社区、文献管理功能基本开发完毕，后序会部署到云服务器中。
+
+描述：
+
+1.具备管理员功能，支持技术文章的编辑、展示、评论、管理，文章可进行查找或按标签类别进行归类；
+2.具备文献管理功能，支持上传下载文献、查看文献列表、管理文献、搜索文献；
+3.微服务结构，实现基础的分布式与负载均衡特性；
+4.具备远程服务器状态监控功能，前端实时绘制远程服务器的性能状态曲线；
+
