@@ -149,9 +149,9 @@ attached:轨道可以依附在主窗口
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="blog,iterStat : ${page.content}">
+                <tr th:each="blog, iterStat : ${page.content}" th:unless="*{page.totalPages}==0">
                     <td th:text="${iterStat.count}">1</td>
-                    <td><a th:text="${paper.name}" th:href="@{/article/{id}(id=${blog.id})}">刻意练习清单</a></td>
+                    <td><a th:text="${blog.title}" th:href="@{/article/{id}(id=${blog.id})}">刻意练习清单</a></td>
                     <td th:text="${blog.type.name}">认知升级</td>
                     <td th:text="${blog.recommend} ? '是':'否'">是</td>
                     <td th:text="${blog.published} ? '发布':'草稿'">草稿</td>
