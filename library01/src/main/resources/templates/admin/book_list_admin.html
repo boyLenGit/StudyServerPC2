@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
     <!--    Semantic的CSS包-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/layout.css" th:href="@{/css/layout.css}">
+    <link rel="stylesheet" href="../../static/css/font.css" th:href="@{/css/font.css}">
+    <link rel="stylesheet" href="../../static/css/LRMme.css" th:href="@{/css/LRMme.css}">
 </head>
 <body>
 <!--****** 导包 ******-->
@@ -16,25 +19,64 @@
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 <!--******     ******-->
 
-<div class="ui container">
-    <div class="ui attached segment">
-        <h1>这里是书籍管理系统</h1>
 
-        <!--书籍管理页面按钮-->
-        <div>
-            <a href="#" th:href="@{/admin/books/add}">
-                <div class="ui button">
-                    <i class="archive icon"></i>
-                    <a>增加书籍</a>
+
+<nav class="ui inverted attached segment">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <b class="ui blue header item">Mo Book</b>
+
+            <a href="#" id="a_top_label1" class="active item LenCssLogic-mobile-hide" th:href="@{/}"><i class="home icon"></i>首页</a>
+            <a href="#" id="a_top_label2" class="item LenCssLogic-mobile-hide" th:href="@{/paper/papers}"><i class="file icon"></i>书籍列表</a>
+            <a href="#" id="a_top_label3" class="item LenCssLogic-mobile-hide" th:href="@{/paper/papers}"><i class="user icon"></i>用户中心</a>
+
+            <div class="ui item right" th:unless="*{session.user}!=null">
+                <div class="text">
+                    <a href="#" class="item" th:href="@{/user/register_get}">注册</a>
                 </div>
-            </a>
-        </div>
+                <div class="text">
+                    <a href="#" class="item" th:href="@{/user/login}">登录</a>
+                </div>
+            </div>
 
-        <!--书籍显示列表-->
-        <div>
-            <div class="ui padded vertical segment" >
-                <table class="ui compact teal table">
-                    <thead>
+            <div id="div_dropdown_user_label" class="right menu LenCssLogic-mobile-hide" th:unless="*{session.user}==null">
+                <div id="dropdown_user_label" class="ui dropdown item">
+                    <div class="text">
+                        <img src="../static/image/icon_little/icon020.png" class="ui avatar image" th:src="*{session.user}==null ? @{image/icon_little/icon020.png} : ${session.user.avatar}">
+                        <span th:text="*{session.user}==null ? 未登录: ${session.user.nickname}">用户名</span>
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#" class="item" th:href="@{/admin/logout}">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+        <div class="ui attached segment">
+            <h1>这里是书籍管理系统</h1>
+
+            <!--书籍管理页面按钮-->
+            <div>
+                <a href="#" th:href="@{/admin/books/add}">
+                    <div class="ui button">
+                        <i class="archive icon"></i>
+                        <a>增加书籍</a>
+                    </div>
+                </a>
+            </div>
+
+            <!--书籍显示列表-->
+            <div>
+                <div class="ui padded vertical segment" >
+                    <table class="ui compact teal table">
+                        <thead>
                         <tr>
                             <th>序号</th>
                             <th>书名</th>
@@ -44,8 +86,8 @@
                             <th>已借阅/总</th>
                             <th>操作</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr th:each="book,iterStat : ${books.content}">
                             <td th:text="${iterStat.count}">1</td>
                             <td><a th:text="${book.name}" th:href="@{/books/detail/{id}(id=${book.id})}">测试书名</a></td>
@@ -58,12 +100,14 @@
                                 <a href="#" th:href="@{/admin/books/delete/{id}(id=${book.id})}" class="ui mini teal basic button">删除</a>
                             </td>
                         </tr>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
 </body>
 </html>
