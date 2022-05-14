@@ -26,7 +26,7 @@ import java.io.IOException;
 
 @Controller
 @RequestMapping("/admin")
-public class bookControllerAdmin {
+public class BookControllerAdmin {
     @Autowired
     private BookService bookService;
 

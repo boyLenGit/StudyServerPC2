@@ -80,6 +80,9 @@
                 </form>
             </div>
 
+            <div class="ui mini negative message" th:unless="${#strings.isEmpty(message_borrow_fail)}" th:text="${message_borrow_fail}">书籍借光了</div>
+            <div class="ui mini positive message" th:unless="${#strings.isEmpty(message_borrow_success)}" th:text="${message_borrow_success}">书籍到了</div>
+
 
             <!--书籍显示列表-->
             <div>
@@ -105,7 +108,7 @@
                             <td th:text="${book.view_time}">测试借阅次数</td>
                             <td><a th:text="${book.remain}">测试库存</a>/<a th:text="${book.amount}"></a></td>
                             <td>
-                                <a href="#" th:href="@{/books/modify/{id}/get(id=${book.id})}" class="ui mini teal basic button">借阅</a>
+                                <a href="#" th:href="@{/user/borrow/{id}(id=${book.id})}" class="ui mini teal basic button">借阅</a>
                             </td>
                         </tr>
                         </tbody>

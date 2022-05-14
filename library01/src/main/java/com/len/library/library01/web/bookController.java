@@ -23,7 +23,7 @@ import java.io.File;
 import java.io.IOException;
 
 @Controller
-public class bookController {
+public class BookController {
     @Autowired
     private BookService bookService;
 

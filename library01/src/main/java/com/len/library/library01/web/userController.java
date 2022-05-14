@@ -6,6 +6,7 @@ import com.len.library.library01.service.BookService;
 import com.len.library.library01.service.UserService;
 import com.len.library.library01.util.LenLog;
 import com.len.library.library01.util.LenPath;
+import com.len.library.library01.util.LenText;
 import com.len.library.library01.util.LenTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +22,7 @@ import java.io.IOException;
 
 @Controller
 @RequestMapping("/user")
-public class userController {
+public class UserController {
     @Autowired
     private UserService userService;
     @Autowired
@@ -39,7 +40,7 @@ public class userController {
     public String signIn_post(@Valid User user, MultipartFile image1) throws IOException {
         String icon_path = "https://picsum.photos/50/50";
         if (image1!=null){
-            icon_path = "/upload/user_icon/" + user.getName().hashCode() + "_" + LenTime.ymdhms_pure_num() + "_" + image1.getOriginalFilename();
+            icon_path = "/upload/user_icon/" + user.getName().hashCode() + "_" + LenTime.ymdhms_pure_num() + "_" + LenText.makeImageNameSafe(image1.getOriginalFilename());
             String file_path_store = LenPath.getData() + icon_path;
             File file_store = new File(file_path_store);
             if (!file_store.exists())
@@ -79,14 +80,20 @@ public class userController {
 
     // 借阅
     @GetMapping("/borrow/{id}")
-    public String borrow(@PathVariable Integer id, RedirectAttributes attributes){
+    public String borrow(@PathVariable Integer id, RedirectAttributes attributes, HttpSession session){
         Book book = bookService.getBookById(id);
         if (book.getRemain()>0){
             book.setRemain(book.getRemain()-1);
-            attributes.addFlashAttribute("message_borrow", "书籍《 " + book.getName() + "》借阅成功！");
+            bookService.updateBook(book.getId(), book);
+            User user_web = (User) session.getAttribute("name");
+            User user_sql = userService.getUserById(user_web.getId());
+            user_sql.addBook_history(book);
+            user_sql.addBook(book);
+            userService.updateUser(user_sql);
+            attributes.addFlashAttribute("message_borrow_success", "书籍《 " + book.getName() + "》借阅成功！");
             return "redirect:/books";
         }else {
-            attributes.addFlashAttribute("message_borrow", "书籍《 " + book.getName() + "》已经全被借走了！");
+            attributes.addFlashAttribute("message_borrow_fail", "书籍《 " + book.getName() + "》已经全被借走了！");
             return "redirect:/books";
         }
     }
