@@ -107,7 +107,7 @@
                             <td th:text="${book.view_time}">测试借阅次数</td>
                             <td><a th:text="${book.remain}">测试库存</a>/<a th:text="${book.amount}"></a></td>
                             <td>
-                                <a href="#" th:href="@{/user/borrow/{id}(id=${book.id})}" class="ui mini teal basic button">借阅</a>
+                                <a href="#" th:href="@{/user/payback/{id}(id=${book.id})}" class="ui mini teal basic button">还书</a>
                             </td>
                         </tr>
                         </tbody>
@@ -115,7 +115,7 @@
                 </div>
             </div>
 
-            <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">还书成功</div>
+            <div class="ui mini positive message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">还书成功</div>
 
 
             <b>历史借阅</b>
@@ -123,7 +123,7 @@
 
             <div>
                 <div class="ui padded vertical segment" >
-                    <table class="ui compact teal table">
+                    <table class="ui compact grey table">
                         <thead>
                         <tr>
                             <th>序号</th>
@@ -132,20 +132,16 @@
                             <th>出版社</th>
                             <th>浏览次数</th>
                             <th>剩余/总</th>
-                            <th>操作</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr th:each="book,iterStat : ${books.content}">
+                        <tr th:each="book,iterStat : ${books_history.content}">
                             <td th:text="${iterStat.count}">1</td>
                             <td><a th:text="${book.name}" th:href="@{/books/detail/{id}(id=${book.id})}">测试书名</a></td>
                             <td th:text="${book.author}">测试作者</td>
                             <td th:text="${book.publisher}">测试出版社</td>
                             <td th:text="${book.view_time}">测试借阅次数</td>
                             <td><a th:text="${book.remain}">测试库存</a>/<a th:text="${book.amount}"></a></td>
-                            <td>
-                                <a href="#" th:href="@{/user/borrow/{id}(id=${book.id})}" class="ui mini teal basic button">借阅</a>
-                            </td>
                         </tr>
                         </tbody>
                     </table>

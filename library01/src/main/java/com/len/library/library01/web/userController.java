@@ -129,6 +129,6 @@ public class UserController {
         Page<Book> books_history_page = new PageImpl<>(books_history, pageable, books_history.size());
         model.addAttribute("books", books_page);
         model.addAttribute("books_history", books_history_page);
-        return ""
+        return "user/user_book_list";
     }
 }
