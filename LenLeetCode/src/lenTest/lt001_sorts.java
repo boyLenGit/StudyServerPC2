@@ -61,10 +61,31 @@ public class lt001_sorts {
         lenSortDFX(inputs,i1+1, end);
     }
 
+    public static void len_quick_sort(int start, int end, int[] list){
+        int s, e, exchange, compare;
+        if (start>end) return;
+        s = start;
+        e = end;
+        compare = list[start];
+        while (s<e){
+            while (s<e && compare<=list[e]) e--;
+            while (s<e && compare>=list[s]) s++;
+            if (s<e){
+                exchange = list[e];
+                list[e] = list[s];
+                list[s] = exchange;
+            }
+        }
+        list[start] = list[e];
+        list[e] = compare;
+        len_quick_sort(start, e-1, list);
+        len_quick_sort(e+1, end, list);
+    }
 
     public static void main(String[] a){
         int[] inputs = new int[]{5,2,4,1,1,3,6,0};
-        lenSortDFX(inputs,0,inputs.length-1);
+//        len(inputs,0,inputs.length-1);
+        len_quick_sort(0, inputs.length-1, inputs);
         System.out.println(Arrays.toString(inputs));
     }
 }
