@@ -3,6 +3,7 @@ package com.len.library.library01.web;
 import com.len.library.library01.pojo.User;
 import com.len.library.library01.service.BookService;
 import com.len.library.library01.service.UserService;
+import com.len.library.library01.util.LenLog;
 import com.len.library.library01.util.LenPath;
 import com.len.library.library01.util.LenTime;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +12,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
@@ -25,9 +29,10 @@ public class userController {
     @Autowired
     private BookService bookService;
 
+    // 用户注册
     // http://localhost:8081/user/sign_in_get
-    @GetMapping("/sign_in_get")
-    public String signIn_get(Model model){
+    @GetMapping("/sign_in")
+    public String sign_in(Model model){
         model.addAttribute("user", new User());
         return "user/sign_in";
     }
@@ -46,5 +51,25 @@ public class userController {
         user.setUser_icon(icon_path);
         userService.addUser(user);
         return "redirect:/books";
+    }
+
+    // 用户登录
+    @GetMapping("/sign_up")
+    public String sign_up(){
+        return "user/sign_up";
+    }
+
+    @PostMapping("/sign_up_post")
+    public String sign_up_post(@RequestParam String name, @RequestParam String password, HttpSession session, RedirectAttributes attributes){
+        LenLog.info("sign_up_post", name + " | " + password);
+        User user = userService.checkUser(name, password);
+        if (user==null){
+            attributes.addFlashAttribute("message", "用户名或密码不正确");
+            return "redirect:/user/sign_up";
+        }else {
+            user.setPassword(null);
+            session.setAttribute("user", user);
+            return "redirect:/";
+        }
     }
 }

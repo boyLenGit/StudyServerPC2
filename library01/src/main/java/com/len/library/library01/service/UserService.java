@@ -3,6 +3,7 @@ package com.len.library.library01.service;
 import com.len.library.library01.dao.UserRepository;
 import com.len.library.library01.pojo.User;
 import com.len.library.library01.util.LenLog;
+import com.len.library.library01.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,12 @@ public class UserService {
 
     public void addUser(User user){
         LenLog.info("addUser", user.toString());
+        user.setPassword(MD5Utils.code(user.getPassword()));
         userRepository.save(user);
+    }
+
+    public User checkUser(String name, String password){
+        User user_sql = userRepository.findUserByNameAndPassword(name, MD5Utils.code(password));
+        return user_sql;
     }
 }
