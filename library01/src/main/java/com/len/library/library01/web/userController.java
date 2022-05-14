@@ -91,7 +91,7 @@ public class UserController {
         if (book.getRemain()>0){
             book.setRemain(book.getRemain()-1);
             bookService.updateBook(book.getId(), book);
-            User user_web = (User) session.getAttribute("name");
+            User user_web = (User) session.getAttribute("user");
             User user_sql = userService.getUserById(user_web.getId());
             user_sql.addBook_history(book);
             user_sql.addBook(book);
@@ -114,7 +114,7 @@ public class UserController {
         User user_sql = userService.getUserById(user.getId());
         user_sql.deleteBook(id);
         userService.updateUser(user_sql);
-        attributes.addFlashAttribute("message", "还书成功！");
+        attributes.addFlashAttribute("message", "还书《 "+book.getName()+"》成功！");
         return "redirect:/user/books";
     }
 
