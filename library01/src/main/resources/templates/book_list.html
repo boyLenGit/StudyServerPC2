@@ -30,18 +30,18 @@
 
             <div class="ui item right" th:unless="*{session.user}!=null">
                 <div class="text">
-                    <a href="#" class="item" th:href="@{/user/register_get}">注册</a>
+                    <a href="#" class="item" th:href="@{/user/sign_in}">注册</a>
                 </div>
                 <div class="text">
-                    <a href="#" class="item" th:href="@{/user/login}">登录</a>
+                    <a href="#" class="item" th:href="@{/user/sign_up}">登录</a>
                 </div>
             </div>
 
             <div id="div_dropdown_user_label" class="right menu LenCssLogic-mobile-hide" th:unless="*{session.user}==null">
                 <div id="dropdown_user_label" class="ui dropdown item">
                     <div class="text">
-                        <img src="../static/image/icon_little/icon020.png" class="ui avatar image" th:src="*{session.user}==null ? @{image/icon_little/icon020.png} : ${session.user.avatar}">
-                        <span th:text="*{session.user}==null ? 未登录: ${session.user.nickname}">用户名</span>
+                        <img src="../static/image/icon_little/icon020.png" class="ui avatar image" th:src="*{session.user}==null ? @{image/icon_little/icon020.png} : ${session.user.user_icon}">
+                        <span th:text="*{session.user}==null ? 未登录: ${session.user.name}">用户名</span>
                     </div>
                     <i class="dropdown icon"></i>
                     <div class="menu">
@@ -117,5 +117,14 @@
 </div>
 
 
+<script>
+    $('#button_sidebar').click(function () {
+        $('#a_top_label1, #a_top_label2, #a_top_label3, #a_top_label4, #a_top_label5, #div_search1').toggleClass('LenCssLogic-mobile-hide');
+    })
+
+    $('#dropdown_user_label.dropdown').dropdown({
+        on : 'hover'
+    });
+</script>
 </body>
 </html>
