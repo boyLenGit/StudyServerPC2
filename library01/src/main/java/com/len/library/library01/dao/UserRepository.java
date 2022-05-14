@@ -10,4 +10,5 @@ public interface UserRepository  extends JpaRepository<User, Integer>, JpaSpecif
 
     @Query("SELECT u FROM user u WHERE u.name=?1 AND u.password=?2")
     public User findUserByNameAndPassword(String name, String password);
+
 }

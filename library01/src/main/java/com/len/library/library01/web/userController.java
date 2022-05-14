@@ -9,6 +9,11 @@ import com.len.library.library01.util.LenPath;
 import com.len.library.library01.util.LenText;
 import com.len.library.library01.util.LenTime;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +24,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 @Controller
 @RequestMapping("/user")
@@ -96,5 +102,32 @@ public class UserController {
             attributes.addFlashAttribute("message_borrow_fail", "书籍《 " + book.getName() + "》已经全被借走了！");
             return "redirect:/books";
         }
+    }
+
+    // 还书
+    @GetMapping("/payback/{id}")
+    public String payback(@PathVariable Integer id, HttpSession session, RedirectAttributes attributes){
+        Book book = bookService.getBookById(id);
+        book.setRemain(book.getRemain()+1);
+        bookService.updateBook(id, book);
+        User user = (User) session.getAttribute("user");
+        User user_sql = userService.getUserById(user.getId());
+        user_sql.deleteBook(id);
+        userService.updateUser(user_sql);
+        attributes.addFlashAttribute("message", "还书成功！");
+        return "redirect:/user/books";
+    }
+
+    // 查看用户借阅的书籍
+    @GetMapping("/books")
+    public String user_books(@PageableDefault(size = 10, sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable, HttpSession session, Model model){
+        User user = (User) session.getAttribute("user");
+        User user_sql = userService.getUserById(user.getId());
+        List<Book> books = user_sql.getBooks();
+        Page<Book> books_page = new PageImpl<>(books, pageable, books.size());
+        List<Book> books_history = user_sql.getBooks_history();
+        Page<Book> books_history_page = new PageImpl<>(books_history, pageable, books_history.size());
+        model.addAttribute("books", books_page);
+        model.addAttribute("books_history", books_history_page);
     }
 }

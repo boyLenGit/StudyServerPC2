@@ -101,6 +101,23 @@ public class User {
         this.books_history.add(book_history);
     }
 
+    public void deleteBook(Book book){
+        for (int i1=0; i1<books.size(); i1++){
+            if (books.get(i1).getId().equals(book.getId())){
+                books.remove(i1);
+                break;
+            }
+        }
+    }
+    public void deleteBook(Integer id){
+        for (int i1=0; i1<books.size(); i1++){
+            if (books.get(i1).getId().equals(id)){
+                books.remove(i1);
+                break;
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return "User{" +
