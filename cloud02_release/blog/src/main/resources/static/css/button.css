@@ -1,0 +1,10 @@
+.LenCssButton-position-right-top{
+    position:absolute !important;
+    top:0 !important;
+    right:0 !important;
+}
+
+.LenCssButton-padding-middle{
+    margin-bottom: 0.3em !important;
+    margin-top: 0.3em !important;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory测试</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+</head>
+<body>
+
+<!--****** 导包 ******-->
+<!--    JQuery包-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    Semantic的JS包-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+<form class="ui large form" method="post" action="#" th:object="${serverStateDynamic}" th:action="@{/cluster/connect/test_memory_object/post}">
+    <div class="ui segment">
+        <div class="field">
+            <div class="ui left icon input">
+                <i class="user icon"></i>
+                <input type="text" name="command" placeholder="指令内容">
+            </div>
+        </div>
+        <button class="ui fluid large teal submit button">提交</button>
+    </div>
+
+    <div class="ui error mini message"></div>
+    <div class="ui mini negative message" th:unless="${#strings.isEmpty(message)}" th:text="${message}">指令结果将显示在此</div>
+    <div class="" th:text="${serverStateDynamic.mem_total}">测试单独变量</div>
+
+    <table class="ui compact teal table">
+        <thead>
+        <tr>
+            <th>mem_total</th>
+            <th>mem_used</th>
+            <th>mem_free</th>
+            <th>mem_shared</th>
+            <th>mem_cache</th>
+            <th>mem_available</th>
+            <th>io_read</th>
+        </tr>
+        </thead>
+
+        <tr>
+            <td th:text="*{mem_total}">0</td>
+            <td th:text="*{mem_usage}">0</td>
+            <td th:text="*{mem_free}">0</td>
+            <td th:text="*{mem_shared}">0</td>
+            <td th:text="*{mem_cache}">0</td>
+            <td th:text="*{mem_available}">0</td>
+            <td th:text="*{io_read}">0</td>
+        </tr>
+    </table>
+
+
+</form>
+
+</body>
+</html>

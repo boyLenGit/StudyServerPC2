@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <!--    用于设置尺寸适配移动端-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <!--    Semantic的CSS包-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!--    自定义CSS导入。必须加rel="stylesheet"才可以生效！-->
+    <link rel="stylesheet" href="../static/css/index.css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" href="../static/css/text.css" th:href="@{/css/text.css}">
+    <link rel="stylesheet" href="../static/css/logic.css" th:href="@{/css/logic.css}">
+    <link rel="stylesheet" href="../static/css/button.css" th:href="@{/css/button.css}">
+    <link rel="stylesheet" href="../static/css/display.css" th:href="@{/css/display.css}">
+    <link rel="stylesheet" href="../static/css/LRMme.css" th:href="@{/css/LRMme.css}">
+    <link rel="stylesheet" href="../static/css/LRManimate.css" th:href="@{/css/LRManimate.css}">
+    <link rel="stylesheet" href="../static/css/LRMtypo.css" th:href="@{/css/LRMtypo.css}">
+</head>
+<body>
+<!--****** 导包 ******-->
+<!--    JQuery包-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    Semantic的JS包-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+<!--****** 导航 ******-->
+<!--
+ui:表示调用Semantic的导航模版
+inverted:表示导航采用白色反转的颜色——黑色
+attached:轨道可以依附在主窗口
+-->
+<nav class="ui inverted attached segment LenCSS-m-padded-tb-mini LenCssDisplay-shadow-middle">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h1 class="ui blue header item">LenCloud Admin</h1>
+            <a href="#" th:href="@{/admin/admin_article}" id="a_top_label1" class="item LenCssLogic-mobile-hide"><i class="home icon"></i>文章</a>
+            <a href="#" th:href="@{/admin/admin_types}" id="a_top_label2" class="active item LenCssLogic-mobile-hide"><i class="idea icon"></i>分类</a>
+            <a href="#" th:href="@{/admin/admin_tags}" id="a_top_label3" class="item LenCssLogic-mobile-hide"><i class="tags icon"></i>标签</a>
+            <div id="div_dropdown_user_label" class="right menu LenCssLogic-mobile-hide">
+                <div id="dropdown_user_label" class="ui dropdown item">
+                    <div class="text">
+                        <img src="../../static/image/icon_little/icon020.png" class="ui avatar image"  th:src="@{/image/icon_little/icon020.png}">
+                        长寿花
+                    </div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#" class="item" th:href="@{/admin/logout}">注销</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" id="button_sidebar" class="ui black icon button LenCssButton-position-right-top LenCssLogic-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+
+
+
+
+
+
+
+<!--****** 中间内容 ******-->
+<div  class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+        <form action="#" method="post"  th:object="${type}" th:action="*{id}==null ? @{/admin/types} : @{/admin/types/{id}(id=*{id})} "  class="ui form">
+            <input type="hidden" name="id" th:value="*{id}">
+            <div class=" field">
+                <div class="ui left labeled input">
+                    <label class="ui teal basic label">名称</label>
+                    <input type="text" name="name" placeholder="分类名称" th:value="*{name}" >
+                </div>
+            </div>
+
+            <div class="ui error message"></div>
+            <!--/*/
+            <div class="ui negative message" th:if="${#fields.hasErrors('name')}"  >
+              <i class="close icon"></i>
+              <div class="header">验证失败</div>
+              <p th:errors="*{name}">提交信息不符合规则</p>
+            </div>
+             /*/-->
+            <div class="ui right aligned container">
+                <button type="button" class="ui button" onclick="window.history.go(-1)" >返回</button>
+                <button class="ui teal submit button">提交</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!--****** 底部footer ******-->
+<footer class="ui inverted vertical segment">
+    <div class="ui center aligned container">
+        <!--        grid一共有16份-->
+        <div class="ui inverted divided stackable grid">
+            <div class="four wide column">
+                <img src="../../static/image/index/bottom_code.png" th:src="@{/image/index/bottom_code.png}" class="ui rounded image" alt="" style="width: 7em">
+            </div>
+
+            <div class="ui four wide column">
+                <h4 class="ui inverted header LenCSS-Text-little-header">承办方</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">IOT研究组</a>
+                    <a href="#" class="item">UPC地学院</a>
+                    <a href="#" class="item">中石油集团</a>
+                </div>
+            </div>
+
+            <div class="ui four wide column">
+                <h4 class="ui inverted header LenCSS-Text-little-header">用户服务</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">云平台 公告</a>
+                    <a href="#" class="item">反馈与建议</a>
+                    <a href="#" class="item">管理员申请</a>
+                </div>
+            </div>
+
+            <div class="ui four wide column">
+                <h4 class="ui inverted header LenCSS-Text-little-header">关于LenCloud</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">云平台简介</a>
+                    <a href="#" class="item">联系开发者</a>
+                    <a href="#" class="item">隐私与政策</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <p class="LenCssText-Opacity-L">Copyright © 2021-2023 LenCloud designed by boyLen</p>
+    </div>
+</footer>
+
+<script>
+    $('#button_sidebar').click(function () {
+        $('#a_top_label1, #a_top_label2, #a_top_label3, #div_dropdown_user_label').toggleClass('LenCssLogic-mobile-hide');
+    });
+
+    $('#dropdown_user_label.dropdown').dropdown({
+        on : 'hover'
+    });
+
+    $(function(){
+        $('.ui.selection.dropdown').dropdown();
+    });
+
+    $('.ui.form').form({
+        fields : {
+            title : {
+                identifier: 'name',
+                rules: [{
+                    type : 'empty',
+                    prompt: '请输入分类名称'
+                }]
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

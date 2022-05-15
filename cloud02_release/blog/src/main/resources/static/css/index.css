@@ -1,0 +1,39 @@
+.LenCSS-m-padded-tb-mini{
+    padding-top: 0.1em !important;
+    padding-bottom: 0.1em !important;
+}
+
+.LenCSS-Text-little-header{
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+.LenCSS-Pad-middle-div1{
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+.LenCSS-Pad-middle-blog-left-front{
+    display: inline-block !important;
+}
+
+/*通用居中*/
+.LenCSS-Item-LeftRight_center{
+
+}
+
+/*上下边距*/
+.LenCSS-Margin-TopBottom-H{
+
+}
+.LenCSS-Margin-TopBottom-M{
+
+}
+.LenCSS-Margin-TopBottom-L{
+    margin-top: 0.3em !important;
+    margin-bottom:  0.3em !important;;
+}
+/*.LenCSS-Background-global{*/
+/*    background: url("../image/");*/
+/*}*/

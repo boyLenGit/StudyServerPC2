@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <!--    用于设置尺寸适配移动端-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <!--    Semantic的CSS包-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!--    自定义CSS导入。必须加rel="stylesheet"才可以生效！-->
+    <!-- 引入MarkDown渲染 -->
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+
+    <link rel="stylesheet" href="../static/css/index.css" th:href="@{/css/index.css}">
+    <link rel="stylesheet" href="../static/css/text.css" th:href="@{/css/text.css}">
+    <link rel="stylesheet" href="../static/css/logic.css" th:href="@{/css/logic.css}">
+    <link rel="stylesheet" href="../static/css/button.css" th:href="@{/css/button.css}">
+    <link rel="stylesheet" href="../static/css/display.css" th:href="@{/css/display.css}">
+    <link rel="stylesheet" href="../static/css/LRMme.css" th:href="@{/css/LRMme.css}">
+    <link rel="stylesheet" href="../static/css/LRManimate.css" th:href="@{/css/LRManimate.css}">
+    <link rel="stylesheet" href="../static/css/LRMtypo.css" th:href="@{/css/LRMtypo.css}">
+</head>
+<body>
+<!--****** 导包 ******-->
+<!--    JQuery包-->
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<!--    Semantic的JS包-->
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+
+<!--****** 导航 ******-->
+<!--
+ui:表示调用Semantic的导航模版
+inverted:表示导航采用白色反转的颜色——黑色
+attached:轨道可以依附在主窗口
+-->
+<nav class="ui inverted attached segment LenCSS-m-padded-tb-mini LenCssDisplay-shadow-middle">
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu">
+            <h1 class="ui blue header item">LenCloud</h1>
+            <a href="#" id="a_top_label1" class="item LenCssLogic-mobile-hide"><i class="home icon"></i>首页</a>
+            <a href="#" id="a_top_label2" class="item LenCssLogic-mobile-hide"><i class="idea icon"></i>功能</a>
+            <a href="#" id="a_top_label3" class="item LenCssLogic-mobile-hide"><i class="tags icon"></i>系统</a>
+            <a href="#" id="a_top_label4" class="active item LenCssLogic-mobile-hide"><i class="info icon"></i>文章</a>
+            <a href="#" id="a_top_label5" class="item LenCssLogic-mobile-hide"><i class="info icon"></i>关于</a>
+            <div id="div_search1" class="right LenCssLogic-mobile-hide item">
+                <form name="form_search1" action="#" th:action="@{/search}" method="post" target="_blank">
+                    <div class="ui icon inverted transparent input">
+                        <input type="text" name="query" placeholder="搜索内容" th:value="${query}">
+                        <i onclick="document.forms['form_search1'].submit()" class="search inverted link icon"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="#" id="button_sidebar" class="ui black icon button LenCssButton-position-right-top LenCssLogic-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+
+
+
+
+
+
+
+<!--****** 中间内容 ******-->
+<div class="LenCSS-Pad-middle-div1">
+    <div class="ui container">
+        <!--        头部-->
+        <div class="ui top attached segment">
+            <div class="ui horizontal link list">
+                <div class="item">
+                    <img src="https://picsum.photos/200/300" th:src="@{${blog.user.avatar}}" alt="" class="ui avatar image">
+                    <div class="content"><a href="#" class="header" th:text="${blog.user.nickname}">百度百科</a> </div>
+                </div>
+                <div class="item">
+                    <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}">2021-05-22</span>
+                </div>
+                <div class="item">
+                    <i class="eye icon"></i><span th:text="${blog.views}">6485</span>
+                </div>
+            </div>
+        </div>
+        <!--        图片-->
+        <div class="ui attached segment">
+            <img src="https://picsum.photos/800/200" th:src="@{${blog.firstPicture}}" alt="" class="ui rounded image">
+        </div>
+
+        <!--        内容-->
+        <div class="ui attached segment">
+            <div class="ui right aligned basic segment">
+                <div class="ui orange basic label" th:text="${blog.flag}">原创</div>
+            </div>
+            <h2 class="ui center aligned header" th:text="${blog.title}">现在的手机把夜晚拍成“白天”，这合理吗？</h2>
+            <br>
+            <div class="typo typo-selection LenCssText-size-middle LenCssText-padding-middle LenCssText-line-space-middle" th:utext="${blog.content}">
+                每当手机发布会上出现超级夜景的展示片段时，总有人问：“把夜晚拍成白天有意义吗？”不少人都有这种想法，但我要说这种想法是错误的，你以为拍出来的是白天，实际上那还是夜晚的照片。
+                这是我2016年6月25日凌晨在无人区里拍的图，可以看到漆黑一片，无人区没有打灯肯定是漆黑一片这没毛病吧？
+                这种看起来很明亮的照片不是所谓的“把夜晚拍成白天”，而是通过长曝光+大光圈+高ISO带来更多的进光量，所以照片看起来比较明亮而已。我们的人眼也有类似的功能，你从明亮突然进入黑暗的环境，你也觉得一片漆黑，但过一段时间你的眼睛就能适应这个黑暗环境，不再是漆黑一片了。
+                这种看起来很明亮的照片不是所谓的“把夜晚拍成白天”，而是通过长曝光+大光圈+高ISO带来更多的进光量，所以照片看起来比较明亮而已。我们的人眼也有类似的功能，你从明亮突然进入黑暗的环境，你也觉得一片漆黑，但过一段时间你的眼睛就能适应这个黑暗环境，不再是漆黑一片了。
+                这张半夜拍的照片是不是看起来也很像白天？时间是凌晨3点，天上还有星星，实际上这是半夜月亮比较明亮的时候拍的。可能有人会说这是长曝光啊，你肉眼能看到这样的画面吗？常年在城市里居住的人们可能不知道，没有光污染的夜晚是完全可以看到星空的，如果月亮非常明亮，那么借着月光看书都是没问题的，靠着月光走夜路也是完全没问题的。
+                现在你懂了吧，那些看起来很像白天的照片实际上是通过长时间曝光来完成的。如果1/100秒的快门速度拍出来的照片是漆黑的，那我改成30秒曝光，拍出来的照片可能就非常明亮，但是30秒的曝光一般都要上三脚架来完成，毕竟手持拍摄30秒妥妥的拍糊。
+                手机拍照把夜晚拍的很亮又是怎样做到的呢？毕竟是手持拍摄没三脚架。目前绝大多数手机都有超级夜景模式，这种就是通过多张拍摄+堆栈来模拟长曝光的效果，属于计算摄影的范畴。如果你用过手机的超级夜景模式你也会看到让你尽可能拿稳手机的提示，这就是通过计算摄影来模拟长曝光。在你端稳手机按下快门的时候，手机会自动拍摄多张照片，堆栈降噪来模拟长时间曝光的效果，多张拍摄堆栈还能降低噪点提升画质。
+                这张是我用超级夜景模式拍的照片，看起来很像是把夜晚拍成了白天，但实际上如果我使用手机的长曝光模式，曝光时间足够久一样能拍出这种效果。你总不能说曝光时间短就真实，曝光时间长就不真实吧？
+                现在你知道了，手机这种把夜晚拍的很亮的照片其实就是长时间曝光拍出的效果，但考虑到没几个人会上三角架玩长曝光，手机厂商使用了计算摄影用手持多张拍摄堆栈降噪的方式来模拟长曝光效果。不是把夜晚拍成白天，而是通过吸收更多的光让照片更亮而已，这个问题解决了那么下一个问题是消费者需要这种功能吗？
+                我认为有新的功能终究是好事，暗光下拍摄清晰明亮的照片是很多很多人的需求，但目前手机厂商过于武断，认为这是所有人在所有时候的需求，其实有一些时候我们不需要这个功能，但手机的AI认为这时候需要超级夜景，导致我们没拍出自己想要的照片。类似的情况也有很多，我在拍一些照片的时候手机AI会识别成微距模式，我还得手动取消这个功能。
+                我认为手机厂商要改进的是提升相机的AI，更加智能的识别我们的拍摄需求；当然也可以让用户自己来选择用什么模式，这样效果会更好。
+            </div>
+            <div class="ui LenCssText-padding-middle right aligned basic segment">
+                <div class="ui basic teal left pointing label" th:each="tag : ${blog.tags}" th:text="${tag.name}">方法论</div>
+            </div>
+            <div id="button_pay" class="ui center aligned basic segment LenCssText-size-middle">
+                <button class="ui orange basic circular button">赞赏</button>
+            </div>
+            <div id="popup_pay" class="ui flowing popup transition hidden">
+                <div class="ui orange basic label">
+                    <div class="ui images" style="font-size: inherit !important;">
+                        <div class="image">
+                            <img src="../static/image/article/QRcode_pay_1.png" th:src="@{/image/article/QRcode_pay_1.png}" alt="" class="ui rounded bordered image" style="width: 120px">
+                            <div>支付宝</div>
+                        </div>
+
+                        <div class="image">
+                            <img src="../static/image/article/QRcode_pay_2.png" th:src="@{/image/article/QRcode_pay_2.png}" alt="" class="ui rounded bordered image" style="width: 120px">
+                            <div>微信</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--        博客信息-->
+        <div class="ui attached positive message">
+            <div class="ui middle aligned grid">
+                <div class="eleven wide column">
+                    <ui class="list">
+                        <li>作者：<span th:text="${blog.user.nickname}">We摄影</span><a href="#" th:href="@{/about}" target="_blank">（联系作者）</a></li>
+                        <li>发表时间：<span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd HH:mm')}">2017-10-02 09:08</span></li>
+                        <li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
+                        <li>公众号转载：请在文末添加作者公众号二维码</li>
+                    </ui>
+                </div>
+            </div>
+        </div>
+
+        <!--        留言模版-->
+        <div id="comment-container" class="ui bottom attached segment">
+            <div class="ui comments">
+                <h3 class="ui dividing header">评论</h3>
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../static/image/icon_little/icon003.png" alt="">
+                    </a>
+                    <div class="content">
+                        <a class="author">Matt</a>
+                        <div class="metadata">
+                            <span class="date">Today at 5:42PM</span>
+                        </div>
+                        <div class="text">
+                            How artistic!
+                        </div>
+                        <div class="actions">
+                            <a class="reply" data-commentid="1" data-commentnickname="Matt" onclick="reply(this)">回复</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../static/image/icon_little/icon002.png" alt="">
+                    </a>
+                    <div class="content">
+                        <a class="author">Elliot Fu</a>
+                        <div class="metadata">
+                            <span class="date">Yesterday at 12:30AM</span>
+                        </div>
+                        <div class="text">
+                            <p>This has been very useful for my research. Thanks as well!</p>
+                        </div>
+                        <div class="actions">
+                            <a class="reply">回复</a>
+                        </div>
+                    </div>
+                    <div class="comments">
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="../static/image/icon_little/icon000.png" alt="">
+                            </a>
+                            <div class="content">
+                                <a class="author">Jenny Hess</a>
+                                <div class="metadata">
+                                    <span class="date">Just now</span>
+                                </div>
+                                <div class="text">
+                                    Elliot you are always so right :)
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">回复</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <a class="avatar">
+                        <img src="../static/image/icon_little/icon001.png" alt="">
+                    </a>
+                    <div class="content">
+                        <a class="author">Joe Henderson</a>
+                        <div class="metadata">
+                            <span class="date">5 days ago</span>
+                        </div>
+                        <div class="text">
+                            Dude, this is awesome. Thanks so much
+                        </div>
+                        <div class="actions">
+                            <a class="reply" data-commentid="1" data-commentnickname="Joe Henderson" onclick="reply(this)">回复</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--                评论输入框-->
+            <div id="comment-form" class="ui form">
+                <input type="hidden" name="blog.id" th:value="${blog.id}">
+                <!--为-1的时候，表示为空，表示无父评论-->
+                <input type="hidden" name="parentComment.id" value="-1">
+
+                <div class="field LenCssButton-padding-middle">
+                    <textarea name="content" placeholder="请输入文本信息..."></textarea>
+                </div>
+                <div class="fields">
+                    <div class="field LenCssButton-padding-middle LenCssButton-length-full">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="nickname" placeholder="姓名">
+                        </div>
+                    </div>
+                    <div class="field LenCssButton-padding-middle LenCssButton-length-full">
+                        <div class="ui left icon input">
+                            <i class="mail icon"></i>
+                            <input type="text" name="nickname" placeholder="邮箱">
+                        </div>
+                    </div>
+                    <div class="field LenCssButton-padding-middle LenCssButton-length-full">
+                        <button id="commentpost-btn" type="button" class="ui yellow button LenCssButton-length-full"><i class="edit icon"></i>发布</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!--****** 底部footer ******-->
+<footer class="ui inverted vertical segment">
+    <div class="ui center aligned container">
+        <!--        grid一共有16份-->
+        <div class="ui inverted divided stackable grid">
+            <div class="four wide column">
+                <img src="../static/image/index/bottom_code.png" class="ui rounded image" alt="" style="width: 7em">
+            </div>
+
+            <div class="ui four wide column">
+                <h4 class="ui inverted header LenCSS-Text-little-header">承办方</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">IOT研究组</a>
+                    <a href="#" class="item">UPC地学院</a>
+                    <a href="#" class="item">中石油集团</a>
+                </div>
+            </div>
+
+            <div class="ui four wide column">
+                <h4 class="ui inverted header LenCSS-Text-little-header">用户服务</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">云平台 公告</a>
+                    <a href="#" class="item">反馈与建议</a>
+                    <a href="#" class="item">管理员申请</a>
+                </div>
+            </div>
+
+            <div class="ui four wide column">
+                <h4 class="ui inverted header LenCSS-Text-little-header">关于LenCloud</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">云平台简介</a>
+                    <a href="#" class="item">联系开发者</a>
+                    <a href="#" class="item">隐私与政策</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <p class="LenCssText-Opacity-L">Copyright © 2021-2023 LenCloud designed by boyLen</p>
+    </div>
+</footer>
+
+<script>
+    // 标题栏展开列表
+    $('#button_sidebar').click(function () {
+        $('#a_top_label1, #a_top_label2, #a_top_label3, #a_top_label4, #a_top_label5, #div_search1').toggleClass('LenCssLogic-mobile-hide');
+    });
+
+    // 付款页面
+    $('#button_pay').popup({
+        popup : $('#popup_pay.popup'),
+        on : 'click',
+        position : 'bottom center'
+    });
+
+    // 评论表单验证
+    $('.ui.form').form({
+        fields: {
+            title: {
+                identifier: 'content',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入评论内容'
+                }
+                ]
+            },
+            content: {
+                identifier: 'nickname',
+                rules: [{
+                    type: 'empty',
+                    prompt: '请输入你的大名'
+                }]
+            },
+            type: {
+                identifier: 'email',
+                rules: [{
+                    type: 'email',
+                    prompt: '请填写正确的邮箱地址'
+                }]
+            }
+        }
+    });
+
+    // 评论提交按钮提交评论并通过Ajax刷新表单功能
+    $('#commentpost-btn').click(function () {
+        // 用于表单验证，当评论内容为空时，不能提交。具体原理和接口不知道
+        var boo = $('.ui.form').form('validate form');
+        if (boo) {
+            console.log('校验成功');
+            postData();
+        } else {
+            console.log('校验失败');
+        }
+    });
+
+    // 评论内容提交。
+    // /comments：为评论提交的地址
+    function postData() {
+        // 下面的""blog.id" : $"结构用于组成键值对，让后端识别数据
+        $("#comment-container").load(/*[[@{/comments}]]*/"",{
+            "parentComment.id" : $("[name='parentComment.id']").val(),
+            "blog.id" : $("[name='blog.id']").val(),
+            "nickname": $("[name='nickname']").val(),
+            "email"   : $("[name='email']").val(),
+            "content" : $("[name='content']").val()
+        },function (responseTxt, statusTxt, xhr) {
+            // 回调内容，如果成功了xhr=200，可用于判断提交是否成功
+//        $(window).scrollTo($('#comment-container'),500);
+            clearContent();
+        });
+    }
+
+    // 评论内容发表后的处理内容
+    function clearContent() {
+        $("[name='content']").val('');
+        $("[name='parentComment.id']").val(-1);
+        $("[name='content']").attr("placeholder", "请输入评论信息...");
+    }
+
+    // 实现评论回复按钮的功能
+    function reply(obj) {
+        // data方法获取"data-xxxxx='1'"标签的内容，调用时不需要写全，只需要写"xxxxx"即可
+        var commentId = $(obj).data('commentid');
+        var commentNickname = $(obj).data('commentnickname');
+        $("[name='content']").attr("placeholder", "@"+commentNickname).focus();
+        $("[name='parentComment.id']").val(commentId);
+        $(window).scrollTo($('#comment-form'),500);
+    }
+
+</script>
+
+</body>
+</html>

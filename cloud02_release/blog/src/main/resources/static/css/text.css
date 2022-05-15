@@ -1,0 +1,43 @@
+/*Color*/
+.LenCssText-color-black{
+    color: black !important;
+}
+/*Size*/
+.LenCssText-size-middle{
+    font-size: medium;
+}
+/*Line spacing */
+.LenCssText-line-space-middle{
+    line-height: 1.8;
+}
+/**/
+.LenCssText-Opacity-L{
+    opacity: 0.8 !important;
+}
+
+/*margin*/
+.LenCssText-margin-middle{
+    margin-top: 0.3em; !important;
+    margin-bottom: 0.3em !important;
+}
+.LenCssText-margin-big{
+    margin-top: 0.6em; !important;
+    margin-bottom: 0.6em !important;
+}
+
+/*padding*/
+.LenCssText-padding-middle{
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
+.LenCssText-padding-UpDown-little{
+    padding-top: 0em !important;
+    margin-bottom: 0.2em !important;
+}
+
+
+/*weight*/
+.LenCssText-weight-bold{
+    font-weight: bold;
+}
+
