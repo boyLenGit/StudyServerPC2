@@ -13,7 +13,7 @@ public class SSH2 {
     public static void main(String[] args) {
 //        command();
 //        System.out.println(Arrays.toString(getFilename_test()));;
-        getFile_test();
+        command_test();
     }
 
     public static void command_test(){
@@ -32,7 +32,8 @@ public class SSH2 {
             InputStream inputStream = session.getStdout();
             InputStreamReader reader = new InputStreamReader(inputStream);
             BufferedReader bufferedReader = new BufferedReader(reader);
-            for (int i1=0; i1<3; i1++){
+            int lines = (int) bufferedReader.lines().count();
+            for (int i1=0; i1<lines; i1++){
                 String line = bufferedReader.readLine();
                 System.out.println(line);
             }
