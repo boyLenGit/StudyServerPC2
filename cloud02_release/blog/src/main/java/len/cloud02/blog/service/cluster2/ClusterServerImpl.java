@@ -4,7 +4,9 @@ import com.trilead.ssh2.Connection;
 import com.trilead.ssh2.SFTPv3Client;
 import com.trilead.ssh2.Session;
 import len.cloud02.blog.po.cluster.ServerStateDynamic;
+import len.cloud02.blog.po.cluster.ServerStateDynamic_vmstat;
 import len.cloud02.blog.util.cluster.LinuxMemoryUtil;
+import len.cloud02.blog.util.cluster.LinuxStateUtil;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
@@ -46,7 +48,7 @@ public class ClusterServerImpl {
     }
 
     public Object[] getVmstatAndMem(String host, String username, String password){
-        StringBuilder res_mem = new StringBuilder();
+        StringBuilder sb_mem = new StringBuilder();
         StringBuilder sb_vm = new StringBuilder();
         Connection connection = new Connection(host);
         try {
@@ -87,8 +89,13 @@ public class ClusterServerImpl {
         }
 
         // 转换
-        ServerStateDynamic serverStateDynamic = new ServerStateDynamic();
-        serverStateDynamic = LinuxMemoryUtil.shellMemoryInfoConvert(serverStateDynamic, sb_vm.toString());
-        return new Object[]{serverStateDynamic, serverStateDynamic};
+//        ServerStateDynamic serverStateDynamic = new ServerStateDynamic();
+//        serverStateDynamic = LinuxMemoryUtil.shellMemoryInfoConvert(serverStateDynamic, sb_mem.toString());
+
+        System.out.println(sb_vm.toString());
+        ServerStateDynamic_vmstat serverStateDynamic_vmstat = new ServerStateDynamic_vmstat();
+        serverStateDynamic_vmstat = LinuxStateUtil.shellVmstatConvert(serverStateDynamic_vmstat, sb_vm.toString());
+        System.out.println(serverStateDynamic_vmstat.toString());
+        return new Object[]{serverStateDynamic_vmstat, serverStateDynamic_vmstat};
     }
 }
