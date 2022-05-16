@@ -472,11 +472,8 @@ attached:轨道可以依附在主窗口
                         <i class="bookmark icon"></i>最新推荐
                     </div>
                     <div class="ui segment" th:each="blog : ${recommendBlogs}">
-                        <a href="#" th:href="@{/admin_article/{id}(id=${blog.id})}" target="_blank" class="LenCssText-color-black" th:text="${blog.title}">超级红月亮“邂逅”月全食</a>
+                        <a href="#" th:href="@{/article/{id}(id=${blog.id})}" target="_blank" class="LenCssText-color-black" th:text="${blog.title}">超级红月亮“邂逅”月全食</a>
                     </div>
-                    <div class="ui segment"><a href="#" target="_blank" class="LenCssText-color-black">日俄船只相撞致3名日渔民遇难</a></div>
-                    <div class="ui segment"><a href="#" target="_blank" class="LenCssText-color-black">论文查重费一年内暴涨10倍</a></div>
-                    <div class="ui segment"><a href="#" target="_blank" class="LenCssText-color-black">中国5G手机终端达3.1亿</a></div>
                 </div>
             </div>
         </div>

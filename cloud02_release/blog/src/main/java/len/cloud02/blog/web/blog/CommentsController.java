@@ -38,6 +38,10 @@ public class CommentsController {
     // 网页提交评论内容
     @PostMapping("/comments")
     public String post(Comment comment, HttpSession session){
+        User user = (User)session.getAttribute("user");
+        if (user==null){
+            return "redirect:/user/login";
+        }
         Long blogId = comment.getBlog().getId();
         // 用于实例化Comment对象中的Blog。
         // 【方法】到底哪些对象需要在这里单独实例化？→查看web端与Comment对象，看看哪些变量传递进去了，哪些没传递进去，没传递进去的就是需要实例化/填充的，否则Comment部分属性为空。
