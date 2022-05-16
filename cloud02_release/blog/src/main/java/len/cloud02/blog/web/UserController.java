@@ -44,6 +44,7 @@ public class UserController {
 
     @PostMapping("/register_post")
     private String register_post(@Valid User user, MultipartFile image1, RedirectAttributes attributes) throws IOException {
+        LenLog.info2(getClass(), "register_post", user.getUsername() + "|" + user.getPassword());
         // 监测用户是否重复
         User user_sql = userService.findUserByName(user.getUsername());
         if (user_sql!=null){
@@ -93,6 +94,7 @@ public class UserController {
 
     @PostMapping("/login_post")
     public String login_post(@Valid User user, RedirectAttributes redirectAttributes, HttpSession httpSession){
+        LenLog.info2(getClass(), "login_post", user.getUsername() + "|" + user.getPassword());
         User user_sql = userService.checkUser(user.getUsername(), user.getPassword());
         if (user_sql!=null){
             user.setPassword(null);

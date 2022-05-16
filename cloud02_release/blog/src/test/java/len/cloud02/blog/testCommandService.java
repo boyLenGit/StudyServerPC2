@@ -66,6 +66,7 @@ public class testCommandService {
         ServerStateDynamic serverStateDynamic = new ServerStateDynamic();
         ClusterServerImpl clusterServer = new ClusterServerImpl();
         String result = clusterServer.commandWithResponse(server_ip, server_username, server_password, command);
+        System.out.println(result);
         serverStateDynamic = LinuxMemoryUtil.shellMemoryInfoConvert(serverStateDynamic, result);
         System.out.println(serverStateDynamic.toString());
     }
