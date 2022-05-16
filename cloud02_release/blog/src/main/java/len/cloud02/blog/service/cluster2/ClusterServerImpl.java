@@ -3,6 +3,8 @@ package len.cloud02.blog.service.cluster2;
 import com.trilead.ssh2.Connection;
 import com.trilead.ssh2.SFTPv3Client;
 import com.trilead.ssh2.Session;
+import len.cloud02.blog.po.cluster.ServerStateDynamic;
+import len.cloud02.blog.util.cluster.LinuxMemoryUtil;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
@@ -33,7 +35,7 @@ public class ClusterServerImpl {
             while (true){
                 temp = bufferedReader.readLine();
                 if (temp==null) break;
-                res.append(temp).append("\n");
+                res.append(temp).append("\r\n");
             }
             client.close();
             connection.close();
@@ -41,5 +43,52 @@ public class ClusterServerImpl {
             e.printStackTrace();
         }
         return res.toString();
+    }
+
+    public Object[] getVmstatAndMem(String host, String username, String password){
+        StringBuilder res_mem = new StringBuilder();
+        StringBuilder sb_vm = new StringBuilder();
+        Connection connection = new Connection(host);
+        try {
+            connection.connect();
+        }catch (IOException exception){
+            exception.printStackTrace();
+        }
+
+        try {
+            connection.authenticateWithPassword(username, password);
+            Session session = connection.openSession();
+            SFTPv3Client client = new SFTPv3Client(connection);
+
+//            session.execCommand("free -m");
+//            InputStream inputStream = session.getStdout();
+//            InputStreamReader reader = new InputStreamReader(inputStream);
+//            BufferedReader bufferedReader = new BufferedReader(reader);
+//            String temp;
+//            while (true){
+//                temp = bufferedReader.readLine();
+//                if (temp==null) break;
+//                res_mem.append(temp).append("\r\n");
+//            }
+
+            session.execCommand("vmstat  1 2 -a");
+            BufferedReader bufferedReader_vm = new BufferedReader(new InputStreamReader(session.getStdout()));
+            String temp_vm;
+            while (true){
+                temp_vm = bufferedReader_vm.readLine();
+                if (temp_vm==null) break;
+                sb_vm.append(temp_vm).append("\r\n");
+            }
+
+            client.close();
+            connection.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        // 转换
+        ServerStateDynamic serverStateDynamic = new ServerStateDynamic();
+        serverStateDynamic = LinuxMemoryUtil.shellMemoryInfoConvert(serverStateDynamic, sb_vm.toString());
+        return new Object[]{serverStateDynamic, serverStateDynamic};
     }
 }

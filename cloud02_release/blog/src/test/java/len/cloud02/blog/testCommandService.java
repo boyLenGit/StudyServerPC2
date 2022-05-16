@@ -12,7 +12,7 @@ public class testCommandService {
     private ClusterServerImpl clusterServer;
 
     public static void main(String[] args) {
-        testCommand05();
+        testCommand06();
     }
 
 
@@ -69,5 +69,14 @@ public class testCommandService {
         System.out.println(result);
         serverStateDynamic = LinuxMemoryUtil.shellMemoryInfoConvert(serverStateDynamic, result);
         System.out.println(serverStateDynamic.toString());
+    }
+
+    public static void testCommand06(){
+        ClusterServerImpl clusterServer = new ClusterServerImpl();
+        String server_ip = "39.103.160.64";
+        String server_username = "lenguest";
+        String server_password = "boylen.com";
+        Object[] b = clusterServer.getVmstatAndMem(server_ip, server_username, server_password);
+
     }
 }
