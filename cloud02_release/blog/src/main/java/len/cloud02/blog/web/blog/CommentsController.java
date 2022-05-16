@@ -36,7 +36,7 @@ public class CommentsController {
     public String Comments(@PathVariable Long blogId, Model model){
         List<Comment> commentList = commentService.listCommentByBlogIdAndParentCommentNull(blogId);
         model.addAttribute("comments", commentList);
-        return "article :: commentList";
+        return "blog/article_detail :: commentList";
     }
 
     // 网页提交评论内容
