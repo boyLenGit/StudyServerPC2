@@ -199,7 +199,7 @@ attached:轨道可以依附在主窗口
                         <div class="comments" th:if="${#arrays.length(comment.replyComments)}>0">
                             <div class="comment" th:each="reply : ${comment.replyComments}">
                                 <a class="avatar">
-                                    <img src="../../static/image/icon_little/icon007.png" th:src="@{${reply.avatar}}">
+                                    <img src="../../static/image/icon_little/icon007.png" th:src="${reply.avatar}">
                                 </a>
                                 <div class="content">
                                     <a class="author">

@@ -35,7 +35,9 @@ public class CommentsController {
     @GetMapping("/comments/{blogId}")
     public String Comments(@PathVariable Long blogId, Model model){
         List<Comment> commentList = commentService.listCommentByBlogIdAndParentCommentNull(blogId);
+        Blog blog_sql = blogService.getBlog(blogId);
         model.addAttribute("comments", commentList);
+        model.addAttribute("blog", blog_sql);
         return "blog/article_detail :: commentList";
     }
 
@@ -53,7 +55,6 @@ public class CommentsController {
         comment.setBlog(blogService.getBlog(blogId));
         // ↓ 管理员身份验证
         Blog blog = blogService.getBlog(blogId);
-        User user_blog = blog.getUser();
         if (user.getNickname().equals(comment.getNickname())){ // 表明评论用户就是博客作者
             comment.setAdminComment(true);  // 设置comment用户为作者
         }else {
