@@ -2,6 +2,7 @@ package len.cloud02.blog.web.admin;
 
 import len.cloud02.blog.service.UserService;
 import len.cloud02.blog.pojo.User;
+import len.cloud02.blog.util.LenLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,10 +35,10 @@ public class LoginController {
 
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password, HttpSession httpSession, RedirectAttributes attributes){
-        logger.info("Len logger <Controller-login-init>|| username={}, password={}", username, password);
+        LenLog.info2(getClass(), "login", username + "|" + password);
         User user = userService.checkUser(username, password);
         if (user != null){
-            logger.info("Len logger <Controller-login-user>|| user={}", user.getUsername());
+            LenLog.info2(getClass(), "login", "查询的用户为不空："+ user.getUsername());
             if (user.getType()==0){
                 attributes.addFlashAttribute("message", "不是管理员账号！已报告给管理员！");
                 return "redirect:/admin";
@@ -47,7 +48,7 @@ public class LoginController {
                 return "admin/admin_index";
             }
         }else {
-            logger.info("Len logger <Controller-login-user>|| user={}", "查询的用户为空");
+            LenLog.info2(getClass(), "login", "查询的用户为空");
             attributes.addFlashAttribute("message", "用户名或密码错误");
             return "redirect:/admin";
         }

@@ -14101,3 +14101,1050 @@ java.lang.IllegalStateException: No instances available for paperservice
 2022-05-16 14:37:22.048  INFO 84772 --- [Thread-21] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
 2022-05-16 14:37:22.836  INFO 84772 --- [Thread-21] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
 2022-05-16 14:37:22.836  INFO 84772 --- [Thread-21] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-05-16 14:37:25.843  INFO 84772 --- [Thread-21] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-05-16 14:37:28.854  INFO 84772 --- [Thread-21] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-05-16 14:37:28.854  INFO 84772 --- [Thread-21] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-05-16 14:37:28.855  INFO 84772 --- [Thread-21] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-05-16 14:37:28.855  INFO 84772 --- [Thread-21] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-05-16 14:37:28.855  INFO 84772 --- [Thread-21] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-05-16 14:37:28.856  WARN 84772 --- [Thread-21] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-05-16 14:37:28.856  WARN 84772 --- [Thread-21] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-05-16 14:37:28.856  INFO 84772 --- [Thread-21] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-05-16 14:37:28.856  INFO 84772 --- [Thread-21] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-05-16 14:37:28.856  INFO 84772 --- [Thread-21] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-05-16 14:37:28.857  WARN 84772 --- [Thread-21] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-05-16 14:37:28.857  INFO 84772 --- [Thread-21] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-16 14:37:28.860  INFO 84772 --- [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:37:28.864  INFO 84772 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-16 14:37:28.873  INFO 84772 --- [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-16 14:37:43.581  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:37:43.612  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:37:43.613  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:37:43.631  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:37:43.836  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:37:43.837  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 JPA repository interfaces.
+2022-05-16 14:37:43.895  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f28dca3e-f722-3e98-af5e-699b126f9841
+2022-05-16 14:37:44.010  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:37:44.011  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:37:44.011  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:37:44.023  INFO 84772 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-05-16 14:37:44.024  INFO 84772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 390 ms
+2022-05-16 14:37:44.093  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:37:44.101  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-05-16 14:37:44.496  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-05-16 14:37:44.497  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:37:44.631  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:37:44.631  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:37:44.655  INFO 84772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-16 14:37:44.671  WARN 84772 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-16 14:37:44.672  INFO 84772 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-16 14:37:44.704  WARN 84772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-16 14:37:44.777  INFO 84772 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-16 14:37:44.813  INFO 84772 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-16 14:37:44.902  INFO 84772 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-16 14:37:45.099  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-16 14:37:45.099  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-05-16 14:37:45.099  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-16 14:37:45.130  INFO 84772 --- [restartedMain] c.a.n.client.identify.CredentialWatcher  : null No credential found
+2022-05-16 14:37:45.183  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-16 14:37:45.185  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8080, ip='172.25.27.97', weight=1.0, serviceName='DEFAULT_GROUP@@blog', cluster='Beijing', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-05-16 14:37:45.187  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='172.25.27.97', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='Beijing', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-05-16 14:37:45.221  INFO 84772 --- [restartedMain] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP blog 172.25.27.97:8080 register finished
+2022-05-16 14:37:45.232  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : Started BlogApplication in 1.993 seconds (JVM running for 194.79)
+2022-05-16 14:37:45.234  INFO 84772 --- [restartedMain] c.a.n.client.config.impl.ClientWorker    : [fixed-124.221.110.115_8848] [subscribe] null.properties+DEFAULT_GROUP
+2022-05-16 14:37:45.235  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=null.properties, group=DEFAULT_GROUP, cnt=1
+2022-05-16 14:37:45.235  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=blog, group=DEFAULT_GROUP, cnt=2
+2022-05-16 14:37:45.235  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=blog.yaml, group=DEFAULT_GROUP, cnt=2
+2022-05-16 14:37:45.283  INFO 84772 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:37:45.286  INFO 84772 --- [restartedMain] c.netflix.loadbalancer.BaseLoadBalancer  : Client: paperservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-05-16 14:37:45.291  INFO 84772 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-05-16 14:37:45.328  INFO 84772 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client paperservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@2dd2f97e
+2022-05-16 14:37:45.337  INFO 84772 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-16 14:37:46.201  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:37:46.203  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:37:47.155  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:37:47.187  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:37:47.188  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:37:47.203  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:37:47.425  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:37:47.453  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 5 JPA repository interfaces.
+2022-05-16 14:37:47.507  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a7ca3ea0-2ea8-371a-9bd1-5596679fceff
+2022-05-16 14:37:47.642  WARN 84772 --- [Thread-86] org.apache.tomcat.util.net.NioEndpoint   : Failed to unlock acceptor for [http-nio-8080] because the local address was not available
+2022-05-16 14:37:47.647  INFO 84772 --- [Thread-86] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-16 14:37:47.642 ERROR 84772 --- [http-nio-8080-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:551)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:80)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:106)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-05-16 14:37:47.676  INFO 84772 --- [Thread-86] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-16 14:37:47.699  INFO 84772 --- [Thread-86] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-05-16 14:37:47.700  INFO 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@blog:172.25.27.97:8080 from beat map.
+2022-05-16 14:37:47.700  INFO 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='172.25.27.97', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='Beijing', serviceName='null', metadata={}}
+2022-05-16 14:37:47.727  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:37:47.728  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:37:47.729  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:37:47.741  INFO 84772 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-05-16 14:37:47.741  INFO 84772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 535 ms
+2022-05-16 14:37:47.809  INFO 84772 --- [Thread-86] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-05-16 14:37:47.809  INFO 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-05-16 14:37:47.847  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:37:47.854  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-05-16 14:37:48.217  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-05-16 14:37:48.217  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:37:48.956  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:37:48.956  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:37:48.993  WARN 84772 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+2022-05-16 14:37:48.993  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-05-16 14:37:49.013  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-05-16 14:37:49.014  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-16 14:37:49.021  INFO 84772 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-16 14:37:49.025 ERROR 84772 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at len.cloud02.blog.BlogApplication.main(BlogApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:247)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:204)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:111)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:430)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 21 common frames omitted
+Caused by: javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:437)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:966)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar.afterPropertiesSet(SpringApplicationAdminMXBeanRegistrar.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795)
+	... 37 common frames omitted
+
+2022-05-16 14:37:50.190  INFO 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-05-16 14:37:50.191  INFO 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-05-16 14:37:53.201  INFO 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-05-16 14:37:56.208  INFO 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-05-16 14:37:56.210  INFO 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-05-16 14:37:56.211  INFO 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-05-16 14:37:56.211  INFO 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-05-16 14:37:56.211  INFO 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-05-16 14:37:56.211  WARN 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-05-16 14:37:56.211  WARN 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-05-16 14:37:56.211  INFO 84772 --- [Thread-86] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-05-16 14:37:56.212  INFO 84772 --- [Thread-86] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-05-16 14:37:56.212  INFO 84772 --- [Thread-86] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-05-16 14:37:56.212  WARN 84772 --- [Thread-86] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-05-16 14:37:56.212  INFO 84772 --- [Thread-86] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-16 14:37:56.213  INFO 84772 --- [Thread-86] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:37:56.214  INFO 84772 --- [Thread-86] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-05-16 14:37:56.222  INFO 84772 --- [Thread-86] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-05-16 14:37:56.739  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:37:56.772  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:37:56.772  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:37:56.782  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:37:57.016  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:37:57.049  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32ms. Found 5 JPA repository interfaces.
+2022-05-16 14:37:57.096  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a7ca3ea0-2ea8-371a-9bd1-5596679fceff
+2022-05-16 14:37:57.316  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:37:57.317  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:37:57.318  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:37:57.331  INFO 84772 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-05-16 14:37:57.331  INFO 84772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 547 ms
+2022-05-16 14:37:57.444  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:37:57.449  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-05-16 14:37:57.829  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-05-16 14:37:57.830  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:37:58.536  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:37:58.536  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:37:58.601  INFO 84772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-16 14:37:59.127  WARN 84772 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-16 14:37:59.127  INFO 84772 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-16 14:37:59.180  WARN 84772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-16 14:37:59.441  INFO 84772 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-16 14:37:59.533  INFO 84772 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-16 14:37:59.644  INFO 84772 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-16 14:37:59.921  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-16 14:37:59.921  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-05-16 14:37:59.921  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-16 14:37:59.945  INFO 84772 --- [restartedMain] c.a.n.client.identify.CredentialWatcher  : null No credential found
+2022-05-16 14:37:59.977  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-16 14:37:59.978  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8080, ip='172.25.27.97', weight=1.0, serviceName='DEFAULT_GROUP@@blog', cluster='Beijing', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-05-16 14:37:59.979  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='172.25.27.97', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='Beijing', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-05-16 14:38:00.009  INFO 84772 --- [restartedMain] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP blog 172.25.27.97:8080 register finished
+2022-05-16 14:38:00.021  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : Started BlogApplication in 3.439 seconds (JVM running for 209.579)
+2022-05-16 14:38:00.023  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=null.properties, group=DEFAULT_GROUP, cnt=2
+2022-05-16 14:38:00.024  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=blog, group=DEFAULT_GROUP, cnt=3
+2022-05-16 14:38:00.024  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=blog.yaml, group=DEFAULT_GROUP, cnt=3
+2022-05-16 14:38:00.072  INFO 84772 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:38:00.074  INFO 84772 --- [restartedMain] c.netflix.loadbalancer.BaseLoadBalancer  : Client: paperservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-05-16 14:38:00.075  INFO 84772 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-05-16 14:38:00.108  INFO 84772 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client paperservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@78bfded2
+2022-05-16 14:38:00.120  INFO 84772 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-16 14:38:01.013  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:38:01.015  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:39:29.631  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:39:29.665  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:39:29.665  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:39:29.682  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:39:29.933  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:39:29.934  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 JPA repository interfaces.
+2022-05-16 14:39:29.987  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f28dca3e-f722-3e98-af5e-699b126f9841
+2022-05-16 14:39:30.100  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:39:30.101  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:39:30.103  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:39:30.124  INFO 84772 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-05-16 14:39:30.125  INFO 84772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 439 ms
+2022-05-16 14:39:30.227  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:39:30.236  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2022-05-16 14:39:30.705  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2022-05-16 14:39:30.705  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:39:30.775  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:39:30.775  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:39:30.789  WARN 84772 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+2022-05-16 14:39:30.790  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2022-05-16 14:39:30.792  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2022-05-16 14:39:30.792  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-16 14:39:30.803  INFO 84772 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-16 14:39:30.804 ERROR 84772 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at len.cloud02.blog.BlogApplication.main(BlogApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:247)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:204)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:111)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:430)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 21 common frames omitted
+Caused by: javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:437)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:966)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar.afterPropertiesSet(SpringApplicationAdminMXBeanRegistrar.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795)
+	... 37 common frames omitted
+
+2022-05-16 14:39:31.702  INFO 84772 --- [Thread-111] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-05-16 14:39:31.703  INFO 84772 --- [Thread-111] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-05-16 14:39:31.704  INFO 84772 --- [Thread-111] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-05-16 14:39:31.704  INFO 84772 --- [Thread-111] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-05-16 14:39:31.704  INFO 84772 --- [Thread-111] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-05-16 14:39:31.704  WARN 84772 --- [Thread-111] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-05-16 14:39:31.704  WARN 84772 --- [Thread-111] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-05-16 14:39:31.704  INFO 84772 --- [Thread-111] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-05-16 14:39:31.705  INFO 84772 --- [Thread-111] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-05-16 14:39:31.705  INFO 84772 --- [Thread-111] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-05-16 14:39:31.705  WARN 84772 --- [Thread-111] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-05-16 14:39:31.706  INFO 84772 --- [Thread-111] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-16 14:39:31.707  INFO 84772 --- [Thread-111] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:39:31.709  INFO 84772 --- [Thread-111] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-05-16 14:39:31.725  INFO 84772 --- [Thread-111] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2022-05-16 14:39:32.558  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:39:32.664  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:39:32.664  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:39:32.679  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:39:32.974  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:39:33.009  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34ms. Found 5 JPA repository interfaces.
+2022-05-16 14:39:33.070  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a7ca3ea0-2ea8-371a-9bd1-5596679fceff
+2022-05-16 14:39:33.449  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:39:33.464  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:39:33.473  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2022-05-16 14:39:33.483  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:39:33.483  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:39:33.499  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:39:33.897  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:39:33.937  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2022-05-16 14:39:33.938  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:39:33.942  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44ms. Found 5 JPA repository interfaces.
+2022-05-16 14:39:34.029  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a7ca3ea0-2ea8-371a-9bd1-5596679fceff
+2022-05-16 14:39:34.209  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:39:34.209  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:39:34.210  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:39:34.220  INFO 84772 --- [restartedMain] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-05-16 14:39:34.220  INFO 84772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 716 ms
+2022-05-16 14:39:34.317  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:39:34.322  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-05-16 14:39:34.630  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:39:34.631  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:39:34.739  INFO 84772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-16 14:39:34.784  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2022-05-16 14:39:34.784  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:39:35.678  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:39:35.679  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:39:35.729  WARN 84772 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+2022-05-16 14:39:35.730  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2022-05-16 14:39:35.735  WARN 84772 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-16 14:39:35.736  INFO 84772 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-16 14:39:35.796  WARN 84772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-16 14:39:35.988  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2022-05-16 14:39:35.988  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-16 14:39:35.998  INFO 84772 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-16 14:39:35.999 ERROR 84772 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at len.cloud02.blog.BlogApplication.main(BlogApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:247)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:204)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:111)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:430)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 21 common frames omitted
+Caused by: javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:437)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:966)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar.afterPropertiesSet(SpringApplicationAdminMXBeanRegistrar.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795)
+	... 37 common frames omitted
+
+2022-05-16 14:39:36.119  INFO 84772 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-16 14:39:36.241  INFO 84772 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-16 14:39:36.375  INFO 84772 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-16 14:39:36.815  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-16 14:39:36.815  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-05-16 14:39:36.815  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-16 14:39:36.851  INFO 84772 --- [restartedMain] c.a.n.client.identify.CredentialWatcher  : null No credential found
+2022-05-16 14:39:36.893  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-16 14:39:36.894  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8080, ip='172.25.27.97', weight=1.0, serviceName='DEFAULT_GROUP@@blog', cluster='Beijing', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-05-16 14:39:36.897  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='172.25.27.97', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='Beijing', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-05-16 14:39:36.930  INFO 84772 --- [restartedMain] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP blog 172.25.27.97:8080 register finished
+2022-05-16 14:39:36.942  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : Started BlogApplication in 4.6 seconds (JVM running for 306.502)
+2022-05-16 14:39:36.945  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=null.properties, group=DEFAULT_GROUP, cnt=3
+2022-05-16 14:39:36.945  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=blog, group=DEFAULT_GROUP, cnt=4
+2022-05-16 14:39:36.945  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=blog.yaml, group=DEFAULT_GROUP, cnt=4
+2022-05-16 14:39:36.986  INFO 84772 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:39:36.988  INFO 84772 --- [restartedMain] c.netflix.loadbalancer.BaseLoadBalancer  : Client: paperservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-05-16 14:39:36.989  INFO 84772 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-05-16 14:39:37.022  INFO 84772 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client paperservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@595b929c
+2022-05-16 14:39:37.033  INFO 84772 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-16 14:39:37.937  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:39:37.938  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:44:40.649  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"172.23.166.195#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"172.23.166.195","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:44:40.650  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"172.23.166.195#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"172.23.166.195","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:45:08.032  INFO 84772 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:47:55.883  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:47:55.915  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:47:55.915  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:47:55.925  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:47:56.128  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:47:56.129  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 JPA repository interfaces.
+2022-05-16 14:47:56.175  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f28dca3e-f722-3e98-af5e-699b126f9841
+2022-05-16 14:47:56.270  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:47:56.271  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:47:56.272  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:47:56.280  INFO 84772 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-05-16 14:47:56.280  INFO 84772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 353 ms
+2022-05-16 14:47:56.335  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:47:56.340  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2022-05-16 14:47:56.645  INFO 84772 --- [Thread-138] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-05-16 14:47:56.804  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2022-05-16 14:47:56.805  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:47:56.932  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:47:56.932  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:47:56.944  WARN 84772 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+2022-05-16 14:47:56.945  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2022-05-16 14:47:57.273  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2022-05-16 14:47:57.273  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-16 14:47:57.280  INFO 84772 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-16 14:47:57.282 ERROR 84772 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at len.cloud02.blog.BlogApplication.main(BlogApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:247)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:204)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:111)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:430)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 21 common frames omitted
+Caused by: javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:437)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:966)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar.afterPropertiesSet(SpringApplicationAdminMXBeanRegistrar.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795)
+	... 37 common frames omitted
+
+2022-05-16 14:47:59.028  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:47:59.059  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:47:59.059  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:47:59.071  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:47:59.380  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:47:59.418  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 5 JPA repository interfaces.
+2022-05-16 14:47:59.474  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a7ca3ea0-2ea8-371a-9bd1-5596679fceff
+2022-05-16 14:47:59.663  INFO 84772 --- [Thread-138] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-05-16 14:47:59.666  INFO 84772 --- [Thread-138] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-05-16 14:47:59.666  INFO 84772 --- [Thread-138] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-05-16 14:47:59.666  INFO 84772 --- [Thread-138] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-05-16 14:47:59.667  INFO 84772 --- [Thread-138] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-05-16 14:47:59.667  WARN 84772 --- [Thread-138] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-05-16 14:47:59.668  WARN 84772 --- [Thread-138] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-05-16 14:47:59.668  INFO 84772 --- [Thread-138] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-05-16 14:47:59.668  INFO 84772 --- [Thread-138] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-05-16 14:47:59.668  INFO 84772 --- [Thread-138] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-05-16 14:47:59.669  WARN 84772 --- [Thread-138] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-05-16 14:47:59.669  INFO 84772 --- [Thread-138] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-16 14:47:59.671  INFO 84772 --- [Thread-138] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:47:59.673  INFO 84772 --- [Thread-138] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2022-05-16 14:47:59.688  INFO 84772 --- [Thread-138] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2022-05-16 14:48:00.389  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:48:00.391  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:48:00.391  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:48:00.530  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:48:00.539  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2022-05-16 14:48:00.634  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:48:00.667  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:48:00.667  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:48:00.680  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:48:00.905  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2022-05-16 14:48:00.906  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:48:00.942  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:48:00.980  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38ms. Found 5 JPA repository interfaces.
+2022-05-16 14:48:01.047  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a7ca3ea0-2ea8-371a-9bd1-5596679fceff
+2022-05-16 14:48:01.242  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:48:01.243  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:48:01.243  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:48:01.255  INFO 84772 --- [restartedMain] o.a.c.c.C.[Tomcat-8].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-05-16 14:48:01.255  INFO 84772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 571 ms
+2022-05-16 14:48:01.364  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:48:01.369  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2022-05-16 14:48:01.745  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2022-05-16 14:48:01.746  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:48:01.753  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:48:01.754  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:48:01.810  INFO 84772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-16 14:48:02.416  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:48:02.416  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:48:02.453  WARN 84772 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-16 14:48:02.453  INFO 84772 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-16 14:48:02.460  WARN 84772 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+2022-05-16 14:48:02.460  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2022-05-16 14:48:02.522  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2022-05-16 14:48:02.523  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-16 14:48:02.529  WARN 84772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-16 14:48:02.530  INFO 84772 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-16 14:48:02.531 ERROR 84772 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at len.cloud02.blog.BlogApplication.main(BlogApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:247)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:204)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:111)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:430)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 21 common frames omitted
+Caused by: javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:437)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:966)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar.afterPropertiesSet(SpringApplicationAdminMXBeanRegistrar.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795)
+	... 37 common frames omitted
+
+2022-05-16 14:48:02.761  INFO 84772 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-16 14:48:02.847  INFO 84772 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-16 14:48:02.976  INFO 84772 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-16 14:48:03.348  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-16 14:48:03.348  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-05-16 14:48:03.348  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-16 14:48:03.378  INFO 84772 --- [restartedMain] c.a.n.client.identify.CredentialWatcher  : null No credential found
+2022-05-16 14:48:03.430  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-16 14:48:03.433  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8080, ip='172.25.27.97', weight=1.0, serviceName='DEFAULT_GROUP@@blog', cluster='Beijing', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-05-16 14:48:03.434  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='172.25.27.97', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='Beijing', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-05-16 14:48:03.469  INFO 84772 --- [restartedMain] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP blog 172.25.27.97:8080 register finished
+2022-05-16 14:48:03.482  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : Started BlogApplication in 4.69 seconds (JVM running for 813.049)
+2022-05-16 14:48:03.484  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=null.properties, group=DEFAULT_GROUP, cnt=4
+2022-05-16 14:48:03.485  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=blog, group=DEFAULT_GROUP, cnt=5
+2022-05-16 14:48:03.485  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=blog.yaml, group=DEFAULT_GROUP, cnt=5
+2022-05-16 14:48:03.535  INFO 84772 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:48:03.538  INFO 84772 --- [restartedMain] c.netflix.loadbalancer.BaseLoadBalancer  : Client: paperservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-05-16 14:48:03.542  INFO 84772 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-05-16 14:48:03.577  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"172.23.166.195#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"172.23.166.195","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:48:03.578  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"172.23.166.195#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"172.23.166.195","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:48:03.579  INFO 84772 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:48:03.582  INFO 84772 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client paperservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[172.23.166.195:8086],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:172.23.166.195:8086;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@1c9fb1fc
+2022-05-16 14:48:03.592  INFO 84772 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-16 14:48:04.455  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:48:04.456  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:48:04.546  INFO 84772 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:51:06.960  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:51:07.004  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:51:07.020  INFO 84772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-16 14:51:07.145  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:51:07.192  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:51:07.193  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:51:07.205  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:51:07.277  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:51:07.280  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1ms. Found 0 JPA repository interfaces.
+2022-05-16 14:51:07.322  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f28dca3e-f722-3e98-af5e-699b126f9841
+2022-05-16 14:51:07.449  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:51:07.450  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:51:07.450  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:51:07.456  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:51:07.457  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0ms. Found 0 JPA repository interfaces.
+2022-05-16 14:51:07.461  INFO 84772 --- [restartedMain] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2022-05-16 14:51:07.461  INFO 84772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 453 ms
+2022-05-16 14:51:07.500  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f28dca3e-f722-3e98-af5e-699b126f9841
+2022-05-16 14:51:07.514  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:51:07.520  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2022-05-16 14:51:07.613  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:51:07.614  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:51:07.614  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:51:07.624  INFO 84772 --- [restartedMain] o.a.c.c.C.[Tomcat-11].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2022-05-16 14:51:07.624  INFO 84772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 416 ms
+2022-05-16 14:51:07.687  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:51:07.695  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2022-05-16 14:51:07.991  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2022-05-16 14:51:07.992  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:51:08.061  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:51:08.061  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:51:08.082  INFO 84772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-16 14:51:08.097  WARN 84772 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-16 14:51:08.097  INFO 84772 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-16 14:51:08.124  WARN 84772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-16 14:51:08.155  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2022-05-16 14:51:08.156  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:51:08.187  INFO 84772 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-16 14:51:08.218  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:51:08.218  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:51:08.221  INFO 84772 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-16 14:51:08.232  WARN 84772 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+2022-05-16 14:51:08.232  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2022-05-16 14:51:08.235  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2022-05-16 14:51:08.236  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-16 14:51:08.244  INFO 84772 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-16 14:51:08.246 ERROR 84772 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at len.cloud02.blog.BlogApplication.main(BlogApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:247)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:204)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:111)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:430)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 21 common frames omitted
+Caused by: javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:437)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:966)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar.afterPropertiesSet(SpringApplicationAdminMXBeanRegistrar.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795)
+	... 37 common frames omitted
+
+2022-05-16 14:51:08.319  INFO 84772 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-16 14:51:08.448  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-16 14:51:08.448  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-05-16 14:51:08.448  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-16 14:51:08.474  INFO 84772 --- [restartedMain] c.a.n.client.identify.CredentialWatcher  : null No credential found
+2022-05-16 14:51:08.510  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-16 14:51:08.512  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8080, ip='172.25.27.97', weight=1.0, serviceName='DEFAULT_GROUP@@blog', cluster='Beijing', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-05-16 14:51:08.512  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='172.25.27.97', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='Beijing', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-05-16 14:51:08.543  INFO 84772 --- [restartedMain] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP blog 172.25.27.97:8080 register finished
+2022-05-16 14:51:08.555  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : Started BlogApplication in 1.889 seconds (JVM running for 998.125)
+2022-05-16 14:51:08.558  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=null.properties, group=DEFAULT_GROUP, cnt=5
+2022-05-16 14:51:08.558  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=blog, group=DEFAULT_GROUP, cnt=6
+2022-05-16 14:51:08.558  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=blog.yaml, group=DEFAULT_GROUP, cnt=6
+2022-05-16 14:51:08.599  INFO 84772 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:51:08.601  INFO 84772 --- [restartedMain] c.netflix.loadbalancer.BaseLoadBalancer  : Client: paperservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-05-16 14:51:08.602  INFO 84772 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-05-16 14:51:08.638  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"172.23.166.195#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"172.23.166.195","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:51:08.639  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"172.23.166.195#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"172.23.166.195","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:51:08.640  INFO 84772 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:51:08.641  INFO 84772 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client paperservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[172.23.166.195:8086],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:172.23.166.195:8086;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@11d0d5cf
+2022-05-16 14:51:08.651  INFO 84772 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-16 14:51:09.542  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:51:09.543  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:51:09.607  INFO 84772 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:51:10.329  INFO 84772 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-16 14:51:10.441  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:51:10.472  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:51:10.473  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:51:10.488  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:51:10.502  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:51:10.537  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:51:10.538  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:51:10.551  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:51:10.909  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:51:10.949  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 5 JPA repository interfaces.
+2022-05-16 14:51:10.977  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:51:11.015  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 5 JPA repository interfaces.
+2022-05-16 14:51:11.016  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a7ca3ea0-2ea8-371a-9bd1-5596679fceff
+2022-05-16 14:51:11.084  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a7ca3ea0-2ea8-371a-9bd1-5596679fceff
+2022-05-16 14:51:11.234  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:51:11.235  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:51:11.235  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:51:11.248  INFO 84772 --- [restartedMain] o.a.c.c.C.[Tomcat-12].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2022-05-16 14:51:11.248  INFO 84772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 757 ms
+2022-05-16 14:51:11.331  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:51:11.332  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:51:11.332  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:51:11.346  INFO 84772 --- [restartedMain] o.a.c.c.C.[Tomcat-13].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2022-05-16 14:51:11.346  INFO 84772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 792 ms
+2022-05-16 14:51:11.410  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:51:11.417  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2022-05-16 14:51:11.451  WARN 84772 --- [Thread-212] org.apache.tomcat.util.net.NioEndpoint   : Failed to unlock acceptor for [http-nio-8080] because the local address was not available
+2022-05-16 14:51:11.451 ERROR 84772 --- [http-nio-8080-Acceptor] org.apache.tomcat.util.net.Acceptor      : Socket accept failed
+
+java.nio.channels.AsynchronousCloseException: null
+	at java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:205)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:259)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:551)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:80)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:106)
+	at java.lang.Thread.run(Thread.java:748)
+
+2022-05-16 14:51:11.451  INFO 84772 --- [Thread-212] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-16 14:51:11.466  INFO 84772 --- [Thread-212] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-16 14:51:11.470  INFO 84772 --- [Thread-212] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-05-16 14:51:11.471  INFO 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@blog:172.25.27.97:8080 from beat map.
+2022-05-16 14:51:11.471  INFO 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='172.25.27.97', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='Beijing', serviceName='null', metadata={}}
+2022-05-16 14:51:11.506  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:51:11.513  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2022-05-16 14:51:11.522  INFO 84772 --- [Thread-212] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-05-16 14:51:11.522  INFO 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-05-16 14:51:11.791  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2022-05-16 14:51:11.791  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:51:11.819  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2022-05-16 14:51:11.819  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:51:12.560  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:51:12.560  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:51:12.586  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:51:12.586  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:51:12.610  WARN 84772 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+2022-05-16 14:51:12.610  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2022-05-16 14:51:12.642  WARN 84772 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+2022-05-16 14:51:12.642  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2022-05-16 14:51:12.651  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2022-05-16 14:51:12.652  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-16 14:51:12.660  INFO 84772 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-16 14:51:12.662 ERROR 84772 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at len.cloud02.blog.BlogApplication.main(BlogApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:247)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:204)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:111)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:430)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 21 common frames omitted
+Caused by: javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:437)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:966)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar.afterPropertiesSet(SpringApplicationAdminMXBeanRegistrar.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795)
+	... 37 common frames omitted
+
+2022-05-16 14:51:12.669  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2022-05-16 14:51:12.678  INFO 84772 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-16 14:51:12.679 ERROR 84772 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1109)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at len.cloud02.blog.BlogApplication.main(BlogApplication.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springApplicationAdminRegistrar' defined in class path resource [org/springframework/boot/autoconfigure/admin/SpringApplicationAdminJmxAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1799)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:247)
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:204)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:134)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:111)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:102)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:430)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1803)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	... 21 common frames omitted
+Caused by: javax.management.InstanceAlreadyExistsException: org.springframework.boot:type=Admin,name=SpringApplication
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:437)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1898)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:966)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:900)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:324)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:522)
+	at org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar.afterPropertiesSet(SpringApplicationAdminMXBeanRegistrar.java:129)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1858)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795)
+	... 37 common frames omitted
+
+2022-05-16 14:51:13.515  INFO 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-05-16 14:51:13.515  INFO 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-05-16 14:51:16.522  INFO 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-05-16 14:51:19.535  INFO 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-05-16 14:51:19.537  INFO 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-05-16 14:51:19.537  INFO 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-05-16 14:51:19.537  INFO 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-05-16 14:51:19.537  INFO 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-05-16 14:51:19.537  WARN 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-05-16 14:51:19.537  WARN 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-05-16 14:51:19.538  INFO 84772 --- [Thread-212] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-05-16 14:51:19.538  INFO 84772 --- [Thread-212] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-05-16 14:51:19.538  INFO 84772 --- [Thread-212] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-05-16 14:51:19.538  WARN 84772 --- [Thread-212] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-05-16 14:51:19.538  INFO 84772 --- [Thread-212] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-16 14:51:19.539  INFO 84772 --- [Thread-212] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:51:19.540  INFO 84772 --- [Thread-212] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2022-05-16 14:51:19.551  INFO 84772 --- [Thread-212] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2022-05-16 14:51:20.120  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
+2022-05-16 14:51:20.148  WARN 84772 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog.yaml] & group[DEFAULT_GROUP]
+2022-05-16 14:51:20.149  INFO 84772 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-blog.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-blog,DEFAULT_GROUP'}]
+2022-05-16 14:51:20.160  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : No active profile set, falling back to default profiles: default
+2022-05-16 14:51:20.361  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-16 14:51:20.386  INFO 84772 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 5 JPA repository interfaces.
+2022-05-16 14:51:20.431  INFO 84772 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a7ca3ea0-2ea8-371a-9bd1-5596679fceff
+2022-05-16 14:51:20.588  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-16 14:51:20.590  INFO 84772 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-16 14:51:20.590  INFO 84772 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-16 14:51:20.623  INFO 84772 --- [restartedMain] o.a.c.c.C.[Tomcat-13].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2022-05-16 14:51:20.623  INFO 84772 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 460 ms
+2022-05-16 14:51:20.700  INFO 84772 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-16 14:51:20.704  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2022-05-16 14:51:21.080  INFO 84772 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2022-05-16 14:51:21.080  INFO 84772 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-05-16 14:51:21.812  INFO 84772 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-16 14:51:21.813  INFO 84772 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-16 14:51:21.857  INFO 84772 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-16 14:51:22.326  WARN 84772 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-05-16 14:51:22.326  INFO 84772 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-16 14:51:22.365  WARN 84772 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-16 14:51:22.530  INFO 84772 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-16 14:51:22.590  INFO 84772 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-16 14:51:22.685  INFO 84772 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-16 14:51:22.941  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-16 14:51:22.941  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2022-05-16 14:51:22.941  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2022-05-16 14:51:22.964  INFO 84772 --- [restartedMain] c.a.n.client.identify.CredentialWatcher  : null No credential found
+2022-05-16 14:51:23.050  INFO 84772 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-16 14:51:23.051  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : [BEAT] adding beat: BeatInfo{port=8080, ip='172.25.27.97', weight=1.0, serviceName='DEFAULT_GROUP@@blog', cluster='Beijing', metadata={preserved.register.source=SPRING_CLOUD}, scheduled=false, period=5000, stopped=false} to beat map.
+2022-05-16 14:51:23.051  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='172.25.27.97', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='Beijing', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2022-05-16 14:51:23.080  INFO 84772 --- [restartedMain] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP blog 172.25.27.97:8080 register finished
+2022-05-16 14:51:23.089  INFO 84772 --- [restartedMain] len.cloud02.blog.BlogApplication         : Started BlogApplication in 3.135 seconds (JVM running for 1012.658)
+2022-05-16 14:51:23.090  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=null.properties, group=DEFAULT_GROUP, cnt=6
+2022-05-16 14:51:23.091  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=blog, group=DEFAULT_GROUP, cnt=7
+2022-05-16 14:51:23.091  INFO 84772 --- [restartedMain] c.a.nacos.client.config.impl.CacheData   : [fixed-124.221.110.115_8848] [add-listener] ok, tenant=, dataId=blog.yaml, group=DEFAULT_GROUP, cnt=7
+2022-05-16 14:51:23.120  INFO 84772 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:51:23.121  INFO 84772 --- [restartedMain] c.netflix.loadbalancer.BaseLoadBalancer  : Client: paperservice instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-05-16 14:51:23.122  INFO 84772 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2022-05-16 14:51:23.153  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"172.23.166.195#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"172.23.166.195","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:51:23.153  INFO 84772 --- [restartedMain] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@paperservice -> [{"instanceId":"172.23.166.195#8086#Beijing#DEFAULT_GROUP@@paperservice","ip":"172.23.166.195","port":8086,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@paperservice","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:51:23.154  INFO 84772 --- [restartedMain] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:51:23.155  INFO 84772 --- [restartedMain] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client paperservice initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=paperservice,current list of Servers=[172.23.166.195:8086],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:172.23.166.195:8086;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@6392899b
+2022-05-16 14:51:23.161  INFO 84772 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-05-16 14:51:24.100  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:51:24.102  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:51:24.125  INFO 84772 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: paperservice.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-16 14:52:28.204  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.23.166.195#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.23.166.195","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
+2022-05-16 14:52:28.205  INFO 84772 --- [com.alibaba.nacos.client.naming.updater] com.alibaba.nacos.client.naming          : current ips:(2) service: DEFAULT_GROUP@@blog@@Beijing -> [{"instanceId":"172.25.27.97#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.25.27.97","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000},{"instanceId":"172.23.166.195#8080#Beijing#DEFAULT_GROUP@@blog","ip":"172.23.166.195","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"Beijing","serviceName":"DEFAULT_GROUP@@blog","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ipDeleteTimeout":30000}]
