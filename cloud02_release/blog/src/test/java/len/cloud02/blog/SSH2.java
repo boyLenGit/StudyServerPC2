@@ -1,6 +1,7 @@
 package len.cloud02.blog;
 
 import com.trilead.ssh2.*;
+import org.junit.Test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,10 +13,11 @@ public class SSH2 {
     public static void main(String[] args) {
 //        command();
 //        System.out.println(Arrays.toString(getFilename_test()));;
-        command_test();
+//        command_test();
     }
 
-    public static void command_test(){
+    @Test
+    public void command_test(){
         Connection connection = new Connection("172.19.144.52");
         try {
             connection.connect();

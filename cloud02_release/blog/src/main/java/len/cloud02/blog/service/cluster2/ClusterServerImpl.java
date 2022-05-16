@@ -13,8 +13,8 @@ import java.io.InputStreamReader;
 @Service
 public class ClusterServerImpl {
     public String commandWithResponse(String host, String username, String password, String command){
-        StringBuilder sb = new StringBuilder();
-        Connection connection = new Connection("172.19.144.52");
+        StringBuilder res = new StringBuilder();
+        Connection connection = new Connection(host);
         try {
             connection.connect();
         }catch (IOException exception){
@@ -22,22 +22,24 @@ public class ClusterServerImpl {
         }
 
         try {
-            connection.authenticateWithPassword("cloud", "123");
+            connection.authenticateWithPassword(username, password);
             Session session = connection.openSession();
             SFTPv3Client client = new SFTPv3Client(connection);
-            session.execCommand("free -m");
+            session.execCommand(command);
             InputStream inputStream = session.getStdout();
             InputStreamReader reader = new InputStreamReader(inputStream);
             BufferedReader bufferedReader = new BufferedReader(reader);
-            int lines = (int) bufferedReader.lines().count();
-            for (int i1=0; i1<lines; i1++){
-                sb.append(bufferedReader.readLine());
+            String temp;
+            while (true){
+                temp = bufferedReader.readLine();
+                if (temp==null) break;
+                res.append(temp).append("\n");
             }
             client.close();
             connection.close();
         }catch (IOException e){
             e.printStackTrace();
         }
-        return sb.toString();
+        return res.toString();
     }
 }

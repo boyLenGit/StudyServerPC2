@@ -32,8 +32,7 @@ public class SSH2 {
             InputStream inputStream = session.getStdout();
             InputStreamReader reader = new InputStreamReader(inputStream);
             BufferedReader bufferedReader = new BufferedReader(reader);
-            int lines = (int) bufferedReader.lines().count();
-            for (int i1=0; i1<lines; i1++){
+            for (int i1=0; i1<5; i1++){
                 String line = bufferedReader.readLine();
                 System.out.println(line);
             }

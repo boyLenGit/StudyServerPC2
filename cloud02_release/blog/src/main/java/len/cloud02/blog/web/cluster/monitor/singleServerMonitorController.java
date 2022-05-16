@@ -29,9 +29,9 @@ public class singleServerMonitorController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     private WebCurveListService webCurveListService = new WebCurveListService();
 
-    private String server_ip = "124.221.110.115";
+    private String server_ip = "39.103.160.64";
     private String server_username = "lenguest";
-    private String server_password = "lenguest";
+    private String server_password = "boylen.com";
 
 
     // singleServerMonitor页面

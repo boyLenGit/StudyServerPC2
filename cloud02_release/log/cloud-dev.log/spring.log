@@ -1834,3 +1834,6 @@ Caused by: java.io.IOException: Cannot negotiate, proposals do not match.
 2022-05-16 00:50:37.558  INFO 70806 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-05-16 00:50:37.565  INFO 70806 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-05-16 00:50:37.582  INFO 70806 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-16 10:21:31.441  INFO 77567 --- [restartedMain] c.a.n.c.c.impl.LocalConfigInfoProcessor  : LOCAL_SNAPSHOT_PATH:/Users/mabolun/nacos/config
+2022-05-16 10:21:31.523  INFO 77567 --- [restartedMain] c.a.nacos.client.config.impl.Limiter     : limitTime:5.0
+2022-05-16 10:21:31.647  WARN 77567 --- [restartedMain] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[blog] & group[DEFAULT_GROUP]
