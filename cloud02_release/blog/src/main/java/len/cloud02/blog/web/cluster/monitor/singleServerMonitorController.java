@@ -5,6 +5,7 @@ import len.cloud02.blog.po.cluster.ServerStateDynamic_vmstat;
 import len.cloud02.blog.pojo.ServerOfUser;
 import len.cloud02.blog.service.cluster.WebCurveListService;
 import len.cloud02.blog.service.cluster.connect.LinuxService;
+import len.cloud02.blog.service.cluster2.ClusterServerImpl;
 import len.cloud02.blog.util.LenLog;
 import len.cloud02.blog.util.cluster.LinuxMemoryUtil;
 import len.cloud02.blog.util.cluster.LinuxStateUtil;
@@ -23,6 +24,8 @@ import java.io.IOException;
 public class singleServerMonitorController {
     @Autowired
     private LinuxService linuxService;
+    @Autowired
+    private ClusterServerImpl clusterServer;
 
     private ServerStateDynamic serverStateDynamic = new ServerStateDynamic();
     private ServerStateDynamic_vmstat serverStateDynamic_vmstat = new ServerStateDynamic_vmstat();
@@ -57,7 +60,9 @@ public class singleServerMonitorController {
     @ResponseBody  // 不加会报错，因为Thymeleaf无法识别非json、html的数据体。
     @PostMapping("/cluster/monitor/singleServerMonitor/ajaxObject_vmstat")
     public ServerStateDynamic_vmstat singleServerMonitorCurve_ByAjax_ByObject_vmstat() throws IOException {
-        String result = linuxService.executeCommand(server_ip, server_username, server_password, "vmstat  1 2 -a");
+//        String result = linuxService.executeCommand(server_ip, server_username, server_password, "vmstat  1 2 -a");
+        String result = clusterServer.commandWithResponse(server_ip, server_username, server_password, "vmstat  1 2 -a");
+        LenLog.info2(getClass(), "ServerStateDynamic_vmstat", result);
         serverStateDynamic_vmstat = LinuxStateUtil.shellVmstatConvert(serverStateDynamic_vmstat, result);
         LenLog.staticInfo("testAjaxTo_MemoryUsageValueCurve", serverStateDynamic_vmstat.toString());
         return serverStateDynamic_vmstat;

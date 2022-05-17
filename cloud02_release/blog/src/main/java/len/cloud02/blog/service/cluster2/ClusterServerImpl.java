@@ -62,16 +62,16 @@ public class ClusterServerImpl {
             Session session = connection.openSession();
             SFTPv3Client client = new SFTPv3Client(connection);
 
-//            session.execCommand("free -m");
-//            InputStream inputStream = session.getStdout();
-//            InputStreamReader reader = new InputStreamReader(inputStream);
-//            BufferedReader bufferedReader = new BufferedReader(reader);
-//            String temp;
-//            while (true){
-//                temp = bufferedReader.readLine();
-//                if (temp==null) break;
-//                res_mem.append(temp).append("\r\n");
-//            }
+            session.execCommand("free -m");
+            InputStream inputStream = session.getStdout();
+            InputStreamReader reader = new InputStreamReader(inputStream);
+            BufferedReader bufferedReader = new BufferedReader(reader);
+            String temp;
+            while (true){
+                temp = bufferedReader.readLine();
+                if (temp==null) break;
+                sb_mem.append(temp).append("\r\n");
+            }
 
             session.execCommand("vmstat  1 2 -a");
             BufferedReader bufferedReader_vm = new BufferedReader(new InputStreamReader(session.getStdout()));
@@ -89,13 +89,13 @@ public class ClusterServerImpl {
         }
 
         // 转换
-//        ServerStateDynamic serverStateDynamic = new ServerStateDynamic();
-//        serverStateDynamic = LinuxMemoryUtil.shellMemoryInfoConvert(serverStateDynamic, sb_mem.toString());
+        ServerStateDynamic serverStateDynamic = new ServerStateDynamic();
+        serverStateDynamic = LinuxMemoryUtil.shellMemoryInfoConvert(serverStateDynamic, sb_mem.toString());
 
         System.out.println(sb_vm.toString());
         ServerStateDynamic_vmstat serverStateDynamic_vmstat = new ServerStateDynamic_vmstat();
         serverStateDynamic_vmstat = LinuxStateUtil.shellVmstatConvert(serverStateDynamic_vmstat, sb_vm.toString());
         System.out.println(serverStateDynamic_vmstat.toString());
-        return new Object[]{serverStateDynamic_vmstat, serverStateDynamic_vmstat};
+        return new Object[]{serverStateDynamic, serverStateDynamic_vmstat};
     }
 }

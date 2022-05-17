@@ -1,8 +1,10 @@
 package len.cloud02.blog;
 
 import len.cloud02.blog.po.cluster.ServerStateDynamic;
+import len.cloud02.blog.po.cluster.ServerStateDynamic_vmstat;
 import len.cloud02.blog.service.cluster2.ClusterServerImpl;
 import len.cloud02.blog.util.cluster.LinuxMemoryUtil;
+import len.cloud02.blog.util.cluster.LinuxStateUtil;
 import org.junit.Test;
 
 public class testCommandService {
@@ -76,7 +78,10 @@ public class testCommandService {
         String server_ip = "39.103.160.64";
         String server_username = "lenguest";
         String server_password = "boylen.com";
-        Object[] b = clusterServer.getVmstatAndMem(server_ip, server_username, server_password);
-
+        String res = clusterServer.commandWithResponse(server_ip, server_username, server_password, "vmstat  1 2 -a");
+        ServerStateDynamic_vmstat serverStateDynamic_vmstat = new ServerStateDynamic_vmstat();
+        serverStateDynamic_vmstat = LinuxStateUtil.shellVmstatConvert(serverStateDynamic_vmstat, res);
+        System.out.println(serverStateDynamic_vmstat.toString());
+        System.out.println(res);
     }
 }

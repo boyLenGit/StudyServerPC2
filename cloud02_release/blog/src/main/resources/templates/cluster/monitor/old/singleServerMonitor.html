@@ -111,10 +111,10 @@ attached:轨道可以依附在主窗口
             <b>服务器：阿里云01；系统：CentOS</b>
             <div class="ui middle aligned two column grid">
                 <div class="column">
-                    <div id="container-mem-free" style="width:535px;height:350px"></div>
+                    <div id="container-mem-usage" style="width:535px;height:350px"></div>
                 </div>
                 <div class="right aligned column">
-                    <div id="container-cpu-usage" style="width:535px;height:350px"></div>
+                    <div id="container-mem-cache" style="width:535px;height:350px"></div>
                 </div>
             </div>
 
@@ -134,19 +134,19 @@ attached:轨道可以依附在主窗口
 </body>
 
 <script>
-    // function getAjaxCurveValue_init() {
-    //     let serverStateDynamic_return;
-    //     $.ajax({
-    //         url : "/cluster/monitor/singleServerMonitor/ajaxObject",
-    //         type : "post",
-    //         data : {},
-    //         async : false,
-    //         success : function(serverStateDynamic) {
-    //             serverStateDynamic_return = serverStateDynamic;
-    //         }
-    //     });
-    //     return serverStateDynamic_return;
-    // }
+    function getAjaxCurveValue_init() {
+        let serverStateDynamic_return;
+        $.ajax({
+            url : "/cluster/monitor/singleServerMonitor/ajaxObject",
+            type : "post",
+            data : {},
+            async : false,
+            success : function(serverStateDynamic) {
+                serverStateDynamic_return = serverStateDynamic;
+            }
+        });
+        return serverStateDynamic_return;
+    }
 
     function getAjax_vmstat_CurveValue_init() {
         let serverStateDynamic_vmstat_return;
@@ -164,28 +164,26 @@ attached:轨道可以依附在主窗口
 
     const vmstat_refresh_time = 3000;
     const data_refresh_time = 2000;
-    // let mem_usage = 0;
-    // let mem_cache = 0;
-    // let mem_available = 0;
+    let mem_usage = 0;
+    let mem_cache = 0;
+    let mem_available = 0;
     let vmstat_io_input = 0;
     let vmstat_io_output = 0;
-    let vmstat_mem_free = 0;
-    let vmstat_cpu_usage = 0;
 
     // 定时获取数据
-    // setInterval(function(){
-    //     $.ajax({
-    //         url : "/cluster/monitor/singleServerMonitor/ajaxObject",
-    //         type : "post",
-    //         data : {},
-    //         async : false,
-    //         success : function(serverStateDynamic) {
-    //             mem_usage = serverStateDynamic.mem_usage;
-    //             mem_cache = serverStateDynamic.mem_cache;
-    //             mem_available = serverStateDynamic.mem_available;
-    //         }
-    //     });
-    // }, data_refresh_time)
+    setInterval(function(){
+        $.ajax({
+            url : "/cluster/monitor/singleServerMonitor/ajaxObject",
+            type : "post",
+            data : {},
+            async : false,
+            success : function(serverStateDynamic) {
+                mem_usage = serverStateDynamic.mem_usage;
+                mem_cache = serverStateDynamic.mem_cache;
+                mem_available = serverStateDynamic.mem_available;
+            }
+        });
+    }, data_refresh_time)
 
     setInterval(function(){
         $.ajax({
@@ -196,8 +194,6 @@ attached:轨道可以依附在主窗口
             success : function(serverStateDynamic_vmstat) {
                 vmstat_io_input = serverStateDynamic_vmstat.io_bi;
                 vmstat_io_output = serverStateDynamic_vmstat.io_bo;
-                vmstat_mem_free = serverStateDynamic_vmstat.mem_free;
-                vmstat_cpu_usage = serverStateDynamic_vmstat.cpu_us;
             }
         });
     }, vmstat_refresh_time)
@@ -208,15 +204,15 @@ attached:轨道可以依附在主窗口
         }
     });
 
-    // ------------------------------------------------- mem-free -------------------------------------------------
-    Highcharts.stockChart('container-mem-free', {
+    // ------------------------------------------------- mem-usage -------------------------------------------------
+    Highcharts.stockChart('container-mem-usage', {
         chart : {
             events : {
                 load : function () {
                     var series = this.series[0];
                     setInterval(function () {
                         var x = (new Date()).getTime(), // current time
-                            y = vmstat_mem_free  // 获取mem_usage，mem_usage通过定时函数，定期刷新，
+                            y = mem_usage  // 获取mem_usage，mem_usage通过定时函数，定期刷新，
                         series.addPoint([x, y], true, true);
                     }, data_refresh_time);
                 }
@@ -239,7 +235,7 @@ attached:轨道可以依附在主窗口
             selected: 0
         },
         title : {
-            text : '服务器可用内存(MB)'
+            text : '服务器内存使用量(MB)'
         },
         tooltip: {
             split: false
@@ -248,22 +244,22 @@ attached:轨道可以依附在主窗口
             enabled: false
         },
         series : [{
-            name : '服务器可用内存值',
+            name : '服务器内存使用值',
             data : (function () {
                 var data = [], time = (new Date()).getTime(), i;
                 let serverStateDynamic = getAjaxCurveValue_init();
                 for (i = -200; i <= 0; i += 1) {
                     data.push([
                         time + i * 1000,
-                        serverStateDynamic.mem_free
+                        serverStateDynamic.mem_usage
                     ]);
                 }
                 return data;
             }())
         }]
     });
-    // ------------------------------------------------- cpu use -------------------------------------------------
-    Highcharts.stockChart('container-cpu-usage', {
+    // ------------------------------------------------- mem-cache -------------------------------------------------
+    Highcharts.stockChart('container-mem-cache', {
         chart : {
             events : {
                 load : function () {
@@ -272,7 +268,7 @@ attached:轨道可以依附在主窗口
                     setInterval(function () {
                         // var data_y = getAjaxCurveValue();
                         var x = (new Date()).getTime(), // current time
-                            y = vmstat_cpu_usage
+                            y = mem_cache
                         console.log("events:" + y, typeof y)
                         series.addPoint([x, y], true, true);
                     }, data_refresh_time);
@@ -296,7 +292,7 @@ attached:轨道可以依附在主窗口
             selected: 0
         },
         title : {
-            text : '服务器CPU使用量(%)'
+            text : '服务器缓存使用量(MB)'
         },
         tooltip: {
             split: false
@@ -305,14 +301,14 @@ attached:轨道可以依附在主窗口
             enabled: false
         },
         series : [{
-            name : '服务器CPU使用值',
+            name : '服务器缓存使用值',
             data : (function () {
                 let serverStateDynamic = getAjaxCurveValue_init();
                 var data = [], time = (new Date()).getTime(), i;
                 for (i = -200; i <= 0; i += 1) {
                     data.push([
                         time + i * 1000,
-                        serverStateDynamic.cpu_us
+                        serverStateDynamic.mem_cache
                     ]);
                 }
                 return data;
