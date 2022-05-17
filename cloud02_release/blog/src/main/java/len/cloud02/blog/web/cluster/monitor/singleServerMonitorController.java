@@ -62,7 +62,7 @@ public class singleServerMonitorController {
     public ServerStateDynamic_vmstat singleServerMonitorCurve_ByAjax_ByObject_vmstat() throws IOException {
 //        String result = linuxService.executeCommand(server_ip, server_username, server_password, "vmstat  1 2 -a");
         String result = clusterServer.commandWithResponse(server_ip, server_username, server_password, "vmstat  1 2 -a");
-        LenLog.info2(getClass(), "ServerStateDynamic_vmstat", result);
+        LenLog.info2(getClass(), "ServerStateDynamic_vmstat", "\n"+result);
         serverStateDynamic_vmstat = LinuxStateUtil.shellVmstatConvert(serverStateDynamic_vmstat, result);
         LenLog.staticInfo("testAjaxTo_MemoryUsageValueCurve", serverStateDynamic_vmstat.toString());
         return serverStateDynamic_vmstat;

@@ -161,32 +161,13 @@ attached:轨道可以依附在主窗口
         });
         return serverStateDynamic_vmstat_return;
     }
-    let serverStateDynamic_vmstat = getAjax_vmstat_CurveValue_init();
+
+
 
     const vmstat_refresh_time = 3000;
     const data_refresh_time = 2000;
-    // let mem_usage = 0;
-    // let mem_cache = 0;
-    // let mem_available = 0;
-    let vmstat_io_input = 0;
-    let vmstat_io_output = 0;
-    let vmstat_mem_free = 0;
-    let vmstat_cpu_usage = 0;
+    let serverStateDynamic_vmstat = getAjax_vmstat_CurveValue_init();
 
-    // 定时获取数据
-    // setInterval(function(){
-    //     $.ajax({
-    //         url : "/cluster/monitor/singleServerMonitor/ajaxObject",
-    //         type : "post",
-    //         data : {},
-    //         async : false,
-    //         success : function(serverStateDynamic) {
-    //             mem_usage = serverStateDynamic.mem_usage;
-    //             mem_cache = serverStateDynamic.mem_cache;
-    //             mem_available = serverStateDynamic.mem_available;
-    //         }
-    //     });
-    // }, data_refresh_time)
 
     setInterval(function(){
         $.ajax({
@@ -194,14 +175,12 @@ attached:轨道可以依附在主窗口
             type : "post",
             data : {},
             async : false,
-            success : function(serverStateDynamic_vmstat) {
-                vmstat_io_input = serverStateDynamic_vmstat.io_bi;
-                vmstat_io_output = serverStateDynamic_vmstat.io_bo;
-                vmstat_mem_free = serverStateDynamic_vmstat.mem_free;
-                vmstat_cpu_usage = serverStateDynamic_vmstat.cpu_us;
+            success : function(serverStateDynamic_vmstat_new) {
+                serverStateDynamic_vmstat = serverStateDynamic_vmstat_new;
             }
         });
     }, vmstat_refresh_time)
+
 
     Highcharts.setOptions({
         global : {
@@ -217,7 +196,7 @@ attached:轨道可以依附在主窗口
                     var series = this.series[0];
                     setInterval(function () {
                         var x = (new Date()).getTime(), // current time
-                            y = vmstat_mem_free  // 获取mem_usage，mem_usage通过定时函数，定期刷新，
+                            y = serverStateDynamic_vmstat.mem_free  // 获取mem_usage，mem_usage通过定时函数，定期刷新，
                         series.addPoint([x, y], true, true);
                     }, data_refresh_time);
                 }
@@ -273,7 +252,7 @@ attached:轨道可以依附在主窗口
                     setInterval(function () {
                         // var data_y = getAjaxCurveValue();
                         var x = (new Date()).getTime(), // current time
-                            y = vmstat_cpu_usage
+                            y = serverStateDynamic_vmstat.cpu_us
                         console.log("events:" + y, typeof y)
                         series.addPoint([x, y], true, true);
                     }, data_refresh_time);
@@ -313,7 +292,7 @@ attached:轨道可以依附在主窗口
                 for (i = -200; i <= 0; i += 1) {
                     data.push([
                         time + i * 1000,
-                        serverStateDynamic_vmstat.cpu_us
+                        0
                     ]);
                 }
                 return data;
@@ -328,7 +307,7 @@ attached:轨道可以依附在主窗口
                     var series = this.series[0];
                     setInterval(function () {
                         var x = (new Date()).getTime(), // current time
-                            y = vmstat_io_input
+                            y = serverStateDynamic_vmstat.io_bi
                         series.addPoint([x, y], true, true);
                     }, vmstat_refresh_time);
                 }
@@ -381,7 +360,7 @@ attached:轨道可以依附在主窗口
                     var series = this.series[0];
                     setInterval(function () {
                         var x = (new Date()).getTime(), // current time
-                            y = vmstat_io_output
+                            y = serverStateDynamic_vmstat.io_bo
                         series.addPoint([x, y], true, true);
                     }, vmstat_refresh_time);
                 }
