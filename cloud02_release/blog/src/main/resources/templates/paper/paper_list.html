@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>文献列表</title>
     <!--Semantic的CSS包-->
-    <link rel="stylesheet" href="../../static/lib/Semantic_UI_CSS_master/semantic.css" th:href="@{/lib/Semantic_UI_CSS_master/semantic.css}">
+    <link rel="stylesheet" href="../../static/lib/Semantic_UI_CSS_master/semantic.min.css" th:href="@{/lib/Semantic_UI_CSS_master/semantic.min.css}">
     <!--    自定义CSS导入。必须加rel="stylesheet"才可以生效！-->
     <link rel="stylesheet" href="../../static/css/index.css" th:href="@{/css/index.css}">
     <link rel="stylesheet" href="../../static/css/text.css" th:href="@{/css/text.css}">
@@ -20,9 +20,9 @@
 <body>
 <!--****** 导包 ******-->
 <!--    JQuery包-->
-<script src="../../static/lib/jquery/jquery_1.10.2.js" th:src="@{/lib/jquery/jquery_1.10.2.js}"></script>
+<script src="../../static/lib/jquery/jquery_3.6.0.min.js" th:src="@{/lib/jquery/jquery_3.6.0.min.js}"></script>
 <!--    Semantic的JS包-->
-<script src="../../static/lib/Semantic_UI_CSS_master/semantic.js" th:src="@{/lib/Semantic_UI_CSS_master/semantic.js}"></script>
+<script src="../../static/lib/Semantic_UI_CSS_master/semantic.min.js" th:src="@{/lib/Semantic_UI_CSS_master/semantic.min.js}"></script>
 
 <!--****** 导航 ******-->
 <!--
@@ -147,14 +147,14 @@ attached:轨道可以依附在主窗口
         <!--        grid一共有16份-->
         <div class="ui inverted divided stackable grid">
             <div class="four wide column">
-                <img src="../static/image/index/bottom_code.png" th:src="@{/image/index/bottom_code.png}" class="ui rounded image" alt="" style="width: 7em">
+                <img src="../../static/image/index/bottom_code.jpg" th:src="@{/image/index/bottom_code.jpg}" class="ui rounded image" alt="" style="width: 7em">
             </div>
 
             <div class="ui four wide column">
                 <h4 class="ui inverted header LenCSS-Text-little-header">承办方</h4>
                 <div class="ui inverted link list">
+                    <a href="#" class="item">Len Studio</a>
                     <a href="#" class="item">IOT研究组</a>
-                    <a href="#" class="item">UPC地学院</a>
                     <a href="#" class="item">中石油集团</a>
                 </div>
             </div>
@@ -162,7 +162,7 @@ attached:轨道可以依附在主窗口
             <div class="ui four wide column">
                 <h4 class="ui inverted header LenCSS-Text-little-header">用户服务</h4>
                 <div class="ui inverted link list">
-                    <a href="#" class="item">云平台 公告</a>
+                    <a href="#" class="item">云平台公告</a>
                     <a href="#" class="item">反馈与建议</a>
                     <a href="#" class="item">管理员申请</a>
                 </div>

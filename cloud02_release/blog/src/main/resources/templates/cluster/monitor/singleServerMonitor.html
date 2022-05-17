@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>服务器监视器</title>
     <!--    Semantic的CSS包-->
-    <link rel="stylesheet" href="../../static/lib/Semantic_UI_CSS_master/semantic.css" th:href="@{/lib/Semantic_UI_CSS_master/semantic.css}">
+    <link rel="stylesheet" href="../../../static/lib/Semantic_UI_CSS_master/semantic.min.css" th:href="@{/lib/Semantic_UI_CSS_master/semantic.min.css}">
     <!--    自定义CSS导入。必须加rel="stylesheet"才可以生效！-->
     <link rel="stylesheet" href="../../../static/css/index.css" th:href="@{/css/index.css}">
     <link rel="stylesheet" href="../../../static/css/text.css" th:href="@{/css/text.css}">
@@ -18,9 +18,9 @@
 <body>
 <!--****** 导包 ******-->
 <!--    JQuery包-->
-<script src="../../../static/lib/jquery/jquery_1.10.2.js" th:src="@{/lib/jquery/jquery_1.10.2.js}"></script>
+<script src="../../../static/lib/jquery/jquery_3.6.0.min.js" th:src="@{/lib/jquery/jquery_3.6.0.min.js}"></script>
 <!--    Semantic的JS包-->
-<script src="../../../static/lib/Semantic_UI_CSS_master/semantic.js" th:src="@{/lib/Semantic_UI_CSS_master/semantic.js}"></script>
+<script src="../../../static/lib/Semantic_UI_CSS_master/semantic.min.js" th:src="@{/lib/Semantic_UI_CSS_master/semantic.min.js}"></script>
 <!--    HighChart本地-->
 <!--<script src="../../../static/lib/Highcharts_10.0.0/code/highcharts.js" th:src="@{/lib/Highcharts_10.0.0/code/highcharts.js}"></script>-->
 <!--<script src="../../../static/lib/Highcharts_10.0.0/code/modules/exporting.js" th:src="@{/lib/Highcharts_10.0.0/code/modules/exporting.js}"></script>-->
@@ -31,9 +31,10 @@
 <!--    HighChart网络-->
 <script src="https://cdn.highcharts.com.cn/highstock/highstock.js"></script>
 <script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
-<script src="https://code.highcharts.com.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
-<!--<script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script>-->
-<script src="https://cdn.highcharts.com.cn/highcharts/themes/dark-unica.js"></script>
+<script src="http://cdn.highcharts.com.cn/highcharts/10.0.0/highcharts.js"></script>
+<!--<script src="https://code.highcharts.com.cn/highcharts-plugins/highcharts-zh_CN.js"></script>-->
+<script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
+<!--<script src="https://cdn.highcharts.com.cn/highcharts/themes/dark-unica.js"></script>-->
 
 <!--****** 导航 ******-->
 <!--
@@ -135,6 +136,49 @@ attached:轨道可以依附在主窗口
         </div>
     </div>
 </div>
+
+
+
+<footer class="ui inverted vertical segment">
+    <div class="ui center aligned container">
+        <!--        grid一共有16份-->
+        <div class="ui inverted divided stackable grid">
+            <div class="four wide column">
+                <img src="../../../static/image/index/bottom_code.jpg" th:src="@{/image/index/bottom_code.jpg}" class="ui rounded image" alt="" style="width: 7em">
+            </div>
+
+            <div class="ui four wide column">
+                <h4 class="ui inverted header LenCSS-Text-little-header">承办方</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Len Studio</a>
+                    <a href="#" class="item">IOT研究组</a>
+                    <a href="#" class="item">中石油集团</a>
+                </div>
+            </div>
+
+            <div class="ui four wide column">
+                <h4 class="ui inverted header LenCSS-Text-little-header">用户服务</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">云平台公告</a>
+                    <a href="#" class="item">反馈与建议</a>
+                    <a href="#" class="item">管理员申请</a>
+                </div>
+            </div>
+
+            <div class="ui four wide column">
+                <h4 class="ui inverted header LenCSS-Text-little-header">关于LenCloud</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">云平台简介</a>
+                    <a href="#" class="item">联系开发者</a>
+                    <a href="#" class="item">隐私与政策</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <p class="LenCssText-Opacity-L">Copyright © 2021-2023 LenCloud designed by boyLen</p>
+    </div>
+</footer>
+
 
 
 </body>
