@@ -1,5 +1,6 @@
 package com.len.library.library01.Config;
 
+import com.len.library.library01.util.LenPath;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -9,11 +10,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/")
+        registry.addResourceHandler("/**")
+                .addResourceLocations("classpath:/static/").addResourceLocations("classpath:/templates/")
                 // swagger的路径
                 .addResourceLocations("classpath:/META-INF/resources/")
                 // 用户文件的路径
-                .addResourceLocations("file:/Users/mabolun/Project/Java/library01/data/");
+                .addResourceLocations("file:" + LenPath.getData() + "/");
     }
 
     @Override
