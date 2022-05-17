@@ -18,6 +18,8 @@ public class Blog {
     //@Basic(fetch = FetchType.LAZY)  // 设定该变量只有用到的时候再加载，避免资源浪费，因为content是文本内容，占用资源大
     @Lob  // 说明这个是大字段类型，因为如果是String，对应到数据库会生成char(255)，所以文章内容长了会报错
     private String content;  // 内容
+    @Lob
+    private String info; // 简介
     private String firstPicture;  // 首图
     private String flag;  // 标记
     private Integer views;  // 浏览次数
@@ -193,6 +195,14 @@ public class Blog {
         this.tagIds = tagIds;
     }
 
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
     public void initTagIds(){
         this.tagIds = tagsToIds(this.getTags());
         System.out.println("LenPrint. " + this.getTags() + " || " + this.tagIds);
@@ -222,7 +232,7 @@ public class Blog {
         return "Blog{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
+                ", content=略'" + '\'' +
                 ", firstPicture='" + firstPicture + '\'' +
                 ", flag='" + flag + '\'' +
                 ", views=" + views +

@@ -8,4 +8,8 @@ public class LenText {
         }
         return str;
     }
+
+    public static String makeBlogInfo(String str){
+        return str.replace("#", "").substring(0, Math.min(str.length(), 150));
+    }
 }

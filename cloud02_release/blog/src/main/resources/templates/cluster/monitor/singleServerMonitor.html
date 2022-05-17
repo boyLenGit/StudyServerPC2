@@ -253,7 +253,6 @@ attached:轨道可以依附在主窗口
                         // var data_y = getAjaxCurveValue();
                         var x = (new Date()).getTime(), // current time
                             y = serverStateDynamic_vmstat.cpu_us
-                        console.log("events:" + y, typeof y)
                         series.addPoint([x, y], true, true);
                     }, data_refresh_time);
                 }

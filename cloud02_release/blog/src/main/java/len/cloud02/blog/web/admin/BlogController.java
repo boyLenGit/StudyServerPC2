@@ -5,6 +5,7 @@ import len.cloud02.blog.pojo.User;
 import len.cloud02.blog.service.BlogService;
 import len.cloud02.blog.service.TagService;
 import len.cloud02.blog.service.TypeService;
+import len.cloud02.blog.util.LenText;
 import len.cloud02.blog.vo.BlogQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -74,6 +75,7 @@ public class BlogController {
         blog.setUser((User) httpSession.getAttribute("user"));
         blog.setType(typeService.getType(blog.getType().getId()));
         blog.setTags(tagService.listTag(blog.getTagIds()));
+        if (blog.getInfo()==null || blog.getInfo().length()<100) blog.setInfo(LenText.makeBlogInfo(blog.getContent()));
         Blog save_result;
 
         // ↓ 检查传入的Blog是否已存在，不存在则执行新建Blog步骤，存在则执行更新Blog步骤。
