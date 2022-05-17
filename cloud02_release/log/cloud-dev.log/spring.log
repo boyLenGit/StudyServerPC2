@@ -19568,3 +19568,27 @@ org.springframework.web.client.HttpServerErrorException$BadGateway: 502 Bad Gate
 	at java.lang.Thread.run(Thread.java:748)
 
 2022-05-17 17:08:30.044  WARN 15381 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.client.HttpServerErrorException$BadGateway: 502 Bad Gateway: [no body]]
+2022-05-17 17:09:39.328  INFO 15381 --- [Thread-2] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2022-05-17 17:09:39.353  INFO 15381 --- [Thread-2] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2022-05-17 17:09:39.353  INFO 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : [BEAT] removing beat: DEFAULT_GROUP@@blog:172.25.27.97:8080 from beat map.
+2022-05-17 17:09:39.354  INFO 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@blog with instance: Instance{instanceId='null', ip='172.25.27.97', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='Beijing', serviceName='null', metadata={}}
+2022-05-17 17:09:39.467  INFO 15381 --- [Thread-2] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2022-05-17 17:09:39.467  INFO 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2022-05-17 17:09:42.480  INFO 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2022-05-17 17:09:42.481  INFO 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown begin
+2022-05-17 17:09:45.491  INFO 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown begin
+2022-05-17 17:09:48.504  INFO 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.PushReceiver do shutdown stop
+2022-05-17 17:09:48.506  INFO 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2022-05-17 17:09:48.507  INFO 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2022-05-17 17:09:48.507  INFO 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.HostReactor do shutdown stop
+2022-05-17 17:09:48.508  INFO 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown begin
+2022-05-17 17:09:48.508  WARN 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2022-05-17 17:09:48.508  WARN 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2022-05-17 17:09:48.508  INFO 15381 --- [Thread-2] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2022-05-17 17:09:48.509  INFO 15381 --- [Thread-2] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2022-05-17 17:09:48.509  INFO 15381 --- [Thread-2] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.net.NamingProxy do shutdown stop
+2022-05-17 17:09:48.510  WARN 15381 --- [Thread-2] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2022-05-17 17:09:48.511  INFO 15381 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-17 17:09:48.516  INFO 15381 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-17 17:09:48.549  INFO 15381 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-17 17:09:48.564  INFO 15381 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
