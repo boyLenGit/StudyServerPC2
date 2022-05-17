@@ -161,6 +161,7 @@ attached:轨道可以依附在主窗口
         });
         return serverStateDynamic_vmstat_return;
     }
+    let serverStateDynamic_vmstat = getAjax_vmstat_CurveValue_init();
 
     const vmstat_refresh_time = 3000;
     const data_refresh_time = 2000;
@@ -251,11 +252,11 @@ attached:轨道可以依附在主窗口
             name : '服务器可用内存值',
             data : (function () {
                 var data = [], time = (new Date()).getTime(), i;
-                let serverStateDynamic = getAjaxCurveValue_init();
+                //let serverStateDynamic = getAjaxCurveValue_init();
                 for (i = -200; i <= 0; i += 1) {
                     data.push([
                         time + i * 1000,
-                        serverStateDynamic.mem_free
+                        serverStateDynamic_vmstat.mem_free
                     ]);
                 }
                 return data;
@@ -307,12 +308,12 @@ attached:轨道可以依附在主窗口
         series : [{
             name : '服务器CPU使用值',
             data : (function () {
-                let serverStateDynamic = getAjaxCurveValue_init();
+                //let serverStateDynamic = getAjaxCurveValue_init();
                 var data = [], time = (new Date()).getTime(), i;
                 for (i = -200; i <= 0; i += 1) {
                     data.push([
                         time + i * 1000,
-                        serverStateDynamic.cpu_us
+                        serverStateDynamic_vmstat.cpu_us
                     ]);
                 }
                 return data;
