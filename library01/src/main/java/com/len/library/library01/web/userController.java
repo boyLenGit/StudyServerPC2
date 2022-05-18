@@ -64,6 +64,7 @@ public class UserController {
         return "user/sign_up";
     }
 
+    // 用户登录-POST  Mapping地址：/user/sign_up_post
     @PostMapping("/sign_up_post")
     public String sign_up_post(@RequestParam String name, @RequestParam String password, HttpSession session, RedirectAttributes attributes){
         LenLog.info("sign_up_post", name + " | " + password);
