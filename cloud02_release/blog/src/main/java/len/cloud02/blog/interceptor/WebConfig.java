@@ -34,5 +34,8 @@ public class WebConfig implements WebMvcConfigurer {
 //        registry.addResourceHandler("/**")
 //                // 用户文件的路径
 //                .addResourceLocations("file:" + LenPath.getData() + "/");
+
+        StringBuilder sb = new StringBuilder("4");
+        sb.toString();
     }
 }
