@@ -31,7 +31,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.lt007_reflact">
+  <component name="RunManager" selected="Application.l746">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RealMeet.mt0430.Main" />
       <module name="LenLeetCode" />
@@ -58,12 +58,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="c6027" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="competition.No285.c6027" />
+    <configuration name="l746" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leet.l746" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="competition.No285.*" />
+          <option name="PATTERN" value="leet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,11 +99,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.l746" />
         <item itemvalue="Application.lt007_reflact" />
         <item itemvalue="Application.lt001_sorts" />
         <item itemvalue="Application.Main2" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.c6027" />
       </list>
     </recent_temporary>
   </component>
@@ -1002,18 +1002,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/leet/l094.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="312" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/leet/l094.java</url>
           <line>17</line>
           <option name="timeStamp" value="313" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/leet/l094.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="314" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/meet/m01_06.java</url>

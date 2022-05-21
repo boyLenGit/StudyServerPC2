@@ -13,13 +13,13 @@ public class l094 {
                 new TreeNode(3, null, new TreeNode(6)));
         TreeNode in2 = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
         TreeNode in3 = new TreeNode(2, new TreeNode(3, new TreeNode(1), null), null);
-        Solution solution = new Solution();
+        Solution094 solution = new Solution094();
         System.out.println(solution.inorderTraversal3(in2));
         System.out.println(1);
     }
 }
 
-class Solution {
+class Solution094 {
     private List<Integer> res = new LinkedList<>();
 
     public List<Integer> inorderTraversal(TreeNode root) {
