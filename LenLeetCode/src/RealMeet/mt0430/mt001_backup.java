@@ -7,12 +7,12 @@
 //
 //class Main2 {
 //    public static void main(String[] args) {
-////        Scanner cin = new Scanner(System.in);
-////        int a1 = cin.nextInt();
-////        int a2 = cin.nextInt();
-////        Solu solu = new Solu();
-////        System.out.printf("%.2f", solu.as(a1, a2));
-////        System.out.println();
+//        Scanner cin = new Scanner(System.in);
+//        int a1 = cin.nextInt();
+//        int a2 = cin.nextInt();
+//        Solu solu = new Solu();
+//        System.out.printf("%.2f", solu.as(a1, a2));
+//        System.out.println();
 //
 //        int a1, a2;
 //        Scanner sc = new Scanner(System.in);
