@@ -85,7 +85,28 @@ public class lt001_sorts {
     public static void main(String[] a){
         int[] inputs = new int[]{5,2,4,1,1,3,6,0};
 //        len(inputs,0,inputs.length-1);
-        len_quick_sort(0, inputs.length-1, inputs);
+        quicksort(inputs, 0, inputs.length-1);
         System.out.println(Arrays.toString(inputs));
+    }
+
+    public static void quicksort(int[] list, int start, int end){
+        int s, e, compare, exchange;
+        if (start>end) return;
+        s = start;
+        e = end;
+        compare = list[start];
+        while (s<e){
+            while (s<e && compare<=list[e]) e--;
+            while (s<e && compare>=list[s]) s++;
+            if (s<e){
+                exchange = list[s];
+                list[s] = list[e];
+                list[e] = exchange;
+            }
+        }
+        list[start] = list[s];
+        list[s] = compare;
+        quicksort(list, start, s-1);
+        quicksort(list, s+1, end);
     }
 }

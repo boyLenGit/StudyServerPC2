@@ -31,7 +31,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.lt007_reflact">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RealMeet.mt0521.Main" />
       <module name="LenLeetCode" />
@@ -99,10 +99,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.l746" />
         <item itemvalue="Application.lt007_reflact" />
         <item itemvalue="Application.lt001_sorts" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.l746" />
         <item itemvalue="Application.Main2" />
       </list>
     </recent_temporary>
