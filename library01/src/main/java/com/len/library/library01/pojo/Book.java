@@ -17,6 +17,8 @@ public class Book {
     private Integer view_time; // 借阅次数
     private Integer amount; // 总数
     private Integer remain; // 剩余
+    @ManyToOne
+    private Type type; // 类型
 
     @ManyToMany(mappedBy = "books") // 多本书对应一个用户，即一个用户可以借多本书。这句代码用于进行对象之间的关系绑定，从而方便数据库数据的获取。
     private List<User> users;
@@ -113,6 +115,14 @@ public class Book {
 
     public void setUsers_history(List<User> users_history) {
         this.users_history = users_history;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
     }
 
     @Override
