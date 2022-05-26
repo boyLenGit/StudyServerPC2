@@ -2,38 +2,36 @@ package lenTest;
 
 public class lt008_thread {
     public static void main(String[] args) throws InterruptedException {
+        lt008_thread l = new lt008_thread();
+
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                for (int i1=0; i1<2; i1++){
-                    System.out.println(1);
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                try {
+                    l.testSyncFunc();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
         });
         thread1.start();
+
         Thread thread2 = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    thread1.join();
+                    l.testSyncFunc();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println(2);
             }
         });
         thread2.start();
     }
 
-    static class StopThread implements Runnable{
-        @Override
-        public void run() {
-
-        }
+    public synchronized void testSyncFunc() throws InterruptedException {
+        System.out.println("测试1");
+        Thread.sleep(1000);
+        System.out.println("测试2");
     }
 }
