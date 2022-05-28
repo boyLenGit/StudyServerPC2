@@ -7,8 +7,7 @@ public class lt010_Runnable_Thread {
         @Override
         public void run() {
             while (cnt<3){
-                System.out.println(cnt);
-                cnt++;
+                System.out.println(cnt++);
             }
         }
     }
@@ -18,14 +17,14 @@ public class lt010_Runnable_Thread {
         @Override
         public void run() {
             while (cnt<3){
-                System.out.println(cnt);
-                cnt++;
+                System.out.println(cnt++);
             }
         }
     }
 
     public static void main(String[] args) {
         ChildRunnable childRunnable = new ChildRunnable();
+        new Thread(childRunnable).start();
         new Thread(childRunnable).start();
         new Thread(childRunnable).start();
     }
