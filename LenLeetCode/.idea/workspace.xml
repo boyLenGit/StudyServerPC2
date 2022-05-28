@@ -31,26 +31,13 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.lt008_thread">
+  <component name="RunManager" selected="Application.lt009_runtime">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RealMeet.mt0521.Main" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="RealMeet.mt0521.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="l746" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leet.l746" />
-      <module name="LenLeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,13 +84,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="lt009_runtime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lenTest.lt009_runtime" />
+      <module name="LenLeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lenTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.lt009_runtime" />
         <item itemvalue="Application.lt008_thread" />
         <item itemvalue="Application.lt007_reflact" />
         <item itemvalue="Application.lt001_sorts" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.l746" />
       </list>
     </recent_temporary>
   </component>
