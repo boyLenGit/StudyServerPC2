@@ -1067,8 +1067,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/leet/l448.java</url>
-          <line>26</line>
+          <line>31</line>
           <option name="timeStamp" value="333" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/leet/l448.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="334" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
