@@ -12,7 +12,18 @@ public class l448 {
 
     public static List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> res = new ArrayList<>();
+        int length = nums.length;
         quicksort(nums, 0, nums.length-1);
+        for (int i1=nums.length-1; i1>=0; i1--){
+            if (nums[i1]>length){
+                while (nums[i1]>=length) i1--;
+            }else if (nums[i1]==length){
+                while (nums[i1]==length) i1--;
+                length--;
+            }else {
+                res.add(nums[i1]);
+            }
+        }
         return res;
     }
 
