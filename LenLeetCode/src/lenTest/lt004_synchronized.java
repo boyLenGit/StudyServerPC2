@@ -16,6 +16,11 @@ public class lt004_synchronized {
                             System.out.println("Thread name:"+Thread.currentThread().getName()+", val:"+num);
                         }
                     }
+                    try {
+                        Thread.sleep(399);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             });
             thread.start();

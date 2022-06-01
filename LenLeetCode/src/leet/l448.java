@@ -3,10 +3,11 @@ package leet;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-//[1,1,2,2]
+//[4,3,2,7,8,2,3,1]
+//[1,1]
 public class l448 {
     public static void main(String[] args) {
-        int[] in1 = new int[]{1,1,2,2};
+        int[] in1 = new int[]{4,3,2,7,8,2,3,1};
         System.out.println(Arrays.toString(findDisappearedNumbers2(in1).toArray()));
     }
 
@@ -55,7 +56,10 @@ public class l448 {
     public static List<Integer> findDisappearedNumbers2(int[] nums) {
         List<Integer> res = new ArrayList<>();
         for (int i1=0; i1<nums.length; i1++){
-            if (nums[i1]<nums.length && nums[nums[i1]]>0) nums[nums[i1]] = -nums[nums[i1]];
+            int debug = Math.abs(nums[i1])-1;
+            if ((Math.abs(nums[i1])-1)<nums.length && nums[Math.abs(nums[i1])-1]>0){
+                nums[Math.abs(nums[i1])-1] = -nums[Math.abs(nums[i1])-1];
+            }
         }
         for (int i1=0; i1<nums.length; i1++){
             if (nums[i1]>=0) res.add(i1+1);
