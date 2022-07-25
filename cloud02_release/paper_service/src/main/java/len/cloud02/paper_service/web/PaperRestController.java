@@ -30,6 +30,16 @@ public class PaperRestController {
     @Autowired
     private PaperService paperService;
 
+    @GetMapping("/add")
+    public Integer test01(@RequestParam(name = "num1") String num1, @RequestParam(name = "num2") String num2){
+        return Integer.parseInt(num1) + Integer.parseInt(num2);
+    }
+
+    @GetMapping("/multi")
+    public Integer test02(@RequestParam(name = "num1") String num1, @RequestParam(name = "num2") String num2){
+        return Integer.parseInt(num1) * Integer.parseInt(num2);
+    }
+
     // http://localhost:8086/rest_paper/papers
     @GetMapping("/papers")
     public ArrayList<Paper> paperList(){

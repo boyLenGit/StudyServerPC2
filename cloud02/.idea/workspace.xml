@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a8904c45-8296-476a-b0b3-49177e863474" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,11 +45,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/blog/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20574713" />
-    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -142,13 +144,6 @@
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="papera_service" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,33 +151,6 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="papera_service" />
       <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -286,21 +254,8 @@
     <list>
       <item itemvalue="Application.SSH2" />
       <item itemvalue="Application.BlogApplication" />
-      <item itemvalue="JavaScript Debug.user_login.html" />
       <item itemvalue="JUnit.testBlog" />
       <item itemvalue="JUnit.testBlog.String" />
-      <item itemvalue="Spring Boot.BlogApplication" />
-      <item itemvalue="Spring Boot.CClientApplication" />
-      <item itemvalue="Spring Boot.CServiceApplication" />
-      <item itemvalue="Spring Boot.ClusterApplication" />
-      <item itemvalue="Spring Boot.CommonApplication" />
-      <item itemvalue="Spring Boot.GdClientApplication" />
-      <item itemvalue="Spring Boot.GdServiceApp-Beijing1" />
-      <item itemvalue="Spring Boot.GdServiceApp-HangZhou1" />
-      <item itemvalue="Spring Boot.GdServiceApp-HangZhou2" />
-      <item itemvalue="Spring Boot.PaperServiceApp01" />
-      <item itemvalue="Spring Boot.PaperServiceApp02" />
-      <item itemvalue="Spring Boot.PaperServiceApp03" />
     </list>
     <recent_temporary>
       <list>
@@ -311,6 +266,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -699,7 +655,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/paper_service/src/main/java/len/cloud02/paper_service/web/admin/PaperAdminController.java</url>
-          <line>103</line>
+          <line>104</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

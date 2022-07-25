@@ -6,7 +6,6 @@
         <groupId>len.cloud02</groupId>
         <artifactId>cloud02</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <!--        <relativePath>../pom.xml</relativePath> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
 
     <groupId>len.cloud02.blog</groupId>
