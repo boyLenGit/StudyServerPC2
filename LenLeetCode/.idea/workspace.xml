@@ -29,15 +29,15 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.lt015_DateFormat">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RealMeet.jingdong0531.Main" />
+  <component name="RunManager" selected="Application.Le01_ThreadPool">
+    <configuration name="Le01_ThreadPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="learn.Le01_ThreadPool" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="RealMeet.jingdong0531.*" />
+          <option name="PATTERN" value="learn.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -45,12 +45,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lt012_meet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lenTest.lt012_meet" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RealMeet.jingdong0531.Main" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lenTest.*" />
+          <option name="PATTERN" value="RealMeet.jingdong0531.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,11 +99,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Le01_ThreadPool" />
         <item itemvalue="Application.lt015_DateFormat" />
         <item itemvalue="Application.lt014_try_string" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.lt013_dead_lock" />
-        <item itemvalue="Application.lt012_meet" />
       </list>
     </recent_temporary>
   </component>
