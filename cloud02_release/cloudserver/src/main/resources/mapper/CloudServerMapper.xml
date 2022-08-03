@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="len.cloud02.cloudserver.mapper.CloudServerMapper">
+
+    <select id="getServerList" resultType="len.cloud02.cloudserver.entity.ServerEntity">
+        SELECT * FROM cloud_server LIMIT #{startIndex}, #{pageSize}
+    </select>
+</mapper>

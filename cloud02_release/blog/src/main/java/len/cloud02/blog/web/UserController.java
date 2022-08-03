@@ -37,13 +37,13 @@ public class UserController {
 
     // 用户注册
     @GetMapping("/register_get")
-    private String register(Model model){
+    public String register(Model model){
         model.addAttribute("user", new User());
         return "user/register";
     }
 
     @PostMapping("/register_post")
-    private String register_post(@Valid User user, MultipartFile image1, RedirectAttributes attributes) throws IOException {
+    public String register_post(@Valid User user, MultipartFile image1, RedirectAttributes attributes) throws IOException {
         LenLog.info2(getClass(), "register_post", user.getUsername() + "|" + user.getPassword());
         // 监测用户是否重复
         User user_sql = userService.findUserByName(user.getUsername());

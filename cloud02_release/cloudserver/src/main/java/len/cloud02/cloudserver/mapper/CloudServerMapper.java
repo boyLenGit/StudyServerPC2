@@ -11,7 +11,7 @@ import java.util.List;
  */
 @Repository
 public interface CloudServerMapper {
-    void takeServer(String host, String userName);
+//    void takeServer(String host, String userName);
 
     List<ServerEntity> getServerList(Integer startIndex, Integer pageSize);
 }

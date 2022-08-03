@@ -31,39 +31,13 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.Le01_ThreadPool">
+  <component name="RunManager" selected="Application.lt017_TimeUtils">
     <configuration name="Le01_ThreadPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="learn.Le01_ThreadPool" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="learn.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RealMeet.jingdong0531.Main" />
-      <module name="LenLeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="RealMeet.jingdong0531.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="lt013_dead_lock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lenTest.lt013_dead_lock" />
-      <module name="LenLeetCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lenTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,13 +71,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="lt016_ReflectUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lenTest.lt016_ReflectUtils" />
+      <module name="LenLeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lenTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lt017_TimeUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lenTest.lt017_TimeUtils" />
+      <module name="LenLeetCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lenTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.lt017_TimeUtils" />
+        <item itemvalue="Application.lt016_ReflectUtils" />
         <item itemvalue="Application.Le01_ThreadPool" />
         <item itemvalue="Application.lt015_DateFormat" />
         <item itemvalue="Application.lt014_try_string" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.lt013_dead_lock" />
       </list>
     </recent_temporary>
   </component>
