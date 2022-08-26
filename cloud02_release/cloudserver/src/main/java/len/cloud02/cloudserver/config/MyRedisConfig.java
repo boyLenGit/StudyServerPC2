@@ -19,11 +19,12 @@ public class MyRedisConfig {
 
     // redission通过redissonClient对象使用 // 如果是多个redis集群，可以配置
     @Bean(destroyMethod = "shutdown")
-    public RedissonClient redisson() {
+    public RedissonClient redissonClient() {
         Config config = new Config();
         // 创建单例模式的配置
-        config.useSingleServer().setAddress("redis://" + ipAddr + ":6379");
-        config.useSingleServer().setPassword("6886526");
+        config.useSingleServer().setAddress("redis://" + ipAddr + ":6379").setPassword("6886526")
+                // 防止出现Redis server response timeout
+                .setKeepAlive(true).setPingConnectionInterval(1000);
         return Redisson.create(config);
     }
 }

@@ -1,0 +1,77 @@
+
+/* 字体大小 */
+.text-size-small{
+    font-size: 12px;
+}
+.text-size-middle{
+    font-size: 24px;
+}
+.text-size-middle2{
+    font-size: 28px;
+}
+
+
+/*字体布局*/
+.text-layout-center{
+    text-align: center;
+}
+
+
+/*字体间距*/
+.text-layout-margin-left{
+    padding-left: 0.5em !important;
+}
+
+
+/*布局*/
+.layout-align-right {
+    float:right;
+}
+.layout-align-left {
+    float:left;
+}
+.item-layout-margin-left{
+    padding-left: 0.5em !important;
+}
+.item-layout-margin-right{
+    padding-right: 0.5em !important;
+}
+.item-layout-margin-right-2{
+    padding-right: 2em !important;
+}
+.item-layout-margin-bottom{
+    padding-bottom: 0.5em !important;
+}
+.item-layout-margin-bottom-2{
+    padding-bottom: 2em !important;
+}
+.item-layout-margin-top{
+    padding-top: 0.5em !important;
+}
+.item-layout-margin-top-1{
+    padding-top: 1em !important;
+}
+.item-layout-margin-top-2{
+    padding-top: 2em !important;
+}
+/*position: absolute;*/
+/*right: 0px;*/
+/*width: 200px;*/
+/*border: 3px solid #73AD21;*/
+/*padding: 10px;*/
+
+/*输入框*/
+.len-input-size {
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding: 0.875rem 0;
+    margin-bottom: 0;
+    line-height: 1;
+    color: #212529;
+    background-color: transparent;
+    border: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #6c9daf;
+}

@@ -3,8 +3,24 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="len.cloud02.cloudserver.mapper.CloudServerMapper">
+    <update id="subServerRemain">
+        UPDATE
+            cloud_server
+        SET
+            remain = remain - 1
+        WHERE
+            id = #{id}
+    </update>
 
     <select id="getServerList" resultType="len.cloud02.cloudserver.entity.ServerEntity">
         SELECT * FROM cloud_server LIMIT #{startIndex}, #{pageSize}
+    </select>
+
+    <select id="getServerById" resultType="len.cloud02.cloudserver.entity.ServerEntity">
+        SELECT * FROM cloud_server WHERE id = #{id}
+    </select>
+
+    <select id="getServerListNoPage" resultType="len.cloud02.cloudserver.entity.ServerEntity">
+        SELECT * FROM cloud_server
     </select>
 </mapper>

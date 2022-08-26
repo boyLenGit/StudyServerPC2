@@ -14,4 +14,10 @@ public interface CloudServerMapper {
 //    void takeServer(String host, String userName);
 
     List<ServerEntity> getServerList(Integer startIndex, Integer pageSize);
+
+    List<ServerEntity> getServerListNoPage();
+
+    void subServerRemain(Long id);
+
+    ServerEntity getServerById(Long id);
 }

@@ -24,4 +24,8 @@ public class RedisService {
         return valueOperations.get(key);
     }
 
+    public static void syncRedisData(){
+
+    }
+
 }

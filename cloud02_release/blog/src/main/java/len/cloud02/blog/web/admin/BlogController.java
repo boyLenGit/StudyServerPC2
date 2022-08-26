@@ -76,9 +76,9 @@ public class BlogController {
         blog.setType(typeService.getType(blog.getType().getId()));
         blog.setTags(tagService.listTag(blog.getTagIds()));
         if (blog.getInfo()==null || blog.getInfo().length()<100) blog.setInfo(LenText.makeBlogInfo(blog.getContent()));
-        Blog save_result;
 
         // ↓ 检查传入的Blog是否已存在，不存在则执行新建Blog步骤，存在则执行更新Blog步骤。
+        Blog save_result;
         if (blog.getId()==null){  // 如果是新建一个Blog，则↓
             save_result = blogService.saveBlog(blog);
         }else {  // 如果是修改一个Blog，则↓

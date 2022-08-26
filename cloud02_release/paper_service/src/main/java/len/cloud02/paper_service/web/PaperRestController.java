@@ -1,5 +1,6 @@
 package len.cloud02.paper_service.web;
 
+import com.alibaba.fastjson.JSONObject;
 import len.cloud02.paper_service.pojo.Paper;
 import len.cloud02.paper_service.serviec.PaperService;
 import len.cloud02.paper_service.util.LenLog;
@@ -45,6 +46,12 @@ public class PaperRestController {
     public ArrayList<Paper> paperList(){
         ArrayList<Paper> paperPage = paperService.getPaperListNoPageable();
         return paperPage;
+    }
+
+    @GetMapping("/papersJObj")
+    public JSONObject paperListJObj(@RequestParam(required = false, defaultValue = "1") Integer pageNum, @RequestParam(required = false, defaultValue = "10") Integer pageSize){
+        JSONObject paperListJObj = paperService.getPaperListJObj(pageNum-1, pageSize);
+        return paperListJObj;
     }
 
     // 文献详情

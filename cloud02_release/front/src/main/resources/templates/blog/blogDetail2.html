@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>文章编辑</title>
+    <!-- boyLen -->
+    <link rel="stylesheet" href="../../static/css/Len.css" th:href="@{/css/Len.css}">
+    <!-- boyLen -->
+    <!--     <link rel="stylesheet" href="../../static/lib/editormd/lib/codemirror/codemirror.min.css" th:href="@{/lib/editormd/lib/codemirror/codemirror.min.css}"> -->
+    <!--     <link rel="stylesheet" href="../../static/lib/editormd/lib/codemirror/addon/dialog/dialog.css" th:href="@{/lib/editormd/lib/codemirror/addon/dialog/dialog.css}"> -->
+    <!--     <link rel="stylesheet" href="../../static/lib/editormd/lib/codemirror/addon/search/matchesonscrollbar.css" th:href="@{/lib/editormd/lib/codemirror/addon/search/matchesonscrollbar.css}"> -->
+    <!--     <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css" th:href="@{/lib/editormd/css/editormd.min.css}"> -->
+    <!--     <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.css" th:href="@{/lib/editormd/css/editormd.css}"/> -->
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.preview.css" th:href="@{/lib/editormd/css/editormd.preview.css}"/>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../static/lib/thirdpart/feather/feather.css" th:href="@{/lib/thirdpart/feather/feather.css}">
+    <link rel="stylesheet" href="../../static/lib/thirdpart/mdi/css/materialdesignicons.min.css" th:href="@{/lib/thirdpart/mdi/css/materialdesignicons.min.css}">
+    <link rel="stylesheet" href="../../static/lib/thirdpart/ti-icons/css/themify-icons.css" th:href="@{/lib/thirdpart/ti-icons/css/themify-icons.css}">
+    <link rel="stylesheet" href="../../static/lib/thirdpart/typicons/typicons.css" th:href="@{/lib/thirdpart/typicons/typicons.css}">
+    <link rel="stylesheet" href="../../static/lib/thirdpart/simple-line-icons/css/simple-line-icons.css" th:href="@{/lib/thirdpart/simple-line-icons/css/simple-line-icons.css}">
+    <link rel="stylesheet" href="../../static/lib/thirdpart/css/vendor.bundle.base.css" th:href="@{/lib/thirdpart/css/vendor.bundle.base.css}">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../../static/js/select.dataTables.min.css" th:href="@{/js/select.dataTables.min.css}">
+    <!-- End plugin css for this page -->
+    <link rel="stylesheet" href="../../static/css/thridpart/vertical-layout-light/style.css" th:href="@{/css/thridpart/vertical-layout-light/style.css}">
+</head>
+
+<body>
+<script src="../../static/lib/jquery/jquery_3.6.0.min.js" th:src="@{/lib/jquery/jquery_3.6.0.min.js}"></script>
+<!-- <script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script> -->
+<script src="../../static/lib/editormd/lib/marked.min.js" th:src="@{/lib/editormd/lib/marked.min.js}"></script>
+<script src="../../static/lib/editormd/lib/prettify.min.js" th:src="@{/lib/editormd/lib/prettify.min.js}"></script>
+<script src="../../static/lib/editormd/lib/raphael.min.js" th:src="@{/lib/editormd/lib/raphael.min.js}"></script>
+<script src="../../static/lib/editormd/lib/underscore.min.js" th:src="@{/lib/editormd/lib/underscore.min.js}"></script>
+<script src="../../static/lib/editormd/lib/sequence-diagram.min.js" th:src="@{/lib/editormd/lib/sequence-diagram.min.js}"></script>
+<script src="../../static/lib/editormd/lib/flowchart.min.js" th:src="@{/lib/editormd/lib/flowchart.min.js}"></script>
+<script src="../../static/lib/editormd/lib/jquery.flowchart.min.js" th:src="@{/lib/editormd/lib/jquery.flowchart.min.js}"></script>
+<script src="../../static/lib/editormd/editormd.js" th:src="@{/lib/editormd/editormd.js}"></script>
+
+
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row" th:replace="index :: replacerOfNavbar">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+            <div class="me-3">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+                    <span class="icon-menu"></span>
+                </button>
+            </div>
+            <div>
+                <a class="navbar-brand brand-logo" href="index.html">
+                    <h3 class="ui blue header item">LenCloud</h3>
+                </a>
+                <a class="navbar-brand brand-logo-mini" href="index.html">
+                    <h3 class="ui blue header item">LenCloud</h3>
+                </a>
+            </div>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-top">
+            <ul class="navbar-nav">
+                <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+                    <h1 class="welcome-text">欢迎,
+                        <span class="text-black fw-bold" th:text="*{session.user}==null ? '访客' : ${session.user.username}">John Doe</span>
+                    </h1>
+                    <h3 class="welcome-sub-text">Your performance summary this week </h3>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown d-none d-lg-block">
+                    <a class="nav-link dropdown-bordered dropdown-toggle dropdown-toggle-split" id="messageDropdown"
+                       href="#" data-bs-toggle="dropdown" aria-expanded="false"> Select Category </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+                         aria-labelledby="messageDropdown">
+                        <a class="dropdown-item py-3">
+                            <p class="mb-0 font-weight-medium float-left">Select category</p>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-item-content flex-grow py-2">
+                                <p class="preview-subject ellipsis font-weight-medium text-dark">Bootstrap Bundle </p>
+                                <p class="fw-light small-text mb-0">This is a Bundle featuring 16 unique dashboards</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-item-content flex-grow py-2">
+                                <p class="preview-subject ellipsis font-weight-medium text-dark">Angular Bundle</p>
+                                <p class="fw-light small-text mb-0">Everything you’ll ever need for your Angular
+                                    projects</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-item-content flex-grow py-2">
+                                <p class="preview-subject ellipsis font-weight-medium text-dark">VUE Bundle</p>
+                                <p class="fw-light small-text mb-0">Bundle of 6 Premium Vue Admin Dashboard</p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-item-content flex-grow py-2">
+                                <p class="preview-subject ellipsis font-weight-medium text-dark">React Bundle</p>
+                                <p class="fw-light small-text mb-0">Bundle of 8 Premium React Admin Dashboard</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item d-none d-lg-block">
+                    <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
+                        <span class="input-group-addon input-group-prepend border-right">
+                            <span class="icon-calendar input-group-text calendar-icon"></span>
+                        </span>
+                        <input type="text" class="form-control">
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <form class="search-form" action="#">
+                        <i class="icon-search"></i>
+                        <input type="search" class="form-control" placeholder="Search Here" title="Search here">
+                    </form>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link count-indicator" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+                        <i class="icon-mail icon-lg"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+                         aria-labelledby="notificationDropdown">
+                        <a class="dropdown-item py-3 border-bottom">
+                            <p class="mb-0 font-weight-medium float-left">You have 4 new notifications </p>
+                            <span class="badge badge-pill badge-primary float-right">View all</span>
+                        </a>
+                        <a class="dropdown-item preview-item py-3">
+                            <div class="preview-thumbnail">
+                                <i class="mdi mdi-alert m-auto text-primary"></i>
+                            </div>
+                            <div class="preview-item-content">
+                                <h6 class="preview-subject fw-normal text-dark mb-1">Application Error</h6>
+                                <p class="fw-light small-text mb-0"> Just now </p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item preview-item py-3">
+                            <div class="preview-thumbnail">
+                                <i class="mdi mdi-settings m-auto text-primary"></i>
+                            </div>
+                            <div class="preview-item-content">
+                                <h6 class="preview-subject fw-normal text-dark mb-1">Settings</h6>
+                                <p class="fw-light small-text mb-0"> Private message </p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item preview-item py-3">
+                            <div class="preview-thumbnail">
+                                <i class="mdi mdi-airballoon m-auto text-primary"></i>
+                            </div>
+                            <div class="preview-item-content">
+                                <h6 class="preview-subject fw-normal text-dark mb-1">New user registration</h6>
+                                <p class="fw-light small-text mb-0"> 2 days ago </p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link count-indicator" id="countDropdown" href="#" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        <i class="icon-bell"></i>
+                        <span class="count"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+                         aria-labelledby="countDropdown">
+                        <a class="dropdown-item py-3">
+                            <p class="mb-0 font-weight-medium float-left">You have 7 unread mails </p>
+                            <span class="badge badge-pill badge-primary float-right">View all</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <img src="images/faces/face10.jpg" alt="image" class="img-sm profile-pic">
+                            </div>
+                            <div class="preview-item-content flex-grow py-2">
+                                <p class="preview-subject ellipsis font-weight-medium text-dark">Marian Garner </p>
+                                <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <img src="images/faces/face12.jpg" alt="image" class="img-sm profile-pic">
+                            </div>
+                            <div class="preview-item-content flex-grow py-2">
+                                <p class="preview-subject ellipsis font-weight-medium text-dark">David Grey </p>
+                                <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
+                            </div>
+                        </a>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <img src="images/faces/face1.jpg" alt="image" class="img-sm profile-pic">
+                            </div>
+                            <div class="preview-item-content flex-grow py-2">
+                                <p class="preview-subject ellipsis font-weight-medium text-dark">Travis Jenkins </p>
+                                <p class="fw-light small-text mb-0"> The meeting is cancelled </p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown d-none d-lg-block user-dropdown" th:unless="*{session.user}!=null">
+                    <a type="button" class="btn btn-primary btn-sm" th:href="@{/user/login}">登录</a>
+                    <a type="button" class="btn btn-success btn-sm" th:href="@{/user/register}">注册</a>
+                </li>
+
+                <li class="nav-item dropdown d-none d-lg-block user-dropdown" th:unless="*{session.user}==null">
+                    <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img class="img-xs rounded-circle" src="../static/image/userAvatar01.jpeg" th:src="*{session.user}==null ? @{/image/userAvatar01.jpeg} : ${session.user.avatar}" alt="Profile image">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                        <div class="dropdown-header text-center">
+                            <img class="img-sm rounded-circle" src="../static/image/userAvatar01.jpeg" th:src="*{session.user}==null ? @{/image/userAvatar01.jpeg} : ${session.user.avatar}" alt="Profile image">
+                            <p class="mb-1 mt-3 font-weight-semibold" th:text="*{session.user}==null ? '访客' : ${session.user.username}">
+                                Allen Moreno</p>
+                            <p class="fw-light text-muted mb-0" th:text="*{session.user}==null ? '无' : ${session.user.email}">
+                                allenmoreno@gmail.com</p>
+                        </div>
+                        <a class="dropdown-item">
+                            <i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile
+                            <span class="badge badge-pill badge-danger">1</span>
+                        </a>
+                        <a class="dropdown-item">
+                            <i class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i> 消息
+                        </a>
+                        <a class="dropdown-item">
+                            <i class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i> 文章
+                        </a>
+                        <a class="dropdown-item">
+                            <i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> 资源
+                        </a>
+                        <a class="dropdown-item" th:href="@{/user/logout}">
+                            <i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>登出
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-bs-toggle="offcanvas">
+                <span class="mdi mdi-menu"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_settings-panel.html -->
+        <div class="theme-setting-wrapper" th:replace="index :: replacerOfSettings">
+            <div id="settings-trigger"><i class="ti-settings"></i></div>
+            <div id="theme-settings" class="settings-panel">
+                <i class="settings-close ti-close"></i>
+                <p class="settings-heading">SIDEBAR SKINS</p>
+                <div class="sidebar-bg-options selected" id="sidebar-light-theme">
+                    <div class="img-ss rounded-circle bg-light border me-3"></div>
+                    Light
+                </div>
+                <div class="sidebar-bg-options" id="sidebar-dark-theme">
+                    <div class="img-ss rounded-circle bg-dark border me-3"></div>
+                    Dark
+                </div>
+                <p class="settings-heading mt-2">HEADER SKINS</p>
+                <div class="color-tiles mx-0 px-4">
+                    <div class="tiles success"></div>
+                    <div class="tiles warning"></div>
+                    <div class="tiles danger"></div>
+                    <div class="tiles info"></div>
+                    <div class="tiles dark"></div>
+                    <div class="tiles default"></div>
+                </div>
+            </div>
+        </div>
+        <!-- partial -->
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar" th:replace="index :: replacerOfSidebar">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/}">
+                        <i class="mdi mdi-grid-large menu-icon"></i>
+                        <span class="menu-title">首页</span>
+                    </a>
+                </li>
+                <li class="nav-item nav-category">文档中台</li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic1" aria-expanded="false"
+                       aria-controls="ui-basic">
+                        <i class="menu-icon mdi mdi-comment-text-outline"></i>
+                        <span class="menu-title">社区服务</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic1">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" th:href="@{/blog/list}">文章列表</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/ui-features/dropdowns.html">文章分类</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic2" aria-expanded="false"
+                       aria-controls="ui-basic">
+                        <i class="menu-icon mdi mdi-book"></i>
+                        <span class="menu-title">文献服务</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="ui-basic2">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="pages/ui-features/buttons.html">文献列表</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pages/ui-features/dropdowns.html">文章分类</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item nav-category">资源中台</li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false"
+                       aria-controls="form-elements">
+                        <i class="menu-icon mdi mdi-server-network"></i>
+                        <span class="menu-title">云服务器</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="form-elements">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">获取服务器</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">控制台</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false"
+                       aria-controls="charts">
+                        <i class="menu-icon mdi mdi-chart-line"></i>
+                        <span class="menu-title">监控服务</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="charts">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="pages/charts/chartjs.html">服务器监控</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <li class="nav-item nav-category">数据中台</li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false"
+                       aria-controls="auth">
+                        <i class="menu-icon mdi mdi-database"></i>
+                        <span class="menu-title">数据概览</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="auth">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" href="pages/samples/login.html">地球物理数据</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item nav-category">关于</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://bootstrapdash.com/demo/star-admin2-free/docs/documentation.html">
+                        <i class="menu-icon mdi mdi-file-document"></i>
+                        <span class="menu-title">关于</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- partial -->
+        <!-- 博客正文 -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <!--博客表单-->
+                <form name="mdEditorForm" id="blog-form" method="post" th:action="@{/user/addOrUpdateBlogPost}">
+                    <h1>转换前</h1>
+                    <textarea id="demo1" style="width:800px;height:300px;">
+    hadoop命令需在hadoop目录下使用
+**常用命令**
+
+    HDFS格式化:
+    bin/hadoop namenode -format    格式化namenode
+    bin/hadoop datanode -format    格式化datanode
+
+    *如不是第一次格式化，为了保证clusterID一致性,
+    *需先删除hdfs临时目录,
+    *即在配置文件中配置的hadoop.tmp.dir参数路径
+        </textarea>
+
+                    <button onclick="mdToHml();" type="button">点击转Html</button>
+
+
+                    <h1>转换后</h1>
+
+                    <!--在该div中展示,如有初始化的数据可以放在textarea中-->
+                    <div id="testEditorMdview">
+                        <textarea id="appendTest" style="display:none;"></textarea>
+                    </div>
+
+                    <button id="submit-button" type="button" class="btn btn-info">发表</button>
+                    <button id="draft-button" type="button" class="btn btn-success">草稿</button>
+                </form>
+            </div>
+
+
+            <!-- partial:partials/_footer.html -->
+            <footer class="footer">
+                <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">
+                        Design by boyLen
+                    </span>
+                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2022. All rights reserved.</span>
+                </div>
+            </footer>
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+
+<!-- plugins:js -->
+<script src="../../static/lib/thirdpart/js/vendor.bundle.base.js" th:src="@{/lib/thirdpart/js/vendor.bundle.base.js}"></script>
+<!-- endinject -->
+<!-- Plugin js for this page -->
+<script src="../../static/lib/thirdpart/chart.js/Chart.min.js" th:src="@{/lib/thirdpart/chart.js/Chart.min.js}"></script>
+<script src="../../static/lib/thirdpart/bootstrap-datepicker/bootstrap-datepicker.min.js" th:src="@{/lib/thirdpart/bootstrap-datepicker/bootstrap-datepicker.min.js}"></script>
+<script src="../../static/lib/thirdpart/progressbar.js/progressbar.min.js" th:src="@{/lib/thirdpart/progressbar.js/progressbar.min.js}"></script>
+
+<!-- End plugin js for this page -->
+<!-- inject:js -->
+<script src="../../static/js/off-canvas.js" th:src="@{/js/off-canvas.js}"></script>
+<script src="../../static/js/hoverable-collapse.js" th:src="@{/js/hoverable-collapse.js}"></script>
+<script src="../../static/js/template.js" th:src="@{/js/template.js}"></script>
+<script src="../../static/js/settings.js" th:src="@{/js/settings.js}"></script>
+<script src="../../static/js/todolist.js" th:src="@{/js/todolist.js}"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../../static/js/jquery.cookie.js" type="text/javascript" th:src="@{/js/jquery.cookie.js}"></script>
+<script src="../../static/js/dashboard.js" th:src="@{/js/dashboard.js}"></script>
+<script src="../../static/js/Chart.roundedBarCharts.js" th:src="@{/js/Chart.roundedBarCharts.js}"></script>
+<!-- End custom js for this page-->
+
+<script type="text/javascript">
+    var pageNumber;
+    var pageSize;
+    var url;
+    var urlOrigin = "/blog/list.data";
+
+    //markDown转HTMl的方法
+    function mdToHml(){
+
+        //先对容器初始化，在需要展示的容器中创建textarea隐藏标签，
+        $("#testEditorMdview").html('<textarea id="appendTest" style="display:none;"></textarea>');
+        var content=$("#demo1").val();//获取需要转换的内容
+        $("#appendTest").val(content);//将需要转换的内容加到转换后展示容器的textarea隐藏标签中
+
+        //转换开始,第一个参数是上面的div的id
+        editormd.markdownToHTML("testEditorMdview", {
+            htmlDecode: "style,script,iframe", //可以过滤标签解码
+            emoji: true,
+            taskList:true,
+            tex: true,               // 默认不解析
+            flowChart:true,         // 默认不解析
+            sequenceDiagram:true,  // 默认不解析
+        });
+    };
+
+
+    setTimeout(function () {
+        loadBlog(urlOrigin);
+    }, 200);
+
+    function loadBlog(url) {
+        $("#blogWholeDiv").load(url, {
+            // title : $("[name='title']").val(),
+        });
+    }
+
+    // 按钮功能
+    $('#submit-button').click(function () {
+        $('[name="state"]').val(1);
+        $('#blog-form').submit();
+    });
+
+    $('#draft-button').click(function () {
+        $('[name="state"]').val(0);
+        $('#blog-form').submit();
+    });
+
+    // MarkDown
+    function nextPage() {
+        pageNumber = Number($("#blogPageNum").val()) + 1;
+        pageSize = Number($("#blogPageSize").val());
+        pageTotalNum = Number($("#blogPageTotalNum").val());
+        if (pageNumber > pageTotalNum) {
+            alert("已是最后一页")
+            return;
+        }
+        url = urlOrigin + "?pageNum=" + pageNumber + "&pageSize=" + pageSize;
+        loadBlog(url);
+    }
+
+    function prevPage() {
+        pageNumber = Number($("#blogPageNum").val()) - 1;
+        pageSize = Number($("#blogPageSize").val());
+        pageTotalNum = Number($("#blogPageTotalNum").val());
+        if (pageNumber <= 0) {
+            alert("已是最前一页")
+            return;
+        }
+        url = urlOrigin + "?pageNum=" + pageNumber + "&pageSize=" + pageSize;
+        loadBlog(url);
+    }
+
+
+    // var testEditor;
+    // $(function() {
+    //     testEditor = editormd("article-content", {
+    //         htmlDecode: "style,script,iframe",
+    //         emoji: true,
+    //         taskList: true,
+    //         tocm: true,
+    //         tex: true, // 默认不解析
+    //         flowChart: true, // 默认不解析
+    //         sequenceDiagram: true, // 默认不解析
+    //         path : /*[[@{/lib/editormd/lib/}]]*/"../../lib/editormd/lib/",
+    //         codeFold: true
+    //     });
+    // });
+    // editormd.markdownToHTML("myEditor", {
+    //     htmlDecode      : "style,script,iframe",  // you can filter tags decode
+    //     emoji           : true,
+    //     taskList        : true,
+    //     tex             : true,  // 默认不解析
+    //     flowChart       : true,  // 默认不解析
+    //     sequenceDiagram : true  // 默认不解析
+    // });
+</script>
+</body>
+
+</html>
+

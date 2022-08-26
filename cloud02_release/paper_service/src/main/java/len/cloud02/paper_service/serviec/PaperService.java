@@ -1,6 +1,7 @@
 package len.cloud02.paper_service.serviec;
 
 
+import com.alibaba.fastjson.JSONObject;
 import len.cloud02.paper_service.dao.PaperRepository;
 import len.cloud02.paper_service.mapper.PaperMapper;
 import len.cloud02.paper_service.pojo.Paper;
@@ -10,11 +11,14 @@ import org.hibernate.Hibernate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class PaperService {
@@ -31,6 +35,21 @@ public class PaperService {
     public ArrayList<Paper> getPaperListNoPageable(){
         ArrayList<Paper> papers = paperRepository.listPaperByNoPageable();
         return papers;
+    }
+
+    public JSONObject getPaperListJObj(Integer pageNum, Integer pageSize){
+        Pageable pageable = PageRequest.of(pageNum, pageSize);
+        Page<Paper> papers = paperRepository.findAll(pageable);
+        List<Paper> paperList = papers.getContent();
+        Long total = papers.getTotalElements();
+        JSONObject result = new JSONObject();
+        result.put("list", paperList);
+        result.put("pageNum", pageNum);
+        result.put("pageSize", pageSize);
+        result.put("pages", (total / pageSize) + 1);
+        result.put("size", paperList.size());
+        result.put("total", total);
+        return result;
     }
 
     public void addPaper(Paper paper){

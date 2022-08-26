@@ -16,13 +16,19 @@ public class SemaphoreService {
     @Autowired
     private RedissonClient redissonClient;
 
+    /**
+     * 实质就是让值-1
+     */
     public boolean sub(String key) throws InterruptedException {
         RSemaphore rSemaphore = redissonClient.getSemaphore(key);
-        return rSemaphore.tryAcquire(5, TimeUnit.SECONDS);    // 实质就是让值-1
+        return rSemaphore.tryAcquire(5, TimeUnit.SECONDS);
     }
 
+    /**
+     * 实质就是让值+1
+     */
     public void add(String key){
         RSemaphore rSemaphore = redissonClient.getSemaphore(key);
-        rSemaphore.release();   // 实质就是让值+1
+        rSemaphore.release();
     }
 }

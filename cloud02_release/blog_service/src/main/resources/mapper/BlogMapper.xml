@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="len.cloud02.blog_service.mapper.BlogMapper">
+    <update id="likeOrDislikeBlog">
+        UPDATE blog SET likes=likes + #{adder} WHERE id = #{id}
+    </update>
+
+    <select id="getBlogById" resultType="len.cloud02.blog_service.entity.Blog">
+        SELECT * FROM blog WHERE id = #{id}
+    </select>
+
+    <select id="getBlogLiteById" resultType="len.cloud02.blog_service.entity.Blog">
+        SELECT id, title, views, likes, state, createTime, updateTime, typeId, userId, userName, userEmail, userAvatar FROM blog WHERE id = #{id}
+    </select>
+
+    <select id="getBlogListByPage" resultType="len.cloud02.blog_service.entity.Blog">
+        SELECT * FROM blog WHERE 1=1 LIMIT #{startIndex}, #{pageSize}
+    </select>
+
+    <select id="getBlogLiteListByPage" resultType="len.cloud02.blog_service.entity.Blog">
+        SELECT id, title, views, likes, state, createTime, updateTime, typeId, userId, userName, userEmail, userAvatar FROM blog WHERE 1=1 LIMIT #{startIndex}, #{pageSize}
+    </select>
+
+    <select id="countBlogListForPage" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM blog WHERE 1=1
+    </select>
+</mapper>

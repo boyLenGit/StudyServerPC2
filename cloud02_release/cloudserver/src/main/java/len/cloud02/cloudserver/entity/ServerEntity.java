@@ -13,24 +13,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ServerEntity {
     private Long id;
-
     private String host;
-
     private String port;
-
     private String userName;
-
     private String password;
-
     private String name;
-
     private Integer total;
-
     private Integer remain;
-
     private Integer cpuCore;
-
     private Long ramSize;
-
     private Long diskSize;
 }

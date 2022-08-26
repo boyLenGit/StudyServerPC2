@@ -29,15 +29,15 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.lt017_TimeUtils">
-    <configuration name="Le01_ThreadPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="learn.Le01_ThreadPool" />
+  <component name="RunManager" selected="Application.Main1">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RealMeet.mt0820Mo.Main" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="learn.*" />
+          <option name="PATTERN" value="RealMeet.mt0820Mo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -45,12 +45,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lt014_try_string" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lenTest.lt014_try_string" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RealMeet.weilai0810.Main" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lenTest.*" />
+          <option name="PATTERN" value="RealMeet.weilai0810.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -58,12 +58,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lt015_DateFormat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lenTest.lt015_DateFormat" />
+    <configuration name="Main1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RealMeet.netease0820.Main1" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lenTest.*" />
+          <option name="PATTERN" value="RealMeet.netease0820.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -71,12 +71,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lt016_ReflectUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lenTest.lt016_ReflectUtils" />
+    <configuration name="Main4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RealMeet.mt0806.Main4" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lenTest.*" />
+          <option name="PATTERN" value="RealMeet.mt0806.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -84,8 +84,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lt017_TimeUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lenTest.lt017_TimeUtils" />
+    <configuration name="lt018_deadLock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lenTest.lt018_deadLock" />
       <module name="LenLeetCode" />
       <extension name="coverage">
         <pattern>
@@ -99,11 +99,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.lt017_TimeUtils" />
-        <item itemvalue="Application.lt016_ReflectUtils" />
-        <item itemvalue="Application.Le01_ThreadPool" />
-        <item itemvalue="Application.lt015_DateFormat" />
-        <item itemvalue="Application.lt014_try_string" />
+        <item itemvalue="Application.Main1" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.lt018_deadLock" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main4" />
       </list>
     </recent_temporary>
   </component>
@@ -1056,11 +1056,6 @@
           <option name="timeStamp" value="330" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/RealMeet/mt0430/Main2.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="331" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/leet/l746.java</url>
           <line>15</line>
           <option name="timeStamp" value="332" />
@@ -1129,6 +1124,21 @@
           <url>file://$PROJECT_DIR$/src/lenTest/lt014_try_string.java</url>
           <line>22</line>
           <option name="timeStamp" value="349" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/RealMeet/mt0806/Main1.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="353" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/RealMeet/mt0806/Main2.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="354" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/RealMeet/netease0820/Main1.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="357" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
