@@ -29,11 +29,16 @@
 <!--<script src="../../../static/lib/Highcharts_10.0.0/code/themes/dark-unica.js" th:src="@{/lib/Highcharts_10.0.0/code/themes/dark-unica.js}"></script>-->
 <!--<script src="../../../static/lib/Highcharts_10.0.0/code/themes/grid-light.js" th:src="@{/lib/Highcharts_10.0.0/code/themes/grid-light.js}"></script>-->
 <!--    HighChart网络-->
-<script src="https://cdn.highcharts.com.cn/highstock/highstock.js"></script>
-<script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script>
-<script src="http://cdn.highcharts.com.cn/highcharts/10.0.0/highcharts.js"></script>
+<!-- <script src="https://cdn.highcharts.com.cn/highstock/highstock.js"></script> -->
+<script src="../../../static/lib/highcharts/highstock.js" th:src="@{/lib/highcharts/highstock.js}"></script>
+<script src="../../../static/lib/highcharts/exporting.js" th:src="@{/lib/highcharts/exporting.js}"></script>
+<script src="../../../static/lib/highcharts/highcharts.js" th:src="@{/lib/highcharts/highcharts.js}"></script>
+<script src="../../../static/lib/highcharts/grid-light.js" th:src="@{/lib/highcharts/grid-light.js}"></script>
+
+<!-- <script src="https://cdn.highcharts.com.cn/highcharts/modules/exporting.js"></script> -->
+<!-- <script src="http://cdn.highcharts.com.cn/highcharts/10.0.0/highcharts.js"></script> -->
 <!--<script src="https://code.highcharts.com.cn/highcharts-plugins/highcharts-zh_CN.js"></script>-->
-<script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script>
+<!-- <script src="https://cdn.highcharts.com.cn/highcharts/themes/grid-light.js"></script> -->
 <!--<script src="https://cdn.highcharts.com.cn/highcharts/themes/dark-unica.js"></script>-->
 
 <!--****** 导航 ******-->
@@ -45,7 +50,7 @@ attached:轨道可以依附在主窗口
 <nav class="ui inverted attached segment LenCSS-m-padded-tb-mini LenCssDisplay-shadow-middle">
     <div class="ui container">
         <div class="ui inverted secondary stackable menu">
-            <h1 class="ui blue header item">LenCloud</h1>
+            <h1 class="ui blue header item">MoCloud</h1>
             <a href="#" id="a_top_label1" class="item LenCssLogic-mobile-hide" th:href="@{/}"><i class="home icon"></i>首页</a>
             <a href="#" id="a_top_label2" class="item active LenCssLogic-mobile-hide" th:href="@{/features}"><i class="block layout icon"></i>功能</a>
             <a href="#" id="a_top_label3" class="item LenCssLogic-mobile-hide" th:href="@{/blog/list}"><i class="book icon"></i>文章</a>

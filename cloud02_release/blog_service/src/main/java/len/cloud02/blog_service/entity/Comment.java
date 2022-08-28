@@ -5,7 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -16,20 +18,29 @@ public class Comment {
 
     private String content;
 
-    private String avatar;
-
     private Date createTime;
 
-    private Boolean isAuthor;
+    private Integer isAuthor; // 0不是 1是作者
+
+    private Long likes;
 
     // 关联
     private Long parentId;
+
+    private Long toReplyId;
+
+    private String toReplyUserName;
 
     private Long blogId;
 
     private Long userId;
 
-    private String nickname;
+    private String userAvatar;
 
-    private String email;
+    private String username;
+
+    private String userEmail;
+
+    // 非数据库数据
+    private List<Comment> replyComments = new ArrayList<>();
 }

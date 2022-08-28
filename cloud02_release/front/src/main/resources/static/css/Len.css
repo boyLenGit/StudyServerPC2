@@ -23,6 +23,13 @@
 }
 
 
+/*字体颜色*/
+.mbl-text-blue {
+    --bs-text-opacity: 1;
+    color: #0c63e4 !important;
+}
+
+
 /*布局*/
 .layout-align-right {
     float:right;
@@ -33,6 +40,9 @@
 .item-layout-margin-left{
     padding-left: 0.5em !important;
 }
+.item-layout-margin-left-2{
+    padding-left: 2em !important;
+}
 .item-layout-margin-right{
     padding-right: 0.5em !important;
 }
@@ -41,6 +51,9 @@
 }
 .item-layout-margin-bottom{
     padding-bottom: 0.5em !important;
+}
+.item-layout-margin-bottom-1{
+    padding-bottom: 1em !important;
 }
 .item-layout-margin-bottom-2{
     padding-bottom: 2em !important;

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="len.cloud02.blog_service.mapper.BlogCommentMapper">
+
+
+    <insert id="addComment">
+        INSERT INTO blogComment(content, createTime, isAuthor, likes, parentId, blogId, userId, userAvatar, username, userEmail, toReplyId, toReplyUserName)
+        VALUES (#{content}, #{createTime}, #{isAuthor}, #{likes}, #{parentId}, #{blogId}, #{userId}, #{userAvatar}, #{username}, #{userEmail}, #{toReplyId}, #{toReplyUserName})
+    </insert>
+
+    <select id="getBlogCommentList" resultType="len.cloud02.blog_service.entity.Comment">
+        SELECT * FROM blogComment WHERE blogId = #{blogId};
+    </select>
+
+
+</mapper>

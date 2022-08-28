@@ -494,7 +494,7 @@
                                                                         <td>
                                                                             <div class="d-flex ">
                                                                                 <div class="">
-                                                                                    <a href="#" target="_blank" class="text-black fw-bold" style="text-decoration:none" th:text="${blog.title}">既能生成图像又能进行分类的ACGAN</a>
+                                                                                    <a href="#" target="_blank" class="text-black fw-bold" style="text-decoration:none" th:text="${blog.title}" th:href="@{/blog/detail?id={id}(id=${blog.id})}">既能生成图像又能进行分类的ACGAN</a>
                                                                                 </div>
                                                                             </div>
                                                                         </td>

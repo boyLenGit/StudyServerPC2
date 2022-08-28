@@ -406,13 +406,17 @@
                                 <p class="fw-bold">发布日期：</p>
                                 <p class=" " th:text="${blog.createTime}">2022-03-11</p>
                             </div>
+
+                            <input id="blogDivblogId" type="hidden" name="blogNameTagblogId" th:value="${blog.id}">
                         </div>
                     </div>
                 </div>
 
+                <!-- 博客内容区 -->
                 <div class="d-flex grid-margin flex-column">
                     <div class="card">
                         <div class="card-body">
+
                             <textarea id="getBlogContent"  th:text="${blog.content}" style="width:800px;height:300px;display:none;"></textarea>
 
                             <!--在该div中展示,如有初始化的数据可以放在textarea中-->
@@ -423,35 +427,79 @@
                     </div>
                 </div>
 
+                <!-- 发表评论区 -->
                 <div class="d-flex grid-margin flex-column">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body" th:unless="*{session.user}==null">
+                            <form id="commentSubmitForm" method="post"  th:action="@{/blog/comment/add}">
+                                <div class="border-bottom item-layout-margin-bottom fw-bold">评论</div>
+                                <div class="item-layout-margin-bottom-1"></div>
+                                <input type="hidden" name="blogId" th:value="${blog.id}">
+                                <input type="hidden" name="userId" th:value="${session.user.id}">
+                                <input type="hidden" name="userAvatar" th:value="${session.user.avatar}">
+                                <input type="hidden" name="username" th:value="${session.user.username}">
+                                <input type="hidden" name="userEmail" th:value="${session.user.email}">
+                                <input type="hidden" name="parentId" value="-1">
+                                <input type="hidden" name="toReplyId" value="-1">
+                                <input type="hidden" name="toReplyUserName" value=" ">
+                                <!-- 博客作者 -->
+                                <input type="hidden" name="blogUserId" th:value="${blog.userId}">
 
-                            <textarea class="len-input-size" name="content" placeholder="    请输入文本信息..."></textarea>
+
+                                <textarea class="len-input-size" name="content" placeholder="    请输入文本信息..."></textarea>
 
 
-                            <ul class="navbar-nav flex-row item-layout-margin-top-1">
-                                <li class="nav-item dropdown d-none d-lg-block">
-                                    <button type="button" class="btn btn-outline-info btn-fw">发表评论</button>
-                                </li>
-                            </ul>
+                                <ul class="navbar-nav flex-row item-layout-margin-top-1">
+                                    <li class="nav-item dropdown d-none d-lg-block">
+                                        <button id="commentSubmitButton" type="button" class="btn btn-outline-info btn-fw">发表评论</button>
+                                    </li>
+                                </ul>
+                            </form>
+
+                        </div>
+                        <div class="card-body" th:unless="*{session.user}!=null">
+                            <div class="border-bottom item-layout-margin-bottom fw-bold">评论</div>
+                            <div class="item-layout-margin-bottom-1"></div>
+                            <div>请登录后再评论</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="d-flex grid-margin flex-column">
-                    <div class="card">
+                <!-- 博客评论区 -->
+                <div class="d-flex grid-margin flex-column" id="commentWholeDiv">
+                    <div class="card" th:fragment="commentList">
                         <div class="card-body">
-                            <div class="template-demo">
-                                <div class="" th:each="comment : ${comments}">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <img class="img-xs rounded-circle" src="../../static/image/userAvatar01.jpeg" th:src="${blog.userAvatar}" alt="Profile image">
-                                        <span class="fw-bold text-layout-margin-left" th:text="${blog.username}">菠萝</span>
-                                        <span class="text-layout-margin-left" th:text="${blog.username}">2022-01-20</span>
-                                    </div>
+                            <div class="border-bottom item-layout-margin-bottom fw-bold">评论区</div>
+                            <div class="item-layout-margin-bottom-1"></div>
 
+                            <div class="template-demo">
+                                <div class="border-bottom item-layout-margin-top" th:each="comment : ${comments}">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <img class="img-xs rounded-circle" src="../../static/image/userAvatar01.jpeg" th:src="${comment.userAvatar}" alt="Profile image">
+                                        <span class="text-layout-margin-left" th:text="${comment.username}">菠萝</span>
+                                        <span class="text-layout-margin-left text-gray" th:text="${comment.createTime}">2022-01-20 08:12:31</span>
+                                        <a class="text-layout-margin-left mbl-text-blue" th:data-commentId="${comment.id}" th:data-commentUsername="${comment.username}" onclick="reply(this.getAttribute('data-commentId'), this.getAttribute('data-commentUsername'))">回复</a>
+                                    </div>
+                                    <div class="item-layout-margin-top item-layout-margin-bottom" th:text="${comment.content}">上文中是springboot开发环境，使用了内置的tomcat。而在实际生产环境中一般用的是外置tomcat来部署(便于后续发布更新)，需要在tomcat的配置文件server.xml中设置超时时间(默认20秒以下设置为120秒)。</div>
+
+                                    <!-- 评论回复 -->
+                                    <div th:if="${#arrays.length(comment.replyComments)}>0">
+                                        <div class="border-bottom item-layout-margin-top item-layout-margin-left-2" th:each="reply : ${comment.replyComments}">
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img class="img-xs rounded-circle" src="../../static/image/userAvatar01.jpeg" th:src="${reply.userAvatar}" alt="Profile image">
+                                                <span class="text-layout-margin-left" th:text="${reply.username}">菠萝</span>
+                                                <span class="text-layout-margin-left mbl-text-blue fw-bold">@</span>
+                                                <span class="mbl-text-blue fw-bold" th:text="${reply.toReplyUserName}">@momo</span>
+                                                <span class="text-layout-margin-left text-gray" th:text="${reply.createTime}">2022-01-20 08:12:31</span>
+                                                <!-- th:data-commentId="${comment.id}"是因为要将这个评论放在一级评论下，而不是二级评论下，否则迭代递归比较麻烦 -->
+                                                <a class="text-layout-margin-left mbl-text-blue" th:data-toReplyId="${reply.id}" th:data-toReplyUserName="${reply.username}" th:data-parentId="${comment.id}" onclick="reply(this.getAttribute('data-toReplyId'), this.getAttribute('data-toReplyUserName'), this.getAttribute('data-parentId'))">回复</a>
+                                            </div>
+                                            <div class="item-layout-margin-top item-layout-margin-bottom" th:text="${reply.content}">同时注意在dubbo的*consume-client.xml服务注册中，如果单个服务也设置了timeout会以各自服务配置的超时时长为准。如下的timeout是20秒，需要修改或直接删掉此timeout的设置。</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -521,7 +569,34 @@
         });
     }
 
-    // MarkDown
+    setTimeout(function () {
+        loadComment("/blog/comment/list");
+    }, 300);
+
+    function loadComment(url) {
+        blogId = Number($("#blogDivblogId").val());
+        url = url + "?blogId=" + blogId;
+        console.log(url)
+        $("#commentWholeDiv").load(url, {
+            // title : $("[name='title']").val(),
+        });
+    }
+
+    // 按钮功能
+    $('#commentSubmitButton').click(function () {
+        $('#commentSubmitForm').submit();
+    });
+
+    // 实现评论回复按钮的功能
+    function reply(toReplyId, toReplyUserName, parentId) {
+        $("[name='content']").attr("placeholder", "@"+toReplyUserName).focus();
+        $("[name='toReplyId']").val(toReplyId);
+        $("[name='toReplyUserName']").val(toReplyUserName);
+        $("[name='parentId']").val(parentId);
+        $(window).scrollTo($('#commentSubmitForm'),500);
+    }
+
+
     function nextPage() {
         pageNumber = Number($("#blogPageNum").val()) + 1;
         pageSize = Number($("#blogPageSize").val());
